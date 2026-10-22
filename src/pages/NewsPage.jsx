@@ -120,14 +120,15 @@ export default function NewsPage() {
               🌟 Featured Community Highlight
             </div>
             <div
-              className="glass"
+              className="card"
               style={{
                 borderRadius: '12px',
                 overflow: 'hidden',
-                border: '1px solid rgba(201,150,58,.3)',
+                border: '1px solid #e2e8f0',
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
-                background: 'linear-gradient(135deg, rgba(201,150,58,.08) 0%, rgba(13,7,4,.95) 100%)',
+                background: '#ffffff',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
               }}
             >
               {featuredArticle.image && (
@@ -342,7 +343,7 @@ export default function NewsPage() {
                 </div>
                 <div>
                   <div className="cinzel" style={{ fontSize: '.58rem', letterSpacing: '.1em', color: 'var(--gold)', textTransform: 'uppercase', marginBottom: '.35rem' }}>Category</div>
-                  <select className="inp" value={f.category} onChange={(e) => setF({ ...f, category: e.target.value })} style={{ background: '#0A0F1D', color: '#F5EDD8' }}>
+                  <select className="inp" value={f.category} onChange={(e) => setF({ ...f, category: e.target.value })}>
                     <option value="development">Development</option>
                     <option value="royal">Royal & Heritage</option>
                     <option value="education">Education & Youth</option>
@@ -564,9 +565,9 @@ export default function NewsPage() {
                   {isExpanded && (
                     <div
                       style={{
-                        borderTop: '1px solid rgba(201,150,58,.15)',
+                        borderTop: '1px solid #e2e8f0',
                         padding: 'clamp(1.2rem, 2.5vw, 2rem)',
-                        background: 'rgba(13,7,4,.5)',
+                        background: '#f8fafc',
                       }}
                     >
                       {n.image && (

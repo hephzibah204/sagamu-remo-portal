@@ -60,8 +60,8 @@ export default function LandRegistryPage() {
       <SEO title="Digital Land Registry" description="Sagamu Remo official digital land registry. Verify land ownership, register plots, and resolve boundaries to prevent disputes." />
       <Hero ey="Land & Property" ti="Digital Land Registry" sub="A transparent, community-backed record of land ownership in Sagamu Remoland to prevent encroachment and secure heritage." dark />
 
-      <div style={{ background: '#050811', padding: '1rem 2rem', textAlign: 'center', borderBottom: '1px solid rgba(201,150,58,0.2)' }}>
-         <span className="cinzel" style={{ fontSize: '0.65rem', letterSpacing: '0.15em', color: 'rgba(245,237,216,0.7)', textTransform: 'uppercase' }}>
+      <div style={{ background: '#f8fafc', padding: '0.85rem 2rem', textAlign: 'center', borderBottom: '1px solid #e2e8f0' }}>
+         <span style={{ fontSize: '0.72rem', letterSpacing: '0.08em', color: '#1e40af', textTransform: 'uppercase', fontWeight: 700 }}>
             📜 SECURING THE LAND OF OUR FATHERS FOR FUTURE GENERATIONS
          </span>
       </div>

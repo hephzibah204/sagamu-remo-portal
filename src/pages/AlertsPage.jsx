@@ -199,7 +199,7 @@ export default function AlertsPage() {
       </div>
 
       {/* Stats bar */}
-      <div style={{ background: '#050811', borderBottom: '1px solid rgba(201,150,58,0.1)', padding: '1rem 0' }}>
+      <div style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0', padding: '1rem 0' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem', textAlign: 'center' }}>
           {[
             [criticalCount, 'Critical', '#ef4444'],

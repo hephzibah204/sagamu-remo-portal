@@ -149,7 +149,7 @@ export default function RoyalAudiencePage() {
       />
 
       {/* Royal announcement banner */}
-      <div style={{ background: 'linear-gradient(135deg, #0A0F1D, #2c1500)', padding: '1rem 2rem', borderBottom: '1px solid rgba(201,150,58,0.3)' }}>
+      <div style={{ background: '#f8fafc', padding: '1rem 2rem', borderBottom: '1px solid #e2e8f0' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
           <img
             src="/images/Akarigbo-Oba-James-Obafemi1.jpg"

@@ -312,8 +312,8 @@ export default function MapPage() {
         dark
       />
 
-      <div style={{ background: 'linear-gradient(90deg, #0A0F1D, #2c1500, #0A0F1D)', padding: '0.65rem 2rem', textAlign: 'center', borderBottom: '1px solid rgba(201,150,58,0.2)' }}>
-        <span className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.18em', color: 'rgba(245,237,216,0.8)', textTransform: 'uppercase' }}>
+      <div style={{ background: '#f8fafc', padding: '0.65rem 2rem', textAlign: 'center', borderBottom: '1px solid #e2e8f0' }}>
+        <span style={{ fontSize: '0.72rem', letterSpacing: '0.08em', color: '#1e40af', textTransform: 'uppercase', fontWeight: 700 }}>
           📍 SAGAMU · SAGAMU LOCAL GOVERNMENT AREA · 6°50′N, 3°38′E · CAPITAL OF REMOLAND
         </span>
       </div>

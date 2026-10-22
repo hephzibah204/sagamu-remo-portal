@@ -315,8 +315,8 @@ export default function MarketplacePage() {
       />
 
       {/* Community Banner */}
-      <div style={{ background: 'linear-gradient(90deg, #0A0F1D, #2c1500, #0A0F1D)', padding: '0.7rem 2rem', textAlign: 'center', borderBottom: '1px solid rgba(201,150,58,0.2)' }}>
-        <span className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.18em', color: 'rgba(245,237,216,0.85)', textTransform: 'uppercase' }}>
+      <div style={{ background: '#f8fafc', padding: '0.7rem 2rem', textAlign: 'center', borderBottom: '1px solid #e2e8f0' }}>
+        <span style={{ fontSize: '0.72rem', letterSpacing: '0.08em', color: '#1e40af', textTransform: 'uppercase', fontWeight: 700 }}>
           🛒 {listings.length} VERIFIED COMMUNITY LISTINGS · 100% DIRECT SELLER CONTACT · ZERO INTERMEDIARY COMMISSIONS
         </span>
       </div>
@@ -367,7 +367,7 @@ export default function MarketplacePage() {
             <div style={{ flex: 1, minWidth: '160px' }}>
               <select
                 className="inp"
-                style={{ borderRadius: '30px', background: '#0A0F1D', padding: '0.6rem 1rem' }}
+                style={{ borderRadius: '30px', background: '#ffffff', padding: '0.6rem 1rem' }}
                 value={selectedQuarter}
                 onChange={e => setSelectedQuarter(e.target.value)}
               >
@@ -379,7 +379,7 @@ export default function MarketplacePage() {
             <div style={{ flex: 1, minWidth: '150px' }}>
               <select
                 className="inp"
-                style={{ borderRadius: '30px', background: '#0A0F1D', padding: '0.6rem 1rem' }}
+                style={{ borderRadius: '30px', background: '#ffffff', padding: '0.6rem 1rem' }}
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
               >
@@ -1063,14 +1063,14 @@ export default function MarketplacePage() {
 
                   <div>
                     <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Category *</label>
-                    <select required className="inp" value={newForm.category} onChange={e => setNewForm({ ...newForm, category: e.target.value })} style={{ background: '#0A0F1D' }}>
+                    <select required className="inp" value={newForm.category} onChange={e => setNewForm({ ...newForm, category: e.target.value })}>
                       {CATEGORIES.slice(1).map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
                     </select>
                   </div>
 
                   <div>
                     <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Quarter / Sector in Sagamu *</label>
-                    <select required className="inp" value={newForm.quarter} onChange={e => setNewForm({ ...newForm, quarter: e.target.value })} style={{ background: '#0A0F1D' }}>
+                    <select required className="inp" value={newForm.quarter} onChange={e => setNewForm({ ...newForm, quarter: e.target.value })}>
                       {QUARTERS.slice(1).map(q => <option key={q} value={q}>{q}</option>)}
                     </select>
                   </div>
