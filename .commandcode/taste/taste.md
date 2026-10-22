@@ -1,0 +1,1 @@
+- Communicates in terse, one-word commands (e.g. "fix", "redploy") and expects the agent to infer the full scope from prior context and proceed autonomously. Confidence: 0.8

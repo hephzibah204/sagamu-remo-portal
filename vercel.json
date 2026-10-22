@@ -1,0 +1,136 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(self), microphone=(self), geolocation=(self)"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/admin-auth",
+      "destination": "/api/auth?action=admin_login"
+    },
+    {
+      "source": "/api/verify-id",
+      "destination": "/api/id-cards"
+    },
+    {
+      "source": "/api/paystack-verify",
+      "destination": "/api/donations"
+    },
+    {
+      "source": "/api/paystack-webhook",
+      "destination": "/api/donations"
+    },
+    {
+      "source": "/api/donation-stats",
+      "destination": "/api/donations"
+    },
+    {
+      "source": "/api/incidents",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/cctv",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/escort",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/live-location",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/patrol-checkin",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/whistleblower",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/broadcasts",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/geocode",
+      "destination": "/api/security"
+    },
+    {
+      "source": "/api/timeline",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/feed",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/forum",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/scholarships",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/contacts",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/sync",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/push-tokens",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/messages",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/chat",
+      "destination": "/api/community"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

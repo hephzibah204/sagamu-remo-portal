@@ -1,0 +1,4 @@
+- Prefers a full QA sweep to find and fix issues before rebuilding or deploying, rather than rebuilding after each individual fix. Confidence: 0.8
+- Deploys the web frontend and API to Vercel production via the Vercel CLI (`vercel deploy --prod --yes`). Confidence: 0.7
+- Prefers Turso (libSQL/SQLite) as the database over Neon/Postgres for the project's persistence layer. Confidence: 0.9
+- Prefers restoring seed/demo data via a script rather than leaving the database empty and populating manually through the app/admin UI. Confidence: 0.5
