@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#064e3b"
+      "backgroundColor": "#1e3a8a"
     },
     "ios": {
       "supportsTablet": true,
@@ -24,7 +24,7 @@
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#064e3b"
+        "backgroundColor": "#1e3a8a"
       },
       "package": "com.sagamuremo.civicportal",
       "permissions": [

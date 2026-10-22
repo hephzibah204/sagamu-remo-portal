@@ -15,7 +15,7 @@ export default function GalleryPage() {
       <SEO title="Gallery" description="Photo gallery showcasing the heritage, monarchy, culture, and development of Sagamu Remo." />
       <Hero ey="Visual History" ti="Photo Gallery" sub="Documented moments from Sagamu Remo — coronations, festivals, development, and cultural heritage." />
       <AdireDivider />
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p style={{ fontSize: '.82rem', color: 'rgba(245,237,216,.45)', marginBottom: '1.5rem', padding: '.8rem 1rem', background: 'rgba(201,150,58,.05)', border: '1px solid rgba(201,150,58,.12)', borderLeft: '3px solid rgba(201,150,58,.4)' }}>
           📸 Gallery sourced from verified news outlets, Wikipedia, YouTube, and community archives. Illustrations represent documented events.
         </p>

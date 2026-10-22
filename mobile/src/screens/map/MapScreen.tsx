@@ -310,7 +310,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8fafc',
   },
   gpsBanner: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     flexDirection: 'row',
     alignItems: 'center',
     padding: 14,
@@ -376,7 +376,7 @@ const styles = StyleSheet.create({
     borderColor: '#e2e8f0',
   },
   catPillSelected: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderColor: '#c9963a',
   },
   catText: {
@@ -465,7 +465,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   navBtn: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     paddingVertical: 9,
     borderRadius: 8,
     alignItems: 'center',

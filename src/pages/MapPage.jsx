@@ -148,7 +148,7 @@ const KEY_PLACES = [
     name: 'Lafarge Africa (Elephant Cement Plant)',
     cat: 'Commerce',
     icon: '🏭',
-    color: '#B5451B',
+    color: '#1E3A8A',
     address: 'Sagamu–Ikorodu Road, Sagamu, Ogun State',
     lat: 6.8290,
     lng: 3.6620,
@@ -312,13 +312,13 @@ export default function MapPage() {
         dark
       />
 
-      <div style={{ background: 'linear-gradient(90deg, #1a0d06, #2c1500, #1a0d06)', padding: '0.65rem 2rem', textAlign: 'center', borderBottom: '1px solid rgba(201,150,58,0.2)' }}>
+      <div style={{ background: 'linear-gradient(90deg, #0A0F1D, #2c1500, #0A0F1D)', padding: '0.65rem 2rem', textAlign: 'center', borderBottom: '1px solid rgba(201,150,58,0.2)' }}>
         <span className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.18em', color: 'rgba(245,237,216,0.8)', textTransform: 'uppercase' }}>
           📍 SAGAMU · SAGAMU LOCAL GOVERNMENT AREA · 6°50′N, 3°38′E · CAPITAL OF REMOLAND
         </span>
       </div>
 
-      <Section bg="#0d0704" py="3rem">
+      <Section bg="#050811" py="3rem">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           
           {/* Filter and Search Bar */}

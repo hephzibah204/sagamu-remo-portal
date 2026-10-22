@@ -154,7 +154,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setToken(savedToken);
         setUser(parsedUser);
 
-        // Live profile synchronization with Neon PostgreSQL backend (with 3.5s timeout)
+        // Live profile synchronization with Sagamu backend (with 3.5s timeout)
         const syncCtrl = new AbortController();
         const syncTimeout = setTimeout(() => syncCtrl.abort(), 3500);
 

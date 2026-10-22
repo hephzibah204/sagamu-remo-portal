@@ -1,12 +1,15 @@
 export const Colors = {
-  primary: '#064e3b', // Royal Sagamu Emerald
-  primaryLight: '#047857',
-  primaryAccent: '#10b981',
-  primaryMuted: '#e6f4ea',
+  primary: '#1e3a8a', // Royal Sagamu Sovereign Indigo
+  primaryLight: '#2563eb',
+  primaryAccent: '#3b82f6',
+  primaryMuted: '#eff6ff',
   
   gold: '#d97706', // Royal Brass & Crown Gold
   goldLight: '#f59e0b',
   goldSoft: '#fef3c7',
+
+  crimson: '#8b1e3f', // Sabo Kolanut Crimson
+  crimsonSoft: '#ffe4e6',
 
   background: '#f8fafc',
   surface: '#ffffff',

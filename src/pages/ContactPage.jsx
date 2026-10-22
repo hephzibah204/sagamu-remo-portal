@@ -46,7 +46,7 @@ export default function ContactPage() {
       <div style={{ background: 'rgba(90,16,16,.25)', borderTop: '3px solid #dc2626', borderBottom: '1px solid rgba(220,38,38,.3)', padding: '1rem 2rem', textAlign: 'center' }}>
         <span className="cinzel" style={{ fontSize: '.62rem', letterSpacing: '.16em', color: '#f87171', textTransform: 'uppercase' }}>⚠ For emergencies — call 112 · Free · 24 hours · Do not use this form for emergencies</span>
       </div>
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '2rem', alignItems: 'start' }}>
           <div>
             <p className="sl">Directory</p>

@@ -457,7 +457,7 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   featuredCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderWidth: 1.5,
     borderColor: Colors.gold,
     gap: 10,

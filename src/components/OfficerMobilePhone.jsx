@@ -1196,7 +1196,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
                   {selectedIncident.reporter_phone && (
                     <a
                       href={`tel:${selectedIncident.reporter_phone}`}
-                      style={{ flex: 1, background: '#047857', color: '#fff', textAlign: 'center', padding: '6px', borderRadius: '6px', textDecoration: 'none', fontWeight: 800, fontSize: '0.65rem', display: 'block' }}
+                      style={{ flex: 1, background: '#2563eb', color: '#fff', textAlign: 'center', padding: '6px', borderRadius: '6px', textDecoration: 'none', fontWeight: 800, fontSize: '0.65rem', display: 'block' }}
                     >
                       📞 Call Primary ({selectedIncident.reporter_phone})
                     </a>
@@ -1349,7 +1349,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
                                   style={{
                                     flex: 1,
                                     textAlign: 'center',
-                                    background: '#047857',
+                                    background: '#2563eb',
                                     color: '#fff',
                                     textDecoration: 'none',
                                     borderRadius: '4px',

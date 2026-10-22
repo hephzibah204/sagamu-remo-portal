@@ -16,7 +16,7 @@ export default function GovernancePage() {
       <SEO title="Governance Dashboard" description="Transparency portal for Sagamu Remo development projects, community funds, and palace administration." />
       <Hero ey="Transparency & Development" ti="Governance Dashboard" sub="Tracking community projects, initiatives, and town administration under the reign of HRM Oba Babatunde Adewale Ajayi, CFR, FCA." dark />
 
-      <Section bg="#0d0704" py="4rem">
+      <Section bg="#050811" py="4rem">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h2 className="playfair" style={{ fontSize: '2.5rem', color: 'var(--cream)' }}>Development Projects Tracker</h2>
           <p style={{ color: 'rgba(245,237,216,0.6)' }}>Monitoring ongoing infrastructure and community initiatives.</p>
@@ -45,7 +45,7 @@ export default function GovernancePage() {
 
       <AdireDivider />
 
-      <Section bg="#1a0d06" py="4rem">
+      <Section bg="#0A0F1D" py="4rem">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
            <h2 className="playfair" style={{ fontSize: '2.5rem', color: 'var(--cream)' }}>Civic Administration & Portals</h2>
            <p style={{ color: 'rgba(245,237,216,0.6)' }}>Direct community governance and traditional justice access.</p>

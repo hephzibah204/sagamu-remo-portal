@@ -445,7 +445,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   successCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderColor: Colors.gold,
     borderWidth: 1,
     paddingVertical: 20,
@@ -465,7 +465,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   tokenBox: {
-    backgroundColor: '#022c22',
+    backgroundColor: '#0f172a',
     borderWidth: 1.5,
     borderColor: Colors.gold,
     paddingHorizontal: 20,

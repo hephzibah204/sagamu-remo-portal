@@ -119,7 +119,7 @@ export default async function handler(req, res) {
 
       return res.status(201).json({
         success: true,
-        message: 'Donation recorded and credited in Neon PostgreSQL ledger.',
+        message: 'Donation recorded and credited in cloud ledger.',
         data: { id: donationId, ...body },
       });
     } catch (err) {

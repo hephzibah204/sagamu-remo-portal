@@ -411,7 +411,7 @@ const styles = StyleSheet.create({
   },
   festivalBanner: {
     flexDirection: 'row',
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderRadius: Radius.lg,
     padding: 16,
     alignItems: 'center',

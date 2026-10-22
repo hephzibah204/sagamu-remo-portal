@@ -44,7 +44,7 @@ export default async function handler(req, res) {
 
         return res.status(201).json({
           success: true,
-          message: 'Scholarship application submitted and registered in Neon database.',
+          message: 'Scholarship application submitted and registered in database.',
           data: { id: appId, ...body },
         });
       } catch (err) {

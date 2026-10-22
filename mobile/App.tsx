@@ -67,17 +67,17 @@ class GlobalErrorBoundary extends Component<{ children: React.ReactNode }, Error
 const errorStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 32,
   },
   icon: { fontSize: 56, marginBottom: 16 },
   title: { fontSize: 22, fontWeight: '700', color: '#ffffff', marginBottom: 8 },
-  subtitle: { fontSize: 14, color: '#a7f3d0', textAlign: 'center', marginBottom: 24, lineHeight: 20 },
-  detailsBox: { maxHeight: 90, width: '100%', backgroundColor: '#022c22', borderRadius: 8, padding: 12, marginBottom: 24 },
-  detailsText: { fontSize: 12, color: '#6ee7b7', fontFamily: 'monospace' },
-  retryBtn: { backgroundColor: '#10b981', paddingHorizontal: 32, paddingVertical: 14, borderRadius: 12 },
+  subtitle: { fontSize: 14, color: '#bfdbfe', textAlign: 'center', marginBottom: 24, lineHeight: 20 },
+  detailsBox: { maxHeight: 90, width: '100%', backgroundColor: '#0f172a', borderRadius: 8, padding: 12, marginBottom: 24 },
+  detailsText: { fontSize: 12, color: '#93c5fd', fontFamily: 'monospace' },
+  retryBtn: { backgroundColor: '#2563eb', paddingHorizontal: 32, paddingVertical: 14, borderRadius: 12 },
   retryText: { color: '#ffffff', fontSize: 16, fontWeight: '600' },
 });
 

@@ -117,7 +117,7 @@ export default function AlertsPage() {
 
       {/* Critical banner */}
       <div style={{
-        background: criticalCount > 0 ? 'linear-gradient(90deg, #7f1d1d, #991b1b, #7f1d1d)' : 'linear-gradient(90deg, #7A2E0E, #B5451B, #7A2E0E)',
+        background: criticalCount > 0 ? 'linear-gradient(90deg, #7f1d1d, #991b1b, #7f1d1d)' : 'linear-gradient(90deg, #1E3A8A, #8B1E3F, #1E3A8A)',
         backgroundSize: '200% 100%',
         animation: 'bannerScroll 3s linear infinite',
         padding: '0.75rem 2rem',
@@ -199,7 +199,7 @@ export default function AlertsPage() {
       </div>
 
       {/* Stats bar */}
-      <div style={{ background: '#0d0704', borderBottom: '1px solid rgba(201,150,58,0.1)', padding: '1rem 0' }}>
+      <div style={{ background: '#050811', borderBottom: '1px solid rgba(201,150,58,0.1)', padding: '1rem 0' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem', textAlign: 'center' }}>
           {[
             [criticalCount, 'Critical', '#ef4444'],
@@ -217,7 +217,7 @@ export default function AlertsPage() {
       </div>
 
       {/* Quick Dial */}
-      <Section bg="#0d0704">
+      <Section bg="#050811">
         <p className="cinzel" style={{ textAlign: 'center', color: 'var(--gold)', fontSize: '0.65rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '1rem' }}>QUICK DIAL</p>
         <h2 className="playfair" style={{ textAlign: 'center', fontSize: '2.5rem', color: 'var(--cream)', marginBottom: '0.5rem' }}>Emergency Numbers</h2>
         <p style={{ textAlign: 'center', color: 'rgba(245,237,216,0.5)', fontSize: '0.85rem', marginBottom: '2.5rem' }}>Tap any number to call immediately</p>

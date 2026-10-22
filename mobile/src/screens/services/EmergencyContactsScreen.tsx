@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   infoCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderWidth: 1,
     borderColor: Colors.gold,
   },

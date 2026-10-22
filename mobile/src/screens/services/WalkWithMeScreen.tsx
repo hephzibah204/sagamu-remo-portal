@@ -381,7 +381,7 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   bannerCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderColor: Colors.gold,
     borderWidth: 1,
   },

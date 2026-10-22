@@ -17,8 +17,8 @@ img.resize((1024, 1024), Image.Resampling.LANCZOS).save("mobile/assets/icon.png"
 img.resize((1024, 1024), Image.Resampling.LANCZOS).save("mobile/assets/adaptive-icon.png", "PNG")
 img.resize((48, 48), Image.Resampling.LANCZOS).save("mobile/assets/favicon.png", "PNG")
 
-# Splash image: 2048x2048 with emerald green background #064e3b
-splash = Image.new("RGBA", (2048, 2048), (6, 78, 59, 255))
+# Splash image: 2048x2048 with Sagamu royal indigo background #1e3a8a
+splash = Image.new("RGBA", (2048, 2048), (30, 58, 138, 255))
 logo_splash = img.resize((1024, 1024), Image.Resampling.LANCZOS)
 splash.paste(logo_splash, (512, 512), logo_splash)
 splash.save("mobile/assets/splash.png", "PNG")

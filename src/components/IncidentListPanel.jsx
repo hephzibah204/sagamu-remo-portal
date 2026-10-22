@@ -176,7 +176,7 @@ export default function IncidentListPanel({
                     {inc.audio_feed_active && (
                       <span
                         style={{
-                          background: "#064e3b",
+                          background: "#1e3a8a",
                           color: "#6ee7b7",
                           border: "1px solid #10b981",
                           fontSize: "0.6rem",

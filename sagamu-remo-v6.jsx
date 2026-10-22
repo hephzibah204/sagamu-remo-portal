@@ -4,36 +4,36 @@ import { useState, useEffect } from "react";
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
   *{margin:0;padding:0;box-sizing:border-box;} html{scroll-behavior:smooth;}
-  body{font-family:'Libre Baskerville',serif;background:#2C1A0E;color:#F5EDD8;overflow-x:hidden;}
-  ::-webkit-scrollbar{width:6px;} ::-webkit-scrollbar-track{background:#1a0d06;} ::-webkit-scrollbar-thumb{background:#C9963A;}
-  .adire{height:10px;background:repeating-linear-gradient(90deg,#B5451B 0,#B5451B 8px,#C9963A 8px,#C9963A 16px,#7A2E0E 16px,#7A2E0E 24px,#C9963A 24px,#C9963A 32px);}
-  .adire-thin{height:4px;opacity:.6;background:repeating-linear-gradient(90deg,#B5451B 0,#B5451B 6px,#C9963A 6px,#C9963A 12px,#7A2E0E 12px,#7A2E0E 18px,#C9963A 18px,#C9963A 24px);}
+  body{font-family:'Libre Baskerville',serif;background:#0F172A;color:#F5EDD8;overflow-x:hidden;}
+  ::-webkit-scrollbar{width:6px;} ::-webkit-scrollbar-track{background:#0A0F1D;} ::-webkit-scrollbar-thumb{background:#C9963A;}
+  .adire{height:10px;background:repeating-linear-gradient(90deg,#8B1E3F 0,#8B1E3F 8px,#C9963A 8px,#C9963A 16px,#1E3A8A 16px,#1E3A8A 24px,#C9963A 24px,#C9963A 32px);}
+  .adire-thin{height:4px;opacity:.6;background:repeating-linear-gradient(90deg,#8B1E3F 0,#8B1E3F 6px,#C9963A 6px,#C9963A 12px,#1E3A8A 12px,#1E3A8A 18px,#C9963A 18px,#C9963A 24px);}
   .cinzel{font-family:'Cinzel',serif;} .playfair{font-family:'Playfair Display',serif;}
   .card{background:rgba(201,150,58,.05);border:1px solid rgba(201,150,58,.18);transition:border-color .25s,transform .25s;}
   .card:hover{border-color:rgba(201,150,58,.5);transform:translateY(-3px);}
   .tag{display:inline-block;font-family:'Cinzel',serif;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .6rem;margin-bottom:.4rem;}
   .tag-gold{background:#8B6914;color:#f5e4a0;} .tag-red{background:#7a1515;color:#f5a4a4;}
-  .tag-green{background:#1a4020;color:#a8d88e;} .tag-terra{background:#7A2E0E;color:#f5c4a4;} .tag-blue{background:#1a2e5e;color:#a4c4f5;}
+  .tag-green{background:#1a4020;color:#a8d88e;} .tag-terra{background:#1E3A8A;color:#bfdbfe;} .tag-blue{background:#1a2e5e;color:#a4c4f5;}
   .sl{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.38em;text-transform:uppercase;color:#C9963A;margin-bottom:.6rem;}
   .st{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#F5EDD8;line-height:1.15;margin-bottom:1rem;}
   .si{font-size:.92rem;line-height:1.85;color:rgba(245,237,216,.72);max-width:620px;}
   .inp{background:rgba(201,150,58,.06);border:1px solid rgba(201,150,58,.25);color:#F5EDD8;font-family:'Libre Baskerville',serif;font-size:.9rem;padding:.82rem 1.1rem;outline:none;width:100%;transition:border-color .2s;}
   .inp:focus{border-color:#C9963A;} .inp::placeholder{color:rgba(245,237,216,.3);}
-  .btn-p{background:#B5451B;color:#F5EDD8;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem 1.8rem;border:none;cursor:pointer;transition:background .2s;}
-  .btn-p:hover{background:#7A2E0E;} .btn-p:disabled{opacity:.5;cursor:not-allowed;}
+  .btn-p{background:#8B1E3F;color:#F5EDD8;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem 1.8rem;border:none;cursor:pointer;transition:background .2s;}
+  .btn-p:hover{background:#1E3A8A;} .btn-p:disabled{opacity:.5;cursor:not-allowed;}
   .btn-o{background:transparent;border:1px solid rgba(201,150,58,.4);color:#C9963A;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.5rem 1.2rem;cursor:pointer;transition:all .2s;}
   .btn-o:hover{background:rgba(201,150,58,.1);border-color:#C9963A;}
   .gd{width:100px;height:2px;background:linear-gradient(90deg,transparent,#C9963A,transparent);margin:1.2rem auto;}
   .ph{min-height:44vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden;}
-  .ph-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(181,69,27,.18),transparent 60%),radial-gradient(ellipse at 70% 20%,rgba(201,150,58,.12),transparent 50%),linear-gradient(160deg,#1a0d06,#2c1a0e 50%,#1e2e15);}
+  .ph-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(181,69,27,.18),transparent 60%),radial-gradient(ellipse at 70% 20%,rgba(201,150,58,.12),transparent 50%),linear-gradient(160deg,#0A0F1D,#0F172A 50%,#1e2e15);}
   .ph-pat{position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(201,150,58,.06) 1px,transparent 0);background-size:40px 40px;}
   @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
   .fu{animation:fadeUp .8s ease both;} .fu2{animation:fadeUp .8s ease .2s both;} .fu3{animation:fadeUp .8s ease .4s both;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.65}} .pulse{animation:pulse 2s infinite;}
   @keyframes spin{to{transform:rotate(360deg)}}
-  select option{background:#2c1a0e;}
+  select option{background:#0F172A;}
   .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:2000;display:flex;align-items:center;justify-content:center;padding:1rem;}
-  .modal{background:#1a0d06;border:1px solid rgba(201,150,58,.35);border-top:3px solid #C9963A;max-width:580px;width:100%;max-height:85vh;overflow-y:auto;padding:2rem;}
+  .modal{background:#0A0F1D;border:1px solid rgba(201,150,58,.35);border-top:3px solid #C9963A;max-width:580px;width:100%;max-height:85vh;overflow-y:auto;padding:2rem;}
 `;
 
 /* ─── DB ─── */
@@ -73,7 +73,7 @@ function Nav({page,setPage}){
 
 const A=(p)=><div className={p.thin?"adire-thin":"adire"}/>;
 const W=({bg,py,children,mw})=>(
-  <div style={{background:bg||"#1a0d06",padding:`${py||"5rem"} 2rem`}}>
+  <div style={{background:bg||"#0A0F1D",padding:`${py||"5rem"} 2rem`}}>
     <div style={{maxWidth:mw||1100,margin:"0 auto"}}>{children}</div>
   </div>
 );
@@ -146,7 +146,7 @@ Kabiyeesi Baba wa Torungbuwa II, Ki ade pe lori, ki bata pe lese!`
       <Hero ey="Royal Institution" ti="The Monarchy of Sagamu" sub="The Akarigbo of Remoland — paramount ruler, spiritual head, and fountain of honour across all 33 kingdoms of Remoland."/>
       <A/>
       {/* Current Oba */}
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <p className="sl">Reigning Monarch</p>
         <h2 className="st">HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Torungbuwa II</h2>
         <div style={{display:"grid",gridTemplateColumns:"260px 1fr",gap:"2.5rem",marginTop:"1.5rem",alignItems:"start"}}>
@@ -189,13 +189,13 @@ Kabiyeesi Baba wa Torungbuwa II, Ki ade pe lori, ki bata pe lese!`
       <div style={{background:"rgba(201,150,58,.04)",padding:"1px 0"}}><A thin/></div>
 
       {/* Kings list */}
-      <W bg="#2c1a0e">
+      <W bg="#0F172A">
         <p className="sl">Royal Succession</p>
         <h2 className="st" style={{marginBottom:".8rem"}}>The Akarigbos of Remoland — Confirmed Kings</h2>
         <p className="si" style={{marginBottom:"2.5rem"}}>The sovereign title of the Paramount Ruler of Sagamu and Remoland is <strong style={{color:"#F0D080"}}>The Akarigbo of Remoland</strong>. Below are confirmed monarchs from historical records and royal palace archives.</p>
         <div style={{display:"grid",gap:"1.1rem"}}>
           {kings.map((k,i)=>(
-            <div key={i} style={{padding:"1.6rem",background:k.cur?"rgba(201,150,58,.08)":"rgba(201,150,58,.03)",border:`1px solid ${k.cur?"rgba(201,150,58,.4)":"rgba(201,150,58,.12)"}`,borderLeft:`4px solid ${k.cur?"#C9963A":"#7A2E0E"}`}}>
+            <div key={i} style={{padding:"1.6rem",background:k.cur?"rgba(201,150,58,.08)":"rgba(201,150,58,.03)",border:`1px solid ${k.cur?"rgba(201,150,58,.4)":"rgba(201,150,58,.12)"}`,borderLeft:`4px solid ${k.cur?"#C9963A":"#1E3A8A"}`}}>
               <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:".5rem",marginBottom:".6rem"}}>
                 <div>
                   {k.cur&&<span className="tag tag-gold" style={{display:"block",marginBottom:".4rem"}}>Currently Reigning</span>}
@@ -269,13 +269,13 @@ function GalleryPage(){
   const[modal,setModal]=useState(null);
 
   const photos=[
-    {cat:"coronation",title:"Coronation of Oba Babatunde Adewale Ajayi",date:"September 23, 2023",desc:"HRM Oba Babatunde Adewale Ajayi, CFR, FCA was formally coronated as the The Akarigbo of Remoland at a grand ceremony attended by dignitaries across Ogun State and Nigeria.",src:"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80",credit:"RelufeEvents / YouTube (Full coronation video available)",icon:"👑",bg:"linear-gradient(135deg,#7A2E0E,#2C1A0E)"},
-    {cat:"coronation",title:"Coronation Ceremony — Traditional Rites",date:"September 23, 2023",desc:"Traditional oaths, communal celebrations, and recognition by Remo authorities marked the coronation. The ceremony was filmed in full by RelufeEvents.",src:"https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&q=80",credit:"RelufeEvents / YouTube",icon:"🎭",bg:"linear-gradient(135deg,#2C1A0E,#1a0d06)"},
-    {cat:"palace",title:"Aafin Akarigbo (Akarigbo Palace) Commissioned",date:"April 26, 2025",desc:"The Akarigbo Palace was officially commissioned on April 26, 2025 — the first permanent royal residence in Sagamu's modern history. Commissioning guest: HRM Oba Babatunde Adewale Ajayi, CFR.",src:"https://images.unsplash.com/photo-1551038247-3d935814c02f?w=600&q=80",credit:"The Nation / InfoStride News / Leadership Nigeria",icon:"🏛️",bg:"linear-gradient(135deg,#8B6914,#2C1A0E)"},
-    {cat:"palace",title:"Sagamu Cultural Centre Inauguration",date:"April 26, 2025",desc:"The iconic Sagamu Cultural Centre, named after founding ancestor Sagamu Founding Ancestors, was unveiled alongside the Palace. It is now the permanent home of the annual Sagamu Day Festival.",src:"https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&q=80",credit:"InfoStride News",icon:"🎪",bg:"linear-gradient(135deg,#2D4A22,#1a0d06)"},
-    {cat:"lipakala",title:"43rd Sagamu Day Celebrations",date:"November 16, 2019",desc:"The people of Sagamu Remo trooped out en masse to witness and actively participate in the 43rd Sagamu Day celebrations at Wesley Primary School Playground.",src:"https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&q=80",credit:"InfoStride News",icon:"🎉",bg:"linear-gradient(135deg,#B5451B,#2C1A0E)"},
-    {cat:"lipakala",title:"49th Sagamu Day — 2025",date:"October 2025",desc:"The 49th edition of the annual Sagamu Day Festival was celebrated with music, cultural displays, and community gathering. Also launched: the ₦500M SDA development fund.",src:"https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80",credit:"Facebook: Miss Sagamu Beauty Pageant / SDA",icon:"🎊",bg:"linear-gradient(135deg,#C9963A,#7A2E0E)"},
-    {cat:"development",title:"FRSC Office Complex Commissioning",date:"April 2026",desc:"Oba Babatunde Adewale Ajayi donated and commissioned a new FRSC office complex on the Lagos–Ibadan Expressway as part of his 3rd coronation anniversary activities.",src:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",credit:"Punch Nigeria / Daily Post / Blueprint Newspapers",icon:"🚦",bg:"linear-gradient(135deg,#1a4a1a,#1a0d06)"},
+    {cat:"coronation",title:"Coronation of Oba Babatunde Adewale Ajayi",date:"September 23, 2023",desc:"HRM Oba Babatunde Adewale Ajayi, CFR, FCA was formally coronated as the The Akarigbo of Remoland at a grand ceremony attended by dignitaries across Ogun State and Nigeria.",src:"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80",credit:"RelufeEvents / YouTube (Full coronation video available)",icon:"👑",bg:"linear-gradient(135deg,#1E3A8A,#0F172A)"},
+    {cat:"coronation",title:"Coronation Ceremony — Traditional Rites",date:"September 23, 2023",desc:"Traditional oaths, communal celebrations, and recognition by Remo authorities marked the coronation. The ceremony was filmed in full by RelufeEvents.",src:"https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&q=80",credit:"RelufeEvents / YouTube",icon:"🎭",bg:"linear-gradient(135deg,#0F172A,#0A0F1D)"},
+    {cat:"palace",title:"Aafin Akarigbo (Akarigbo Palace) Commissioned",date:"April 26, 2025",desc:"The Akarigbo Palace was officially commissioned on April 26, 2025 — the first permanent royal residence in Sagamu's modern history. Commissioning guest: HRM Oba Babatunde Adewale Ajayi, CFR.",src:"https://images.unsplash.com/photo-1551038247-3d935814c02f?w=600&q=80",credit:"The Nation / InfoStride News / Leadership Nigeria",icon:"🏛️",bg:"linear-gradient(135deg,#8B6914,#0F172A)"},
+    {cat:"palace",title:"Sagamu Cultural Centre Inauguration",date:"April 26, 2025",desc:"The iconic Sagamu Cultural Centre, named after founding ancestor Sagamu Founding Ancestors, was unveiled alongside the Palace. It is now the permanent home of the annual Sagamu Day Festival.",src:"https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&q=80",credit:"InfoStride News",icon:"🎪",bg:"linear-gradient(135deg,#2D4A22,#0A0F1D)"},
+    {cat:"lipakala",title:"43rd Sagamu Day Celebrations",date:"November 16, 2019",desc:"The people of Sagamu Remo trooped out en masse to witness and actively participate in the 43rd Sagamu Day celebrations at Wesley Primary School Playground.",src:"https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&q=80",credit:"InfoStride News",icon:"🎉",bg:"linear-gradient(135deg,#8B1E3F,#0F172A)"},
+    {cat:"lipakala",title:"49th Sagamu Day — 2025",date:"October 2025",desc:"The 49th edition of the annual Sagamu Day Festival was celebrated with music, cultural displays, and community gathering. Also launched: the ₦500M SDA development fund.",src:"https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80",credit:"Facebook: Miss Sagamu Beauty Pageant / SDA",icon:"🎊",bg:"linear-gradient(135deg,#C9963A,#1E3A8A)"},
+    {cat:"development",title:"FRSC Office Complex Commissioning",date:"April 2026",desc:"Oba Babatunde Adewale Ajayi donated and commissioned a new FRSC office complex on the Lagos–Ibadan Expressway as part of his 3rd coronation anniversary activities.",src:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",credit:"Punch Nigeria / Daily Post / Blueprint Newspapers",icon:"🚦",bg:"linear-gradient(135deg,#1a4a1a,#0A0F1D)"},
     {cat:"development",title:"Community Empowerment Programme",date:"April 2025",desc:"Artisans received tools and equipment; 50 residents received ₦100,000 each. Extended to non-indigenes including Yoruba, Igbo, Hausa, Tiv, and Igede residents.",src:"https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&q=80",credit:"InfoStride News / The Nation",icon:"💰",bg:"linear-gradient(135deg,#2D4A22,#8B6914)"},
     {cat:"heritage",title:"Sagamu Remo Hills — Town Topography",date:"Timeless",desc:"Sagamu Remo is situated in a distinctly hilly terrain — justifying the saying 'a town upon hills cannot be hidden.' The hills have defined the town's character since its founding circa 1401 A.D.",src:"https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80",credit:"Community archives",icon:"🏔️",bg:"linear-gradient(135deg,#2D4A22,#1a3015)"},
     {cat:"heritage",title:"Remo Secondary School (RSS) — Students",date:"Historical",desc:"Students of Remo Secondary School (RSS) during a tree-planting exercise on the school grounds — symbolising the institution's commitment to community and environmental stewardship.",src:"https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",credit:"Wikipedia / Sagamu Remo — community archives",icon:"🏫",bg:"linear-gradient(135deg,#1a2e5e,#0e1a3a)"},
@@ -290,7 +290,7 @@ function GalleryPage(){
     <div>
       <Hero ey="Visual History" ti="Photo Gallery" sub="Documented moments from Sagamu Remo — coronations, festivals, development, and cultural heritage."/>
       <A/>
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <p style={{fontSize:".82rem",color:"rgba(245,237,216,.45)",marginBottom:"1.5rem",padding:".8rem 1rem",background:"rgba(201,150,58,.05)",border:"1px solid rgba(201,150,58,.12)",borderLeft:"3px solid rgba(201,150,58,.4)"}}>
           📸 Gallery sourced from verified news outlets (Punch Nigeria, The Nation, InfoStride News, Daily Post, Blueprint, Leadership Nigeria), Wikipedia, YouTube (RelufeEvents), and community archives. Illustrations represent documented events. Own photos of Sagamu can be submitted via the Contact page.
         </p>
@@ -388,7 +388,7 @@ function DiasporaPage(){
     <div>
       <Hero ey="Sons & Daughters Abroad" ti="Diaspora Network" sub="Connecting Sagamu Remo's global family — register, contribute, and stay connected to your roots."/>
       <A/>
-      <W bg="#1a0d06" py="2.5rem">
+      <W bg="#0A0F1D" py="2.5rem">
         <div style={{display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap"}}>
           {[["network","🌍 Diaspora Network"],["register","+ Join the Network"],["notable","🌟 Notable Diasporans"]].map(([id,l])=>(
             <button key={id} className={tab===id?"btn-p":"btn-o"} onClick={()=>setTab(id)}>{l}</button>
@@ -397,7 +397,7 @@ function DiasporaPage(){
       </W>
 
       {tab==="network"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Our Global Family</p>
           <h2 className="st">Sagamu Remo Around the World</h2>
           <p className="si" style={{marginBottom:"2.5rem"}}>Sagamu sons and daughters have carried the spirit of the ancient town to all corners of the world — in law, medicine, sports, business, government, and the arts.</p>
@@ -445,7 +445,7 @@ function DiasporaPage(){
       )}
 
       {tab==="register"&&(
-        <W bg="#1a0d06" mw={680}>
+        <W bg="#0A0F1D" mw={680}>
           <p className="sl">Join the Network</p>
           <h2 className="st">Diaspora Registration</h2>
           <p className="si" style={{marginBottom:"2rem"}}>Connect with your Sagamu roots. Free registration. Your details help us build a stronger global community.</p>
@@ -481,7 +481,7 @@ function DiasporaPage(){
       )}
 
       {tab==="notable"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Distinguished Diasporans</p>
           <h2 className="st" style={{marginBottom:"2rem"}}>Notable Sagamu Sons & Daughters</h2>
           <div style={{display:"grid",gap:"1.5rem"}}>
@@ -543,13 +543,13 @@ function EventsPage(){
   const all=[...STATIC_EVENTS,...events];
   const upcoming=all.filter(e=>e.status==="upcoming");
   const past=all.filter(e=>e.status==="completed");
-  const catColor={festival:"#8B6914",royal:"#7A2E0E",traditional:"#1a2e5e",community:"#2D4A22"};
+  const catColor={festival:"#8B6914",royal:"#1E3A8A",traditional:"#1a2e5e",community:"#2D4A22"};
 
   return(
     <div>
       <Hero ey="What's On" ti="Events Calendar" sub="Festivals, ceremonies, community gatherings, and cultural events in Sagamu Remo."/>
       <A/>
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"1rem",marginBottom:"2.5rem"}}>
           <div>
             <p className="sl">Upcoming Events</p>
@@ -673,13 +673,13 @@ function ForumPage(){
     setF({name:"",topic:"",body:"",cat:"general"});
   };
 
-  const catColor={heritage:"#8B6914",development:"#2D4A22",news:"#1a2e5e",general:"#7A2E0E",security:"#5a1010"};
+  const catColor={heritage:"#8B6914",development:"#2D4A22",news:"#1a2e5e",general:"#1E3A8A",security:"#5a1010"};
 
   return(
     <div>
       <Hero ey="Community Voice" ti="Community Forum" sub="Share news, ask questions, discuss Sagamu Remo — for residents, diaspora and visitors."/>
       <A/>
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <div style={{display:"grid",gridTemplateColumns:"2fr 1fr",gap:"2.5rem",alignItems:"start"}}>
           {/* Posts */}
           <div>
@@ -793,7 +793,7 @@ function AdminPage(){
     <div>
       <Hero ey="Admin Access" ti="SDA Admin Panel" sub="Secure administration for the Sagamu Remo Community Development Association."/>
       <A/>
-      <W bg="#1a0d06" mw={420}>
+      <W bg="#0A0F1D" mw={420}>
         <div style={{textAlign:"center",marginBottom:"2rem"}}>
           <div style={{fontSize:"3rem",marginBottom:"1rem"}}>🔐</div>
           <p className="sl">Restricted Access</p>
@@ -819,12 +819,12 @@ function AdminPage(){
     <div>
       <Hero ey="SDA Administration" ti="Admin Panel" sub="Manage business listings, messages, diaspora registrations, and community events."/>
       <A/>
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"2rem",flexWrap:"wrap",gap:"1rem"}}>
           <div style={{display:"flex",gap:".5rem",flexWrap:"wrap"}}>
             {tabs.map(([id,l,c])=>(
               <button key={id} className={tab===id?"btn-p":"btn-o"} onClick={()=>setTab(id)} style={{display:"flex",alignItems:"center",gap:".4rem"}}>
-                {l} {c>0&&<span style={{background:"#B5451B",color:"white",fontSize:".6rem",padding:".1rem .4rem",borderRadius:"10px"}}>{c}</span>}
+                {l} {c>0&&<span style={{background:"#8B1E3F",color:"white",fontSize:".6rem",padding:".1rem .4rem",borderRadius:"10px"}}>{c}</span>}
               </button>
             ))}
           </div>
@@ -945,7 +945,7 @@ function HomePage({setPage}){
   return(
     <div>
       <div style={{minHeight:"100vh",position:"relative",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",textAlign:"center",overflow:"hidden",paddingTop:56}}>
-        <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 20% 50%,rgba(181,69,27,.18),transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(201,150,58,.12),transparent 50%),linear-gradient(160deg,#1a0d06 0%,#2c1a0e 40%,#1e2e15 100%)"}}/>
+        <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 20% 50%,rgba(181,69,27,.18),transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(201,150,58,.12),transparent 50%),linear-gradient(160deg,#0A0F1D 0%,#0F172A 40%,#1e2e15 100%)"}}/>
         <div style={{position:"absolute",inset:0,backgroundImage:"radial-gradient(circle at 1px 1px,rgba(201,150,58,.07) 1px,transparent 0)",backgroundSize:"40px 40px"}}/>
         {[560,760,960].map((s,i)=><div key={i} style={{position:"absolute",width:s,height:s,border:`1px solid rgba(201,150,58,${.1-i*.03})`,borderRadius:"50%",top:"50%",left:"50%",transform:"translate(-50%,-50%)"}}/>)}
         <div style={{position:"relative",zIndex:2,maxWidth:820,padding:"2rem",animation:"fadeUp 1s ease both"}}>
@@ -962,7 +962,7 @@ function HomePage({setPage}){
         </div>
       </div>
       <A/>
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <p className="sl" style={{textAlign:"center"}}>Explore Sagamu Remo</p>
         <h2 className="st" style={{textAlign:"center",marginBottom:"2.5rem"}}>Everything About Our Town</h2>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(185px,1fr))",gap:".9rem"}}>
@@ -999,20 +999,20 @@ function HomePage({setPage}){
 }
 
 /* Stub pages for the rest (history, associations, etc. — carried over from v2) */
-function StubPage({ey,ti,sub,msg}){return(<div><Hero ey={ey} ti={ti} sub={sub}/><A/><W bg="#1a0d06"><div style={{textAlign:"center",padding:"3rem",color:"rgba(245,237,216,.5)",fontSize:".9rem"}}>{msg||"Full content available in the complete website."}</div></W><A/></div>);}
+function StubPage({ey,ti,sub,msg}){return(<div><Hero ey={ey} ti={ti} sub={sub}/><A/><W bg="#0A0F1D"><div style={{textAlign:"center",padding:"3rem",color:"rgba(245,237,216,.5)",fontSize:".9rem"}}>{msg||"Full content available in the complete website."}</div></W><A/></div>);}
 
 function HistoryPage(){return(<div>
   <Hero ey="Our Roots" ti="History & Heritage" sub="Six centuries of Yoruba tradition, royal lineage, and community resilience."/>
   <A/>
-  <W bg="#1a0d06">
+  <W bg="#0A0F1D">
     <p className="sl">The Beginning</p><h2 className="st">The Founding of Sagamu</h2>
     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"3rem",marginTop:"1.5rem"}}>
       <div>{["Sagamu Remo traces its origins to circa 1401 A.D., when Sagamu Founding Ancestors — an Ile-Ife Crown Prince, direct descendant of Oduduwa — migrated with his wife Yemogun and established the settlement of Ilagere at Agbele. A second group led by Lowa-Lida from Lagere District in Ile-Ife also settled, forming the founding nucleus of Sagamu.","Sagamu Founding Ancestors was a legendary warrior. Under his leadership, Sagamu people were never defeated in war — immortalised in: 'Sagamu Founding Ancestors a gbe ni ma dehin.' He and Yemogun are venerated as Sagamu's founding guardian spirits.","Sagamu stands as one of 33 ancient Remo Kingdom towns in Sagamu LGA — bounded by Ajura (north), Iperu-Remo (south), Ode-Remo (east), and Sagamu (west). Both the Lagos–Ibadan Expressway and Ijebu-Ode/Abeokuta Road pass through the town."].map((p,i)=><p key={i} style={{fontSize:".9rem",lineHeight:1.9,color:"rgba(245,237,216,.7)",marginBottom:"1rem"}}>{p}</p>)}</div>
       <div style={{position:"relative",paddingLeft:"2rem"}}>
-        <div style={{position:"absolute",left:0,top:0,bottom:0,width:2,background:"linear-gradient(to bottom,#C9963A,#B5451B,transparent)"}}/>
+        <div style={{position:"absolute",left:0,top:0,bottom:0,width:2,background:"linear-gradient(to bottom,#C9963A,#8B1E3F,transparent)"}}/>
         {[["c.1401","Founding at Agbele","Sagamu Founding Ancestors settles with Yemogun. Lowa-Lida's group joins."],["Pre-1880s","Agricultural Expansion","Satellite villages: Iporo I & II, Orile-Epe, Iseje, Lowosiwu, Larufin, Sakale and more."],["Early 1880s","Town Established","Yoruba Wars drive consolidation. Oba Adelana Osifayo becomes first Akarigbo."],["1930","Church Born Here","Prophet Josiah Ositelu founds Church of the Lord (Aladura) Worldwide at Lisa Compound."],["1945–1982","Legunsen III Reigns","Oba Alfred Obafuwa Babington-Ashaye reigns as Legunsen III."],["1983–2022","Agbejoye II Reigns","Oba Oladele Ogunbade leads Sagamu for 38 remarkable years."],["2025","Palace Commissioned","Aafin Akarigbo and Sagamu Cultural Centre unveiled."]].map(([y,t,b],i)=>(
           <div key={i} style={{position:"relative",paddingLeft:"1.5rem",marginBottom:"1.7rem"}}>
-            <div style={{position:"absolute",left:"-2.3rem",top:".25rem",width:11,height:11,background:"#C9963A",borderRadius:"50%",border:"3px solid #1a0d06",boxShadow:"0 0 0 2px #C9963A"}}/>
+            <div style={{position:"absolute",left:"-2.3rem",top:".25rem",width:11,height:11,background:"#C9963A",borderRadius:"50%",border:"3px solid #0A0F1D",boxShadow:"0 0 0 2px #C9963A"}}/>
             <div className="cinzel" style={{fontSize:".58rem",letterSpacing:".12em",color:"#C9963A",textTransform:"uppercase"}}>{y}</div>
             <div className="playfair" style={{fontSize:".97rem",color:"#F5EDD8",margin:".18rem 0"}}>{t}</div>
             <div style={{fontSize:".8rem",lineHeight:1.65,color:"rgba(245,237,216,.58)"}}>{b}</div>
@@ -1021,7 +1021,7 @@ function HistoryPage(){return(<div>
       </div>
     </div>
   </W>
-  <W bg="#2c1a0e">
+  <W bg="#0F172A">
     <div style={{maxWidth:480,margin:"0 auto",textAlign:"center"}}>
       <p className="sl">Our Song</p><h2 className="st" style={{marginBottom:"1.5rem"}}>The Sagamu Anthem — Ilu Mi</h2>
       <div style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:"1.1rem",lineHeight:2.3,color:"#F0D080",padding:"2rem",background:"rgba(201,150,58,.06)",border:"1px solid rgba(201,150,58,.2)",borderLeft:"4px solid #C9963A"}}>
@@ -1046,13 +1046,13 @@ function AlertsPage(){
   const lb={high:"rgba(220,38,38,.07)",medium:"rgba(217,119,6,.06)",low:"rgba(22,163,74,.05)",resolved:"rgba(255,255,255,.02)"};
   return(<div>
     <Hero ey="⚠ Community Safety" ti="Security Alerts" sub="Live alerts and verified emergency contacts for Sagamu Remo." dark/>
-    <div className="pulse" style={{background:"#7A2E0E",padding:".65rem 2rem",textAlign:"center"}}><span className="cinzel" style={{fontSize:".62rem",letterSpacing:".18em",color:"white",textTransform:"uppercase"}}>⚠ 2 HIGH PRIORITY ALERTS · DIAL 112 FOR ANY EMERGENCY</span></div>
-    <W bg="#0d0704">
+    <div className="pulse" style={{background:"#1E3A8A",padding:".65rem 2rem",textAlign:"center"}}><span className="cinzel" style={{fontSize:".62rem",letterSpacing:".18em",color:"white",textTransform:"uppercase"}}>⚠ 2 HIGH PRIORITY ALERTS · DIAL 112 FOR ANY EMERGENCY</span></div>
+    <W bg="#050811">
       <p className="sl" style={{textAlign:"center"}}>Quick Dial</p>
       <h2 className="st" style={{textAlign:"center",marginBottom:"2rem"}}>Emergency Numbers — Save These Now</h2>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(165px,1fr))",gap:".9rem",marginBottom:"3rem"}}>
         {[["🚔","Police","112","Free·National"],["🚑","Ambulance","08112000033","Ogun State"],["🚦","Road Safety","122","FRSC"],["🛡️","So-Safe","08034681687","Ogun State"],["🚗","Accidents","07066942555","TRACE"],["👮","Sagamu DPO","08081762371","Sagamu Station"]].map(([ic,l,n,s])=>(
-          <div key={l} style={{background:"rgba(181,69,27,.12)",border:"1px solid rgba(181,69,27,.35)",borderTop:"3px solid #B5451B",padding:"1rem",textAlign:"center"}}>
+          <div key={l} style={{background:"rgba(181,69,27,.12)",border:"1px solid rgba(181,69,27,.35)",borderTop:"3px solid #8B1E3F",padding:"1rem",textAlign:"center"}}>
             <div style={{fontSize:"1.6rem",marginBottom:".3rem"}}>{ic}</div>
             <div className="cinzel" style={{fontSize:".5rem",letterSpacing:".08em",color:"rgba(245,237,216,.45)",textTransform:"uppercase",marginBottom:".15rem"}}>{l}</div>
             <div className="cinzel" style={{fontSize:n.length>10?".78rem":"1rem",fontWeight:700,color:"#F5EDD8",letterSpacing:".03em",marginBottom:".1rem"}}>{n}</div>
@@ -1105,7 +1105,7 @@ function AlertsPage(){
   </div>);}
 
 function Footer({setPage}){return(
-  <footer style={{background:"#0d0704",borderTop:"1px solid rgba(201,150,58,.18)",padding:"2.5rem 2rem",textAlign:"center"}}>
+  <footer style={{background:"#050811",borderTop:"1px solid rgba(201,150,58,.18)",padding:"2.5rem 2rem",textAlign:"center"}}>
     <div style={{maxWidth:1100,margin:"0 auto"}}>
       <div className="cinzel" style={{fontSize:"1.4rem",fontWeight:900,color:"#C9963A",letterSpacing:".1em"}}>SAGAMU REMO</div>
       <div className="playfair" style={{fontStyle:"italic",fontSize:".82rem",color:"rgba(245,237,216,.3)",margin:".3rem 0 1.5rem"}}>"A town upon the hills — Ancient, Proud, Enduring."</div>
@@ -1136,7 +1136,7 @@ const MAP_LOCATIONS = [
     placeId:"ChIJ1fEusO7QOxAR0ZMs7fg5eaU"
   },
   {
-    id:"resort", icon:"🏨", cat:"Hospitality", color:"#B5451B",
+    id:"resort", icon:"🏨", cat:"Hospitality", color:"#8B1E3F",
     name:"Sagamu Resort & Convention Centre",
     address:"KM 67, Lagos–Ibadan Expressway, Sagamu 121107",
     lat:6.9388, lng:3.6437,
@@ -1228,7 +1228,7 @@ const MAP_LOCATIONS = [
 ];
 
 const CAT_COLORS={
-  "All":"#C9963A","Town":"#C9963A","Hospitality":"#B5451B",
+  "All":"#C9963A","Town":"#C9963A","Hospitality":"#8B1E3F",
   "Education":"#1a2e5e","Emergency":"#dc2626","Commerce":"#8B6914",
   "Governance":"#2D4A22","Heritage":"#1a4a2e","Transport":"#5C3317"
 };
@@ -1250,7 +1250,7 @@ function MapPage(){
       <A/>
 
       {/* Category filter */}
-      <W bg="#0d0704" py="2rem">
+      <W bg="#050811" py="2rem">
         <div style={{display:"flex",gap:".4rem",flexWrap:"wrap",justifyContent:"center"}}>
           {cats.map(c=>(
             <button key={c} onClick={()=>{setFilter(c);setSelected(null);}} style={{
@@ -1265,7 +1265,7 @@ function MapPage(){
       </W>
 
       {/* Main layout: SVG map + sidebar */}
-      <W bg="#1a0d06" py="3rem">
+      <W bg="#0A0F1D" py="3rem">
         <div style={{display:"grid",gridTemplateColumns:"1fr 340px",gap:"1.5rem",alignItems:"start"}}>
 
           {/* SVG Interactive Map */}
@@ -1283,7 +1283,7 @@ function MapPage(){
                 <defs>
                   <radialGradient id="terrain" cx="50%" cy="50%" r="60%">
                     <stop offset="0%" stopColor="#1e2e15" stopOpacity=".9"/>
-                    <stop offset="100%" stopColor="#1a0d06" stopOpacity=".95"/>
+                    <stop offset="100%" stopColor="#0A0F1D" stopOpacity=".95"/>
                   </radialGradient>
                   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
                     <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(201,150,58,.06)" strokeWidth=".5"/>
@@ -1438,7 +1438,7 @@ function MapPage(){
       </W>
 
       {/* Getting Here section */}
-      <W bg="#2c1a0e" py="3rem">
+      <W bg="#0F172A" py="3rem">
         <p className="sl" style={{textAlign:"center"}}>Getting to Sagamu Remo</p>
         <h2 className="st" style={{textAlign:"center",marginBottom:"2rem",fontSize:"1.8rem"}}>Directions from Major Cities</h2>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:"1rem"}}>
@@ -1566,7 +1566,7 @@ function AssociationsPage(){
       <A/>
 
       {/* Tab nav */}
-      <W bg="#1a0d06" py="2rem">
+      <W bg="#0A0F1D" py="2rem">
         <div style={{display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap"}}>
           {[["orgs","🏛️ Civic Associations"],["trad","🎭 Traditional Societies"],["register","+ Register Your Association"]].map(([id,l])=>(
             <button key={id} className={tab===id?"btn-p":"btn-o"} onClick={()=>setTab(id)}>{l}</button>
@@ -1575,7 +1575,7 @@ function AssociationsPage(){
       </W>
 
       {tab==="orgs"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Civic & Community Organisations</p>
           <h2 className="st" style={{marginBottom:"2.5rem"}}>Official Associations of Sagamu Remo</h2>
           <div style={{display:"grid",gap:"2rem"}}>
@@ -1611,20 +1611,20 @@ function AssociationsPage(){
       )}
 
       {tab==="trad"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Traditional Institutions</p>
           <h2 className="st" style={{marginBottom:".6rem"}}>Sacred Societies & Age-Grades</h2>
           <p className="si" style={{marginBottom:"2.5rem"}}>Sagamu's traditional societies form the invisible architecture of community life — governing rites of passage, ancestral ceremonies, justice, and collective identity going back centuries.</p>
           <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))",gap:"1.2rem"}}>
             {trad.map((t,i)=>(
-              <div key={i} style={{padding:"1.8rem",background:"rgba(201,150,58,.04)",border:"1px solid rgba(201,150,58,.16)",borderTop:"3px solid #7A2E0E"}}>
+              <div key={i} style={{padding:"1.8rem",background:"rgba(201,150,58,.04)",border:"1px solid rgba(201,150,58,.16)",borderTop:"3px solid #1E3A8A"}}>
                 <div style={{fontSize:"2rem",marginBottom:".7rem"}}>{t.ic}</div>
                 <div className="playfair" style={{fontSize:"1rem",color:"#F5EDD8",marginBottom:".5rem"}}>{t.n}</div>
                 <div style={{fontSize:".82rem",lineHeight:1.75,color:"rgba(245,237,216,.62)"}}>{t.d}</div>
               </div>
             ))}
           </div>
-          <div style={{marginTop:"2.5rem",padding:"1.8rem",background:"rgba(201,150,58,.07)",border:"1px solid rgba(201,150,58,.2)",borderLeft:"4px solid #B5451B"}}>
+          <div style={{marginTop:"2.5rem",padding:"1.8rem",background:"rgba(201,150,58,.07)",border:"1px solid rgba(201,150,58,.2)",borderLeft:"4px solid #8B1E3F"}}>
             <div className="cinzel" style={{fontSize:".62rem",letterSpacing:".16em",color:"#C9963A",textTransform:"uppercase",marginBottom:".6rem"}}>⚠ Note on Traditional Society Events</div>
             <p style={{fontSize:".85rem",lineHeight:1.8,color:"rgba(245,237,216,.65)"}}>Certain festivals, especially the Oro Festival (Isemo), observe movement restrictions for women and non-initiates during sacred nocturnal ceremonies. Visitors and residents should respect community announcements and directives from the Traditional Council during these periods.</p>
           </div>
@@ -1632,7 +1632,7 @@ function AssociationsPage(){
       )}
 
       {tab==="register"&&(
-        <W bg="#1a0d06" mw={680}>
+        <W bg="#0A0F1D" mw={680}>
           <p className="sl">Association Registry</p>
           <h2 className="st">Register Your Association</h2>
           <p className="si" style={{marginBottom:"2rem"}}>Is your community group, cooperative, women's society, trade union, or cultural association not listed? Register free to be added to the official Sagamu Remo directory.</p>
@@ -1758,7 +1758,7 @@ function EducationPage(){
       <Hero ey="Knowledge & Legacy" ti="Education in Sagamu Remo" sub="From the oldest mission school to Remo Secondary School (RSS) — the institutions that built Sagamu's brilliant minds, and the great people they produced."/>
       <A/>
 
-      <W bg="#1a0d06" py="2rem">
+      <W bg="#0A0F1D" py="2rem">
         <div style={{display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap"}}>
           {[["schools","🏫 Schools"],["notable","🌟 Notable People"]].map(([id,l])=>(
             <button key={id} className={tab===id?"btn-p":"btn-o"} onClick={()=>setTab(id)}>{l}</button>
@@ -1767,7 +1767,7 @@ function EducationPage(){
       </W>
 
       {tab==="schools"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Educational Institutions</p>
           <h2 className="st" style={{marginBottom:"2.5rem"}}>Schools of Sagamu Remo</h2>
           <div style={{display:"grid",gap:"2rem"}}>
@@ -1804,7 +1804,7 @@ function EducationPage(){
       )}
 
       {tab==="notable"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Distinguished Alumni & Sons of the Soil</p>
           <h2 className="st" style={{marginBottom:"2.5rem"}}>Notable People of Sagamu Remo</h2>
           <div style={{display:"grid",gap:"1.5rem"}}>
@@ -1891,7 +1891,7 @@ My town, my town, Sagamu.`
       <Hero ey="Spirituality & Heritage" ti="Faith & Culture" sub="From the birthplace of a global church to sacred groves and festival drums — the soul of Sagamu Remo expressed in worship, ceremony, and song."/>
       <A/>
 
-      <W bg="#1a0d06" py="2rem">
+      <W bg="#0A0F1D" py="2rem">
         <div style={{display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap"}}>
           {[["faith","⛪ Houses of Faith"],["festivals","🎊 Festivals & Ceremonies"],["anthem","🎵 Sagamu Anthem (Ilu Mi)"]].map(([id,l])=>(
             <button key={id} className={tab===id?"btn-p":"btn-o"} onClick={()=>setTab(id)}>{l}</button>
@@ -1900,7 +1900,7 @@ My town, my town, Sagamu.`
       </W>
 
       {tab==="faith"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Houses of Worship</p>
           <h2 className="st" style={{marginBottom:"2.5rem"}}>Faith in Sagamu Remo</h2>
 
@@ -1938,7 +1938,7 @@ My town, my town, Sagamu.`
               {ic:"🕌",n:"Islam & Other Faiths",tag:"Multi-Faith Community",
                d:"Sagamu Remo is a multi-faith community. Muslim residents worship at mosques within the town, and the community's empowerment ethos — expressed by the Akarigbo himself — embraces all faiths: Yoruba, Igbo, Hausa, Tiv, Igede and all ethnic communities living in the transit town."},
             ].map((f,i)=>(
-              <div key={i} style={{padding:"1.5rem",background:"rgba(201,150,58,.04)",border:"1px solid rgba(201,150,58,.15)",borderTop:"3px solid #7A2E0E"}}>
+              <div key={i} style={{padding:"1.5rem",background:"rgba(201,150,58,.04)",border:"1px solid rgba(201,150,58,.15)",borderTop:"3px solid #1E3A8A"}}>
                 <div style={{fontSize:"2rem",marginBottom:".6rem"}}>{f.ic}</div>
                 <span className="tag tag-terra">{f.tag}</span>
                 <div className="playfair" style={{fontSize:"1.05rem",color:"#F5EDD8",marginBottom:".5rem"}}>{f.n}</div>
@@ -1950,12 +1950,12 @@ My town, my town, Sagamu.`
       )}
 
       {tab==="festivals"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Annual Celebrations</p>
           <h2 className="st" style={{marginBottom:"2.5rem"}}>Festivals & Traditional Ceremonies</h2>
           <div style={{display:"grid",gap:"1.3rem"}}>
             {festivals.map((f,i)=>(
-              <div key={i} style={{padding:"1.8rem",background:"rgba(201,150,58,.04)",border:`1px solid ${f.sacred?"rgba(122,46,14,.4)":"rgba(201,150,58,.18)"}`,borderLeft:`4px solid ${f.sacred?"#7A2E0E":"#C9963A"}`}}>
+              <div key={i} style={{padding:"1.8rem",background:"rgba(201,150,58,.04)",border:`1px solid ${f.sacred?"rgba(122,46,14,.4)":"rgba(201,150,58,.18)"}`,borderLeft:`4px solid ${f.sacred?"#1E3A8A":"#C9963A"}`}}>
                 <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:".5rem",marginBottom:".8rem",alignItems:"flex-start"}}>
                   <div style={{display:"flex",gap:".8rem",alignItems:"center"}}>
                     <span style={{fontSize:"1.8rem"}}>{f.ic}</span>
@@ -1973,15 +1973,15 @@ My town, my town, Sagamu.`
               </div>
             ))}
           </div>
-          <div style={{marginTop:"2.5rem",padding:"1.5rem",background:"rgba(181,69,27,.07)",border:"1px solid rgba(181,69,27,.3)",borderLeft:"4px solid #B5451B"}}>
-            <div className="cinzel" style={{fontSize:".6rem",letterSpacing:".16em",color:"#B5451B",textTransform:"uppercase",marginBottom:".5rem"}}>⚠ Sacred Ceremony Advisory</div>
+          <div style={{marginTop:"2.5rem",padding:"1.5rem",background:"rgba(181,69,27,.07)",border:"1px solid rgba(181,69,27,.3)",borderLeft:"4px solid #8B1E3F"}}>
+            <div className="cinzel" style={{fontSize:".6rem",letterSpacing:".16em",color:"#8B1E3F",textTransform:"uppercase",marginBottom:".5rem"}}>⚠ Sacred Ceremony Advisory</div>
             <p style={{fontSize:".84rem",lineHeight:1.8,color:"rgba(245,237,216,.62)"}}>During the Oro Festival (Isemo) and other nocturnal traditional ceremonies, movement restrictions may apply to women and non-initiates. Visitors and residents should always follow official announcements from the Sagamu Remo Traditional Council. These sacred institutions are an integral part of Sagamu's living cultural heritage and must be respected.</p>
           </div>
         </W>
       )}
 
       {tab==="anthem"&&(
-        <W bg="#1a0d06" mw={820}>
+        <W bg="#0A0F1D" mw={820}>
           <p className="sl">Ilu Mi</p>
           <h2 className="st" style={{marginBottom:".5rem"}}>The Sagamu Anthem</h2>
           <p className="si" style={{marginBottom:"2.5rem"}}>The anthem of Sagamu Remo — sung at Sagamu Day and community assemblies. "Ilu Mi" means "My Town." It honours the ancestors Sagamu Founding Ancestors and Yemogun, and affirms the endurance of the ancient community.</p>
@@ -1990,7 +1990,7 @@ My town, my town, Sagamu.`
               <div className="cinzel" style={{fontSize:".62rem",letterSpacing:".2em",color:"#C9963A",textTransform:"uppercase",marginBottom:"1.2rem"}}>Yoruba — Original Text</div>
               <div className="playfair" style={{fontSize:"1rem",lineHeight:2.1,color:"#F5EDD8",whiteSpace:"pre-line"}}>{anthem.yoruba}</div>
             </div>
-            <div style={{background:"rgba(201,150,58,.03)",border:"1px solid rgba(201,150,58,.12)",padding:"2rem",borderTop:"4px solid #7A2E0E"}}>
+            <div style={{background:"rgba(201,150,58,.03)",border:"1px solid rgba(201,150,58,.12)",padding:"2rem",borderTop:"4px solid #1E3A8A"}}>
               <div className="cinzel" style={{fontSize:".62rem",letterSpacing:".2em",color:"rgba(245,237,216,.4)",textTransform:"uppercase",marginBottom:"1.2rem"}}>English — Translation</div>
               <div style={{fontSize:".9rem",lineHeight:2.1,color:"rgba(245,237,216,.62)",whiteSpace:"pre-line",fontStyle:"italic"}}>{anthem.english}</div>
             </div>
@@ -2065,13 +2065,13 @@ function NewsPage(){
   };
 
   const all=[...STATIC,...stored];
-  const catColor={development:"#2D4A22",royal:"#7A2E0E",community:"#1a2e5e",infrastructure:"#8B6914",culture:"#B5451B",diaspora:"#1a4060"};
+  const catColor={development:"#2D4A22",royal:"#1E3A8A",community:"#1a2e5e",infrastructure:"#8B6914",culture:"#8B1E3F",diaspora:"#1a4060"};
 
   return(
     <div>
       <Hero ey="Stay Informed" ti="News & Community Updates" sub="The latest developments, infrastructure projects, royal events, and community stories from Sagamu Remo."/>
       <A/>
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"1rem",marginBottom:"2.5rem"}}>
           <div>
             <p className="sl">Community Record</p>
@@ -2158,7 +2158,7 @@ function TourismPage(){
       n:"Sagamu Resort & Convention Centre",
       tag:"FEATURED · Premier Resort",tagClass:"tag-gold",
       ic:"🏨",
-      color:"#B5451B",
+      color:"#8B1E3F",
       desc:"Nigeria's premier expressway resort, sitting at KM 67 on the Lagos–Ibadan Expressway. With 140+ rooms, a full convention centre, swimming pools, and dining facilities, it is the most recognised hospitality destination between Lagos and Ibadan. Ideal for weddings, conferences, leisure breaks, and corporate retreats.",
       rating:"4.4★",reviews:"558 Google reviews",
       phone:"+234 906 247 0474",
@@ -2229,7 +2229,7 @@ function TourismPage(){
       <A/>
 
       {/* Resort — featured banner */}
-      <W bg="#2c1a0e" py="3rem">
+      <W bg="#0F172A" py="3rem">
         <div style={{background:"rgba(201,150,58,.07)",border:"1px solid rgba(201,150,58,.28)",borderTop:"4px solid #C9963A",padding:"2rem"}}>
           <div style={{display:"flex",gap:"1.5rem",alignItems:"flex-start",flexWrap:"wrap"}}>
             <div style={{fontSize:"3.5rem",flexShrink:0}}>🏨</div>
@@ -2248,7 +2248,7 @@ function TourismPage(){
       </W>
 
       {/* All attractions grid */}
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <p className="sl">Discover Sagamu Remo</p>
         <h2 className="st" style={{marginBottom:"2.5rem"}}>Attractions & Points of Interest</h2>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))",gap:"1.2rem"}}>
@@ -2290,7 +2290,7 @@ function TourismPage(){
       </W>
 
       {/* Getting Here */}
-      <W bg="#2c1a0e" py="3rem">
+      <W bg="#0F172A" py="3rem">
         <p className="sl" style={{textAlign:"center"}}>Plan Your Visit</p>
         <h2 className="st" style={{textAlign:"center",marginBottom:"2rem",fontSize:"1.8rem"}}>Getting to Sagamu Remo</h2>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:"1rem",marginBottom:"2rem"}}>
@@ -2381,14 +2381,14 @@ function BusinessPage(){
     return matchQ&&matchCat;
   });
 
-  const catColor={"Hospitality":"#B5451B","Education":"#1a2e5e","Trade":"#8B6914","Transport":"#2D4A22","Services":"#7A2E0E","Health":"#5a1010","Agriculture":"#2D4A22","Technology":"#1a2e5e","Faith":"#8B6914","Infrastructure":"#2c2c0e","Food & Dining":"#8B3014"};
+  const catColor={"Hospitality":"#8B1E3F","Education":"#1a2e5e","Trade":"#8B6914","Transport":"#2D4A22","Services":"#1E3A8A","Health":"#5a1010","Agriculture":"#2D4A22","Technology":"#1a2e5e","Faith":"#8B6914","Infrastructure":"#2c2c0e","Food & Dining":"#8B3014"};
 
   return(
     <div>
       <Hero ey="Commerce & Enterprise" ti="Sagamu Business Directory" sub="Find businesses in Sagamu Remo — or register yours free and join the official community directory."/>
       <A/>
 
-      <W bg="#1a0d06" py="2rem">
+      <W bg="#0A0F1D" py="2rem">
         <div style={{display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap"}}>
           {[["directory","🏪 Browse Directory"],["register","+ Register Your Business"]].map(([id,l])=>(
             <button key={id} className={tab===id?"btn-p":"btn-o"} onClick={()=>setTab(id)}>{l}</button>
@@ -2397,7 +2397,7 @@ function BusinessPage(){
       </W>
 
       {tab==="directory"&&(
-        <W bg="#1a0d06">
+        <W bg="#0A0F1D">
           <p className="sl">Business Listings</p>
           <h2 className="st" style={{marginBottom:"1.5rem"}}>Sagamu Remo Business Directory</h2>
 
@@ -2447,7 +2447,7 @@ function BusinessPage(){
       )}
 
       {tab==="register"&&(
-        <W bg="#1a0d06" mw={680}>
+        <W bg="#0A0F1D" mw={680}>
           <p className="sl">Free Registration</p>
           <h2 className="st">Register Your Business</h2>
           <p className="si" style={{marginBottom:"2rem"}}>List your Sagamu Remo business free of charge. All submissions are reviewed by the SDA admin team before publication.</p>
@@ -2536,7 +2536,7 @@ function ContactPage(){
         <span className="cinzel" style={{fontSize:".62rem",letterSpacing:".16em",color:"#f87171",textTransform:"uppercase"}}>⚠ For emergencies — call 112 · Free · 24 hours · Police · Ambulance · Fire · Do not use this contact form for emergencies</span>
       </div>
 
-      <W bg="#1a0d06">
+      <W bg="#0A0F1D">
         <div style={{display:"grid",gridTemplateColumns:"1fr 1.3fr",gap:"3rem",alignItems:"start"}}>
 
           {/* Left — contacts */}
@@ -2692,7 +2692,7 @@ function FamiliesPage(){
       ward:"Agbejoye / Fadagbuwa Ruling House",
       tag:"Royal · 38-Year Reign",
       tagClass:"tag-terra",
-      accent:"#7A2E0E",
+      accent:"#1E3A8A",
       summary:"Producers of Sagamu Remo's longest-serving modern monarch — Oba Oladele Ogunbade, who reigned 38 years and whose palace archives remain a primary source on Sagamu's ancient history.",
       desc:"The Ogunbade family of Gbenlokun Compound belongs to the Agbejoye/Fadagbuwa Ruling House — the second of Sagamu's four royal houses. When Oba Alfred Babington-Ashaye (Legunsen III) died in December 1982, the throne rotated to this house. Three princes contested: Omoba J. Oshinubi, Omoba Oladele Moshood Ogunbade, and Omoba Shitu. Ogunbade prevailed and was installed on December 3, 1983. He reigned for over 38 years — the longest modern reign in Sagamu's recorded history — until his passing on April 10, 2022, at age 85. Before ascending the throne he served as Marketing Manager at the Nigerian Tobacco Company (NTC), Ibadan. His coronation Apepe song, composed by Chief Nasiru Taiwo Omodugbe, is preserved in community memory: 'Ogunbade ti joba eee…' His 2008 palace archives remain a foundational source on Sagamu Remo's ancient history.",
       members:[
@@ -2714,7 +2714,7 @@ function FamiliesPage(){
       <A/>
 
       {/* Intro & family selector */}
-      <W bg="#1a0d06" py="3rem">
+      <W bg="#0A0F1D" py="3rem">
         <p className="si" style={{textAlign:"center",margin:"0 auto 2.5rem"}}>
           Beyond the four royal ruling houses, Sagamu Remo's identity has been shaped by a constellation of families whose contributions span centuries — from founding chieftaincy lineages and the birth of a global church, to the naming of roads and the building of schools.
         </p>
@@ -2733,7 +2733,7 @@ function FamiliesPage(){
 
       {/* Expanded family detail */}
       {families.map(f=>active===f.id&&(
-        <W key={f.id} bg="#2c1a0e">
+        <W key={f.id} bg="#0F172A">
           <div style={{borderTop:`4px solid ${f.accent}`,background:"rgba(201,150,58,.04)",border:"1px solid rgba(201,150,58,.2)",borderTop:`4px solid ${f.accent}`,padding:"2.5rem"}}>
             {/* Header */}
             <div style={{display:"flex",gap:"1.2rem",alignItems:"flex-start",flexWrap:"wrap",marginBottom:"1.8rem"}}>
@@ -2775,7 +2775,7 @@ function FamiliesPage(){
       ))}
 
       {/* Submit a family CTA */}
-      <W bg="#1a0d06" py="3rem">
+      <W bg="#0A0F1D" py="3rem">
         <div style={{maxWidth:620,margin:"0 auto",textAlign:"center",padding:"2rem",background:"rgba(201,150,58,.06)",border:"1px solid rgba(201,150,58,.2)",borderTop:"3px solid #C9963A"}}>
           <div style={{fontSize:"2rem",marginBottom:".7rem"}}>🏡</div>
           <div className="cinzel" style={{fontSize:".62rem",letterSpacing:".18em",color:"#C9963A",textTransform:"uppercase",marginBottom:".5rem"}}>Know a Notable Family?</div>

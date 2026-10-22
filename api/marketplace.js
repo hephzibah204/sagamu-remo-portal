@@ -76,7 +76,7 @@ export default async function handler(req, res) {
 
       return res.status(201).json({
         success: true,
-        message: 'Marketplace item published and saved to Neon cloud database.',
+        message: 'Marketplace item published and saved to database.',
         data: saved,
       });
     } catch (err) {

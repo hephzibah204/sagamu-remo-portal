@@ -83,7 +83,7 @@ export default function LivePage() {
           
           <div
             style={{
-              background: 'linear-gradient(135deg, #111, #1a0d06)',
+              background: 'linear-gradient(135deg, #111, #0A0F1D)',
               aspectRatio: '16/9',
               borderRadius: '16px',
               display: 'flex',
@@ -113,7 +113,7 @@ export default function LivePage() {
       <AdireDivider />
 
       {/* Video Archive */}
-      <Section bg="#0d0704" py="5rem">
+      <Section bg="#050811" py="5rem">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.7rem', marginBottom: '0.5rem' }}>PALACE ARCHIVES</p>
           <h2 className="playfair" style={{ fontSize: '2.5rem', color: 'var(--cream)' }}>Video Archive</h2>
@@ -172,7 +172,7 @@ export default function LivePage() {
           <div
             onClick={e => e.stopPropagation()}
             style={{
-              background: '#0d0704',
+              background: '#050811',
               border: '2px solid var(--gold)',
               borderRadius: '16px',
               maxWidth: '800px',

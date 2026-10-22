@@ -526,7 +526,7 @@ const styles = StyleSheet.create({
   },
   orikiContainerCard: {
     padding: Spacing.lg,
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
   },
   orikiHeader: {
     alignItems: 'center',
@@ -649,7 +649,7 @@ const styles = StyleSheet.create({
     color: '#1e293b',
   },
   optionTextCorrect: {
-    color: '#047857',
+    color: '#2563eb',
     fontWeight: '800',
   },
   optionTextWrong: {

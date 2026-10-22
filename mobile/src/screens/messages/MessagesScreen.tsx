@@ -577,7 +577,7 @@ export const MessagesScreen: React.FC<{ navigation: any }> = ({ navigation }) =>
             </View>
 
             <Text style={styles.modalSubtitle}>
-              Select any registered resident from the Neon database or enter a name below:
+              Select any registered resident from the Sagamu Community Directory or enter a name below:
             </Text>
 
             {/* Registered Directory List */}

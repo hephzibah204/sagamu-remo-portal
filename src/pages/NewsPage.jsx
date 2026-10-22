@@ -342,7 +342,7 @@ export default function NewsPage() {
                 </div>
                 <div>
                   <div className="cinzel" style={{ fontSize: '.58rem', letterSpacing: '.1em', color: 'var(--gold)', textTransform: 'uppercase', marginBottom: '.35rem' }}>Category</div>
-                  <select className="inp" value={f.category} onChange={(e) => setF({ ...f, category: e.target.value })} style={{ background: '#1a0d06', color: '#F5EDD8' }}>
+                  <select className="inp" value={f.category} onChange={(e) => setF({ ...f, category: e.target.value })} style={{ background: '#0A0F1D', color: '#F5EDD8' }}>
                     <option value="development">Development</option>
                     <option value="royal">Royal & Heritage</option>
                     <option value="education">Education & Youth</option>

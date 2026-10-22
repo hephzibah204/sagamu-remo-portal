@@ -49,7 +49,7 @@ export default function ComingSoonPage({ onUnlock }) {
     return () => clearInterval(t);
   }, []);
 
-  // ── Real-time donor/fundraising stats from Neon ─
+  // ── Real-time donor/fundraising stats from Cloud Database ─
   const [stats, setStats] = useState({ raised: 0, donors: 0, loading: true });
   const fetchStats = useCallback(async () => {
     try {
@@ -239,7 +239,7 @@ export default function ComingSoonPage({ onUnlock }) {
   ];
 
   return (
-    <div style={{ minHeight: '100vh', background: '#0D0704', color: '#F5EDD8', overflowX: 'hidden' }}>
+    <div style={{ minHeight: '100vh', background: '#050811', color: '#F5EDD8', overflowX: 'hidden' }}>
       <SEO
         title="Coming Soon — Sagamu Remo: Nigeria's 1st Digital Town"
         description="Support Hephtech Multimedia in building Nigeria's first digital town platform for Sagamu Remo. Donors receive free business promotion and free custom websites."
@@ -250,7 +250,7 @@ export default function ComingSoonPage({ onUnlock }) {
       <div
         style={{
           background: 'linear-gradient(90deg, #7A2E0E 0%, #C9963A 50%, #7A2E0E 100%)',
-          color: '#1a0d06',
+          color: '#0A0F1D',
           padding: '.55rem 1rem',
           textAlign: 'center',
           fontWeight: 700,
@@ -447,7 +447,7 @@ export default function ComingSoonPage({ onUnlock }) {
       <AdireDivider />
 
       {/* 1. IMPORTANT FEATURES SHOWCASE (FIRST) */}
-      <Section id="features-section" bg="#0D0704" py="5rem">
+      <Section id="features-section" bg="#050811" py="5rem">
         <div style={{ maxWidth: '1050px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div
@@ -632,7 +632,7 @@ export default function ComingSoonPage({ onUnlock }) {
                 <div>
                   <strong style={{ color: '#F5EDD8', fontSize: '1.02rem' }}>Cloud Infrastructure & Managed PostgreSQL</strong>
                   <div style={{ fontSize: '.84rem', color: 'rgba(245,237,216,0.72)', lineHeight: 1.65, marginTop: '.3rem' }}>
-                    Financing ultra-fast cloud servers, Neon PostgreSQL database clusters, domain registrations, SSL, and global CDN caching.
+                    Financing ultra-fast cloud servers, Sagamu PostgreSQL/Turso database clusters, domain registrations, SSL, and global CDN caching.
                   </div>
                 </div>
               </div>
@@ -674,7 +674,7 @@ export default function ComingSoonPage({ onUnlock }) {
       <AdireDivider />
 
       {/* 3. WHAT YOU RECEIVE FOR YOUR SUPPORT & DONATION (COMES LAST) */}
-      <Section bg="#0D0704" py="5.5rem">
+      <Section bg="#050811" py="5.5rem">
         <div id="donate-section" style={{ maxWidth: '1180px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div
@@ -769,7 +769,7 @@ export default function ComingSoonPage({ onUnlock }) {
                           top: '-12px',
                           right: '15px',
                           background: 'var(--gold)',
-                          color: '#1a0d06',
+                          color: '#0A0F1D',
                           fontSize: '.55rem',
                           fontWeight: 800,
                           padding: '.25rem .7rem',
@@ -1058,7 +1058,7 @@ export default function ComingSoonPage({ onUnlock }) {
                   fontSize: '1.15rem',
                   letterSpacing: '.15em',
                   padding: '.95rem 1.2rem',
-                  background: '#0D0704',
+                  background: '#050811',
                   borderColor: error ? '#f87171' : 'rgba(201,150,58,0.4)',
                 }}
                 autoComplete="off"

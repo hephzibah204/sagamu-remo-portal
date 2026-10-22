@@ -24,7 +24,7 @@ const spots = [
     tag: 'Sports & Recreation',
     tagClass: 'tag-terra',
     ic: '🏟️',
-    color: '#B5451B',
+    color: '#1E3A8A',
     desc: 'A 20,000-seat modern sports stadium constructed to FIFA standards. Hosted national athletics championships, FIFA international training camps, and league tournaments.',
     rating: '4.5★',
     address: 'GRA Sagamu / Benin Expressway Link',
@@ -59,7 +59,7 @@ const spots = [
     tag: 'Premier Hospitality',
     tagClass: 'tag-gold',
     ic: '🏨',
-    color: '#B5451B',
+    color: '#8B1E3F',
     desc: 'Luxury hotel and conference facility offering presidential suites, fine dining restaurants, swimming pool, and banquet halls in a tranquil environment.',
     rating: '4.4★',
     phone: '+234 805 000 0000',
@@ -116,7 +116,7 @@ export default function TourismPage() {
         sub="From the sovereign seat of the Akarigbo of Remoland and the historic Sabo kolanut exchange to the Gateway International Stadium — explore the cultural and commercial heart of Remo."
       />
       <AdireDivider />
-      <Section bg="#2c1a0e" py="3rem">
+      <Section bg="#0F172A" py="3rem">
         <div style={{ background: 'rgba(201,150,58,.07)', border: '1px solid rgba(201,150,58,.28)', borderTop: '4px solid #C9963A', padding: '2rem' }}>
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
             <div style={{ fontSize: '3.5rem', flexShrink: 0 }}>👑</div>
@@ -139,7 +139,7 @@ export default function TourismPage() {
           </div>
         </div>
       </Section>
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p className="sl">Discover Sagamu Remo</p>
         <h2 className="st" style={{ marginBottom: '2.5rem' }}>Attractions & Points of Interest</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(min(280px, 100%),1fr))', gap: '1.5rem' }}>

@@ -21,9 +21,9 @@ export default function NewsDetailPage() {
 
   if (!article) {
     return (
-      <div style={{ minHeight: '80vh', background: '#0D0704', color: '#F5EDD8' }}>
+      <div style={{ minHeight: '80vh', background: '#050811', color: '#F5EDD8' }}>
         <SEO title="Article Not Found" description="The requested news article could not be found on the Sagamu Remo Portal." />
-        <Section bg="#0D0704" py="5rem">
+        <Section bg="#050811" py="5rem">
           <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
             <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>📰</div>
             <h1 className="playfair" style={{ fontSize: '2rem', color: '#F5EDD8', marginBottom: '1rem' }}>
@@ -70,7 +70,7 @@ export default function NewsDetailPage() {
   const relatedArticles = STATIC_NEWS.filter((n) => n.id !== article.id).slice(0, 3);
 
   return (
-    <div style={{ background: '#0D0704', color: '#F5EDD8' }}>
+    <div style={{ background: '#050811', color: '#F5EDD8' }}>
       <SEO
         title={article.headline}
         description={article.summary || (article.body ? article.body.slice(0, 160) : 'Sagamu Remo Community News')}
@@ -206,7 +206,7 @@ export default function NewsDetailPage() {
       </section>
 
       {/* Main Article Body Section */}
-      <Section bg="#0D0704" py="2.5rem">
+      <Section bg="#050811" py="2.5rem">
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           {/* Main Hero Photograph */}
           {article.image && (

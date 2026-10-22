@@ -1092,7 +1092,7 @@ export default function MobilePreviewPage() {
                   justifyContent: 'space-between',
                   padding: '0 10px',
                 }}>
-                  <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#047857' }} />
+                  <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#2563eb' }} />
                   <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#1e293b' }} />
                 </div>
               )}
@@ -1256,7 +1256,7 @@ export default function MobilePreviewPage() {
               {/* Status Bar */}
               <div style={{
                 height: '42px',
-                background: '#064e3b',
+                background: '#1e3a8a',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
@@ -1276,7 +1276,7 @@ export default function MobilePreviewPage() {
 
               {/* App Royal Header */}
               <div style={{
-                backgroundColor: '#064e3b',
+                backgroundColor: '#1e3a8a',
                 borderBottom: '2px solid #d97706',
                 padding: '10px 16px',
                 display: 'flex',
@@ -1336,7 +1336,7 @@ export default function MobilePreviewPage() {
                     {/* Welcome Banner */}
                     <div style={{ background: '#ffffff', padding: '12px', borderRadius: '12px', borderLeft: '4px solid #d97706', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '20px', background: '#064e3b', border: '1.5px solid #d97706', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 900 }}>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '20px', background: '#1e3a8a', border: '1.5px solid #d97706', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 900 }}>
                           👑
                         </div>
                         <div>
@@ -1416,7 +1416,7 @@ export default function MobilePreviewPage() {
                     {/* ── "WHAT'S ON YOUR MIND?" MOBILE STATUS COMPOSER ── */}
                     <div style={{ background: '#ffffff', borderRadius: '12px', padding: '12px', border: '1px solid #e2e8f0', boxShadow: '0 2px 6px rgba(0,0,0,0.04)' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <div style={{ width: '34px', height: '34px', borderRadius: '17px', background: '#064e3b', color: '#d97706', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 900, flexShrink: 0 }}>
+                        <div style={{ width: '34px', height: '34px', borderRadius: '17px', background: '#1e3a8a', color: '#d97706', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 900, flexShrink: 0 }}>
                           👑
                         </div>
                         <div
@@ -1555,7 +1555,7 @@ export default function MobilePreviewPage() {
                                 setIsStatusComposerOpen(false);
                               }}
                               style={{
-                                background: (!statusInputText.trim() && !statusSelectedPhoto) ? '#94a3b8' : '#064e3b',
+                                background: (!statusInputText.trim() && !statusSelectedPhoto) ? '#94a3b8' : '#1e3a8a',
                                 color: '#ffffff',
                                 border: 'none',
                                 borderRadius: '6px',
@@ -1606,7 +1606,7 @@ export default function MobilePreviewPage() {
                           <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#0f172a' }}>Civic Status Timeline</span>
                           <span style={{ fontSize: '0.55rem', background: '#ecfdf5', color: '#059669', padding: '1px 5px', borderRadius: '4px', fontWeight: 800 }}>LIVE</span>
                         </div>
-                        <Link to="/timeline" style={{ fontSize: '0.62rem', color: '#064e3b', fontWeight: 700, textDecoration: 'none' }}>
+                        <Link to="/timeline" style={{ fontSize: '0.62rem', color: '#1e3a8a', fontWeight: 700, textDecoration: 'none' }}>
                           Full Web Feed ➔
                         </Link>
                       </div>
@@ -1624,7 +1624,7 @@ export default function MobilePreviewPage() {
                               fontSize: '0.58rem',
                               fontWeight: 700,
                               border: 'none',
-                              background: statusFilterQuarter === q ? '#064e3b' : '#e2e8f0',
+                              background: statusFilterQuarter === q ? '#1e3a8a' : '#e2e8f0',
                               color: statusFilterQuarter === q ? '#ffffff' : '#475569',
                               cursor: 'pointer',
                               whiteSpace: 'nowrap',
@@ -1718,7 +1718,7 @@ export default function MobilePreviewPage() {
                     </div>
 
                     {/* Reigning Monarch Spotlight */}
-                    <div style={{ background: '#064e3b', border: '1px solid #d97706', borderRadius: '12px', padding: '12px', color: '#ffffff' }}>
+                    <div style={{ background: '#1e3a8a', border: '1px solid #d97706', borderRadius: '12px', padding: '12px', color: '#ffffff' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
                         <span style={{ fontSize: '1.2rem' }}>👑</span>
                         <div>
@@ -1736,7 +1736,7 @@ export default function MobilePreviewPage() {
                     <div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                         <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#0f172a' }}>Town News & Decrees</span>
-                        <span onClick={() => setActiveTab('news')} style={{ fontSize: '0.65rem', color: '#064e3b', fontWeight: 700, cursor: 'pointer' }}>See All →</span>
+                        <span onClick={() => setActiveTab('news')} style={{ fontSize: '0.65rem', color: '#1e3a8a', fontWeight: 700, cursor: 'pointer' }}>See All →</span>
                       </div>
                       {SEED_NEWS.slice(0, 2).map((n) => (
                         <div key={n.id} style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '10px', padding: '10px', marginBottom: '6px' }}>
@@ -1757,7 +1757,7 @@ export default function MobilePreviewPage() {
                     <div style={{ fontSize: '0.85rem', fontWeight: 900, color: '#0f172a' }}>Town Bulletins & Proclamations</div>
                     {SEED_NEWS.map((n) => (
                       <div key={n.id} style={{ background: '#ffffff', borderRadius: '12px', padding: '12px', border: '1px solid #e2e8f0' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.6rem', fontWeight: 800, color: '#064e3b', marginBottom: '4px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.6rem', fontWeight: 800, color: '#1e3a8a', marginBottom: '4px' }}>
                           <span>{n.category}</span>
                           <span style={{ color: '#94a3b8' }}>{n.date}</span>
                         </div>
@@ -1772,7 +1772,7 @@ export default function MobilePreviewPage() {
                 {/* ── SCREEN 3: HERITAGE TAB ── */}
                 {activeTab === 'heritage' && !activeServiceScreen && (
                   <div style={{ display: 'grid', gap: '12px' }}>
-                    <div style={{ background: '#064e3b', borderRadius: '12px', padding: '12px', color: '#fff' }}>
+                    <div style={{ background: '#1e3a8a', borderRadius: '12px', padding: '12px', color: '#fff' }}>
                       <div style={{ fontSize: '0.9rem', fontWeight: 900 }}>👑 Succession of the Obas</div>
                       <div style={{ fontSize: '0.65rem', color: '#a7f3d0', marginTop: '2px' }}>600+ Years Dynastic Royal Lineage of Sagamu Remo</div>
                     </div>
@@ -1898,7 +1898,7 @@ export default function MobilePreviewPage() {
                     <a href="/events" style={{ textDecoration: 'none', color: 'inherit', background: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e2e8f0', display: 'flex', gap: '8px', alignItems: 'center' }}>
                       <span style={{ fontSize: '1.4rem' }}>📅</span>
                       <div>
-                        <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#047857' }}>Community Events & Festivals</div>
+                        <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#2563eb' }}>Community Events & Festivals</div>
                         <div style={{ fontSize: '0.62rem', color: '#64748b' }}>Sagamu Founding Ancestors Festival, Royal Anniversaries & meetings calendar</div>
                       </div>
                     </a>
@@ -2197,7 +2197,7 @@ export default function MobilePreviewPage() {
                             type="button"
                             onClick={handleStartEscort}
                             style={{
-                              background: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
+                              background: 'linear-gradient(135deg, #059669 0%, #2563eb 100%)',
                               border: '1px solid #34d399',
                               color: '#fff',
                               fontWeight: 900,
@@ -2332,17 +2332,17 @@ export default function MobilePreviewPage() {
                         <textarea placeholder="Describe vehicles, weapons, sighting details..." rows={3} style={{ fontSize: '0.75rem', padding: '6px', borderRadius: '4px', border: '1px solid #cbd5e1' }} />
                         <button
                           onClick={() => setWhistleToken('SGM-TIP-7842')}
-                          style={{ background: '#064e3b', color: '#fff', padding: '8px', borderRadius: '6px', fontWeight: 800, fontSize: '0.75rem', border: 'none', cursor: 'pointer' }}
+                          style={{ background: '#1e3a8a', color: '#fff', padding: '8px', borderRadius: '6px', fontWeight: 800, fontSize: '0.75rem', border: 'none', cursor: 'pointer' }}
                         >
                           Transmit Anonymous Intel
                         </button>
                       </div>
                     ) : (
-                      <div style={{ background: '#064e3b', color: '#fff', padding: '16px', borderRadius: '10px', textAlign: 'center' }}>
+                      <div style={{ background: '#1e3a8a', color: '#fff', padding: '16px', borderRadius: '10px', textAlign: 'center' }}>
                         <div style={{ fontSize: '1.8rem' }}>🛡️</div>
                         <div style={{ fontSize: '0.88rem', fontWeight: 900, marginTop: '4px' }}>Intel Transmitted Safely</div>
                         <div style={{ fontSize: '0.65rem', color: '#d1fae5', marginTop: '2px' }}>Save your secret tracking token:</div>
-                        <div style={{ background: '#022c22', border: '1px solid #d97706', padding: '8px 16px', borderRadius: '6px', margin: '10px auto', fontSize: '1.2rem', fontWeight: 900, color: '#f59e0b', letterSpacing: '2px' }}>
+                        <div style={{ background: '#0f172a', border: '1px solid #d97706', padding: '8px 16px', borderRadius: '6px', margin: '10px auto', fontSize: '1.2rem', fontWeight: 900, color: '#f59e0b', letterSpacing: '2px' }}>
                           {whistleToken}
                         </div>
                         <button
@@ -2359,7 +2359,7 @@ export default function MobilePreviewPage() {
                 {/* ── SUB-SCREEN: DIGITAL ID WALLET ── */}
                 {activeServiceScreen === 'id' && (
                   <div style={{ display: 'grid', gap: '12px' }}>
-                    <div style={{ background: 'linear-gradient(135deg, #064e3b 0%, #042f24 100%)', border: '2px solid #d97706', borderRadius: '14px', padding: '16px', color: '#ffffff', boxShadow: '0 8px 24px rgba(0,0,0,0.2)' }}>
+                    <div style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #042f24 100%)', border: '2px solid #d97706', borderRadius: '14px', padding: '16px', color: '#ffffff', boxShadow: '0 8px 24px rgba(0,0,0,0.2)' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
                           <div className="cinzel" style={{ fontSize: '0.72rem', fontWeight: 900, color: '#fef3c7' }}>KINGDOM OF SAGAMU REMO</div>
@@ -2459,7 +2459,7 @@ export default function MobilePreviewPage() {
                               setAudTrackingLoading(false);
                             }
                           }}
-                          style={{ background: '#064e3b', color: '#fff', padding: '8px', borderRadius: '6px', fontWeight: 800, fontSize: '0.75rem', border: 'none', cursor: 'pointer' }}
+                          style={{ background: '#1e3a8a', color: '#fff', padding: '8px', borderRadius: '6px', fontWeight: 800, fontSize: '0.75rem', border: 'none', cursor: 'pointer' }}
                         >
                           {audTrackingLoading ? 'Checking Palace Log…' : '🔍 Verify Status'}
                         </button>
@@ -2487,8 +2487,8 @@ export default function MobilePreviewPage() {
                             <div><strong>Confirmed Date:</strong> {audTrackedData.confirmed_date || audTrackedData.scheduled_date || 'Awaiting Confirmation'}</div>
                             <div><strong>Chamber:</strong> {audTrackedData.palace_chamber || 'To Be Assigned'}</div>
                             {audTrackedData.notes && (
-                              <div style={{ background: '#fff', padding: '6px', borderRadius: '4px', borderLeft: '3px solid #064e3b', marginTop: '4px' }}>
-                                <div style={{ fontWeight: 800, color: '#064e3b', fontSize: '0.6rem' }}>Palace Official Note:</div>
+                              <div style={{ background: '#fff', padding: '6px', borderRadius: '4px', borderLeft: '3px solid #1e3a8a', marginTop: '4px' }}>
+                                <div style={{ fontWeight: 800, color: '#1e3a8a', fontSize: '0.6rem' }}>Palace Official Note:</div>
                                 <div style={{ color: '#334155' }}>{audTrackedData.notes}</div>
                               </div>
                             )}
@@ -2508,11 +2508,11 @@ export default function MobilePreviewPage() {
                         )}
                       </div>
                     ) : audSubmittedRef ? (
-                      <div style={{ background: '#064e3b', color: '#fff', padding: '16px', borderRadius: '10px', textAlign: 'center' }}>
+                      <div style={{ background: '#1e3a8a', color: '#fff', padding: '16px', borderRadius: '10px', textAlign: 'center' }}>
                         <div style={{ fontSize: '2rem' }}>👑</div>
                         <div style={{ fontSize: '0.88rem', fontWeight: 900, marginTop: '4px' }}>Audience Request Transmitted</div>
                         <div style={{ fontSize: '0.65rem', color: '#d1fae5', marginTop: '2px' }}>A receipt email has been sent to {audEmail}</div>
-                        <div style={{ background: '#022c22', border: '1px solid #d97706', padding: '8px 16px', borderRadius: '6px', margin: '10px auto', fontSize: '1.1rem', fontWeight: 900, color: '#f59e0b' }}>
+                        <div style={{ background: '#0f172a', border: '1px solid #d97706', padding: '8px 16px', borderRadius: '6px', margin: '10px auto', fontSize: '1.1rem', fontWeight: 900, color: '#f59e0b' }}>
                           {audSubmittedRef}
                         </div>
                         <div style={{ display: 'flex', gap: '6px', justifyContent: 'center' }}>
@@ -2637,7 +2637,7 @@ export default function MobilePreviewPage() {
                         <a href="tel:08033456789" style={{ flex: 1, background: '#1e3a8a', color: '#fff', textAlign: 'center', padding: '6px 4px', borderRadius: '6px', textDecoration: 'none', fontSize: '0.68rem', fontWeight: 900 }}>
                           POLICE POST
                         </a>
-                        <a href="tel:08029994433" style={{ flex: 1, background: '#064e3b', color: '#fff', textAlign: 'center', padding: '6px 4px', borderRadius: '6px', textDecoration: 'none', fontSize: '0.68rem', fontWeight: 900 }}>
+                        <a href="tel:08029994433" style={{ flex: 1, background: '#1e3a8a', color: '#fff', textAlign: 'center', padding: '6px 4px', borderRadius: '6px', textDecoration: 'none', fontSize: '0.68rem', fontWeight: 900 }}>
                           SO-SAFE
                         </a>
                       </div>
@@ -3035,7 +3035,7 @@ export default function MobilePreviewPage() {
                             <div style={{ fontSize: '0.7rem', fontWeight: 900, color: '#065f46' }}>
                               Live Location Radar (Real-Time GPS)
                             </div>
-                            <div style={{ fontSize: '0.58rem', color: '#047857' }}>
+                            <div style={{ fontSize: '0.58rem', color: '#2563eb' }}>
                               Perpetually stream moving GPS coordinates to Police command
                             </div>
                           </div>
@@ -3098,12 +3098,12 @@ export default function MobilePreviewPage() {
                       >
                         ← Back to Services
                       </button>
-                      <span style={{ fontSize: '0.65rem', fontWeight: 900, color: '#064e3b' }}>
+                      <span style={{ fontSize: '0.65rem', fontWeight: 900, color: '#1e3a8a' }}>
                         FAMILY KIN BEACON
                       </span>
                     </div>
 
-                    <div style={{ background: '#064e3b', color: '#fff', padding: '10px 12px', borderRadius: '10px' }}>
+                    <div style={{ background: '#1e3a8a', color: '#fff', padding: '10px 12px', borderRadius: '10px' }}>
                       <div style={{ fontSize: '0.78rem', fontWeight: 900 }}>👨‍👩‍👧‍👦 Guardian Circles ({guardiansList.length}/3)</div>
                       <div style={{ fontSize: '0.62rem', color: '#d1fae5', marginTop: '2px' }}>
                         Trusted family or kin notified immediately via SMS with a direct public live tracking radar link whenever you trigger an SOS.
@@ -3171,7 +3171,7 @@ export default function MobilePreviewPage() {
                         <div style={{ display: 'flex', gap: '6px', marginTop: '4px' }}>
                           <button
                             onClick={handleAddGuardian}
-                            style={{ flex: 1, background: '#064e3b', color: '#fff', border: 'none', padding: '6px', borderRadius: '6px', fontSize: '0.72rem', fontWeight: 800, cursor: 'pointer' }}
+                            style={{ flex: 1, background: '#1e3a8a', color: '#fff', border: 'none', padding: '6px', borderRadius: '6px', fontSize: '0.72rem', fontWeight: 800, cursor: 'pointer' }}
                           >
                             Save Guardian
                           </button>
@@ -3232,7 +3232,7 @@ export default function MobilePreviewPage() {
                         style={{
                           padding: '3px 12px',
                           borderRadius: '14px',
-                          background: isFocused ? '#e6f4ea' : 'transparent',
+                          background: isFocused ? '#eff6ff' : 'transparent',
                           fontSize: isFocused ? '1.2rem' : '1.05rem',
                           transition: 'all 0.15s ease',
                         }}
@@ -3243,7 +3243,7 @@ export default function MobilePreviewPage() {
                         style={{
                           fontSize: '0.65rem',
                           fontWeight: isFocused ? 900 : 600,
-                          color: isFocused ? '#064e3b' : '#94a3b8',
+                          color: isFocused ? '#1e3a8a' : '#94a3b8',
                         }}
                       >
                         {tab.label}

@@ -9,7 +9,7 @@ const STATIC_PHOTOS = [
     src: '/images/palace/1.jpg',
     credit: 'Remo Traditional Council Archives',
     icon: '🏛️',
-    bg: 'linear-gradient(135deg,#8B6914,#2C1A0E)'
+    bg: 'linear-gradient(135deg,#8B6914,#0F172A)'
   },
   {
     cat: 'coronation',
@@ -19,7 +19,7 @@ const STATIC_PHOTOS = [
     src: '/images/OLsagamu Oba James Coronation.jpg',
     credit: 'State & National Archives',
     icon: '👑',
-    bg: 'linear-gradient(135deg,#7A2E0E,#2C1A0E)'
+    bg: 'linear-gradient(135deg,#7A2E0E,#0F172A)'
   },
   {
     cat: 'sagamu-day',
@@ -29,7 +29,7 @@ const STATIC_PHOTOS = [
     src: '/images/49th Sagamu Day.jpg',
     credit: 'Sagamu Development Association (SDA)',
     icon: '🎉',
-    bg: 'linear-gradient(135deg,#B5451B,#2C1A0E)'
+    bg: 'linear-gradient(135deg,#B5451B,#0F172A)'
   },
   {
     cat: 'miss-sagamu',
@@ -69,7 +69,7 @@ const STATIC_PHOTOS = [
     src: '/images/Sagamu Town.jpg',
     credit: 'Sagamu Chamber of Commerce',
     icon: '🌾',
-    bg: 'linear-gradient(135deg,#5C3317,#2C1A0E)'
+    bg: 'linear-gradient(135deg,#5C3317,#0F172A)'
   },
   {
     cat: 'diaspora',

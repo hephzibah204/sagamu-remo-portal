@@ -16,7 +16,7 @@ export default function NotFoundPage() {
       />
       <AdireDivider />
 
-      <Section bg="#0d0704" py="5rem">
+      <Section bg="#050811" py="5rem">
         <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🏛️</div>
           <h2 className="playfair" style={{ fontSize: '2.5rem', color: 'var(--cream)', marginBottom: '1rem' }}>

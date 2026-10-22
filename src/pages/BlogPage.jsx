@@ -32,7 +32,7 @@ export default function BlogPage() {
       <SEO title="Blog" description="Stories, news, and perspectives from the Sagamu Remo community." />
       <Hero ey="Sagamu Remo" ti="Blog" sub="Stories, news, and perspectives from the Sagamu Remo community." />
       <AdireDivider />
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
           <p className="sl" style={{ margin: 0 }}>Latest Posts</p>
           {categories.length > 1 && (

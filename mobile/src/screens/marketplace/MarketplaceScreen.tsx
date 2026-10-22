@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
     borderColor: '#e2e8f0',
   },
   catPillSelected: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderColor: '#c9963a',
   },
   catText: {
@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
   priceTag: {
     fontSize: 15,
     fontWeight: '900',
-    color: '#064e3b',
+    color: '#1e3a8a',
   },
   verifiedPill: {
     backgroundColor: '#ecfdf5',

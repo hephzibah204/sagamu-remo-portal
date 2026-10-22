@@ -14,7 +14,7 @@ export const DEFAULT_SAAS_CONFIG = {
     officialEmail: 'secretariat@sagamuremo.ng',
     emergencyHotline: '+234 800 SAGAMU SOS (0800 724 268)',
     primaryColor: '#C9963A', // Royal Gold
-    secondaryColor: '#1a0d06', // Royal Mahogany
+    secondaryColor: '#0A0F1D', // Royal Mahogany
     currency: 'NGN (₦)',
     siteStatus: 'live', // live, maintenance, emergency
   },

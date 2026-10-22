@@ -16,3 +16,4 @@ test-results/
 .paperclip/
 agent/
 skills-lock.json
+release-apks/*.apk

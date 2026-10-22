@@ -659,7 +659,7 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -725,8 +725,8 @@ const styles = StyleSheet.create({
     borderColor: '#e2e8f0',
   },
   quarterFilterPillActive: {
-    backgroundColor: '#064e3b',
-    borderColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
+    borderColor: '#1e3a8a',
   },
   quarterFilterText: {
     fontSize: 12,
@@ -768,7 +768,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   emptyCreateBtn: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     paddingVertical: 10,
     paddingHorizontal: 18,
     borderRadius: 20,
@@ -821,7 +821,7 @@ const styles = StyleSheet.create({
   postQuarterPill: {
     fontSize: 11,
     fontWeight: '700',
-    color: '#064e3b',
+    color: '#1e3a8a',
     backgroundColor: '#ecfdf5',
     paddingHorizontal: 6,
     paddingVertical: 2,
@@ -968,8 +968,8 @@ const styles = StyleSheet.create({
     borderColor: '#cbd5e1',
   },
   photoPresetPillActive: {
-    backgroundColor: '#064e3b',
-    borderColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
+    borderColor: '#1e3a8a',
   },
   quarterPill: {
     paddingVertical: 6,
@@ -980,8 +980,8 @@ const styles = StyleSheet.create({
     borderColor: '#cbd5e1',
   },
   quarterPillActive: {
-    backgroundColor: '#064e3b',
-    borderColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
+    borderColor: '#1e3a8a',
   },
   quarterPillText: {
     fontSize: 12,
@@ -1002,8 +1002,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   audienceBtnActive: {
-    backgroundColor: '#064e3b',
-    borderColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
+    borderColor: '#1e3a8a',
   },
   audienceBtnText: {
     fontSize: 12,
@@ -1014,7 +1014,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   publishBtn: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     paddingVertical: 14,
     borderRadius: 14,
     alignItems: 'center',
@@ -1080,7 +1080,7 @@ const styles = StyleSheet.create({
     color: '#0f172a',
   },
   sendCommentBtn: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 18,

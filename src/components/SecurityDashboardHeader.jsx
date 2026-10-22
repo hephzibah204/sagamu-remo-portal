@@ -134,7 +134,7 @@ export default function SecurityDashboardHeader({
         <button
           onClick={() => setShowPatrolModal(true)}
           style={{
-            background: '#064e3b',
+            background: '#1e3a8a',
             border: '1px solid #10b981',
             color: '#ffffff',
             padding: '0.35rem 0.8rem',

@@ -163,7 +163,7 @@ export default function QuizPage() {
       />
       <AdireDivider />
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         {!quizStarted ? (
           <div style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>📜</div>

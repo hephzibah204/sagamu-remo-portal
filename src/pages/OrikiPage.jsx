@@ -183,7 +183,7 @@ export default function OrikiPage() {
       />
       <AdireDivider />
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p className="sl">Ancestral Anthem</p>
         <h2 className="st">Oriki Sagamu Remo (Ilu Alafia)</h2>
         <div style={{ maxWidth: '780px', margin: '0 auto', background: 'rgba(201,150,58,.06)', border: '1px solid rgba(201,150,58,.25)', borderLeft: '4px solid #C9963A', padding: '1.8rem', borderRadius: 4 }}>
@@ -207,7 +207,7 @@ export default function OrikiPage() {
 
       <AdireDivider thin />
 
-      <Section bg="#2c1a0e">
+      <Section bg="#0F172A">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))', gap: '2.5rem', alignItems: 'start' }}>
           
           {/* LEFT: Monarch Selector & Information */}
@@ -267,7 +267,7 @@ export default function OrikiPage() {
           {/* RIGHT: Glowing Audio Console & synchronized chanting */}
           <div style={{ background: 'rgba(13,7,4,.85)', border: '1px solid rgba(201,150,58,.3)', borderTop: '4px solid #C9963A', padding: '2rem', borderRadius: 4, position: 'relative' }}>
             
-            <div style={{ padding: '1rem', background: '#0d0704', border: '1px solid rgba(201,150,58,.15)', borderRadius: 4, marginBottom: '1.5rem', textAlign: 'center', boxShadow: 'inset 0 4px 30px rgba(0,0,0,0.8)' }}>
+            <div style={{ padding: '1rem', background: '#050811', border: '1px solid rgba(201,150,58,.15)', borderRadius: 4, marginBottom: '1.5rem', textAlign: 'center', boxShadow: 'inset 0 4px 30px rgba(0,0,0,0.8)' }}>
               <div className="cinzel" style={{ fontSize: '0.55rem', letterSpacing: '.2em', color: 'rgba(201,150,58,.8)', textTransform: 'uppercase', marginBottom: '1rem' }}>
                 {playing ? '🎙️ Royal Lineage Chants Playing — Synchronized Yoruba Audio' : '🔇 Audio Visualizer (Click Play or Any Line to Hear)'}
               </div>
@@ -319,7 +319,7 @@ export default function OrikiPage() {
               </div>
             </div>
 
-            <div style={{ background: '#0d0704', padding: '1rem', border: '1px solid rgba(201,150,58,.1)', borderRadius: 4, maxHeight: '350px', overflowY: 'auto' }}>
+            <div style={{ background: '#050811', padding: '1rem', border: '1px solid rgba(201,150,58,.1)', borderRadius: 4, maxHeight: '350px', overflowY: 'auto' }}>
               <div style={{ display: 'grid', gap: '1.2rem' }}>
                 {selectedKing.oriki.map((item, index) => {
                   const isCurrent = time === index;

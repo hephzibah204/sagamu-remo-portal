@@ -134,7 +134,7 @@ export default function MessagesPage() {
     scrollToBottom();
   }, [activeChat.id, chatMessages]);
 
-  // Fetch real registered users from Neon database
+  // Fetch real registered users from Sagamu cloud database
   const fetchContacts = async () => {
     try {
       const res = await fetch('/api/contacts');
@@ -367,7 +367,7 @@ export default function MessagesPage() {
                   width: '40px',
                   height: '40px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
+                  background: 'linear-gradient(135deg, #059669 0%, #2563eb 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',

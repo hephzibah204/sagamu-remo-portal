@@ -592,7 +592,7 @@ function executeInMemoryFallback(queryText, params = []) {
   if (upper.includes('SELECT NOW()')) {
     return [{
       db_time: new Date().toISOString(),
-      database_name: 'neondb_portal_active',
+      database_name: 'sagamu_portal_active',
     }];
   }
 

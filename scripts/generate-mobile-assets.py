@@ -18,11 +18,11 @@ def create_badge(filename, size, bg_color, border_color, symbol, title, subtitle
     img.save(filename, 'PNG')
     print(f"Created {filename} ({size}x{size})")
 
-# 1. Citizen App Icon (Emerald #064E3B & Gold)
-create_badge('mobile/assets/icon.png', 1024, (6, 78, 59, 255), (201, 150, 58, 255), '👑', 'SAGAMU REMO', 'CIVIC PORTAL')
-create_badge('mobile/assets/adaptive-icon.png', 1024, (6, 78, 59, 255), (201, 150, 58, 255), '👑', 'SAGAMU REMO', 'CIVIC PORTAL')
-create_badge('mobile/assets/splash.png', 2048, (6, 78, 59, 255), (201, 150, 58, 255), '👑', 'SAGAMU REMO', 'CIVIC PORTAL')
-create_badge('mobile/assets/favicon.png', 48, (6, 78, 59, 255), (201, 150, 58, 255), '👑', '', '')
+# 1. Citizen App Icon (Royal Sovereign Indigo #1E3A8A & Crown Gold)
+create_badge('mobile/assets/icon.png', 1024, (30, 58, 138, 255), (201, 150, 58, 255), '👑', 'SAGAMU REMO', 'CIVIC PORTAL')
+create_badge('mobile/assets/adaptive-icon.png', 1024, (30, 58, 138, 255), (201, 150, 58, 255), '👑', 'SAGAMU REMO', 'CIVIC PORTAL')
+create_badge('mobile/assets/splash.png', 2048, (30, 58, 138, 255), (201, 150, 58, 255), '👑', 'SAGAMU REMO', 'CIVIC PORTAL')
+create_badge('mobile/assets/favicon.png', 48, (30, 58, 138, 255), (201, 150, 58, 255), '👑', '', '')
 
 # 2. Officer App Icon (Dark Crimson / Gold / Shield)
 create_badge('mobile/assets/officer-icon.png', 1024, (20, 10, 8, 255), (239, 68, 68, 255), '🛡️', 'FIELD COMMAND', 'SAGAMU REMO')

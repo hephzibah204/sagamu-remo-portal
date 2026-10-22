@@ -49,7 +49,7 @@ function generateRoyalEmailHtml({
   <div style="max-width: 620px; margin: 0 auto; background-color: #140a05; border: 2px solid #C9963A; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
     
     <!-- Royal Letterhead Header -->
-    <div style="background: linear-gradient(135deg, #064e3b 0%, #042f24 100%); padding: 30px 20px; text-align: center; border-bottom: 2px solid #C9963A;">
+    <div style="background: linear-gradient(135deg, #1e3a8a 0%, #042f24 100%); padding: 30px 20px; text-align: center; border-bottom: 2px solid #C9963A;">
       <div style="font-size: 38px; margin-bottom: 8px;">👑</div>
       <div style="color: #fef08a; font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;">AAFIN AKARIGBO OF REMOLAND</div>
       <div style="color: #ffffff; font-size: 20px; font-weight: 800; margin: 6px 0; letter-spacing: 0.5px;">PALACE PROTOCOL SECRETARIAT</div>
@@ -130,7 +130,7 @@ function generateRoyalEmailHtml({
       ${
         isConfirmed
           ? `
-      <div style="background-color: #064e3b; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+      <div style="background-color: #1e3a8a; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
         <div style="color: #fef08a; font-size: 12px; font-weight: 800; margin-bottom: 8px;">
           👑 TRADITIONAL PALACE ETIQUETTE & PROTOCOL
         </div>

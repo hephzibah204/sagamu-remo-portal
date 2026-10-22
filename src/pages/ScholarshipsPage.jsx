@@ -54,7 +54,7 @@ export default function ScholarshipsPage() {
       <SEO title="Scholarships & Empowerment" description="Educational scholarships, grants, and empowerment programs for Sagamu Remo indigenes." />
       <Hero ey="Education & Future" ti="Empowerment Portal" sub="Funding the future of Sagamu Remoland through educational scholarships, tech grants, and vocational support." dark />
 
-      <Section bg="#0d0704" py="4rem">
+      <Section bg="#050811" py="4rem">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.7rem', marginBottom: '1rem' }}>CURRENT OPPORTUNITIES</p>
           <h2 className="playfair" style={{ fontSize: '2.5rem', color: 'var(--cream)' }}>Available Grants & Scholarships</h2>
@@ -81,7 +81,7 @@ export default function ScholarshipsPage() {
 
       <AdireDivider />
 
-      <Section bg="#1a0d06" py="4rem">
+      <Section bg="#0A0F1D" py="4rem">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h2 className="playfair" style={{ fontSize: '2rem', color: 'var(--cream)' }}>Past Beneficiaries</h2>
           <p style={{ color: 'rgba(245,237,216,0.5)', fontSize: '0.9rem' }}>Celebrating the success of our empowered youth.</p>

@@ -57,7 +57,7 @@ export const DonationScreen: React.FC<{ navigation: any }> = ({ navigation }) =>
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
 
-  // 1. Fetch real-time donation stats from Neon DB
+  // 1. Fetch real-time donation stats from Sagamu Cloud Database
   useEffect(() => {
     const fetchStats = async () => {
       try {
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   timeBox: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 8,
@@ -318,7 +318,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   amountText: {
-    color: '#064e3b',
+    color: '#1e3a8a',
     fontSize: 24,
     fontWeight: '900',
     marginTop: 2,
@@ -436,7 +436,7 @@ const styles = StyleSheet.create({
     borderColor: '#cbd5e1',
   },
   tierBtnSelected: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderColor: '#c9963a',
   },
   tierBtnText: {
@@ -465,7 +465,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   donateSubmitBtn: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     paddingVertical: 12,
     borderRadius: 10,
     alignItems: 'center',

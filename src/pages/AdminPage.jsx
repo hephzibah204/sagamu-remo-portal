@@ -848,7 +848,7 @@ function RoyalAudiencesAdminView({ addToast }) {
                     <button
                       onClick={() => openDecisionModal(b)}
                       className="abtn abtn-p"
-                      style={{ fontSize: '.6rem', padding: '.35rem .75rem', background: '#064e3b', borderColor: '#C9963A' }}
+                      style={{ fontSize: '.6rem', padding: '.35rem .75rem', background: '#1e3a8a', borderColor: '#C9963A' }}
                     >
                       👑 Review & Decide
                     </button>
@@ -938,7 +938,7 @@ function RoyalAudiencesAdminView({ addToast }) {
             {/* Action Selection Tabs */}
             <div style={{ display: 'flex', gap: '.4rem', marginBottom: '1.2rem' }}>
               {[
-                { id: 'confirm', label: '🟢 Confirm & Schedule', bg: '#064e3b', col: '#86efac' },
+                { id: 'confirm', label: '🟢 Confirm & Schedule', bg: '#1e3a8a', col: '#86efac' },
                 { id: 'postpone', label: '🟡 Postpone / Reschedule', bg: '#78350f', col: '#fde047' },
                 { id: 'decline', label: '🔴 Decline / Regrets', bg: '#7f1d1d', col: '#fca5a5' },
               ].map(tab => (
@@ -1105,7 +1105,7 @@ function RoyalAudiencesAdminView({ addToast }) {
             {/* Printable Pass Container */}
             <div style={{ textAlign: 'center', borderBottom: '2px solid #C9963A', paddingBottom: '12px', marginBottom: '14px' }}>
               <div style={{ fontSize: '2.5rem' }}>👑</div>
-              <div style={{ fontFamily: "'Cinzel', serif", fontWeight: 900, fontSize: '1rem', color: '#064e3b', letterSpacing: '1px' }}>
+              <div style={{ fontFamily: "'Cinzel', serif", fontWeight: 900, fontSize: '1rem', color: '#1e3a8a', letterSpacing: '1px' }}>
                 PALACE OF THE The Akarigbo of Remoland
               </div>
               <div style={{ fontSize: '.7rem', color: '#d97706', fontWeight: 800 }}>
@@ -1136,7 +1136,7 @@ function RoyalAudiencesAdminView({ addToast }) {
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #e2e8f0', paddingBottom: '4px' }}>
                 <span style={{ color: '#64748b' }}>Designated Chamber:</span>
-                <strong style={{ color: '#064e3b' }}>{passBooking.palace_chamber || 'Inner Royal Council Chamber'}</strong>
+                <strong style={{ color: '#1e3a8a' }}>{passBooking.palace_chamber || 'Inner Royal Council Chamber'}</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #e2e8f0', paddingBottom: '4px' }}>
                 <span style={{ color: '#64748b' }}>Party Size:</span>
@@ -1151,7 +1151,7 @@ function RoyalAudiencesAdminView({ addToast }) {
 
             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
               <button onClick={() => setPassBooking(null)} className="abtn abtn-o" style={{ color: '#334155' }}>Close</button>
-              <button onClick={() => window.print()} className="abtn abtn-p" style={{ background: '#064e3b' }}>🖨️ Print Voucher</button>
+              <button onClick={() => window.print()} className="abtn abtn-p" style={{ background: '#1e3a8a' }}>🖨️ Print Voucher</button>
             </div>
           </div>
         </div>
@@ -1663,7 +1663,7 @@ export default function AdminPage() {
     return (
       <div style={{
         position: 'fixed', inset: 0, zIndex: 99999,
-        background: 'linear-gradient(160deg,#1a0d06,#2c1a0e 50%,#0d0704)',
+        background: 'linear-gradient(160deg,#0A0F1D,#0F172A 50%,#050811)',
         display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem',
       }}>
         <div style={{ maxWidth: 380, width: '100%' }}>
@@ -1696,13 +1696,13 @@ export default function AdminPage() {
   return (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 99999,
-      background: '#0d0704',
+      background: '#050811',
       display: 'flex', flexDirection: 'column',
       fontFamily: "'Libre Baskerville',serif",
       color: '#F5EDD8',
     }}>
       <div style={{
-        height: 44, background: '#1a0d06', borderBottom: '1px solid rgba(201,150,58,.18)',
+        height: 44, background: '#0A0F1D', borderBottom: '1px solid rgba(201,150,58,.18)',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '0 .8rem', flexShrink: 0,
       }}>
@@ -1847,7 +1847,7 @@ export default function AdminPage() {
 
       {showPuck && (
         <div style={{ position: 'fixed', inset: 0, zIndex: 100000, background: '#000' }}>
-          <div style={{ height: 44, background: '#1a0d06', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 1rem', borderBottom: '1px solid rgba(201,150,58,.2)' }}>
+          <div style={{ height: 44, background: '#0A0F1D', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 1rem', borderBottom: '1px solid rgba(201,150,58,.2)' }}>
             <div style={{ fontSize: '.7rem', color: '#C9963A', fontFamily: "'Cinzel',serif" }}>✨ Visual Editor: {items[editIndex]?.title}</div>
             <button className="abtn abtn-d" onClick={() => setShowPuck(false)} style={{ fontSize: '.5rem', padding: '.25rem .5rem' }}>✕ Close without saving</button>
           </div>

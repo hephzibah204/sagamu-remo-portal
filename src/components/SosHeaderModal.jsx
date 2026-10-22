@@ -1306,7 +1306,7 @@ export default function SosHeaderModal({ isOpen, onClose }) {
                       onClick={toggleAudio}
                       style={{
                         background: audioEnabled
-                          ? 'linear-gradient(135deg, #059669 0%, #047857 100%)'
+                          ? 'linear-gradient(135deg, #059669 0%, #2563eb 100%)'
                           : 'rgba(255, 255, 255, 0.06)',
                         border: audioEnabled ? '1px solid #34d399' : '1px solid rgba(255, 255, 255, 0.15)',
                         borderRadius: '6px',

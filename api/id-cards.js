@@ -47,7 +47,7 @@ export default async function handler(req, res) {
       return res.status(404).json({
         success: false,
         valid: false,
-        message: `No active official community ID record found in Neon database matching reference "${lookupKey}".`,
+        message: `No active official community ID record found in database matching reference "${lookupKey}".`,
       });
     } catch (err) {
       return res.status(500).json({ success: false, error: err.message });
@@ -89,7 +89,7 @@ export default async function handler(req, res) {
 
       return res.status(201).json({
         success: true,
-        message: 'ID application saved to Neon PostgreSQL database.',
+        message: 'ID application saved to database.',
         data: {
           id: cardId,
           fullName: body.fullName,

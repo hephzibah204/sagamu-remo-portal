@@ -93,7 +93,7 @@ export default function MissSagamuPage() {
       />
       <AdireDivider />
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <div style={{ display: 'flex', gap: '1rem', borderBottom: '1px solid rgba(201,150,58,.2)', marginBottom: '2rem' }}>
           <button
             onClick={() => setTab('about')}
@@ -150,7 +150,7 @@ export default function MissSagamuPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
               {WINNERS.map((w, i) => (
                 <div key={i} style={{ background: 'rgba(44,26,14,.45)', border: '1px solid rgba(201,150,58,.2)', borderRadius: 4, overflow: 'hidden' }}>
-                  <div style={{ height: 260, overflow: 'hidden', background: '#0d0704' }}>
+                  <div style={{ height: 260, overflow: 'hidden', background: '#050811' }}>
                     <img src={w.img} alt={w.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div style={{ padding: '1.2rem' }}>

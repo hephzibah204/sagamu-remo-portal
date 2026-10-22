@@ -315,13 +315,13 @@ export default function MarketplacePage() {
       />
 
       {/* Community Banner */}
-      <div style={{ background: 'linear-gradient(90deg, #1a0d06, #2c1500, #1a0d06)', padding: '0.7rem 2rem', textAlign: 'center', borderBottom: '1px solid rgba(201,150,58,0.2)' }}>
+      <div style={{ background: 'linear-gradient(90deg, #0A0F1D, #2c1500, #0A0F1D)', padding: '0.7rem 2rem', textAlign: 'center', borderBottom: '1px solid rgba(201,150,58,0.2)' }}>
         <span className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.18em', color: 'rgba(245,237,216,0.85)', textTransform: 'uppercase' }}>
           🛒 {listings.length} VERIFIED COMMUNITY LISTINGS · 100% DIRECT SELLER CONTACT · ZERO INTERMEDIARY COMMISSIONS
         </span>
       </div>
 
-      <Section bg="#0d0704" py="3.5rem">
+      <Section bg="#050811" py="3.5rem">
         {/* Marketplace Summary Metrics */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', marginBottom: '2.5rem', textAlign: 'center' }}>
           {[
@@ -367,7 +367,7 @@ export default function MarketplacePage() {
             <div style={{ flex: 1, minWidth: '160px' }}>
               <select
                 className="inp"
-                style={{ borderRadius: '30px', background: '#1a0d06', padding: '0.6rem 1rem' }}
+                style={{ borderRadius: '30px', background: '#0A0F1D', padding: '0.6rem 1rem' }}
                 value={selectedQuarter}
                 onChange={e => setSelectedQuarter(e.target.value)}
               >
@@ -379,7 +379,7 @@ export default function MarketplacePage() {
             <div style={{ flex: 1, minWidth: '150px' }}>
               <select
                 className="inp"
-                style={{ borderRadius: '30px', background: '#1a0d06', padding: '0.6rem 1rem' }}
+                style={{ borderRadius: '30px', background: '#0A0F1D', padding: '0.6rem 1rem' }}
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
               >
@@ -689,7 +689,7 @@ export default function MarketplacePage() {
                           padding: '0.6rem',
                           background: '#25D366',
                           borderColor: '#22c55e',
-                          color: '#0d0704',
+                          color: '#050811',
                           fontWeight: 'bold',
                         }}
                         onClick={() => setOrderModalItem(item)}
@@ -824,7 +824,7 @@ export default function MarketplacePage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '0.8rem', borderTop: '1px solid rgba(201,150,58,0.2)', paddingTop: '1.2rem' }}>
               <button
                 className="btn-p"
-                style={{ background: '#25D366', borderColor: '#22c55e', color: '#0d0704', fontWeight: 'bold' }}
+                style={{ background: '#25D366', borderColor: '#22c55e', color: '#050811', fontWeight: 'bold' }}
                 onClick={() => {
                   setSelectedItem(null);
                   setOrderModalItem(selectedItem);
@@ -921,7 +921,7 @@ export default function MarketplacePage() {
 
               <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'flex-end', marginTop: '1rem' }}>
                 <button type="button" className="btn-o" onClick={() => setOrderModalItem(null)}>Cancel</button>
-                <button type="submit" className="btn-p" style={{ background: '#25D366', borderColor: '#22c55e', color: '#0d0704', fontWeight: 'bold' }}>
+                <button type="submit" className="btn-p" style={{ background: '#25D366', borderColor: '#22c55e', color: '#050811', fontWeight: 'bold' }}>
                   💬 Open in WhatsApp →
                 </button>
               </div>
@@ -992,7 +992,7 @@ export default function MarketplacePage() {
 
               <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'flex-end' }}>
                 <button type="button" className="btn-o" onClick={() => setOfferModalItem(null)}>Cancel</button>
-                <button type="submit" className="btn-p" style={{ background: '#25D366', borderColor: '#22c55e', color: '#0d0704', fontWeight: 'bold' }}>
+                <button type="submit" className="btn-p" style={{ background: '#25D366', borderColor: '#22c55e', color: '#050811', fontWeight: 'bold' }}>
                   💬 Send Offer via WhatsApp
                 </button>
               </div>
@@ -1063,14 +1063,14 @@ export default function MarketplacePage() {
 
                   <div>
                     <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Category *</label>
-                    <select required className="inp" value={newForm.category} onChange={e => setNewForm({ ...newForm, category: e.target.value })} style={{ background: '#1a0d06' }}>
+                    <select required className="inp" value={newForm.category} onChange={e => setNewForm({ ...newForm, category: e.target.value })} style={{ background: '#0A0F1D' }}>
                       {CATEGORIES.slice(1).map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
                     </select>
                   </div>
 
                   <div>
                     <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Quarter / Sector in Sagamu *</label>
-                    <select required className="inp" value={newForm.quarter} onChange={e => setNewForm({ ...newForm, quarter: e.target.value })} style={{ background: '#1a0d06' }}>
+                    <select required className="inp" value={newForm.quarter} onChange={e => setNewForm({ ...newForm, quarter: e.target.value })} style={{ background: '#0A0F1D' }}>
                       {QUARTERS.slice(1).map(q => <option key={q} value={q}>{q}</option>)}
                     </select>
                   </div>

@@ -110,7 +110,7 @@ export default function AiChat() {
           style={{
             position: 'fixed', bottom: 'min(92px, calc(10vh + 56px))', right: 'min(24px, 4vw)', zIndex: 9999,
             width: 360, maxWidth: 'calc(100vw - 32px)', height: 480, maxHeight: 'calc(100vh - 120px)',
-            background: '#1a0d06', border: '1px solid rgba(201,150,58,.3)', borderTop: '3px solid #C9963A',
+            background: '#0A0F1D', border: '1px solid rgba(201,150,58,.3)', borderTop: '3px solid #C9963A',
             borderRadius: 12, overflow: 'hidden', display: 'flex', flexDirection: 'column',
             boxShadow: '0 8px 40px rgba(0,0,0,.6)',
           }}
@@ -163,7 +163,7 @@ export default function AiChat() {
               placeholder="Ask about Sagamu Remo..."
               style={{ flex: 1, padding: '.5rem .7rem', fontSize: '.78rem', background: 'rgba(44,26,14,.6)', border: '1px solid rgba(201,150,58,.2)', color: '#F5EDD8', outline: 'none', borderRadius: 4 }}
             />
-            <button onClick={() => send(inp)} disabled={busy} style={{ padding: '.5rem .8rem', background: '#C9963A', border: 'none', color: '#1a0d06', fontSize: '.7rem', cursor: 'pointer', borderRadius: 4, fontWeight: 600 }}>Send</button>
+            <button onClick={() => send(inp)} disabled={busy} style={{ padding: '.5rem .8rem', background: '#C9963A', border: 'none', color: '#0A0F1D', fontSize: '.7rem', cursor: 'pointer', borderRadius: 4, fontWeight: 600 }}>Send</button>
           </div>
         </div>
       )}

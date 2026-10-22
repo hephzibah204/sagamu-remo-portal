@@ -40,7 +40,7 @@ export const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => 
         return {
           label: `INDIGENE · DIASPORA (${user.diasporaCountry || 'INTERNATIONAL'})`,
           icon: '✈️',
-          badgeBg: '#047857',
+          badgeBg: '#2563eb',
           color: '#ffffff',
           locationInfo: `Diaspora: ${user.diasporaCity ? user.diasporaCity + ', ' : ''}${user.diasporaCountry || 'Abroad'}`,
         };
@@ -349,7 +349,7 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   idCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderWidth: 2,
     borderColor: Colors.gold,
     borderRadius: Radius.lg,
@@ -497,7 +497,7 @@ const styles = StyleSheet.create({
   qrSub: {
     fontSize: 7,
     fontWeight: '800',
-    color: '#064e3b',
+    color: '#1e3a8a',
     marginTop: -2,
   },
   cardAuthorityRow: {

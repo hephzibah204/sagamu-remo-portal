@@ -121,7 +121,7 @@ export default function EducationPage() {
         sub="From Remo Secondary School (est. 1946) to federal colleges and medical faculties — the pillars that educate Sagamu's brilliant minds."
       />
       <AdireDivider />
-      <Section bg="#1a0d06" py="2rem">
+      <Section bg="#0A0F1D" py="2rem">
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           {[['schools', '🏫 Schools & Colleges'], ['notable', '🌟 Notable Pioneers & Alumni']].map(([id, l]) => (
             <button key={id} className={tab === id ? 'btn-p' : 'btn-o'} onClick={() => setTab(id)}>{l}</button>
@@ -130,7 +130,7 @@ export default function EducationPage() {
       </Section>
 
       {tab === 'schools' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Educational Institutions</p>
           <h2 className="st" style={{ marginBottom: '2.5rem' }}>Pillar Institutions of Sagamu</h2>
           <div style={{ display: 'grid', gap: '2rem' }}>
@@ -174,7 +174,7 @@ export default function EducationPage() {
       )}
 
       {tab === 'notable' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Distinguished Leaders & Pioneers</p>
           <h2 className="st" style={{ marginBottom: '2.5rem' }}>Notable People of Sagamu</h2>
           <div style={{ display: 'grid', gap: '1.5rem' }}>

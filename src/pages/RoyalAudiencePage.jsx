@@ -149,7 +149,7 @@ export default function RoyalAudiencePage() {
       />
 
       {/* Royal announcement banner */}
-      <div style={{ background: 'linear-gradient(135deg, #1a0d06, #2c1500)', padding: '1rem 2rem', borderBottom: '1px solid rgba(201,150,58,0.3)' }}>
+      <div style={{ background: 'linear-gradient(135deg, #0A0F1D, #2c1500)', padding: '1rem 2rem', borderBottom: '1px solid rgba(201,150,58,0.3)' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
           <img
             src="/images/Akarigbo-Oba-James-Obafemi1.jpg"
@@ -216,7 +216,7 @@ export default function RoyalAudiencePage() {
         </div>
       </div>
 
-      <Section bg="#0d0704" py="3rem">
+      <Section bg="#050811" py="3rem">
         {viewMode === 'track' ? (
           <div style={{ maxWidth: '750px', margin: '0 auto', animation: 'fadeUp 0.4s ease both' }}>
             <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>

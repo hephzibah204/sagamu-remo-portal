@@ -11,7 +11,7 @@ export default function Hero({ ey, ti, sub, dark }) {
         position: 'relative',
         overflow: 'hidden',
         background: dark 
-          ? 'linear-gradient(160deg, #1A0D06, #2C1A0E)' 
+          ? 'linear-gradient(160deg, #0A0F1D, #0F172A)' 
           : 'var(--darker)',
       }}
     >

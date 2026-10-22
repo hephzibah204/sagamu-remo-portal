@@ -136,7 +136,7 @@ export default function DiasporaPage() {
       />
       <AdireDivider />
 
-      <Section bg="#1a0d06" py="2.5rem">
+      <Section bg="#0A0F1D" py="2.5rem">
         <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           {[
             ['network', '🌍 Diaspora Network'],
@@ -152,7 +152,7 @@ export default function DiasporaPage() {
       </Section>
 
       {tab === 'giving' && (
-        <Section bg="#1a0d06" py="3.5rem">
+        <Section bg="#0A0F1D" py="3.5rem">
           <div style={{ textAlign: 'center', marginBottom: '3rem', maxWidth: '680px', margin: '0 auto 3rem' }}>
             <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.65rem', marginBottom: '0.8rem' }}>
               COMMUNITY ENDOWMENT
@@ -225,7 +225,7 @@ export default function DiasporaPage() {
       )}
 
       {tab === 'network' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Our Global Family</p>
           <h2 className="st">Sagamu Remo Around the World</h2>
           <p className="si" style={{ marginBottom: '2.5rem' }}>Sagamu sons and daughters have carried the spirit of the ancient town to all corners of the world.</p>
@@ -270,7 +270,7 @@ export default function DiasporaPage() {
       )}
 
       {tab === 'register' && (
-        <Section bg="#1a0d06" mw={680}>
+        <Section bg="#0A0F1D" mw={680}>
           <p className="sl">Join the Network</p>
           <h2 className="st">Diaspora Registration</h2>
           <p className="si" style={{ marginBottom: '2rem' }}>Connect with your Sagamu roots. Free registration.</p>
@@ -298,7 +298,7 @@ export default function DiasporaPage() {
       )}
 
       {tab === 'notable' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Sagamu Ambassadors</p>
           <h2 className="st">Notable Sagamu Diasporans</h2>
           <p className="si" style={{ marginBottom: '2.5rem' }}>Sagamu sons and daughters who have achieved distinction internationally.</p>

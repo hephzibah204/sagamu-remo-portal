@@ -26,7 +26,7 @@ export default class ErrorBoundary extends Component {
         <div
           style={{
             minHeight: '100vh',
-            background: '#0d0704',
+            background: '#050811',
             color: '#F5EDD8',
             display: 'flex',
             alignItems: 'center',

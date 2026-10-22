@@ -730,7 +730,7 @@ const styles = StyleSheet.create({
     lineHeight: 16,
   },
   idPreviewBanner: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderRadius: Radius.md,
     padding: 12,
     borderWidth: 1,

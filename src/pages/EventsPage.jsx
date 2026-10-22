@@ -36,7 +36,7 @@ export default function EventsPage() {
       <SEO title="Events" description="Community events, festivals, and gatherings in Sagamu Remo." />
       <Hero ey="What's On" ti="Events Calendar" sub="Festivals, ceremonies, community gatherings, and cultural events in Sagamu Remo." />
       <AdireDivider />
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.5rem' }}>
           <div><p className="sl">Upcoming Events</p><h2 className="st" style={{ margin: 0 }}>What's Coming</h2></div>
           <button className="btn-p" onClick={() => setShowForm(!showForm)}>+ Submit an Event</button>

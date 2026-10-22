@@ -320,7 +320,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   resultCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderColor: Colors.gold,
     borderWidth: 2,
     gap: 12,

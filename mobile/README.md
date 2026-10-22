@@ -21,7 +21,7 @@ A world-class, offline-first civic mobile application for **Sagamu Remo Kingdom 
    - **Citizen Registration & Login**: Unified citizen profile with quarter, compound (agbo-ile), and biometric authentication (Face ID / Fingerprint) support via `expo-local-authentication`.
 
 4. **Shared Database & Unified Backend**:
-   - Connects to the same PostgreSQL database (`neondb`) as the web app.
+   - Connects to the dedicated Sagamu cloud database (PostgreSQL / Turso) via serverless APIs.
    - Powered by serverless endpoints in `/api/auth.js`, `/api/sync.js`, `/api/id-cards.js`, and `/api/royal-audiences.js`.
 
 ---
@@ -85,5 +85,5 @@ mobile/
     │   └── profile/            # Citizen Digital ID card wallet & device sync settings
     ├── services/
     │   └── authContext.tsx     # Authentication state, SecureStore & biometrics
-    └── theme/                  # Design system tokens (Sagamu Emerald #064e3b & Gold #d97706)
+    └── theme/                  # Design system tokens (Sagamu Royal Indigo #1e3a8a, Crown Gold #d97706 & Kolanut Crimson #8b1e3f)
 ```

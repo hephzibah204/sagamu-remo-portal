@@ -394,7 +394,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   palaceCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderWidth: 1,
     borderColor: Colors.gold,
     gap: 8,

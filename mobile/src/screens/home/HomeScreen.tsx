@@ -498,7 +498,7 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -581,7 +581,7 @@ const styles = StyleSheet.create({
     marginTop: 1,
   },
   monarchCard: {
-    backgroundColor: '#064e3b',
+    backgroundColor: '#1e3a8a',
     borderWidth: 1,
     borderColor: Colors.gold,
   },

@@ -119,7 +119,7 @@ const STATIC = [
   },
   {
     id: 'biz9',
-    name: 'Kankanbiina Solar & Electrical Engineering',
+    name: 'Torungbuwa Solar & Industrial Power Systems',
     cat: 'Technology',
     ic: '⚡',
     desc: 'Solar inverter installations, lithium battery setups, and commercial electrical wiring for homes and industrial plants in Sagamu.',
@@ -185,7 +185,7 @@ const STATIC = [
   },
 ];
 
-const catColor = { Hospitality: '#B5451B', Education: '#1a2e5e', Trade: '#8B6914', Transport: '#2D4A22', Services: '#7A2E0E', Health: '#5a1010', Agriculture: '#2D4A22', Technology: '#1a2e5e', Faith: '#8B6914', Infrastructure: '#2c2c0e', 'Food & Dining': '#8B3014' };
+const catColor = { Hospitality: '#8B1E3F', Education: '#1a2e5e', Trade: '#8B6914', Transport: '#2D4A22', Services: '#1E3A8A', Health: '#5a1010', Agriculture: '#2D4A22', Technology: '#2563EB', Faith: '#8B6914', Infrastructure: '#1E3A8A', 'Food & Dining': '#B45309' };
 
 export default function BusinessPage() {
   const [search, setSearch] = useState('');

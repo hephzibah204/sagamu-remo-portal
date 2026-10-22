@@ -289,7 +289,7 @@ export const LandRegistryScreen: React.FC<{ navigation: any }> = ({ navigation }
 
                   <View style={styles.fieldGroup}>
                     <Text style={styles.fieldLabel}>Legal Status:</Text>
-                    <Text style={[styles.fieldValue, { color: '#047857', fontWeight: '800' }]}>
+                    <Text style={[styles.fieldValue, { color: '#2563eb', fontWeight: '800' }]}>
                       {selectedPlot.status}
                     </Text>
                   </View>
@@ -532,7 +532,7 @@ const styles = StyleSheet.create({
   disputeText: {
     fontSize: 11,
     fontWeight: '600',
-    color: '#047857',
+    color: '#2563eb',
   },
   viewMoreText: {
     fontSize: 11,

@@ -56,13 +56,13 @@ export default function VerifyIdPage() {
         dark
       />
 
-      <div style={{ background: 'linear-gradient(135deg, #7A2E0E, #B5451B)', padding: '0.65rem 2rem', textAlign: 'center' }}>
+      <div style={{ background: 'linear-gradient(135deg, #1E3A8A, #8B1E3F)', padding: '0.65rem 2rem', textAlign: 'center' }}>
         <span className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.18em', color: 'white', textTransform: 'uppercase' }}>
           👑 OFFICIAL PALACE VERIFICATION DATABASE · SECURE & TRANSPARENT
         </span>
       </div>
 
-      <Section bg="#0d0704" py="4rem">
+      <Section bg="#050811" py="4rem">
         <div style={{ maxWidth: '680px', margin: '0 auto' }}>
           {/* Search Bar */}
           <form onSubmit={handleSearch} style={{ marginBottom: '3rem' }}>

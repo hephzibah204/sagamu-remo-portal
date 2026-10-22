@@ -79,7 +79,7 @@ export default function HealthPage() {
         dark
       />
 
-      <Section bg="#0d0704" py="4rem">
+      <Section bg="#050811" py="4rem">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.7rem', marginBottom: '1rem' }}>MEDICAL FACILITIES</p>
           <h2 className="playfair" style={{ fontSize: '2.5rem', color: 'var(--cream)' }}>Healthcare Directory</h2>

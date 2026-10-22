@@ -21,7 +21,7 @@ export default function MonarchyPage() {
       />
       <AdireDivider />
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p className="sl">Reigning Monarch</p>
         <h2 className="st">HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Torungbuwa II</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '2.5rem', marginTop: '1.5rem', alignItems: 'start' }}>
@@ -62,7 +62,7 @@ export default function MonarchyPage() {
 
       <div style={{ background: 'rgba(201,150,58,.04)', padding: '1px 0' }}><AdireDivider thin /></div>
 
-      <Section bg="#2c1a0e">
+      <Section bg="#0F172A">
         <p className="sl">Ancestral Sovereignty</p>
         <h2 className="st">The Royal Ruling Houses of the Akarigbo</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.2rem', marginTop: '1.5rem' }}>
@@ -78,7 +78,7 @@ export default function MonarchyPage() {
 
       <div style={{ background: 'rgba(201,150,58,.04)', padding: '1px 0' }}><AdireDivider thin /></div>
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p className="sl">Chronicle of Monarchs</p>
         <h2 className="st">Illustrious Past Akarigbos of Remoland</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
@@ -95,7 +95,7 @@ export default function MonarchyPage() {
 
       <div style={{ background: 'rgba(201,150,58,.04)', padding: '1px 0' }}><AdireDivider thin /></div>
 
-      <Section bg="#2c1a0e">
+      <Section bg="#0F172A">
         <p className="sl">Hall of Distinction</p>
         <h2 className="st">Illustrious Sons & Daughters of Sagamu</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.2rem', marginTop: '1.5rem' }}>

@@ -5,7 +5,7 @@ import { getSaasConfig, saveSaasConfig, DEFAULT_SAAS_CONFIG } from '../../servic
 export default function SuperadminPanel({ addToast, user }) {
   const [activeTab, setActiveTab] = useState('modules'); // modules, identity, monetization, broadcast, rbac, telemetry, batch
   const [saasConfig, setSaasConfig] = useState(getSaasConfig());
-  const [dbStatus, setDbStatus] = useState({ connected: true, engine: 'Neon / CockroachDB PostgreSQL', latency: null, checking: false });
+  const [dbStatus, setDbStatus] = useState({ connected: true, engine: 'Neon Serverless / Turso libSQL', latency: null, checking: false });
   const [counts, setCounts] = useState({
     idCards: 0,
     pendingIdCards: 0,
@@ -118,8 +118,8 @@ export default function SuperadminPanel({ addToast, user }) {
       const json = await res.json().catch(() => ({}));
       setDbStatus({
         connected: res.ok && json.database?.connected !== false,
-        engine: json.database?.engine || 'Neon / CockroachDB PostgreSQL',
-        databaseName: json.database?.databaseName || 'neondb',
+        engine: json.database?.engine || 'Neon Serverless / Turso libSQL',
+        databaseName: json.database?.databaseName || 'sagamu_portal_db',
         latency: `${latency}ms`,
         checking: false,
       });

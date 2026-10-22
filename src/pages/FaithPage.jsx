@@ -65,7 +65,7 @@ export default function FaithPage() {
         sub="From the historic Cathedral of the Diocese of Remo to the grand Central Mosque, Osugbo groves, and Sagamu Day festivals."
       />
       <AdireDivider />
-      <Section bg="#1a0d06" py="2rem">
+      <Section bg="#0A0F1D" py="2rem">
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           {[['faith', '⛪ Houses of Worship & Faith'], ['festivals', '🎊 Traditional Festivals & Ceremonies']].map(([id, l]) => (
             <button key={id} className={tab === id ? 'btn-p' : 'btn-o'} onClick={() => setTab(id)}>{l}</button>
@@ -74,7 +74,7 @@ export default function FaithPage() {
       </Section>
 
       {tab === 'faith' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Houses of Worship</p>
           <h2 className="st" style={{ marginBottom: '2.5rem' }}>Religious Heritage in Sagamu</h2>
           
@@ -138,7 +138,7 @@ export default function FaithPage() {
       )}
 
       {tab === 'festivals' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Ceremonial Calendar</p>
           <h2 className="st" style={{ marginBottom: '2.5rem' }}>Festivals of Sagamu</h2>
           <div style={{ display: 'grid', gap: '1.5rem' }}>

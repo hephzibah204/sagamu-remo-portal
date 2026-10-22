@@ -90,7 +90,7 @@ export default function DuressPinSettings({ onClose, onSave }) {
 
       {/* Safe PIN */}
       <div style={{ background: '#fff', padding: '12px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-        <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#064e3b', marginBottom: '4px' }}>
+        <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#1e3a8a', marginBottom: '4px' }}>
           🛡️ Safe Arrival PIN
         </div>
         <div style={{ fontSize: '0.6rem', color: '#64748b', marginBottom: '6px' }}>
@@ -117,7 +117,7 @@ export default function DuressPinSettings({ onClose, onSave }) {
             borderRadius: '8px',
             border: '2px solid #059669',
             background: '#f0fdf4',
-            color: '#064e3b',
+            color: '#1e3a8a',
             fontWeight: 900,
             boxSizing: 'border-box',
           }}
@@ -186,7 +186,7 @@ export default function DuressPinSettings({ onClose, onSave }) {
           onClick={handleSave}
           style={{
             flex: 1,
-            background: '#064e3b',
+            background: '#1e3a8a',
             color: '#fff',
             border: 'none',
             padding: '10px',

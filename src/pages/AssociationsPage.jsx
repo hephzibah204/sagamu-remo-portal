@@ -56,7 +56,7 @@ export default function AssociationsPage() {
       <SEO title="Associations" description="Community associations, traditional societies, and civic organizations of Sagamu Remo." />
       <Hero ey="Community Life" ti="Associations & Societies" sub="The civic heartbeat of Sagamu Remo — from apex bodies to traditional fraternities." />
       <AdireDivider />
-      <Section bg="#1a0d06" py="2rem">
+      <Section bg="#0A0F1D" py="2rem">
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           {[['orgs', '🏛️ Civic Associations'], ['trad', '🎭 Traditional Societies'], ['register', '+ Register Your Association']].map(([id, l]) => (
             <button key={id} className={tab === id ? 'btn-p' : 'btn-o'} onClick={() => setTab(id)}>{l}</button>
@@ -65,7 +65,7 @@ export default function AssociationsPage() {
       </Section>
 
       {tab === 'orgs' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Civic & Community Organisations</p>
           <h2 className="st" style={{ marginBottom: '2.5rem' }}>Official Associations of Sagamu Remo</h2>
           <div style={{ display: 'grid', gap: '2rem' }}>
@@ -105,7 +105,7 @@ export default function AssociationsPage() {
       )}
 
       {tab === 'trad' && (
-        <Section bg="#1a0d06">
+        <Section bg="#0A0F1D">
           <p className="sl">Traditional Institutions</p>
           <h2 className="st" style={{ marginBottom: '.6rem' }}>Sacred Societies & Age-Grades</h2>
           <p className="si" style={{ marginBottom: '2.5rem' }}>Sagamu's traditional societies form the invisible architecture of community life — governing rites of passage, ancestral ceremonies, and collective identity.</p>
@@ -122,7 +122,7 @@ export default function AssociationsPage() {
       )}
 
       {tab === 'register' && (
-        <Section bg="#1a0d06" mw={680}>
+        <Section bg="#0A0F1D" mw={680}>
           <p className="sl">Association Registry</p>
           <h2 className="st">Register Your Association</h2>
           <p className="si" style={{ marginBottom: '2rem' }}>Register free to be added to the official Sagamu Remo directory.</p>

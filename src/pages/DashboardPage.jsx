@@ -57,7 +57,7 @@ export default function DashboardPage() {
       <SEO title="My Dashboard" description="Your Sagamu Remo community dashboard — manage your profile and view your activity." />
       <Hero ey="Community" ti={`Welcome, ${user.name || user.username}`} sub="Manage your profile and view your community activity." />
       <AdireDivider />
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         {msg && <div style={{ padding: '.5rem 1rem', marginBottom: '1rem', background: 'rgba(45,74,34,.2)', border: '1px solid rgba(45,74,34,.3)', borderRadius: 4, color: '#a8d88e', fontSize: '.8rem' }}>{msg}</div>}
 
         <div className="astats" style={{ marginBottom: '2rem' }}>

@@ -11,7 +11,7 @@ const CARD_TYPES = [
     id: 'indigene',
     label: 'Full Indigene',
     color: '#C9963A',
-    bg: 'linear-gradient(135deg, #1a0d06 0%, #2c1500 50%, #1a0d06 100%)',
+    bg: 'linear-gradient(135deg, #0A0F1D 0%, #2c1500 50%, #0A0F1D 100%)',
     badge: '🟡 INDIGENE',
     border: '#C9963A',
     desc: 'Born to Sagamu parents with registered compound',
@@ -239,8 +239,8 @@ export default function IdCardPage() {
     const win = window.open('', '_blank');
     win.document.write(`<html><head><title>Sagamu ID Card</title>
       <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
-      <style>body{margin:0;background:#0D0704;display:flex;justify-content:center;align-items:center;min-height:100vh;}
-      @media print{body{background:#0D0704;}}</style>
+      <style>body{margin:0;background:#050811;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+      @media print{body{background:#050811;}}</style>
       </head><body>${el.outerHTML}</body></html>`);
     win.document.close();
     setTimeout(() => { win.print(); win.close(); }, 600);
@@ -251,14 +251,14 @@ export default function IdCardPage() {
       <SEO title="Digital ID Card" description="Apply for your official Sagamu Remo Digital Community Identity Card — for indigenes, residents, diaspora, and honorary citizens." />
       <Hero ey="Community Identity" ti="Sagamu Digital ID Card" sub="Your official proof of belonging to the ancient Kingdom of Sagamu Remoland." dark />
 
-      <div style={{ background: 'linear-gradient(135deg, #7A2E0E, #B5451B)', padding: '0.65rem 2rem', textAlign: 'center' }}>
+      <div style={{ background: 'linear-gradient(135deg, #1E3A8A, #8B1E3F)', padding: '0.65rem 2rem', textAlign: 'center' }}>
         <span className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.18em', color: 'white', textTransform: 'uppercase' }}>
           👑 ISSUED UNDER THE AUTHORITY OF HRH OBA JAMES OBAFEMI SALIU — KANKANBIINA II · The Akarigbo of Remoland
         </span>
       </div>
 
       {/* Step indicator */}
-      <Section bg="#0d0704" py="3rem">
+      <Section bg="#050811" py="3rem">
         <div style={{ display: 'flex', justifyContent: 'center', gap: '0', marginBottom: '3rem' }}>
           {[['1', 'Card Type'], ['2', 'Your Details'], ['3', 'Your ID']].map(([n, l], i) => {
             const active = step === i + 1;

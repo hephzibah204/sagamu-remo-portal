@@ -496,7 +496,7 @@ const styles = StyleSheet.create({
   },
   timelineSwitchSub: {
     fontSize: 11,
-    color: '#047857',
+    color: '#2563eb',
     marginTop: 1,
   },
   timelineSwitchArrow: {

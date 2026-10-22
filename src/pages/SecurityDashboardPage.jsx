@@ -715,7 +715,7 @@ export default function SecurityDashboardPage() {
                 onClick={() => setSelectedAgency(ag.id)}
                 style={{
                   background: isSelected ? 'var(--gold)' : 'rgba(255,255,255,0.05)',
-                  color: isSelected ? '#1a0d06' : '#f5edd8',
+                  color: isSelected ? '#0A0F1D' : '#f5edd8',
                   border: isSelected ? '1px solid var(--gold)' : '1px solid rgba(201,150,58,0.2)',
                   padding: '0.5rem 1rem',
                   borderRadius: '6px',

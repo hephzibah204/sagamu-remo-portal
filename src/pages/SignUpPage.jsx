@@ -57,7 +57,7 @@ export default function SignUpPage() {
       <SEO title="Create Account" description="Join the Sagamu Remo community — sign up for a free account to participate in the forum, submit business listings, and more." />
       <Hero ey="Community" ti="Create Account" sub="Join the Sagamu Remo online community." />
       <AdireDivider />
-      <Section bg="#1a0d06" mw={460}>
+      <Section bg="#0A0F1D" mw={460}>
         {error && <div style={{ padding: '.6rem', background: 'rgba(220,38,38,.12)', border: '1px solid rgba(220,38,38,.25)', borderRadius: 4, marginBottom: '1rem', color: '#f87171', fontSize: '.82rem' }}>{error}</div>}
         <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '.8rem' }}>
           <div>

@@ -109,7 +109,7 @@ export default function AiSearch() {
         <div style={{
           position: 'absolute', top: '100%', right: 0, zIndex: 9998, marginTop: 8,
           width: 340, maxWidth: 'calc(100vw - 32px)',
-          background: '#1a0d06', border: '1px solid rgba(201,150,58,.3)', borderTop: '3px solid #C9963A',
+          background: '#0A0F1D', border: '1px solid rgba(201,150,58,.3)', borderTop: '3px solid #C9963A',
           borderRadius: 8, overflow: 'hidden', boxShadow: '0 8px 40px rgba(0,0,0,.6)',
         }}>
           <div style={{ display: 'flex', borderBottom: '1px solid rgba(201,150,58,.12)' }}>
@@ -121,7 +121,7 @@ export default function AiSearch() {
               placeholder="Search Sagamu Remo..."
               style={{ flex: 1, padding: '.65rem .8rem', fontSize: '.8rem', background: 'rgba(44,26,14,.4)', border: 'none', color: '#F5EDD8', outline: 'none' }}
             />
-            <button onClick={search} disabled={busy} style={{ padding: '.65rem .9rem', background: '#C9963A', border: 'none', color: '#1a0d06', fontSize: '.7rem', cursor: 'pointer', fontWeight: 600 }}>{busy ? '...' : 'Go'}</button>
+            <button onClick={search} disabled={busy} style={{ padding: '.65rem .9rem', background: '#C9963A', border: 'none', color: '#0A0F1D', fontSize: '.7rem', cursor: 'pointer', fontWeight: 600 }}>{busy ? '...' : 'Go'}</button>
           </div>
           {results && (
             <div style={{ padding: '.5rem' }}>

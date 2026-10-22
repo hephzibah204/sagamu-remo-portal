@@ -177,7 +177,7 @@ export default function DiasporaEscrowPage() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.2rem' }}>
-                        <span style={{ fontSize: '0.7rem', background: '#047857', color: '#fff', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>
+                        <span style={{ fontSize: '0.7rem', background: '#2563eb', color: '#fff', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>
                           {project.category}
                         </span>
                         <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>{project.id}</span>

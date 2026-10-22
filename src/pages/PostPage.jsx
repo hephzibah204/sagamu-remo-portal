@@ -28,7 +28,7 @@ export default function PostPage() {
       <div>
         <Hero ey="Not Found" ti="Post Not Found" sub="The blog post you're looking for doesn't exist." />
         <AdireDivider />
-        <Section bg="#1a0d06" style={{ textAlign: 'center' }}>
+        <Section bg="#0A0F1D" style={{ textAlign: 'center' }}>
           <Link to="/blog" className="btn-p" style={{ textDecoration: 'none', display: 'inline-block' }}>← Back to Blog</Link>
         </Section>
       </div>
@@ -40,7 +40,7 @@ export default function PostPage() {
       <SEO title={post?.title || 'Post'} description={post?.excerpt || post?.body?.substring(0, 160) || 'Blog post'} />
       <Hero ey={post.author || 'SDA'} ti={post.title} sub={post.publishDate || ''} />
       <AdireDivider />
-      <Section bg="#1a0d06" mw={760}>
+      <Section bg="#0A0F1D" mw={760}>
         <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
           <Link to="/blog" className="btn-o" style={{ textDecoration: 'none', fontSize: '.55rem', padding: '.3rem .7rem', display: 'inline-block' }}>← Back</Link>
           {(post.categories || []).map(c => (

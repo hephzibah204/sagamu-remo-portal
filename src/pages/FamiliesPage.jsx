@@ -91,7 +91,7 @@ export default function FamiliesPage() {
         sub="The great dynasties—royal, civic, industrial—whose names are woven into the streets, monuments, and soul of Sagamu Remoland."
       />
       <AdireDivider />
-      <Section bg="#1a0d06" py="3rem">
+      <Section bg="#0A0F1D" py="3rem">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(240px,1fr))', gap: '1rem' }}>
           {families.map(f => (
             <button
@@ -118,7 +118,7 @@ export default function FamiliesPage() {
       </Section>
 
       {families.map(f => active === f.id && (
-        <Section key={f.id} bg="#2c1a0e">
+        <Section key={f.id} bg="#0F172A">
           <div style={{ borderTop: `4px solid ${f.accent}`, background: 'rgba(201,150,58,.04)', border: '1px solid rgba(201,150,58,.2)', padding: '2.5rem', borderRadius: 4 }}>
             <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.8rem' }}>
               <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'flex-start', flexWrap: 'wrap', flex: 1, minWidth: '280px' }}>

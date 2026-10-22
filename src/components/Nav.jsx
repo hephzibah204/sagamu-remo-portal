@@ -154,7 +154,7 @@ export default function Nav() {
             justifyContent: 'center',
             gap: '0.6rem',
             background:
-              broadcast.type === 'royal' ? 'linear-gradient(90deg, #1a0d06, #2c1a0e, #1a0d06)' :
+              broadcast.type === 'royal' ? 'linear-gradient(90deg, #0A0F1D, #0F172A, #0A0F1D)' :
               broadcast.type === 'festival' ? 'linear-gradient(90deg, #14301a, #1b4324, #14301a)' :
               broadcast.type === 'alert' ? 'linear-gradient(90deg, #3b0d0c, #5c1412, #3b0d0c)' :
               'linear-gradient(90deg, #0d1b2a, #1b263b, #0d1b2a)',
@@ -300,7 +300,7 @@ export default function Nav() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.35rem',
-                background: 'linear-gradient(135deg, #C9963A, #B5451B)',
+                background: 'linear-gradient(135deg, #C9963A, #1E3A8A)',
                 border: 'none',
                 color: '#fff',
                 cursor: 'pointer',
@@ -387,7 +387,7 @@ export default function Nav() {
                     flex: 1,
                     padding: '0.7rem',
                     fontSize: '0.8rem',
-                    background: 'linear-gradient(135deg, #C9963A, #B5451B)',
+                    background: 'linear-gradient(135deg, #C9963A, #1E3A8A)',
                     border: 'none',
                     display: 'flex',
                     alignItems: 'center',

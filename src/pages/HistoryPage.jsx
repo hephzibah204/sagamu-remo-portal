@@ -19,7 +19,7 @@ export default function HistoryPage() {
       />
       <AdireDivider />
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p className="sl">Origins & Meaning</p>
         <h2 className="st">The Sacred Spring: Orisagamu Ewa</h2>
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'center', margin: '1.5rem 0' }}>
@@ -37,7 +37,7 @@ export default function HistoryPage() {
         </div>
       </Section>
 
-      <Section bg="#2c1a0e">
+      <Section bg="#0F172A">
         <p className="sl">The Great Confederation of 1872</p>
         <h2 className="st">Thirteen Settlements, One Mighty City</h2>
         <p style={pStyle}>
@@ -70,7 +70,7 @@ export default function HistoryPage() {
         </div>
       </Section>
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p className="sl">Royal Lineage</p>
         <h2 className="st">The Akarigbo of Remoland</h2>
         <p style={pStyle}>
@@ -81,7 +81,7 @@ export default function HistoryPage() {
         </p>
       </Section>
 
-      <Section bg="#2c1a0e">
+      <Section bg="#0F172A">
         <p className="sl">Trade & Enterprise</p>
         <h2 className="st">Sabo: West Africa's Kolanut Capital</h2>
         <p style={pStyle}>
@@ -92,7 +92,7 @@ export default function HistoryPage() {
         </p>
       </Section>
 
-      <Section bg="#1a0d06">
+      <Section bg="#0A0F1D">
         <p className="sl">Modern Era</p>
         <h2 className="st">Education, Medicine & Industrial Resurgence</h2>
         <p style={pStyle}>

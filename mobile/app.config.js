@@ -43,7 +43,7 @@ module.exports = ({ config }) => {
     splash: {
       image: "./assets/splash.png",
       resizeMode: "contain",
-      backgroundColor: "#064e3b",
+      backgroundColor: "#1e3a8a",
     },
     android: {
       ...config.android,
@@ -51,7 +51,7 @@ module.exports = ({ config }) => {
       package: "com.sagamuremo.civicportal",
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
-        backgroundColor: "#064e3b",
+        backgroundColor: "#1e3a8a",
       },
     },
     extra: {
