@@ -52,7 +52,7 @@ export default async function handler(req, res) {
           documents_ref = EXCLUDED.documents_ref`,
         [
           plotId,
-          body.area || body.area_quarter || 'Oke-Sagamu',
+          body.area || body.area_quarter || 'Offin',
           body.owner || body.owner_name || 'Community Member',
           body.size || body.size_description || '1 Plot',
           body.use || body.land_use || 'Residential',
@@ -65,7 +65,7 @@ export default async function handler(req, res) {
 
       const saved = normalizePlot({
         id: plotId,
-        area: body.area || body.area_quarter || 'Oke-Sagamu',
+        area: body.area || body.area_quarter || 'Offin',
         owner: body.owner || body.owner_name || 'Community Member',
         size: body.size || body.size_description || '1 Plot',
         use: body.use || body.land_use || 'Residential',

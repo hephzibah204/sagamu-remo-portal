@@ -6,7 +6,7 @@ export const ESCROW_PROJECTS = [
     id: 'ESC-PRJ-01',
     title: 'Solar Streetlight Grid Phase II (Town Core & Oja Oba)',
     category: 'INFRASTRUCTURE',
-    location: 'Palace Way to Isale-Sagamu Hospital Axis (4.2km)',
+    location: 'Palace Way to Makun Hospital Axis (4.2km)',
     targetBudgetNgn: 18500000,
     targetBudgetUsd: 12500,
     raisedNgn: 14800000,
@@ -15,7 +15,7 @@ export const ESCROW_PROJECTS = [
     status: 'IN_EXECUTION', // FUNDING, IN_EXECUTION, VERIFICATION_PENDING, COMPLETED
     leadContractor: 'Solaris Energy Africa Ltd & SDA Works',
     leadSupervisor: 'Engr. Folake Sobukonla (SDA)',
-    palaceSignatory: 'HRH Akarigbo & Inner Royal Council',
+    palaceSignatory: 'HRM The Akarigbo & Inner Royal Council',
     donorsCount: 42,
     completionPercentage: 65,
     milestones: [
@@ -54,7 +54,7 @@ export const ESCROW_PROJECTS = [
     id: 'ESC-PRJ-02',
     title: 'Sagamu Health Centre Maternity Solar Cold-Chain & Oxygen Unit',
     category: 'HEALTHCARE',
-    location: 'Sagamu State Hospital Compound, Isale-Sagamu',
+    location: 'OOUTH General Outpatient Wing, Makun, Sagamu',
     targetBudgetNgn: 12000000,
     targetBudgetUsd: 8000,
     raisedNgn: 12000000,

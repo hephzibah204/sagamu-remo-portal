@@ -29,8 +29,8 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="ogere-portal"/>
-        <data android:scheme="com.ogeremo.civicportal"/>
+        <data android:scheme="sagamu-portal"/>
+        <data android:scheme="com.sagamuremo.civicportal"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>

@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 import { dbInsert } from '../services/db';
 
 const SCHOLARSHIPS = [
-  { id: 1, title: 'Kankanbina University Bursary', sponsor: 'HRH The Akarigbo', level: 'Undergraduate', amount: '₦100,000', deadline: 'Aug 30, 2026', desc: 'Annual bursary for Sagamu indigenes in any Federal University in Nigeria. Must maintain a 3.5 CGPA.' },
+  { id: 1, title: 'Akarigbo Royal Tertiary Bursary', sponsor: 'HRM The Akarigbo of Remoland', level: 'Undergraduate', amount: '₦100,000', deadline: 'Aug 30, 2026', desc: 'Annual bursary for Sagamu indigenes in any Federal University in Nigeria. Must maintain a 3.5 CGPA.' },
   { id: 2, title: 'SDA UK Diaspora Tech Grant', sponsor: 'Sagamu Diaspora (UK)', level: 'Vocational / Tech', amount: 'Laptop + ₦50k', deadline: 'Jul 15, 2026', desc: 'Providing laptops and data grants to young people in Sagamu learning programming or digital skills.' },
   { id: 3, title: 'Sagamu Market Women Guild Fund', sponsor: 'Market Women Association', level: 'Secondary School', amount: 'Full Tuition', deadline: 'Sep 05, 2026', desc: 'For children of active Sagamu market women attending Remo Secondary School or similar public schools.' },
   { id: 4, title: 'Afolabi Medical Scholarship', sponsor: 'Dr. Tunde Afolabi', level: 'Medical Students', amount: '₦250,000', deadline: 'Oct 01, 2026', desc: 'Exclusive to Sagamu indigenes studying Medicine, Nursing, or Pharmacy at any accredited Nigerian institution.' },
@@ -14,7 +14,7 @@ const SCHOLARSHIPS = [
 
 const PAST_RECIPIENTS = [
   { name: 'Ogunlesi Tobi', award: 'SDA Tech Grant 2025', bio: 'Now working as a junior web developer.' },
-  { name: 'Adebayo Funmilayo', award: 'Kankanbina Bursary 2024', bio: 'Graduated First Class in Accounting, OAU.' },
+  { name: 'Adebayo Funmilayo', award: 'Akarigbo Royal Bursary 2024', bio: 'Graduated First Class in Accounting, OAU.' },
   { name: 'Kazeem Olayemi', award: 'Market Guild Fund 2023', bio: 'Currently in SS3, Head Boy of Remo Sec. Sch.' },
 ];
 
@@ -107,7 +107,7 @@ export default function ScholarshipsPage() {
               
               <div style={{ display: 'grid', gap: '1.2rem' }}>
                 <div><label className="cinzel" style={{ fontSize: '0.6rem', color: 'var(--gold)' }}>Full Name</label><input required className="inp" value={form.fullName} onChange={e => set('fullName', e.target.value)} placeholder="Full legal name" /></div>
-                <div><label className="cinzel" style={{ fontSize: '0.6rem', color: 'var(--gold)' }}>Sagamu Compound / Family</label><input required className="inp" value={form.compound} onChange={e => set('compound', e.target.value)} placeholder="E.g. Kankanbina, Agbejoye" /></div>
+                <div><label className="cinzel" style={{ fontSize: '0.6rem', color: 'var(--gold)' }}>Sagamu Compound / Family</label><input required className="inp" value={form.compound} onChange={e => set('compound', e.target.value)} placeholder="E.g. Torungbuwa, Anoko, Ewusi" /></div>
                 <div><label className="cinzel" style={{ fontSize: '0.6rem', color: 'var(--gold)' }}>Current Institution & Level</label><input required className="inp" value={form.institution} onChange={e => set('institution', e.target.value)} placeholder="E.g. OOU, 300 Level" /></div>
                 <div><label className="cinzel" style={{ fontSize: '0.6rem', color: 'var(--gold)' }}>Email Address</label><input required type="email" className="inp" value={form.email} onChange={e => set('email', e.target.value)} placeholder="student@example.com" /></div>
                 <div><label className="cinzel" style={{ fontSize: '0.6rem', color: 'var(--gold)' }}>Phone Number</label><input required type="tel" className="inp" value={form.phone} onChange={e => set('phone', e.target.value)} placeholder="+234..." /></div>

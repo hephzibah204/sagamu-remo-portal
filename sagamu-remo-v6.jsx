@@ -96,68 +96,67 @@ const Spin=()=><span style={{display:"inline-block",width:13,height:13,border:"2
 function MonarchyPage(){
   const kings=[
     {
-      n:"Oba Adelana Osifayo",t:"Legunsen I",e:"c. 1880s",h:"Legunsen Ruling House",cur:false,
-      note:"The FIRST The Akarigbo of Remoland upon formal establishment of the town after the Yoruba Wars. He was the third Oba to have reigned at the original Agbele settlement — and became the founding Akarigbo as the scattered Ilagere settlements consolidated into one fortified town in the early 1880s.",
+      n:"Oba Igimisoje",t:"The Founding Akarigbo of Sagamu",e:"c. 1872 – 1880s",h:"Anoko / Historical Patriarch",cur:false,
+      note:"The heroic paramount ruler who led the historic confederation in 1872. Amidst the 19th-century Yoruba civil wars, he united the 13 independent Remo settlements onto the defensible, fertile land of Bammowu near the Orisagamu Ewa stream, laying the foundation of modern Sagamu as the capital of Remoland.",
+      oriki:"Omo Igimisoje tii fidi pote mole, Alase to ko Remo jo sori oke Bammowu."
+    },
+    {
+      n:"Oba Oyebajo",t:"Akarigbo of Remoland",e:"1891 – 1899",h:"Torungbuwa Ruling House",cur:false,
+      note:"Reigned during the critical decade of British colonial treaty negotiations and boundary demarcations between Lagos Colony and Remoland.",
       oriki:null
     },
     {
-      n:"[Additional Kings — Legunsen II onwards]",t:"Historical Record",e:"1880s – 1945",h:"Rotating Ruling Houses",cur:false,
-      note:"Several Akarigbo reigned in succession through the early colonial period and into independence. The royal titles confirm at least Legunsen II existed before Legunsen III. Full register is preserved in the Akarigbo Palace Archives and the Ogun State Ministry of Chieftaincy Affairs.",
+      n:"Oba Adebonojo",t:"Akarigbo of Remoland",e:"1899 – 1915",h:"Anoko Ruling House",cur:false,
+      note:"Oversaw the transition into early 20th-century commerce, the founding of modern commercial markets in Sagamu, and the consolidation of the confederacy.",
       oriki:null
     },
     {
-      n:"Oba Alfred Obafuwa Babington-Ashaye",t:"Legunsen III · Agbalajobi-Erinjogunola",e:"c. 1945 – December 4, 1982",h:"Legunsen Ruling House",cur:false,
-      note:"A patriarchal and highly respected monarch who reigned for approximately 37 years. He received a full state burial befitting his stature. His son was the late Prince Adebajo Babington-Ashaye, and his grandson is Adedeji Babington-Ashaye. His descendants include Dr. Shola Mos-Shogbamimu (lawyer, author & political commentator, UK), and Otunba Fatai Sowemimo's wife is his granddaughter through Prince Olumuyiwa Babington-Ashaye. The late Otunba Ademolu Babington-Ashaye, former Principal General, Remo Division, was his son.",
-      children:["Prince Adebajo Babington-Ashaye","Prince Olumuyiwa Babington-Ashaye","Baba Olumuyiwa","Baba Olufunmilayo","Baba Tinuade","Baba Ademolu","Baba Ademola","Baba Adebajo","Baba Adegboyega","Baba Aderonke","Prince Adetoyinbo Babington-Ashaye","Baba Adeleke","Baba Tiwalade"],
-      oriki:`Agbalajobi-Erinjogunola, Omo Otunbade, Omo Jawo ni di agbalagba.
-Oba nla to n gbadobale Oba. Omo Sagamu Day agbeni madein,
-re folugboro oloyo poyo, o fi Ori oloyo dakere.
-Omo Yemogun atatameti, elebiripo ijimiji,
-ti sale ko jina, ti toke jinna,
-Omo Sagamu mogbo, Sagamu ota, ni le onireke.
-Omo itun epe, agbade sori yan gbendeke,
-Omo olowo Joye Meji po, o tun reti eketa.
-Omo arojojoye, adele tejiteji. Ojoye titi, o tun je sikuloye.
-ojoye koye wun niije. Borokini dara dele ko to joba,
-aguntaso lo, olowo ladugbo baba Tinuade.
-Oko dudu, oko pupa, oko Borokini baba Ademola.
-Ara Ijebu ode, Ijebu Ode-ajagbalura,
-eyin lomo a fidi pote mole, alagemo merindinlogun,
-Omo alagemo abijo wenewene. Omo Lagere, lagboole Iremo.
-Nile Ife Odaaye ni bi ojumo ti n mo wa,
-enu lo n jibo ni le baba to bi yin lomo.
+      n:"Oba William Christopher Adedoyin II",t:"Akarigbo of Remoland",e:"1916 – 1952",h:"Torungbuwa Ruling House",cur:false,
+      note:"A titan of modern Yoruba monarchy whose 36-year reign revolutionized Remoland. He championed Western education, court reforms, and paved the way for the founding of Remo Secondary School (RSS) in 1946. He was an influential member of the Western Region House of Chiefs.",
+      oriki:"Adedoyin Aladesanmi, Omo Akarigbo gbayi, omo a bi owo nile t'owo tun wa l'aafin."
+    },
+    {
+      n:"Oba Moses Awolesi",t:"Erinwole II",e:"1952 – 1988",h:"Anoko Ruling House",cur:false,
+      note:"Reigned for 36 prosperous years spanning Nigeria's independence era. A visionary diplomat and peacebuilder, he unified the 13 quarters of Sagamu, spearheaded the establishment of WAPCO Elephant Cement and Olabisi Onabanjo University Teaching Hospital (OOUTH).",
+      oriki:"Erinwole Oba nla, Omo agbejoro tii feje we, omo Awolesi tii so ibi d'ire."
+    },
+    {
+      n:"Oba Dr. Michael Adeniyi Sonariwo, CON",t:"Erinjugbo II",e:"1990 – July 23, 2016",h:"Torungbuwa / Erinjugbo Ruling House",cur:false,
+      note:"Reigned with exceptional majesty for 26 years. A distinguished chartered accountant and past Chairman of the Ogun State Council of Obas. He elevated the national profile of Sagamu, nurtured Sabo international kolanut trade, and championed higher education and industrial expansion across Remoland.",
+      oriki:`Erinjugbo Omo Akarigbo, Oba to f'ogbon joba.
+Omo Remo Metalelogbon, omo Alagbafo tii f'omi tutu we.
+Sagamu a bi owo nile, a b'oro l'enu,
+Omo afidi pote mole, alagemo merindinlogun,
 Kabiyeesi alase, igbakeji orisa,
-Orisa nla to n biologbo leru.
 Didun ni iranti olododo...`
     },
     {
-      n:"Oba Oladele Moshood Ogunbade",t:"Agbejoye II",e:"December 3, 1983 – April 10, 2022",h:"Agbejoye/Fadagbuwa Ruling House",cur:false,
-      note:"Installed on December 3, 1983. Reigned for over 38 remarkable years. Before ascending the throne he served as Marketing Manager at the Nigerian Tobacco Company (NTC), Ibadan. Passed away on April 10, 2022 at the age of 85. His palace archives (12 August 2008) remain the primary historical source for Sagamu Remo's ancient history. His Apepe song — composed by Chief Nasiru Taiwo Omodugbe — marked his coronation: 'Ogunbade ti joba eee, Mosiudi ti joba aaa, Agbejoye ti joba eee...'",
-      oriki:null
-    },
-    {
-      n:"Oba Babatunde Adewale Ajayi",t:"Kankanbiina II · Ilufemiloye I · Arole Sagamu Founding Ancestors",e:"April 25, 2023 — Present",h:"Kankanbina/Ejigboye Ruling House",cur:true,
-      note:"Appointed and installed on April 25, 2023; formally coronated September 23, 2023. Currently reigning. His titles include Kankanbiina II, Ilufemiloye I, and Arole Sagamu Founding Ancestors. Commissioned the Aafin Akarigbo Palace (April 2025), the Sagamu Cultural Centre (April 2025), an FRSC office complex (April 2026), and led major community empowerment programmes. Note: A legal challenge from members of the Kankanbina Ruling House was filed at the Ogun State High Court, Sagamu, scheduled for hearing May 2025.",
-      oriki:null
+      n:"Oba Babatunde Adewale Ajayi, CFR, FCA",t:"Torungbuwa II",e:"December 7, 2017 — Present",h:"Torungbuwa Ruling House",cur:true,
+      note:"The reigning Akarigbo and Paramount Ruler of Remoland. An accomplished Chartered Accountant, seasoned Barrister and Solicitor of the Supreme Court of Nigeria, and former Chairman of the Ogun State Council of Traditional Rulers. He commissioned the modern Aafin Akarigbo Palace, catalyzed the Gateway Agro-Cargo corridor, and launched pioneering youth innovation and economic development funds.",
+      oriki:`Torungbuwa Keji, Ajayi Omo Oba l'Eko, l'Offin, ni Sagamu.
+Ogbomolehin ti n f'owo ola to ilu ro.
+Akarigbo Olufiran, omo a bi owo nile,
+Oba to m'ero, to m'eko, to tun m'owo se rere.
+Kabiyeesi Baba wa Torungbuwa II, Ki ade pe lori, ki bata pe lese!`
     },
   ];
 
   return(
     <div>
-      <Hero ey="Royal Institution" ti="The Monarchy of Sagamu" sub="The The Akarigbo of Remoland — paramount ruler, spiritual head, and fountain of honour for all of Sagamu Remoland."/>
+      <Hero ey="Royal Institution" ti="The Monarchy of Sagamu" sub="The Akarigbo of Remoland — paramount ruler, spiritual head, and fountain of honour across all 33 kingdoms of Remoland."/>
       <A/>
       {/* Current Oba */}
       <W bg="#1a0d06">
         <p className="sl">Reigning Monarch</p>
-        <h2 className="st">HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Kankanbiina II</h2>
+        <h2 className="st">HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Torungbuwa II</h2>
         <div style={{display:"grid",gridTemplateColumns:"260px 1fr",gap:"2.5rem",marginTop:"1.5rem",alignItems:"start"}}>
           <div style={{background:"rgba(201,150,58,.08)",border:"1px solid rgba(201,150,58,.28)",padding:"2rem",textAlign:"center",borderTop:"4px solid #C9963A"}}>
             <div style={{fontSize:"3.5rem",marginBottom:".7rem"}}>👑</div>
             <div className="cinzel" style={{fontSize:".58rem",letterSpacing:".12em",color:"#C9963A",textTransform:"uppercase"}}>The Akarigbo of Remoland</div>
             <div className="playfair" style={{fontSize:"1.05rem",color:"#F5EDD8",margin:".5rem 0 .2rem"}}>Oba Babatunde Adewale Ajayi</div>
-            <div className="cinzel" style={{fontSize:".52rem",color:"rgba(245,237,216,.45)",letterSpacing:".08em"}}>Kankanbiina II · Ilufemiloye I · Arole Sagamu Founding Ancestors</div>
+            <div className="cinzel" style={{fontSize:".52rem",color:"rgba(245,237,216,.45)",letterSpacing:".08em"}}>Torungbuwa II · CFR, FCA</div>
             <div style={{height:1,background:"rgba(201,150,58,.18)",margin:"1rem 0"}}/>
-            {[["Installed","April 25, 2023"],["Coronated","September 23, 2023"],["Ruling House","Kankanbina/Ejigboye"],["Reign","3rd Year (2026)"]].map(([k,v])=>(
+            {[["Installed","December 7, 2017"],["Coronated","December 7, 2017"],["Ruling House","Torungbuwa"],["Seat","Aafin Akarigbo, Ita Oba"]].map(([k,v])=>(
               <div key={k} style={{marginBottom:".45rem"}}>
                 <div className="cinzel" style={{fontSize:".5rem",letterSpacing:".08em",color:"rgba(201,150,58,.5)",textTransform:"uppercase"}}>{k}</div>
                 <div style={{fontSize:".82rem",color:"rgba(245,237,216,.7)"}}>{v}</div>
@@ -165,10 +164,16 @@ Didun ni iranti olododo...`
             ))}
           </div>
           <div>
-            <p style={{fontSize:".9rem",lineHeight:1.9,color:"rgba(245,237,216,.7)",marginBottom:"1.1rem"}}>Oba Babatunde Adewale Ajayi was installed as The Akarigbo of Remoland on April 25, 2023, succeeding the late Oba Oladele Ogunbade (Agbejoye II) who passed on April 10, 2022 after 38 years. His formal coronation ceremony took place on September 23, 2023 and was widely celebrated across Sagamu Remo and Nigeria.</p>
-            <p style={{fontSize:".9rem",lineHeight:1.9,color:"rgba(245,237,216,.7)",marginBottom:"1.3rem"}}>Under his reign, Sagamu has witnessed impressive strides in infrastructure and community empowerment. He donated operational vehicles to security agencies, constructed security posts, commissioned the Akarigbo Palace and Sagamu Cultural Centre, and extended empowerment programmes to all ethnic communities living in the transit town — Yoruba, Igbo, Hausa, Tiv, and Igede alike.</p>
+            <p style={{fontSize:".9rem",lineHeight:1.9,color:"rgba(245,237,216,.7)",marginBottom:"1.1rem"}}>Oba Babatunde Adewale Ajayi, CFR, FCA ascended the throne as the Akarigbo of Remoland on December 7, 2017, succeeding the esteemed Oba Dr. Michael Adeniyi Sonariwo (Erinjugbo II) who joined his ancestors after 26 years on the throne. The ascension of Oba Babatunde Ajayi was greeted with widespread celebration across Sagamu, Ogun State, and the diaspora.</p>
+            <p style={{fontSize:".9rem",lineHeight:1.9,color:"rgba(245,237,216,.7)",marginBottom:"1.3rem"}}>Under his reign, Sagamu has witnessed rapid industrial and technological renaissance. He catalyzed the Sagamu Tech Corridor, oversaw multi-million naira STEM endowments, renovated community roads, and reinforced inter-community unity between the 13 confederate quarters and merchant communities in Sabo.</p>
             <div className="cinzel" style={{fontSize:".63rem",letterSpacing:".14em",color:"#C9963A",textTransform:"uppercase",marginBottom:"1rem"}}>Landmark Achievements</div>
-            {[["🏛️","April 2025","Commissioned Aafin Akarigbo — first permanent palace in Sagamu's modern history. Commissioning guest: HRM Oba Babatunde Adewale Ajayi, CFR."],["🎭","April 2025","Opened Sagamu Cultural Centre — permanent home for Sagamu's cultural heritage and events."],["💰","April 2025","Empowerment programme — artisans received tools; 50 residents (all ethnicities) received ₦100,000 each."],["⛽","Feb 2026","Welcomed TEG CNG facility — 60,000 SCMD, creating new jobs for Sagamu residents."],["🚦","April 2026","Donated and commissioned FRSC office complex — 3rd coronation anniversary."]].map(([ic,d,t],i)=>(
+            {[
+              ["🏛️","2017–Present","Ultra-Modern Aafin Akarigbo Palace Complex — Renovated and expanded royal council chambers and cultural amphitheatre."],
+              ["✈️","2022–2026","Gateway Agro-Cargo Airport & Special Agro-Processing Industrial Zone at the Sagamu corridor."],
+              ["🎓","Annual","Akarigbo STEM & Higher Education Endowments — Providing full tertiary scholarships for Sagamu youths."],
+              ["🌾","2023–2026","Sabo International Kolanut Hub Modernization — Upgrading trade infrastructure for West Africa's largest kolanut market."],
+              ["🛡️","Continuous","Remo Security Joint Taskforce & Community Harmony Council — Ensuring peaceful coexistence across ethnic groups."]
+            ].map(([ic,d,t],i)=>(
               <div key={i} style={{display:"flex",gap:".9rem",padding:".68rem 1rem",background:"rgba(201,150,58,.04)",border:"1px solid rgba(201,150,58,.1)",borderLeft:"3px solid #C9963A",marginBottom:".5rem"}}>
                 <span style={{fontSize:"1rem",flexShrink:0}}>{ic}</span>
                 <div>
@@ -186,8 +191,8 @@ Didun ni iranti olododo...`
       {/* Kings list */}
       <W bg="#2c1a0e">
         <p className="sl">Royal Succession</p>
-        <h2 className="st" style={{marginBottom:".8rem"}}>The The Akarigbo of Remoland — Confirmed Kings</h2>
-        <p className="si" style={{marginBottom:"2.5rem"}}>The title of the King of Sagamu Remo is <strong style={{color:"#F0D080"}}>Akarigbo</strong>. Below are the confirmed monarchs from historical records and community archives.</p>
+        <h2 className="st" style={{marginBottom:".8rem"}}>The Akarigbos of Remoland — Confirmed Kings</h2>
+        <p className="si" style={{marginBottom:"2.5rem"}}>The sovereign title of the Paramount Ruler of Sagamu and Remoland is <strong style={{color:"#F0D080"}}>The Akarigbo of Remoland</strong>. Below are confirmed monarchs from historical records and royal palace archives.</p>
         <div style={{display:"grid",gap:"1.1rem"}}>
           {kings.map((k,i)=>(
             <div key={i} style={{padding:"1.6rem",background:k.cur?"rgba(201,150,58,.08)":"rgba(201,150,58,.03)",border:`1px solid ${k.cur?"rgba(201,150,58,.4)":"rgba(201,150,58,.12)"}`,borderLeft:`4px solid ${k.cur?"#C9963A":"#7A2E0E"}`}}>
@@ -209,27 +214,20 @@ Didun ni iranti olododo...`
                   <div style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:".88rem",lineHeight:2.1,color:"#F0D080",whiteSpace:"pre-line"}}>{k.oriki}</div>
                 </div>
               )}
-              {k.children&&(
-                <div style={{marginTop:".8rem"}}>
-                  <div className="cinzel" style={{fontSize:".55rem",letterSpacing:".1em",color:"rgba(201,150,58,.6)",textTransform:"uppercase",marginBottom:".4rem"}}>His Children (as mentioned in Oriki)</div>
-                  <div style={{display:"flex",flexWrap:"wrap",gap:".4rem"}}>
-                    {k.children.map(c=><span key={c} style={{fontSize:".75rem",color:"rgba(245,237,216,.55)",padding:".15rem .5rem",border:"1px solid rgba(201,150,58,.15)"}}>{c}</span>)}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </div>
 
-        {/* Notable descendants */}
+        {/* Notable sons & daughters */}
         <div style={{marginTop:"3rem"}}>
-          <p className="sl">Royal Descendants of Note</p>
-          <h2 className="st" style={{fontSize:"1.6rem",marginBottom:"1.5rem"}}>Descendants of Oba Alfred Babington-Ashaye</h2>
+          <p className="sl">Illustrious Heritage</p>
+          <h2 className="st" style={{fontSize:"1.6rem",marginBottom:"1.5rem"}}>Prominent Sons & Daughters of Sagamu</h2>
           <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))",gap:"1rem"}}>
             {[
-              {n:"Dr. Shola Mos-Shogbamimu",r:"Granddaughter of Oba Alfred (Legunsen III)",f:"Lawyer, Author & Political Commentator (UK). PhD (Birkbeck), LLM (LSE), Executive MBA (Cambridge). New York Attorney. Founder: Women in Leadership publication.",note:"Daughter of late Prince Adebajo Babington-Ashaye"},
-              {n:"Late Otunba Ademolu Babington-Ashaye",r:"Son of Oba Alfred (Legunsen III)",f:"Former Principal General, Remo Division, Ogun State. Distinguished administrator and community leader.",note:"Father of Adedeji Babington-Ashaye"},
-              {n:"Otunba Fatai Sowemimo",r:"Married into the family",f:"His wife is a granddaughter of Oba Alfred through Prince Olumuyiwa Babington-Ashaye. Prominent Ogun State figure.",note:""},
+              {n:"Anthony Joshua, OBE",r:"Two-Time World Heavyweight Champion",f:"Born to the illustrious Joshua family of Sagamu. Proud ambassador of Sagamu and Yoruba heritage across global sports arenas.",note:"Joshua Family Compound, Sagamu"},
+              {n:"Otunba Gbenga Daniel",r:"Former Executive Governor of Ogun State",f:"Distinguished engineer, entrepreneur, and Senator representing Ogun East. Founder of Kresta Laurel and Conference Hotels.",note:"Makun Quarter, Sagamu"},
+              {n:"Chief Timothy Adeola Odutola",r:"Pioneer Nigerian Industrialist",f:"First President of the Manufacturers Association of Nigeria (MAN), pioneering rubber and manufacturing visionary in Remoland.",note:"Historical Industrial Leader"},
+              {n:"Oba William Christopher Adedoyin II",r:"Architect of Modern Remoland",f:"Historic monarch whose vision established Remo Secondary School in 1946 and modernized traditional governance.",note:"Torungbuwa Royal Dynasty"},
             ].map((p,i)=>(
               <div key={i} className="card" style={{padding:"1.5rem",borderTop:"3px solid #C9963A"}}>
                 <div style={{fontSize:"1.5rem",marginBottom:".5rem"}}>🌟</div>
@@ -242,16 +240,16 @@ Didun ni iranti olododo...`
           </div>
         </div>
 
-        {/* 4 Ruling Houses */}
+        {/* 2 Paramount Ruling Houses */}
         <div style={{marginTop:"3rem"}}>
-          <p className="sl">Governance</p>
-          <h2 className="st" style={{fontSize:"1.6rem",marginBottom:"1.5rem"}}>The Four Royal Ruling Houses</h2>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(230px,1fr))",gap:"1rem"}}>
-            {[["⚔️","Legunsen Ruling House","The founding royal house. Produced Legunsen I (first Akarigbo), Legunsen III (Oba Alfred Babington-Ashaye, 1945-1982)."],["🌿","Agbejoye / Fadagbuwa Ruling House","Produced Oba Oladele Ogunbade (Agbejoye II), who reigned 1983–2022 for 38 years."],["👑","Kankanbina / Ejigboye Ruling House","Currently reigning — Oba Babatunde Adewale Ajayi (Kankanbiina II), installed April 2023."],["🏺","Oregunsen Ruling House","Fourth of the four royal houses eligible to produce the The Akarigbo of Remoland."]].map(([ic,n,d],i)=>(
-              <div key={i} className="card" style={{padding:"1.5rem",borderTop:"3px solid #B5451B"}}>
-                <div style={{fontSize:"1.5rem",marginBottom:".5rem"}}>{ic}</div>
-                <div className="cinzel" style={{fontSize:".62rem",letterSpacing:".1em",color:"#C9963A",textTransform:"uppercase",marginBottom:".4rem"}}>{n}</div>
-                <div style={{fontSize:".8rem",lineHeight:1.68,color:"rgba(245,237,216,.62)"}}>{d}</div>
+          <p className="sl">Royal Dynasty</p>
+          <h2 className="st" style={{fontSize:"1.6rem",marginBottom:"1.5rem"}}>The Sovereign Ruling Houses of the Akarigbo</h2>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))",gap:"1.5rem"}}>
+            {[["👑","Torungbuwa Ruling House","Ancient royal dynasty tracing lineage directly from crowned princes of Oduduwa. Produced Oba William Christopher Adedoyin II (1916–1952) and the reigning Akarigbo, HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II)."],["🌿","Anoko Ruling House","The historic dynasty encompassing the Erinwole and Erinjugbo royal branches. Produced Oba Moses Awolesi (Erinwole II, 1952–1988) and Oba Dr. Michael Adeniyi Sonariwo (Erinjugbo II, 1990–2016)."]].map(([ic,n,d],i)=>(
+              <div key={i} className="card" style={{padding:"1.8rem",borderTop:"4px solid #C9963A"}}>
+                <div style={{fontSize:"2rem",marginBottom:".5rem"}}>{ic}</div>
+                <div className="cinzel" style={{fontSize:".72rem",letterSpacing:".1em",color:"#C9963A",textTransform:"uppercase",marginBottom:".5rem"}}>{n}</div>
+                <div style={{fontSize:".84rem",lineHeight:1.75,color:"rgba(245,237,216,.68)"}}>{d}</div>
               </div>
             ))}
           </div>

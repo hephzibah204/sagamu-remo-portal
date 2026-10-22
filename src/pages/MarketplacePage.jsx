@@ -84,7 +84,7 @@ export default function MarketplacePage() {
     condition: 'Fresh Harvest',
     stockStatus: 'In Stock',
     seller: '',
-    quarter: 'Oke-Sagamu',
+    quarter: 'Offin',
     phone: '',
     whatsapp: '',
     email: '',
@@ -213,7 +213,7 @@ export default function MarketplacePage() {
       condition: 'Fresh Harvest',
       stockStatus: 'In Stock',
       seller: '',
-      quarter: 'Oke-Sagamu',
+      quarter: 'Offin',
       phone: '',
       whatsapp: '',
       email: '',
@@ -912,7 +912,7 @@ export default function MarketplacePage() {
               </div>
               <div>
                 <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Delivery / Pickup Location in Sagamu *</label>
-                <input required className="inp" value={orderForm.address} onChange={e => setOrderForm({ ...orderForm, address: e.target.value })} placeholder="E.g. Oke-Sagamu, near Town Hall" />
+                <input required className="inp" value={orderForm.address} onChange={e => setOrderForm({ ...orderForm, address: e.target.value })} placeholder="E.g. Ita Oba, Offin, near Aafin Akarigbo" />
               </div>
               <div>
                 <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Special Note (Optional)</label>

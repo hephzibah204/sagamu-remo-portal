@@ -30,9 +30,9 @@ function generateRoyalEmailHtml({
     : 'AUDIENCE REQUEST RECEIVED';
 
   const statusMessage = isConfirmed
-    ? `We are pleased to formally convey that His Royal Highness, <strong>Oba Babatunde Adewale Ajayi — Kankanbiina II</strong>, the The Akarigbo of Remoland, has granted your request for a royal audience.`
+    ? `We are pleased to formally convey that His Royal Majesty, <strong>Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II)</strong>, The Akarigbo and Paramount Ruler of Remoland, has granted your request for a royal audience.`
     : isPostponed
-    ? `The Palace Protocol Office of the The Akarigbo of Remoland regrets to inform you that due to traditional council engagements or royal state duties, your audience appointment has been rescheduled.`
+    ? `The Palace Protocol Office of The Akarigbo of Remoland regrets to inform you that due to traditional council engagements or royal state duties, your audience appointment has been rescheduled.`
     : isDeclined
     ? `The Palace Protocol Office acknowledges receipt of your request. Following review by the King's Council, we regret to inform you that an audience cannot be accommodated at this time.`
     : `Your formal request for a royal audience has been registered with the Palace Secretariat and is currently undergoing protocol review.`;
@@ -51,9 +51,9 @@ function generateRoyalEmailHtml({
     <!-- Royal Letterhead Header -->
     <div style="background: linear-gradient(135deg, #064e3b 0%, #042f24 100%); padding: 30px 20px; text-align: center; border-bottom: 2px solid #C9963A;">
       <div style="font-size: 38px; margin-bottom: 8px;">👑</div>
-      <div style="color: #fef08a; font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;">AAFIN The Akarigbo of Remoland</div>
+      <div style="color: #fef08a; font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;">AAFIN AKARIGBO OF REMOLAND</div>
       <div style="color: #ffffff; font-size: 20px; font-weight: 800; margin: 6px 0; letter-spacing: 0.5px;">PALACE PROTOCOL SECRETARIAT</div>
-      <div style="color: #86efac; font-size: 12px; font-style: italic;">Under the Auspices of HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Kankanbiina II</div>
+      <div style="color: #86efac; font-size: 12px; font-style: italic;">Under the Auspices of HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Torungbuwa II</div>
     </div>
 
     <!-- Body Content -->

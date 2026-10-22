@@ -26,6 +26,7 @@ const NEWS_DEFAULTS = [
     ic: '🚀',
     readTime: '3 min read',
     author: 'Palace Communications Bureau',
+    image: '/images/palace/1.jpg',
     featured: true
   },
   {
@@ -52,7 +53,8 @@ const NEWS_DEFAULTS = [
     },
     ic: '🏥',
     readTime: '4 min read',
-    author: 'Medical Affairs Desk'
+    author: 'Medical Affairs Desk',
+    image: '/images/sagamu-townscape.jpg'
   },
   {
     id: 'n3',
@@ -78,7 +80,8 @@ const NEWS_DEFAULTS = [
     },
     ic: '🌾',
     readTime: '3 min read',
-    author: 'Commerce & Markets Desk'
+    author: 'Commerce & Markets Desk',
+    image: '/images/Sagamu Central Market.webp'
   },
   {
     id: 'n4',
@@ -104,7 +107,116 @@ const NEWS_DEFAULTS = [
     },
     ic: '🔥',
     readTime: '3 min read',
-    author: 'Culture & Heritage Bureau'
+    author: 'Culture & Heritage Bureau',
+    image: '/images/palace/1.jpg'
+  },
+  {
+    id: 'n5',
+    slug: 'gateway-stadium-sagamu-sports-festival-prep',
+    date: 'May 14, 2026',
+    cat: 'infrastructure',
+    headline: 'Gateway International Stadium Sagamu Completes Multi-Million Pitch and Facilities Upgrade',
+    summary: 'The 20,000-seater stadium undergoes comprehensive revitalization ahead of regional football championships and athletic trials.',
+    body: "The Ogun State Sports Council in collaboration with the Sagamu Youth Sports Development Directorate has completed the turf re-grassing and modern tartan track resurfacing at the Gateway International Stadium, Sagamu.\n\nThe stadium, famous for hosting international youth tournaments and premier league fixtures, now boasts digital LED floodlights, VAR-ready press booths, and renewed VIP lounges.\n\nLocal football clubs and youth academies in Sagamu expressed joy, affirming that the facility will inspire the next generation of international champions like Sagamu's own Anthony Joshua.",
+    paragraphs: [
+      'The Ogun State Sports Council in collaboration with the Sagamu Youth Sports Development Directorate has completed the turf re-grassing and modern tartan track resurfacing at the Gateway International Stadium, Sagamu.',
+      'The stadium, famous for hosting international youth tournaments and premier league fixtures, now boasts digital LED floodlights, VAR-ready press booths, and renewed VIP lounges.',
+      'Local football clubs and youth academies in Sagamu expressed joy, affirming that the facility will inspire the next generation of international champions like Sagamu\'s own Anthony Joshua.'
+    ],
+    highlights: [
+      'FIFA-compliant turf and Olympic 8-lane tartan track.',
+      'Equipped with digital lighting for evening fixtures.',
+      'Home base for Remo youth athletic talent discovery.'
+    ],
+    quote: {
+      text: 'Sagamu sports infrastructure is returning to world-class reckoning.',
+      author: 'Sagamu Sports Development Commission'
+    },
+    ic: '🏟️',
+    readTime: '3 min read',
+    author: 'Sports & Youth Desk',
+    image: '/images/Gateway Stadium Sagamu.png'
+  },
+  {
+    id: 'n6',
+    slug: 'lafarge-elephant-cement-sagamu-green-initiative',
+    date: 'April 22, 2026',
+    cat: 'infrastructure',
+    headline: 'Lafarge Elephant Cement Sagamu Works Commissions ₦800M Clean Energy & Youth Apprenticeship Hub',
+    summary: 'Industrial giant reinforces community commitment with biomass energy transition and fully funded engineering apprenticeships for Sagamu youths.',
+    body: "In celebration of over six decades of continuous industrial excellence in Sagamu, Lafarge Africa Plc has commissioned an ₦800 million alternative fuel and community training complex at its Sagamu Elephant Cement Works.\n\nThe initiative transitions a significant portion of kiln heating to renewable agricultural biomass, cutting local carbon emissions while opening direct technical vocational training for 200 youths annually in mechanical, electrical, and mechatronic engineering.\n\nHis Royal Majesty The Akarigbo commended Lafarge as a pillar of Sagamu's modern industrial economy, urging other corporations in the corridor to emulate their dedication.",
+    paragraphs: [
+      'In celebration of over six decades of continuous industrial excellence in Sagamu, Lafarge Africa Plc has commissioned an ₦800 million alternative fuel and community training complex at its Sagamu Elephant Cement Works.',
+      'The initiative transitions a significant portion of kiln heating to renewable agricultural biomass, cutting local carbon emissions while opening direct technical vocational training for 200 youths annually in mechanical, electrical, and mechatronic engineering.',
+      'His Royal Majesty The Akarigbo commended Lafarge as a pillar of Sagamu\'s modern industrial economy, urging other corporations in the corridor to emulate their dedication.'
+    ],
+    highlights: [
+      '₦800M investment in alternative green fuel and youth training.',
+      '200 full technical scholarships awarded yearly.',
+      'Reduces carbon footprint across Sagamu industrial zone.'
+    ],
+    quote: {
+      text: 'Elephant Cement and Sagamu share an inseparable bond of industrial heritage and progress.',
+      author: 'Lafarge Sagamu Plant Operations'
+    },
+    ic: '🏗️',
+    readTime: '4 min read',
+    author: 'Industry & Environment Desk',
+    image: '/images/sagamu-townscape.jpg'
+  },
+  {
+    id: 'n7',
+    slug: 'remo-secondary-school-rss-80th-anniversary-endowment',
+    date: 'March 11, 2026',
+    cat: 'education',
+    headline: 'Remo Secondary School (RSS) Alunmi (RSSOSA) Endows ₦50M Digital Research Chair Ahead of 80th Jubilee',
+    summary: 'The pioneer secondary school of Remoland prepares for historic milestone with major digital library and scientific laboratories.',
+    body: "The global alumni body of Remo Secondary School (RSSOSA) has endowed a ₦50 million science, technology, and humanities research fund ahead of the school's upcoming 80th anniversary.\n\nFounded on February 4, 1946 by Oba William Christopher Adedoyin II and visionary community leaders, RSS remains the intellectual cornerstone of Sagamu and Remoland.\n\nThe endowment finances high-speed fiber internet throughout the historic quadrangle campus, advanced physics and robotics laboratories, and annual scholarships for exceptional indigent students.",
+    paragraphs: [
+      'The global alumni body of Remo Secondary School (RSSOSA) has endowed a ₦50 million science, technology, and humanities research fund ahead of the school\'s upcoming 80th anniversary.',
+      'Founded on February 4, 1946 by Oba William Christopher Adedoyin II and visionary community leaders, RSS remains the intellectual cornerstone of Sagamu and Remoland.',
+      'The endowment finances high-speed fiber internet throughout the historic quadrangle campus, advanced physics and robotics laboratories, and annual scholarships for exceptional indigent students.'
+    ],
+    highlights: [
+      '₦50M research and digital library endowment.',
+      'Commemorates 80 years of pioneer academic excellence since 1946.',
+      'Transforms science and robotics training for Sagamu youth.'
+    ],
+    quote: {
+      text: 'The torch lit in 1946 will forever burn bright across Remoland and the nation.',
+      author: 'RSSOSA National Executive'
+    },
+    ic: '🏫',
+    readTime: '3 min read',
+    author: 'Education & Alumni Secretariat',
+    image: '/images/Ositelu Memorial School Gate.jpg'
+  },
+  {
+    id: 'n8',
+    slug: 'sagamu-diaspora-alliance-maternal-health-clinics',
+    date: 'February 15, 2026',
+    cat: 'diaspora',
+    headline: 'Sagamu Diaspora Network in UK & North America Mobilizes $1.2M for Primary Health Centers Across Quarters',
+    summary: 'Diaspora indigenes fund maternal health, solar boreholes, and emergency response outposts in Sonyindo, Epe, and Batoro.',
+    body: "The Sagamu Union UK & Ireland and the Sagamu Association of North America (SANA) have united to deliver a comprehensive healthcare intervention package valued at $1.2 million across Sagamu.\n\nThe project delivers 24-hour solar electrical systems to primary health centers, automated vaccine refrigeration, clean potable water boreholes, and three rapid-response community ambulances.\n\nThe handover ceremony, held at Aafin Akarigbo, saw quarter leaders and traditional chiefs warmly celebrating the diaspora sons and daughters for their unwavering homecoming investments.",
+    paragraphs: [
+      'The Sagamu Union UK & Ireland and the Sagamu Association of North America (SANA) have united to deliver a comprehensive healthcare intervention package valued at $1.2 million across Sagamu.',
+      'The project delivers 24-hour solar electrical systems to primary health centers, automated vaccine refrigeration, clean potable water boreholes, and three rapid-response community ambulances.',
+      'The handover ceremony, held at Aafin Akarigbo, saw quarter leaders and traditional chiefs warmly celebrating the diaspora sons and daughters for their unwavering homecoming investments.'
+    ],
+    highlights: [
+      '$1.2M diaspora community healthcare intervention.',
+      'Solar power, vaccine cold chains, and boreholes installed.',
+      'Benefitting Sonyindo, Epe, Batoro, and Offin primary care centers.'
+    ],
+    quote: {
+      text: 'No matter how far we travel, our hearts and resources remain anchored in Sagamu.',
+      author: 'Sagamu Diaspora Joint Action Committee'
+    },
+    ic: '🌐',
+    readTime: '3 min read',
+    author: 'Diaspora Affairs Desk',
+    image: '/images/community-empowerment.jpg'
   }
 ];
 

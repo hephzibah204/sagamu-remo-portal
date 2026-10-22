@@ -12,7 +12,7 @@ const festivals = [
     origin: 'Initiated by Sagamu Development Association (SDA)',
     desc: 'The supreme civic and cultural carnival of Sagamu, bringing together all 13 confederate quarters, home and diaspora indigenes, royal durbars, cultural competitions, and the Miss Sagamu pageant.',
     sacred: false,
-    img: '/images/49th Olipakala Day.jpg'
+    img: '/images/sagamu-townscape.jpg'
   },
   {
     n: 'Remo Grand Agemo Festival',

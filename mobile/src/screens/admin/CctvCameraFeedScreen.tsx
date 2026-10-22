@@ -94,9 +94,9 @@ const FALLBACK_CAMERAS = [
   },
   {
     id: 'CAM-05',
-    name: 'Isale-Sagamu Hospital Junction & Emergency Axis',
+    name: 'OOUTH Hospital Junction & Emergency Axis',
     sector: 'Sector 4 — Medical & Social',
-    location: 'Isale-Sagamu Hospital Road',
+    location: 'OOUTH Hospital Road, Makun',
     latitude: 6.9325,
     longitude: 3.6310,
     agency: 'Civil Defence (NSCDC)',

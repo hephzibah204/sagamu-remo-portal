@@ -52,10 +52,10 @@ const CARD_TYPES = [
 import { SAGAMU_QUARTER_NAMES } from '../constants/quarters';
 
 const QUARTERS = [...SAGAMU_QUARTER_NAMES, 'Other'];
-const COMPOUNDS = ['Kankanbina', 'Ejigboye', 'Agbejoye', 'Legunsen', 'Orowa', 'Olu-Iwa', 'Other'];
+const COMPOUNDS = ['Torungbuwa', 'Anoko', 'Ewusi', 'Aafin Akarigbo Royal Court', 'Ita Oba', 'Offin', 'Makun', 'Sonyindo', 'Latawa', 'Batoro', 'Other'];
 
 function generateId(type) {
-  const prefix = { indigene: 'OGR', resident: 'SGM-R', diaspora: 'SGM-D', honorary: 'SGM-H' };
+  const prefix = { indigene: 'SGM', resident: 'SGM-R', diaspora: 'SGM-D', honorary: 'SGM-H' };
   const num = Math.floor(100000 + Math.random() * 900000);
   return `${prefix[type]}-${num}`;
 }

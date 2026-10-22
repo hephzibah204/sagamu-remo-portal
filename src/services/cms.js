@@ -18,7 +18,7 @@ const CONTENT_TYPES = {
   gallery: {
     label: 'Gallery', icon: '🖼️', key: 'cms-gallery',
     fields: [
-      { k: 'cat', l: 'Category', t: 'select', o: ['coronation', 'palace', 'lipakala', 'development', 'heritage', 'diaspora'] },
+      { k: 'cat', l: 'Category', t: 'select', o: ['coronation', 'palace', 'sagamu_day', 'development', 'heritage', 'diaspora'] },
       { k: 'title', l: 'Title', t: 'text', r: true },
       { k: 'date', l: 'Date', t: 'text' },
       { k: 'desc', l: 'Description', t: 'textarea' },

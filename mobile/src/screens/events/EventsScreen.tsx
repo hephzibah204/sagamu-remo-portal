@@ -52,7 +52,7 @@ const SEED_EVENTS: CommunityEvent[] = [
     title: 'SDA Quarterly Civic Town Hall & Electrification Review',
     date: '2026-10-14',
     time: '02:00 PM WAT',
-    venue: 'Civic Centre Hall, Oke-Sagamu',
+    venue: 'Sagamu Civic Centre Hall, Offin',
     desc: 'Community-wide deliberative session on solar mini-grid installations, road repairs along Sagamu corridor, and ₦10M Transformation Fund allocation.',
     category: 'civic',
     status: 'upcoming',
@@ -313,7 +313,7 @@ export const EventsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
               <Text style={styles.inputLabel}>Venue *</Text>
               <TextInput
                 style={styles.input}
-                placeholder="e.g., Town Hall, Oke-Sagamu"
+                placeholder="e.g., Town Hall, Offin"
                 placeholderTextColor="#94a3b8"
                 value={venue}
                 onChangeText={setVenue}

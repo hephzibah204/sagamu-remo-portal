@@ -73,7 +73,7 @@ export const SEED_TIMELINE_POSTS: TimelinePost[] = [
         id: 'c1',
         author_name: 'Chief Olatunji Orowa',
         author_avatar: '🏛️',
-        comment_text: 'Kábíyèsí o! The elders of Kankanbina are fully ready with the ancestral masquerade troupe.',
+        comment_text: 'Kábíyèsí o! The elders of Torungbuwa are fully ready with the ancestral masquerade troupe.',
         created_at: new Date(Date.now() - 3600000 * 3).toISOString(),
       },
       {

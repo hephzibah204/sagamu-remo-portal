@@ -23,58 +23,58 @@ interface QuizQuestion {
 
 const QUESTIONS: QuizQuestion[] = [
   {
-    question: "When was the Ilagere homestead established by the warrior prince Sagamu Founding Ancestors?",
-    options: ["1401 A.D.", "1550 A.D.", "1880 A.D.", "1930 A.D."],
+    question: "In what historic year was modern Sagamu founded through the mutual defense confederation of 13 Remo settlements?",
+    options: ["1872 A.D.", "1804 A.D.", "1914 A.D.", "1960 A.D."],
     answer: 0,
-    insight: "Prince Sagamu Founding Ancestors, an Ile-Ife royal warrior, migrated and settled at Agbele, establishing the homestead in 1401 A.D. This marked the ancient foundation of Sagamu Remo."
+    insight: "In 1872, driven by the need for survival and mutual defense during the 19th-century Yoruba Civil Wars, thirteen independent Remo settlements confederated to establish modern Sagamu on Bammowu land."
   },
   {
-    question: "Who is the legendary deified guardian mother of Sagamu Remo and royal companion of Sagamu Founding Ancestors?",
-    options: ["Queen Moremi", "Yemogun", "Madam Tinubu", "Deity Yemoja"],
+    question: "What is the historical origin of the name 'Sagamu'?",
+    options: ["A sacred hill fortress", "Orisagamu Ewa — a freshwater spring", "An ancient warrior sword", "A sacred palm grove"],
     answer: 1,
-    insight: "Yemogun is the deified guardian mother of Sagamu Remoland who migrated with Sagamu Founding Ancestors. Her sacred shrine and memory are highly revered in Sagamu Remo."
+    insight: "The name Sagamu is derived from 'Orisagamu Ewa', a natural spring and aperture where fresh water bubbled from the earth, sustaining the founding confederate ancestors."
   },
   {
-    question: "Faced with Yoruba Wars, who consolidated the satellite settlements and became the FIRST The Akarigbo of Remoland?",
-    options: ["Oba Alfred Babington-Ashaye", "Oba Babatunde Adewale Ajayi", "Oba Adelana Osifayo (Legunsen I)", "Oba Oladele Moshood Ogunbade"],
+    question: "On whose fertile farmland did the 13 confederate communities gather to establish unified Sagamu?",
+    options: ["Oduduwa", "Obanta", "Bammowu", "Lisabi"],
     answer: 2,
-    insight: "Oba Adelana Osifayo (Legunsen I) merged the scattered war camps and compounds into a unified town in the c. 1880s, becoming the first official Akarigbo."
+    insight: "The founding confederates assembled and settled on the elevated, fertile farmlands of a nobleman named Bammowu, which offered strategic high ground for defensive vigilance."
   },
   {
-    question: "What is the correct, respectful Yoruba greeting for elders in the morning?",
-    options: ["áº¸ káàsán", "áº¸ káàbá»Ì€", "áº¸ káàrá»Ì€", "Báwo ni"],
-    answer: 2,
-    insight: "\"áº¸ káàrá»Ì€\" is the respectful morning greeting, utilizing the plural honorific \"áº¸\" to show deep reverence, a core pillar of Yoruba moral heritage."
-  },
-  {
-    question: "Which global spiritual institution was founded in Sagamu Remo on July 27, 1930 by Prophet Josiah Ositelu?",
-    options: ["Redeemed Christian Church of God", "The Church of the Lord (Aladura) Worldwide", "Christ Apostolic Church", "Celestial Church of Christ"],
+    question: "What is the traditional title of the sovereign paramount monarch of Sagamu and all of Remoland?",
+    options: ["The Awujale", "The Akarigbo of Remoland", "The Alake", "The Ooni"],
     answer: 1,
-    insight: "Prophet Josiah Olunowo Ositelu founded the Church of the Lord (Aladura) Worldwide at the Lisa compound in Sagamu. It has since spread across the globe."
+    insight: "The Akarigbo of Remoland is the paramount sovereign and supreme traditional ruler over all 33 towns of Remoland (Remo Metalelogbon), with his royal seat in Sagamu (Aafin Akarigbo, Ita Oba)."
   },
   {
-    question: "Which distinguished Akarigbo met Her Majesty Queen Elizabeth II during her royal visit to Nigeria in 1956?",
-    options: ["Oba Alfred Obafuwa Babington-Ashaye (Legunsen III)", "Oba Adelana Osifayo", "Oba Oladele Moshood Ogunbade", "Oba Babatunde Adewale Ajayi"],
+    question: "How many historic settlements united to form the confederation of Sagamu?",
+    options: ["7 Settlements", "10 Settlements", "13 Settlements", "33 Settlements"],
+    answer: 2,
+    insight: "Thirteen distinct settlements confederated in 1872: Offin, Makun, Sonyindo, Epe, Ibido, Igbepa, Ado, Oko, Ipoji, Batoro, Ijoku, Latawa, and Ijagba."
+  },
+  {
+    question: "Which market in Sagamu is internationally renowned as the largest kolanut trading hub in West Africa?",
+    options: ["Mile 12 Market", "Sabo Kolanut Market", "Bodija Market", "Dugbe Market"],
+    answer: 1,
+    insight: "Sabo Market in Sagamu has operated for over a century as West Africa's preeminent wholesale exchange for Gbanja and Abata kolanuts, trading with Niger, Chad, Mali, and northern Nigeria."
+  },
+  {
+    question: "Which institution, founded in 1946 in Sagamu, was the first secondary school established in Remoland?",
+    options: ["Ositelu Memorial College", "Remo Secondary School (RSS Sagamu)", "Abeokuta Grammar School", "Ijebu Ode Grammar School"],
+    answer: 1,
+    insight: "Remo Secondary School (RSS) was established in 1946 under the royal patronage of Oba William Christopher Adedoyin II as the pioneer secondary academy of Remoland."
+  },
+  {
+    question: "Who is the reigning The Akarigbo of Remoland, crowned on December 7, 2017?",
+    options: ["Oba Babatunde Adewale Ajayi, CFR, FCA", "Oba Moses Awolesi", "Oba Dr. Michael Sonariwo", "Oba William Adedoyin"],
     answer: 0,
-    insight: "Oba Alfred Babington-Ashaye (Legunsen III) met Queen Elizabeth II in 1956, marking a legendary diplomatic highlight in Sagamu's history."
+    insight: "HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II), a distinguished Chartered Accountant and Supreme Court Barrister, reigns as the Paramount Ruler of Remoland."
   },
   {
-    question: "What natural physical landmark provided defensive fortification for the early ancestors of Sagamu?",
-    options: ["A volcanic crater lake", "The Hills of Sagamu (Agbele Heights)", "A massive river delta", "A deep rainforest valley"],
+    question: "What flagship annual festival unites all 13 confederate quarters of Sagamu every November?",
+    options: ["Ojude Oba Festival", "Sagamu Day Grand Celebration", "Eyo Festival", "Lisabi Day"],
     answer: 1,
-    insight: "The towering Hills of Sagamu (Agbele Heights) served as an invincible, high-altitude war camp and shelter for founding ancestors during tribal conflicts."
-  },
-  {
-    question: "Who was the longest-reigning modern The Akarigbo of Remoland, ruling peacefully for 38 years?",
-    options: ["Oba Babatunde Adewale Ajayi", "Oba Adelana Osifayo", "Oba Oladele Moshood Ogunbade (Agbejoye II)", "Oba Alfred Babington-Ashaye"],
-    answer: 2,
-    insight: "Oba Oladele Moshood Ogunbade (Agbejoye II) ascended the throne in December 1983 and guided Sagamu through 38 years of modernization and growth until 2022."
-  },
-  {
-    question: "What primary annual carnival unites all Sagamu indigenes to celebrate their common ancestral heritage?",
-    options: ["Eyo Festival", "Sagamu Day Festival", "Ojude Oba Festival", "Lisabi Day Festival"],
-    answer: 1,
-    insight: "The Sagamu Day Festival celebrates Prince Sagamu Founding Ancestors's founding legacy with cultural parades, traditional homage to the palace, and homecoming galas."
+    insight: "Sagamu Day is the supreme civic and cultural homecoming celebration organized annually in November by the Sagamu Development Association (SDA)."
   }
 ];
 

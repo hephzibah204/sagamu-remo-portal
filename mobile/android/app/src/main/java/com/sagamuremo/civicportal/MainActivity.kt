@@ -1,4 +1,4 @@
-package com.ogeremo.civicportal
+package com.sagamuremo.civicportal
 
 import android.os.Build
 import android.os.Bundle

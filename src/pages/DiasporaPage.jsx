@@ -29,7 +29,7 @@ const CIVIC_PROJECTS = [
     organizer: 'Sagamu Diaspora STEM Alumni',
   },
   {
-    id: 'lipakala_jubilee',
+    id: 'sagamu_day_jubilee',
     title: '50th Sagamu Day Golden Jubilee Cultural Fund',
     goal: 8000000,
     raised: 5100000,

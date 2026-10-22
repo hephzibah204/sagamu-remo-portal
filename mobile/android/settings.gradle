@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'Ogere Remo Civic Portal'
+rootProject.name = 'Sagamu Remo Civic Portal'
 
 dependencyResolutionManagement {
   versionCatalogs {

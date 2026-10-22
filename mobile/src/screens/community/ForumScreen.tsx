@@ -363,7 +363,7 @@ export const ForumScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
               <Text style={styles.inputLabel}>Your Name / Quarter *</Text>
               <TextInput
                 style={styles.input}
-                placeholder="e.g., Segun Adeleke (Oke-Sagamu Youth Wing)"
+                placeholder="e.g., Segun Adeleke (Offin Youth Wing)"
                 placeholderTextColor="#94a3b8"
                 value={newAuthor}
                 onChangeText={setNewAuthor}

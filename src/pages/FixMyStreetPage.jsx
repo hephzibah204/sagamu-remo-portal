@@ -80,7 +80,7 @@ export default function FixMyStreetPage() {
           latitude: lat,
           longitude: lng,
           location: loc.formattedText,
-          quarter: loc.sector.includes('Sector 2') ? 'Oke-Sagamu' : loc.sector.includes('Sector 4') ? 'Isale-Sagamu' : 'Oke-Sagamu',
+          quarter: loc.sector.includes('Sector 2') ? 'Offin' : loc.sector.includes('Sector 4') ? 'Makun' : 'Offin',
         }));
         setIsDetectingGps(false);
       },
@@ -99,7 +99,7 @@ export default function FixMyStreetPage() {
     setFormData({
       title: '',
       category: 'pothole_road',
-      quarter: 'Oke-Sagamu',
+      quarter: 'Offin',
       location: '',
       latitude: 6.9368,
       longitude: 3.6330,

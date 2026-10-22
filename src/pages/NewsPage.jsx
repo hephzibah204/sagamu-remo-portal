@@ -15,6 +15,7 @@ const CATEGORIES = [
   { id: 'royal', label: 'Royal & Heritage' },
   { id: 'education', label: 'Education & Youth' },
   { id: 'health', label: 'Health & Welfare' },
+  { id: 'commerce', label: 'Commerce & Markets' },
   { id: 'infrastructure', label: 'Infrastructure' },
   { id: 'culture', label: 'Culture & Festivals' },
   { id: 'diaspora', label: 'Diaspora' },

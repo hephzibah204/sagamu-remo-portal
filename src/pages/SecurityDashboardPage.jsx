@@ -52,9 +52,9 @@ const THREAT_LEVELS = {
 const SECTORS = [
   'KM 66-68 Lagos-Ibadan Expressway',
   'Sagamu Tollgate Bypass / Old Tollgate',
-  'Palace Way / Aafin Akarigbo Axis',
-  'Isale-Sagamu Hospital Road',
-  'Oke-Sagamu Central Market Complex',
+  'Palace Way / Aafin Akarigbo Axis (Offin)',
+  'OOUTH Hospital Road (Makun)',
+  'Sabo Kolanut / Sagamu Central Market Complex',
   'RSSOSA College Junction',
   'Agbele Ancestral Corridor',
   'Trailer Park Outpost',

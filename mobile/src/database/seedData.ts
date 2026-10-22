@@ -43,84 +43,106 @@ export interface SeedEmergencyContact {
 export const SEED_NEWS: SeedNewsItem[] = [
   {
     id: 'news-01',
-    title: 'Ogun State Government Approves Rehabilitation of Yemogun Street in Sagamu',
+    title: 'HRM The Akarigbo Unveils ₦2.5B Sagamu Digital Innovation & Industrial Corridor',
     category: 'Infrastructure & Development',
-    date: '2026-09-12',
+    date: '2026-09-24',
     readTime: '3 min read',
     isBreaking: true,
-    author: 'Ogun State Ministry of Works',
-    summary: 'The 1.25km Yemogun road project officially commences to improve intra-city connectivity in Sagamu Remo.',
-    content: `The Ogun State Executive Council has approved and commenced the complete rehabilitation of the 1.25km Yemogun Street in Sagamu Remo, Sagamu Local Government Area. This strategic infrastructure project aligns with Governor Dapo Abiodun's ongoing infrastructural drive across the state to boost local commerce, ease transportation of agricultural goods, and enhance the quality of life for all Sagamu residents. Construction equipment has been mobilized to the site.`
+    author: 'Palace Communications Bureau',
+    summary: 'A new tech hub and agro-industrial corridor launched near the Gateway Agro-Cargo Airport.',
+    content: `His Royal Majesty Oba Babatunde Adewale Ajayi, Torungbuwa II, CFR, Akarigbo and Paramount Ruler of Remoland, in partnership with private sector leaders, has unveiled the master plan for the Sagamu Digital Innovation and Agro-Industrial Park. Strategically located along the Interchange-Airport axis, the park is designed to create over 5,000 direct technology and manufacturing jobs for Sagamu youths while modernizing the local supply chain for agricultural and industrial goods.`
   },
   {
     id: 'news-02',
-    title: 'High Chief Kesington Adebutu Sponsors Modern Recreation Centre at Panada, Sagamu',
-    category: 'Community Welfare',
-    date: '2026-08-31',
+    title: 'OOUTH Sagamu Commissions Ultra-Modern Multi-Specialty Diagnostic Center',
+    category: 'Health & Welfare',
+    date: '2026-08-18',
     readTime: '4 min read',
     isBreaking: false,
-    author: 'Sagamu Development Council',
-    summary: 'A new state-of-the-art civic recreation centre is currently under construction along Abeokuta Road.',
-    content: `A monumental foundation-laying ceremony was held on August 31, 2026, for the new Sagamu Recreation Centre situated at Panada, along the Abeokuta Road axis. Fully sponsored by the esteemed philanthropist High Chief Kesington Adebutu, the center will feature modern sporting facilities, civic gathering halls, and youth empowerment hubs. This joins the ongoing renovations of the historic Sagamu Town Hall, marking a renaissance in community civic architecture.`
+    author: 'Medical Affairs Desk',
+    summary: 'Olabisi Onabanjo University Teaching Hospital expands tertiary healthcare with MRI and cardiac catheterization laboratories.',
+    content: `The Management of Olabisi Onabanjo University Teaching Hospital (OOUTH), Sagamu, has formally commissioned its state-of-the-art Advanced Diagnostic and Cardiac Wing. This multimillion-naira upgrade enhances tertiary trauma care, specialized neurological imaging, and cardiac monitoring for residents of Sagamu, Ogun State, and interstate transit passengers on the Lagos-Ibadan and Sagamu-Benin corridors.`
   },
   {
     id: 'news-03',
-    title: 'State Relocates Major Kara Market Operations to Sagamu',
+    title: 'Sabo Sagamu International Kolanut Market Adopts Digital Trade & E-Commerce Platform',
     category: 'Economy & Commerce',
-    date: '2026-07-15',
+    date: '2026-07-10',
     readTime: '4 min read',
     isBreaking: false,
-    author: 'Sagamu Economic Development Desk',
-    summary: 'The bustling Kara cattle and livestock market operations are being relocated to Sagamu Remo to boost regional trade.',
-    content: `In a major economic policy shift, the Ogun State Government announced the relocation of the famous Kara Market to the Sagamu Remo industrial and logistics corridor. This strategic move is expected to exponentially increase commercial activities, create hundreds of direct and indirect jobs for local youth, and consolidate Sagamu's position as the premier logistics and trade nexus along the Lagos-Ibadan Expressway.`
+    author: 'Commerce & Markets Desk',
+    summary: 'West Africa\'s largest kolanut market partners with financial technology firms to streamline nationwide and international transactions.',
+    content: `A historic transformation is underway at Sabo Market, Sagamu, as the Kolanut Traders Union officially inaugurated the digital wholesale matching and verified freight tracking network. For more than a century, Sabo has served as the undisputed heartbeat of the kolanut trade, linking South-West growers to northern Nigerian and Sahelian merchants. The new digital portal offers transparent pricing indices, escrow protections, and electronic freight waybills.`
   },
   {
     id: 'news-04',
-    title: 'HRM Oba Babatunde Adewale Ajayi, CFR, FCA Commissioned Ultra-Modern Aafin Akarigbo Palace',
-    category: 'Palace Proclamation',
-    date: '2025-04-18',
-    readTime: '4 min read',
+    title: 'Sagamu Day 2026: Unity Torch Commences Tour Across All 13 Confederate Quarters',
+    category: 'Culture & Heritage',
+    date: '2026-06-01',
+    readTime: '3 min read',
     isBreaking: false,
-    author: 'Royal Palace Media Secretariat',
-    summary: 'A landmark achievement in Sagamu Remo modern history as the first permanent royal palace was officially dedicated.',
-    content: `In a historic gathering of Remo monarchs, state dignitaries, and indigenes from around the world, His Royal Majesty Oba Babatunde Adewale Ajayi (Kankanbiina II, Ilufemiloye I, Arole Sagamu Founding Ancestors) formally commissioned the permanent Aafin Akarigbo Palace. The royal complex features council chambers for traditional chiefs, a modern civic reception auditorium, archival royal library, and administrative suites.`
+    author: 'Culture & Heritage Bureau',
+    summary: 'The Sagamu Development Association begins countdown to the 41st Sagamu Day with cultural processions across federated towns.',
+    content: `The Sagamu Development Association (SDA) has officially lit the Sagamu Day Unity Torch at the sacred grounds of Ita Oba, outside Aafin Akarigbo. The torch will journey through each of the 13 founding settlements—Offin, Makun, Sonyindo, Epe, Ibido, Igbepa, Ado, Oko, Ipoji, Batoro, Ijoku, Latawa, and Ijagba—symbolizing unbroken brotherhood and solidarity since the 1872 confederation.`
+  },
+  {
+    id: 'news-05',
+    title: 'Gateway International Stadium Sagamu Completes Multi-Million Pitch and Facilities Upgrade',
+    category: 'Sports & Youth',
+    date: '2026-05-14',
+    readTime: '3 min read',
+    isBreaking: false,
+    author: 'Sports & Youth Desk',
+    summary: 'The 20,000-seater stadium undergoes comprehensive revitalization ahead of regional football championships.',
+    content: `The Ogun State Sports Council in collaboration with the Sagamu Youth Sports Development Directorate has completed the turf re-grassing and modern tartan track resurfacing at the Gateway International Stadium, Sagamu. The stadium boasts digital LED floodlights, VAR-ready press booths, and renewed VIP lounges.`
   }
 ];
 
 export const SEED_KINGS: SeedKingItem[] = [
   {
-    name: 'Oba Babatunde Adewale Ajayi',
-    title: 'Kankanbiina II Â· Ilufemiloye I Â· Arole Sagamu Founding Ancestors',
-    era: 'April 25, 2023 â€” Present',
-    house: 'Kankanbina / Ejigboye Ruling House',
+    name: 'Oba Babatunde Adewale Ajayi, CFR, FCA',
+    title: 'Torungbuwa II',
+    era: 'December 7, 2017 — Present',
+    house: 'Torungbuwa Ruling House',
     isCurrent: true,
-    note: 'Currently reigning. Commissioned the Aafin Akarigbo Palace (2025), Sagamu Cultural Centre, and spearheaded modern community civic transformations.',
-    oriki: 'Kabiyesi Akarigbo ti Sagamu Remo! Omo Sagamu Day agbeni madein, Arole Sagamu Founding Ancestors, Omo Sagamu mogbo, Sagamu ota, ni le onireke.'
+    note: 'The reigning Akarigbo and Paramount Ruler of Remoland. An accomplished Chartered Accountant, seasoned Barrister and Solicitor of the Supreme Court of Nigeria, and former Chairman of the Ogun State Council of Traditional Rulers.',
+    oriki: 'Torungbuwa Keji, Ajayi Omo Oba l\'Eko, l\'Offin, ni Sagamu. Ogbomolehin ti n f\'owo ola to ilu ro. Akarigbo Olufiran, omo a bi owo nile. Kabiyeesi Baba wa Torungbuwa II!'
   },
   {
-    name: 'Oba Oladele Moshood Ogunbade',
-    title: 'Agbejoye II',
-    era: 'December 3, 1983 â€“ April 10, 2022',
-    house: 'Agbejoye / Fadagbuwa Ruling House',
+    name: 'Oba Dr. Michael Adeniyi Sonariwo, CON',
+    title: 'Erinjugbo II',
+    era: '1990 – July 23, 2016',
+    house: 'Torungbuwa / Erinjugbo Ruling House',
     isCurrent: false,
-    note: 'Reigned for over 38 transformative years. Formerly Marketing Manager at Nigerian Tobacco Company (NTC). Oversaw major educational developments in Sagamu Remo.',
+    note: 'Reigned with exceptional majesty for 26 years. A distinguished chartered accountant and past Chairman of the Ogun State Council of Obas. Championed higher education, Sabo kolanut commerce, and industrial expansion.',
+    oriki: 'Erinjugbo Omo Akarigbo, Oba to f\'ogbon joba. Omo Remo Metalelogbon, omo Alagbafo tii f\'omi tutu we. Didun ni iranti olododo.'
   },
   {
-    name: 'Oba Alfred Obafuwa Babington-Ashaye',
-    title: 'Legunsen III Â· Agbalajobi-Erinjogunola',
-    era: 'c. 1945 â€“ December 4, 1982',
-    house: 'Legunsen Ruling House',
+    name: 'Oba Moses Awolesi',
+    title: 'Erinwole II',
+    era: '1952 – 1988',
+    house: 'Anoko Ruling House',
     isCurrent: false,
-    note: 'Patriarchal and revered monarch who reigned for 37 years. Received full state honours and led community consolidation across post-independence Nigeria.',
-    oriki: 'Agbalajobi-Erinjogunola, Omo Otunbade, Oba nla to n gbadobale Oba. Omo Sagamu Day agbeni madein, Omo Sagamu mogbo, Sagamu ota.'
+    note: 'Reigned for 36 prosperous years spanning Nigeria\'s independence era. Spearheaded the establishment of WAPCO Elephant Cement and Olabisi Onabanjo University Teaching Hospital (OOUTH).',
+    oriki: 'Erinwole Oba nla, Omo agbejoro tii feje we, omo Awolesi tii so ibi d\'ire.'
   },
   {
-    name: 'Oba Adelana Osifayo',
-    title: 'Legunsen I',
-    era: 'c. 1880s',
-    house: 'Legunsen Ruling House',
+    name: 'Oba William Christopher Adedoyin II',
+    title: 'Akarigbo of Remoland',
+    era: '1916 – 1952',
+    house: 'Torungbuwa Ruling House',
     isCurrent: false,
-    note: 'The founding The Akarigbo of Remoland upon the formal establishment and fortification of the town following the historic Yoruba Wars.',
+    note: 'A titan of modern Yoruba monarchy whose 36-year reign revolutionized Remoland. Pioneered Western education and founded Remo Secondary School (RSS) in 1946.',
+    oriki: 'Adedoyin Aladesanmi, Omo Akarigbo gbayi, omo a bi owo nile t\'owo tun wa l\'aafin.'
+  },
+  {
+    name: 'Oba Igimisoje',
+    title: 'The Founding Akarigbo of Sagamu',
+    era: 'c. 1872 – 1880s',
+    house: 'Anoko / Historical Patriarch',
+    isCurrent: false,
+    note: 'The heroic paramount ruler who led the historic confederation in 1872, uniting the 13 independent settlements onto Bammowu land near the Orisagamu Ewa stream.',
+    oriki: 'Omo Igimisoje tii fidi pote mole, Alase to ko Remo jo sori oke Bammowu.'
   }
 ];
 
@@ -130,74 +152,84 @@ export const SEED_BUSINESSES: SeedBusinessItem[] = [
     name: 'Hephzibah Edutech & Innovation Hub',
     category: 'Technology & Education',
     tier: 'Premium',
-    description: 'Digital innovation hub offering software bootcamps, AI training, coding, and STEM certification in Sagamu Remo.',
+    description: 'Digital innovation hub offering software engineering bootcamps, AI training, coding, and STEM certification in Sagamu Remo.',
     phone: '+234 803 892 0110',
     address: 'Innovation Campus, Palace Way / Expressway Axis, Sagamu',
-    rating: '5.0â˜…'
+    rating: '5.0★'
   },
   {
     id: 'biz1',
-    name: 'Sagamu Resort & Convention Centre',
+    name: 'Conference Hotel & Suites Sagamu',
     category: 'Hospitality & Tourism',
     tier: 'Premium',
-    description: 'Premier retreat destination with 140+ luxury chalets, recreational pools, and conference auditoriums.',
-    phone: '+234 906 247 0474',
-    address: 'KM 67, Lagosâ€“Ibadan Expressway, Sagamu Remo',
-    rating: '4.4â˜…'
+    description: 'Premier luxury hotel with 100+ executive chalets, Olympic swimming pool, banquet halls, and international dining.',
+    phone: '+234 805 000 0000',
+    address: 'GRA Sagamu, Ogun State',
+    rating: '4.6★'
   },
   {
     id: 'biz2',
-    name: 'Remo Secondary School (RSS) (RSSOSA)',
-    category: 'Education',
-    tier: 'Standard',
-    description: 'Flagship secondary educational institution of Sagamu Remo, preserving academic excellence.',
-    phone: '+234 806 215 8840',
-    address: 'Awomosu Agbato Drive, Sagamu 121107',
-    rating: '4.8â˜…'
+    name: 'Sabo Kolanut International Traders Association',
+    category: 'Trade & Export',
+    tier: 'Premium',
+    description: 'West Africa\'s premier wholesale kolanut exchange, connecting trans-Saharan and nationwide merchants with daily multi-ton trade auctions.',
+    phone: '+234 704 957 0510',
+    address: 'Sabo International Market, Sabo, Sagamu',
+    rating: '4.7★'
   },
   {
     id: 'biz3',
-    name: 'Sagamu Central Agro-Allied Logistics',
-    category: 'Agriculture & Trade',
-    tier: 'Verified',
-    description: 'Wholesale agricultural farm produce distribution, poultry processing, and haulage services.',
-    phone: '+234 802 334 9911',
-    address: 'Oke-Sagamu Market Complex, Sagamu',
-    rating: '4.7â˜…'
+    name: 'Remo Secondary School (RSS) (RSSOSA)',
+    category: 'Education',
+    tier: 'Standard',
+    description: 'Flagship pioneer secondary school of Remoland (est. 1946), preserving academic excellence for eight decades.',
+    phone: '+234 806 215 8840',
+    address: 'Awomosu Agbato Drive, Sagamu 121107',
+    rating: '4.8★'
+  },
+  {
+    id: 'biz4',
+    name: 'Lafarge Elephant Cement Sagamu Depot',
+    category: 'Infrastructure & Manufacturing',
+    tier: 'Premium',
+    description: 'Direct distribution of certified Lafarge Elephant Cement (Classic 32.5 & Supaset 42.5R) and building aggregates.',
+    phone: '+234 802 887 6655',
+    address: 'Elephant Cement Works Way, Sagamu',
+    rating: '4.8★'
   }
 ];
 
 export const SEED_EMERGENCY: SeedEmergencyContact[] = [
   {
     id: 'em-1',
-    service: 'Sagamu Police Divisional Headquarters',
-    phone: '08034567890',
-    location: 'Palace Way, Sagamu Remo',
+    service: 'Sagamu Police Area Command & Divisional HQ',
+    phone: '08081762371',
+    location: 'Ewusi Street / Akarigbo Road, Sagamu',
     availableHours: '24/7 Rapid Response',
     icon: 'ShieldAlert'
   },
   {
     id: 'em-2',
-    service: 'FRSC Expressway Patrol Unit (RS2.2)',
+    service: 'OOUTH Tertiary Emergency Trauma Centre',
+    phone: '08023456789',
+    location: 'Hospital Road, OOUTH Complex, Sagamu',
+    availableHours: '24 Hours Emergency Ward & Blood Bank',
+    icon: 'Cross'
+  },
+  {
+    id: 'em-3',
+    service: 'FRSC Sagamu Corridor Command (RS2.2)',
     phone: '122',
-    location: 'KM 66 Lagosâ€“Ibadan Expressway, Sagamu Outpost',
+    location: 'Sagamu Interchange, Lagos–Ibadan & Benin Expressway',
     availableHours: '24/7 Highway Rescue',
     icon: 'Ambulance'
   },
   {
-    id: 'em-3',
-    service: 'Sagamu Comprehensive Primary Health Centre',
-    phone: '08123456781',
-    location: 'Isale-Sagamu Hospital Road',
-    availableHours: '24 Hours Emergency Ward',
-    icon: 'Cross'
-  },
-  {
     id: 'em-4',
-    service: 'Palace of the Akarigbo Emergency Secretariat',
-    phone: '08023456789',
-    location: 'Aafin Akarigbo, Sagamu Remo',
-    availableHours: '8:00 AM â€” 8:00 PM',
+    service: 'Aafin Akarigbo Royal Security Command',
+    phone: '08029876543',
+    location: 'Ita Oba, Offin, Sagamu Remo',
+    availableHours: '24/7 Royal Security Guard',
     icon: 'Landmark'
   }
 ];

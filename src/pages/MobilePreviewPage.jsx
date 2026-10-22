@@ -271,13 +271,13 @@ export default function MobilePreviewPage() {
       setEscortCustomDestination(destinationText);
       setSosFullAddress(rev.fullAddress || destinationText);
       setSosCustomLandmark(rev.nearestLandmark || '');
-      setSosLandmark(rev.sector || 'Oke-Sagamu Central Market Axis');
+      setSosLandmark(rev.sector || 'Sabo Kolanut / Sagamu Central Market Axis');
       setSosDirectionsUrl(fix.directionsUrl);
       setEscortGpsFeedback(`✅ Pinned: ${destinationText} (±${Math.round(fix.accuracy || 20)}m)`);
       setTimeout(() => setEscortGpsFeedback(''), 6000);
     } catch (err) {
       console.warn('GPS lookup error in Walk With Me:', err);
-      const fallback = 'Oke-Sagamu Central Market Axis, Sagamu Remo';
+      const fallback = 'Sabo Kolanut / Central Market Axis, Sagamu Remo';
       setEscortCustomDestination(fallback);
       setEscortGpsFeedback(`📍 Defaulted to ${fallback}`);
       setTimeout(() => setEscortGpsFeedback(''), 5000);
@@ -2044,7 +2044,7 @@ export default function MobilePreviewPage() {
                               <option value="Agbele Farmlands Corridor">Agbele Farmlands Corridor</option>
                               <option value="KM 66-68 Expressway Tollgate Axis">KM 66-68 Expressway Tollgate Axis</option>
                               <option value="Palace Way / Town Square">Palace Way / Town Square</option>
-                              <option value="Isale-Sagamu Market Road">Isale-Sagamu Market Road</option>
+                              <option value="Sabo Kolanut / Sagamu Market Road">Sabo Kolanut / Sagamu Market Road</option>
                               <option value="Ajura Industrial Bypass">Ajura Industrial Bypass</option>
                               <option value="RSSOSA College Junction">RSSOSA College Junction</option>
                               <option value="Trailer Park Commercial Axis">Trailer Park Commercial Axis</option>
@@ -2814,10 +2814,10 @@ export default function MobilePreviewPage() {
                             <option>KM 66-68 Expressway Axis</option>
                             <option>Sagamu Tollgate Corridor</option>
                             <option>Palace Way / Aafin Akarigbo</option>
-                            <option>Isale-Sagamu Hospital Road</option>
+                            <option>OOUTH Hospital Road (Makun)</option>
                             <option>RSSOSA College Junction</option>
                             <option>Trailer Park Outpost</option>
-                            <option>Oke-Sagamu Market Complex</option>
+                            <option>Sabo Kolanut / Central Market Complex</option>
                             <option>Agbele Farmland Axis</option>
                           </select>
 

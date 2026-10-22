@@ -70,10 +70,10 @@ async function ensureAuthTables() {
 
     const defaultHash = 'a1b2c3d4e5f60718:b920824b5f5b276c0ce73a4b033f16f60e0a9c2d550ce6fcb7ffe2243dfb14b1215f9de7a1aa464994c607b8c9f0c229f98b09f4052b4948ff1f20a9bc9fd8d9';
     const seedOfficers = [
-      ['usr_cmd_001', 'Cmdr. Segun Ogunjobi', 'commander@sagamuremo.org', '08030001122', defaultHash, 'officer', 'Oke-Sagamu', 'Joint Task Force HQ', 'CMD-SGM-001', 'security_commander', 'Sagamu Joint Security Task Force', 'CMD-SGM-001'],
+      ['usr_cmd_001', 'Cmdr. Segun Ogunjobi', 'commander@sagamuremo.org', '08030001122', defaultHash, 'officer', 'Offin', 'Joint Task Force HQ', 'CMD-SGM-001', 'security_commander', 'Sagamu Joint Security Task Force', 'CMD-SGM-001'],
       ['usr_sec_001', 'Insp. Kayode Adeleke', 'police@sagamuremo.org', '08031112233', defaultHash, 'officer', 'Expressway Axis', 'Nigeria Police Force HQ', 'NPF-OG-4891', 'security_officer', 'Nigeria Police Force (NPF)', 'NPF-OG-4891'],
-      ['usr_adm_001', 'Engr. Olufemi Balogun (Admin)', 'admin@sagamuremo.org', '08033334455', defaultHash, 'indigene', 'Oke-Sagamu', 'SDA Central Command', 'SGM-ADM-101', 'ocda_admin', 'Sagamu Development Association (SDA)', 'SDA-ADM-101'],
-      ['usr_pal_001', 'Prince Olawale Babatunde', 'protocol@sagamuremo.org', '08032223344', defaultHash, 'indigene', 'Oke-Sagamu', 'Aafin Akarigbo', 'PAL-PRO-002', 'palace_protocol', 'Aafin Akarigbo Palace Secretariat', 'PAL-PRO-002'],
+      ['usr_adm_001', 'Engr. Olufemi Balogun (Admin)', 'admin@sagamuremo.org', '08033334455', defaultHash, 'indigene', 'Offin', 'SDA Central Command', 'SGM-ADM-101', 'ocda_admin', 'Sagamu Development Association (SDA)', 'SDA-ADM-101'],
+      ['usr_pal_001', 'Prince Olawale Babatunde', 'protocol@sagamuremo.org', '08032223344', defaultHash, 'indigene', 'Offin', 'Aafin Akarigbo', 'PAL-PRO-002', 'palace_protocol', 'Aafin Akarigbo Palace Secretariat', 'PAL-PRO-002'],
     ];
     for (const o of seedOfficers) {
       await sqlQuery(
@@ -215,14 +215,14 @@ export default async function handler(req, res) {
           locationSummary = `Nigeria (${nigeriaCity ? nigeriaCity + ', ' : ''}${nigeriaState || 'Interstate'})`;
           subCategoryLabel = 'Indigene · In Nigeria';
         } else {
-          cardPrefix = 'SGM-IND-OG';
-          locationSummary = `Resident in Sagamu Remo (${quarter || 'Oke-Sagamu'})`;
+          cardPrefix = 'SGM-IND-SG';
+          locationSummary = `Resident in Sagamu Remo (${quarter || 'Offin'})`;
           subCategoryLabel = 'Indigene · Resident in Sagamu';
         }
       } else if (citizenType === 'non-indigene' || citizenType === 'resident') {
         cardPrefix = 'SGM-RES';
         normalizedType = 'non-indigene';
-        locationSummary = address ? `${address}, Sagamu Remo` : `Resident in Sagamu (${quarter || 'Oke-Sagamu'})`;
+        locationSummary = address ? `${address}, Sagamu Remo` : `Resident in Sagamu (${quarter || 'Offin'})`;
         subCategoryLabel = 'Non-Indigene Resident';
       } else if (citizenType === 'guest' || citizenType === 'non-resident') {
         cardPrefix = 'SGM-GST';
@@ -248,7 +248,7 @@ export default async function handler(req, res) {
           phone || null,
           passwordHash,
           normalizedType,
-          quarter || (normalizedType === 'guest' ? 'Guest / External' : 'Oke-Sagamu'),
+          quarter || (normalizedType === 'guest' ? 'Guest / External' : 'Offin'),
           compound || (isOfficerSignup ? (agencyName || '') : ''),
           cardId,
           assignedRole,
@@ -273,7 +273,7 @@ export default async function handler(req, res) {
           fullName,
           normalizedType,
           compound || (normalizedType === 'guest' ? (guestInterest || 'Friend of Sagamu') : ''),
-          quarter || (normalizedType === 'guest' ? 'External / Guest' : 'Oke-Sagamu'),
+          quarter || (normalizedType === 'guest' ? 'External / Guest' : 'Offin'),
           phone || '',
           email || '',
           locationSummary,
@@ -294,7 +294,7 @@ export default async function handler(req, res) {
         subCategoryLabel,
         locationSummary,
         indigeneResidency: citizenType === 'indigene' ? indigeneResidency : null,
-        quarter: quarter || (normalizedType === 'guest' ? 'External' : 'Oke-Sagamu'),
+        quarter: quarter || (normalizedType === 'guest' ? 'External' : 'Offin'),
         compound: compound || '',
         guestInterest: normalizedType === 'guest' ? guestInterest : null,
         status: 'approved',
@@ -322,7 +322,7 @@ export default async function handler(req, res) {
           nigeriaState: nigeriaState || null,
           nigeriaCity: nigeriaCity || null,
           guestInterest: guestInterest || null,
-          quarter: quarter || (normalizedType === 'guest' ? 'External' : 'Oke-Sagamu'),
+          quarter: quarter || (normalizedType === 'guest' ? 'External' : 'Offin'),
           compound: compound || '',
           idCardNumber: cardId,
           role: assignedRole,

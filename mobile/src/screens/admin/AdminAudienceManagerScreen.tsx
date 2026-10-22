@@ -59,7 +59,7 @@ export const AdminAudienceManagerScreen: React.FC<{ navigation: any }> = ({ navi
             purpose: 'Community Electrification Project Presentation',
             phone: '08033221144',
             email: 'adebayo.remoland@gmail.com',
-            address: '14 Palace Way, Oke-Sagamu',
+            address: '14 Palace Way, Ita Oba, Offin',
             group_size: '3 delegates',
             booking_date: '2026-09-22',
             time_slot: '11:00 AM',

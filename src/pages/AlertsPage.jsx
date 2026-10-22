@@ -13,24 +13,24 @@ const alerts = [
   { id: 4, lv: 'medium', ti: 'Farm Land Encroachment — Northern Zone', bo: 'Boundary disputes reported near Ajura border. All affected farmers must document their borders with the Sagamu Land Registry within 30 days to protect their claims.', dt: 'May 10, 2026', loc: 'Northern Zone / Ajura Border', reporter: 'Community Tip', views: 89 },
   { id: 5, lv: 'medium', ti: 'Flood Risk Advisory', bo: 'Heavy rainfall forecasted. Please clear drainage channels around your property. A community clean-up exercise is scheduled for June 7, 2026. All quarters should participate.', dt: 'May 1, 2026', loc: 'All Quarters', reporter: 'SDA Team', views: 134 },
   { id: 6, lv: 'low', ti: 'Stray Livestock on Market Road', bo: 'Farmers are advised to secure all livestock, particularly on market days. The town council will impound unattended animals from July 1, 2026.', dt: 'April 28, 2026', loc: 'Market Road, Sagamu', reporter: 'Community Report', views: 67 },
-  { id: 7, lv: 'resolved', ti: 'Water Supply Disruption — Resolved', bo: 'The water supply disruption affecting Oke-Sagamu and Idi-Iroko quarters has been fully resolved. Normal supply was restored on April 15, 2026. Thank you for your patience.', dt: 'Resolved: April 15, 2026', loc: 'Oke-Sagamu / Idi-Iroko', reporter: 'SDA Works', views: 203 },
+  { id: 7, lv: 'resolved', ti: 'Water Supply Disruption — Resolved', bo: 'The water supply disruption affecting Offin and Makun quarters has been fully resolved. Normal supply was restored on April 15, 2026. Thank you for your patience.', dt: 'Resolved: April 15, 2026', loc: 'Offin / Makun Quarters', reporter: 'SDA Works', views: 203 },
 ];
 
 const EM = [
   {
     cat: '🚔 Nigeria Police Force', col: '#1a2e6e', bdr: 'rgba(100,140,255,.4)',
     list: [
-      { n: 'DPO — Sagamu Station', p: '08081762371', v: true, note: 'Direct line to Sagamu DPO' },
-      { n: 'O/C Trailer Park Sagamu', p: '08035864696', v: true, note: 'Expressway/trailer park' },
-      { n: 'DPO — Ikenne', p: '08037159221', v: true, note: 'LGA Headquarters' },
-      { n: 'DPO — Sagamu Area Command', p: '08038122121', v: true, note: 'Area Command, Ogun State' },
+      { n: 'DPO — Sagamu Divisional HQ', p: '08081762371', v: true, note: 'Ewusi / Akarigbo Road' },
+      { n: 'Sagamu Police Area Command', p: '08038122121', v: true, note: 'Area Command Headquarters' },
+      { n: 'DPO — Sakora Division Sagamu', p: '08037159221', v: true, note: 'Sagamu Division 2' },
+      { n: 'O/C Trailer Park & Interchange', p: '08035864696', v: true, note: 'Expressway corridor' },
       { n: 'Police Emergency', p: '112', v: true, note: 'Free · 24 hours · National' },
     ],
   },
   {
     cat: '🚦 FRSC — Road Safety', col: '#1a4a1a', bdr: 'rgba(100,200,100,.4)',
     list: [
-      { n: 'FRSC Sagamu Unit', p: '—', v: false, note: 'New office April 2026 — awaiting number' },
+      { n: 'FRSC Sagamu Interchange Command', p: '08075557788', v: true, note: 'Sagamu Interchange Corridor' },
       { n: 'FRSC National', p: '122', v: true, note: 'Free · nationwide' },
       { n: 'TRACE — Road Accidents', p: '07066942555', v: true, note: 'Ogun State Traffic Command' },
     ],

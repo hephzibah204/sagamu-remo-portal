@@ -30,7 +30,7 @@ const PILLARS = [
   {
     icon: '💡',
     title: 'Street Illumination & Safety',
-    desc: 'Solar LED street lamps across Oke-Sagamu, Isale, and dark corridor axes.',
+    desc: 'Solar LED street lamps across Offin, Makun, and Sabo market corridors.',
     allocation: '₦2.5M Target',
   },
   {

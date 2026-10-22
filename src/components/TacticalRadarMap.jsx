@@ -67,7 +67,7 @@ const STATIC_CCTV = [
   { id: 'CAM-01', name: 'Expressway Tollgate North Cam', lat: 6.9385, lng: 3.6420, agency: 'FRSC / Police' },
   { id: 'CAM-02', name: 'Palace Way Main Gate PTZ', lat: 6.9368, lng: 3.6330, agency: 'Palace Security' },
   { id: 'CAM-03', name: 'Trailer Park South Weighbridge', lat: 6.9366, lng: 3.6344, agency: 'So-Safe Corps' },
-  { id: 'CAM-04', name: 'Isale-Sagamu Hospital Junction', lat: 6.9325, lng: 3.6310, agency: 'Civil Defence' },
+  { id: 'CAM-04', name: 'OOUTH Hospital Junction', lat: 6.9325, lng: 3.6310, agency: 'Civil Defence' },
 ];
 
 const PATROL_UNITS = [

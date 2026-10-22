@@ -1,4 +1,4 @@
-name: Ogere Remo Portal CI/CD
+name: Sagamu Remo Portal CI/CD
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
         run: npm run build
         env:
           VITE_COMING_SOON: false
-          VITE_SITE_URL: https://ogeremo.org
+          VITE_SITE_URL: https://sagamuremo.org
 
   mobile-validate:
     name: Validate Mobile App Config

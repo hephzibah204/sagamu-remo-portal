@@ -408,7 +408,7 @@ export const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) =>
                   <Text style={styles.label}>Ancestral Family Compound / Agbo-Ile *</Text>
                   <TextInput
                     style={styles.input}
-                    placeholder="e.g. Kankanbina, Ejigboye, Sagamu Founding Ancestors, Legunsen, Oregunsen"
+                    placeholder="e.g. Torungbuwa, Anoko, Erinwole, Erinjugbo, Akarigbo Royal House"
                     placeholderTextColor={Colors.textMuted}
                     value={compound}
                     onChangeText={setCompound}

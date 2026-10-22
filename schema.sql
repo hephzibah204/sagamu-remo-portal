@@ -523,8 +523,8 @@ CREATE INDEX IF NOT EXISTS idx_civic_issues_quarter ON civic_infrastructure_issu
 
 INSERT INTO id_cards (id, full_name, card_type, dob, compound, quarter, phone, email, address, occupation, status, issued_date, expiry_date, verified_by)
 VALUES 
-('SGM-782910', 'Adewale Babatunde Ogunleke', 'indigene', '1992-06-14', 'Kankanbina', 'Oke-Sagamu', '08034512345', 'adewale.ogunleke@gmail.com', '14 Palace Way, Oke-Sagamu, Sagamu Remo', 'Civil Engineer', 'approved', '2024-01-15', '2027-01-15', 'HRH Akarigbo Palace Office'),
-('SGM-D-492019', 'Dr. Folashade Adeyemi-Clark', 'diaspora', '1985-11-22', 'Ejigboye', 'Isale-Sagamu', '+44 7911 123456', 'f.adeyemi@nhs.net', 'London, UK / 3 Ejigboye St, Sagamu', 'Consultant Surgeon', 'approved', '2024-03-01', '2027-03-01', 'SDA Diaspora Secretariat')
+('SGM-782910', 'Adewale Babatunde Ogunleke', 'indigene', '1992-06-14', 'Torungbuwa', 'Offin', '08034512345', 'adewale.ogunleke@gmail.com', '14 Palace Way, Offin, Sagamu Remo', 'Civil Engineer', 'approved', '2024-01-15', '2027-01-15', 'Akarigbo Palace Secretariat'),
+('SGM-D-492019', 'Dr. Folashade Adeyemi-Clark', 'diaspora', '1985-11-22', 'Anoko', 'Makun', '+44 7911 123456', 'f.adeyemi@nhs.net', 'London, UK / Makun, Sagamu', 'Consultant Surgeon', 'approved', '2024-03-01', '2027-03-01', 'SDA Diaspora Secretariat')
 ON CONFLICT (id) DO NOTHING;
 
 INSERT INTO businesses (id, name, category, tier, description, phone, website, address, rating)
@@ -536,7 +536,7 @@ ON CONFLICT (id) DO NOTHING;
 
 INSERT INTO pageant_registrations (id, name, email, phone, age, height, address, occupation, reason, status)
 VALUES
-('PGN-2026-001', 'Adetoun Kikelomo Solarin', 'adetoun.solarin@gmail.com', '08034567812', 22, '5''7"', 'Isale-Sagamu (Living in Lagos)', 'Undergraduate (Mass Comm)', 'Passionate about Yoruba cultural preservation, girl-child education in Remo, and serving as a worthy cultural ambassador for Sagamu Remo worldwide.', 'pending')
+('PGN-2026-001', 'Adetoun Kikelomo Solarin', 'adetoun.solarin@gmail.com', '08034567812', 22, '5''7"', 'Makun, Sagamu (Living in Lagos)', 'Undergraduate (Mass Comm)', 'Passionate about Yoruba cultural preservation, girl-child education in Remo, and serving as a worthy cultural ambassador for Sagamu Remo worldwide.', 'pending')
 ON CONFLICT (id) DO NOTHING;
 
 INSERT INTO cctv_registry (id, business_name, contact_person, phone, location, latitude, longitude, coverage_direction, camera_count, notes)
@@ -556,7 +556,7 @@ ON CONFLICT (id) DO NOTHING;
 INSERT INTO users (id, full_name, email, phone, password_hash, citizen_type, quarter, compound, id_card_number, role, agency_name, badge_number, is_officer_verified, is_verified)
 VALUES
 ('usr_sec_01', 'ASP Babatunde Oladipo', 'police@sagamuremo.org', '08031112233', '4e55e09f2d1e041355447b971a812be2:53457a412c98d6c706d860d5b62b7ffbc5c07b7bbfb56345ec41b07223697eb4b23d9b049d58a8a25c798ce857864f77c385a4a3ae04469e32f5f14e9f783100', 'indigene', 'Expressway Axis', 'Police Command', 'SGM-SEC-01', 'security_officer', 'Nigeria Police Force (Sagamu Divisional Command)', 'NPF-OG-4891', TRUE, TRUE),
-('usr_pal_01', 'Chief Adebisi Adeleke', 'protocol@sagamuremo.org', '08032223344', '4e55e09f2d1e041355447b971a812be2:53457a412c98d6c706d860d5b62b7ffbc5c07b7bbfb56345ec41b07223697eb4b23d9b049d58a8a25c798ce857864f77c385a4a3ae04469e32f5f14e9f783100', 'indigene', 'Oke-Sagamu', 'Aafin Akarigbo', 'SGM-PAL-01', 'palace_protocol', 'Aafin Akarigbo Protocol Secretariat', 'PAL-PRO-002', TRUE, TRUE),
-('usr_adm_01', 'Engr. Olufemi Balogun', 'admin@sagamuremo.org', '08033334455', '4e55e09f2d1e041355447b971a812be2:53457a412c98d6c706d860d5b62b7ffbc5c07b7bbfb56345ec41b07223697eb4b23d9b049d58a8a25c798ce857864f77c385a4a3ae04469e32f5f14e9f783100', 'indigene', 'Isale-Sagamu', 'SDA Central', 'SGM-ADM-01', 'ocda_admin', 'Sagamu Development Association (SDA)', 'SDA-ADM-101', TRUE, TRUE)
+('usr_pal_01', 'Chief Adebisi Adeleke', 'protocol@sagamuremo.org', '08032223344', '4e55e09f2d1e041355447b971a812be2:53457a412c98d6c706d860d5b62b7ffbc5c07b7bbfb56345ec41b07223697eb4b23d9b049d58a8a25c798ce857864f77c385a4a3ae04469e32f5f14e9f783100', 'indigene', 'Offin', 'Aafin Akarigbo', 'SGM-PAL-01', 'palace_protocol', 'Aafin Akarigbo Protocol Secretariat', 'PAL-PRO-002', TRUE, TRUE),
+('usr_adm_01', 'Engr. Olufemi Balogun', 'admin@sagamuremo.org', '08033334455', '4e55e09f2d1e041355447b971a812be2:53457a412c98d6c706d860d5b62b7ffbc5c07b7bbfb56345ec41b07223697eb4b23d9b049d58a8a25c798ce857864f77c385a4a3ae04469e32f5f14e9f783100', 'indigene', 'Makun', 'SDA Central', 'SGM-ADM-01', 'ocda_admin', 'Sagamu Development Association (SDA)', 'SDA-ADM-101', TRUE, TRUE)
 ON CONFLICT (id) DO NOTHING;
 

@@ -42,7 +42,7 @@ export const AdminIdApprovalScreen: React.FC<{ navigation: any }> = ({ navigatio
             id: 'SGM-IND-2026-081',
             fullName: 'Oluwaseun Adedayo Adeleke',
             citizenType: 'indigene',
-            quarter: 'Oke-Sagamu',
+            quarter: 'Offin',
             compound: 'Ile Akarigbo (Royal Clan)',
             phone: '08023456789',
             nin: '78291048572',
@@ -244,7 +244,7 @@ export const AdminIdApprovalScreen: React.FC<{ navigation: any }> = ({ navigatio
                     </View>
                     <View style={styles.gridCell}>
                       <Text style={styles.gridLabel}>Quarter / Area</Text>
-                      <Text style={styles.gridVal}>{c.quarter || 'Oke-Sagamu'}</Text>
+                      <Text style={styles.gridVal}>{c.quarter || 'Offin'}</Text>
                     </View>
                     <View style={styles.gridCell}>
                       <Text style={styles.gridLabel}>Ancestral Compound</Text>

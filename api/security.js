@@ -84,12 +84,12 @@ export default async function handler(req, res) {
   // ─────────────────────────────────────────────────────────────────────────────
   if (subroute === 'geocode' || pathname.includes('/geocode')) {
     const SAGAMU_LANDMARKS = [
-      { name: 'Aafin Akarigbo Palace & Royal Square', sector: 'Sector 2 — Central Heritage Core', lat: 6.9368, lng: 3.6330, address: 'Palace Way, Oke-Sagamu' },
+      { name: 'Aafin Akarigbo Palace & Royal Square', sector: 'Sector 2 — Central Heritage Core', lat: 6.9368, lng: 3.6330, address: 'Palace Way, Ita Oba, Offin, Sagamu' },
       { name: 'Sagamu Toll Gate / Expressway Intercept', sector: 'Sector 1 — Highway Corridor', lat: 6.9388, lng: 3.6437, address: 'KM 67 Lagos-Ibadan Expressway' },
       { name: 'Sagamu Resort & Convention Centre', sector: 'Sector 1 — Highway Corridor', lat: 6.9388, lng: 3.6437, address: 'KM 67 Lagos-Ibadan Expressway' },
-      { name: 'Sagamu Central Market (Oja Sagamu)', sector: 'Sector 2 — Central Heritage Core', lat: 6.9354, lng: 3.6338, address: 'Market Road, Oke-Sagamu' },
+      { name: 'Sagamu Central Market (Oja Sagamu)', sector: 'Sector 2 — Central Heritage Core', lat: 6.9354, lng: 3.6338, address: 'Sabo / Market Road, Sagamu' },
       { name: 'Sagamu Police Divisional Station', sector: 'Sector 3 — Security & Emergency', lat: 6.9348, lng: 3.6356, address: 'Palace Way, Sagamu Remo' },
-      { name: 'Sagamu State Hospital & Health Centre', sector: 'Sector 4 — Medical & Social', lat: 6.9325, lng: 3.6310, address: 'Isale-Sagamu Hospital Road' },
+      { name: 'Sagamu State Hospital & Health Centre', sector: 'Sector 4 — Medical & Social', lat: 6.9325, lng: 3.6310, address: 'OOUTH Hospital Road, Makun, Sagamu' },
       { name: 'Sagamu Trailer Park & Logistics Hub', sector: 'Sector 1 — Highway Corridor', lat: 6.9366, lng: 3.6344, address: 'Expressway Bypass South' },
       { name: 'Remo Secondary School (RSS)', sector: 'Sector 5 — Academic Belt', lat: 6.9405, lng: 3.6397, address: 'Awomosu Agbato Drive' },
       { name: 'The Church of the Lord (Aladura) Worldwide HQ', sector: 'Sector 2 — Central Heritage Core', lat: 6.9360, lng: 3.6420, address: 'Mount Taborar, Lisa Quarter' },
@@ -862,7 +862,7 @@ export default async function handler(req, res) {
         id: 'CAM-02',
         name: 'Aafin Akarigbo Palace Square & Royal Esplanade (PTZ 360°)',
         sector: 'Sector 2 — Central Heritage Core',
-        location: 'Palace Way, Oke-Sagamu',
+        location: 'Palace Way, Ita Oba, Offin',
         latitude: 6.9368,
         longitude: 3.6330,
         agency: 'Palace Security Secretariat',
@@ -917,9 +917,9 @@ export default async function handler(req, res) {
       },
       {
         id: 'CAM-05',
-        name: 'Isale-Sagamu Hospital Junction & Emergency Axis',
+        name: 'OOUTH Hospital Junction & Emergency Axis',
         sector: 'Sector 4 — Medical & Social',
-        location: 'Isale-Sagamu Hospital Road',
+        location: 'OOUTH Hospital Road, Makun',
         latitude: 6.9325,
         longitude: 3.6310,
         agency: 'Civil Defence (NSCDC)',

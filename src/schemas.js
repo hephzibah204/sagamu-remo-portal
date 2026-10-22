@@ -57,13 +57,13 @@ export const KingSchema = {
   },
 };
 export const KingExample = {
-  n: 'Oba Babatunde Adewale Ajayi',
-  t: 'Kankanbiina II',
-  e: 'April 25, 2023 — Present',
-  h: 'Kankanbina/Ejigboye Ruling House',
+  n: 'Oba Babatunde Adewale Ajayi, CFR, FCA',
+  t: 'Torungbuwa II, The Akarigbo and Paramount Ruler of Remoland',
+  e: 'December 7, 2017 — Present',
+  h: 'Torungbuwa Ruling House',
   cur: true,
-  note: 'Appointed and installed on April 25, 2023.',
-  oriki: null,
+  note: 'Eminent Chartered Accountant and legal practitioner; crowned the 19th Akarigbo of Remoland on December 7, 2017.',
+  oriki: 'Omo Torungbuwa, Omo Erin ti n f’owo ti kanga ti kanga ko ya...',
   children: [],
 };
 
@@ -71,7 +71,7 @@ export const KingExample = {
 export const GallerySchema = {
   storageKey: 'cms-gallery',
   fields: {
-    cat: { type: 'enum', values: ['coronation','palace','lipakala','development','heritage','diaspora'], label: 'Category' },
+    cat: { type: 'enum', values: ['coronation','palace','sagamu_day','development','heritage','diaspora'], label: 'Category' },
     title: { type: 'string', label: 'Title', required: true },
     date: { type: 'string', label: 'Date' },
     desc: { type: 'text', label: 'Description' },
@@ -88,7 +88,7 @@ export const NewsSchema = {
   fields: {
     id: { type: 'string', label: 'ID' },
     date: { type: 'string', label: 'Date' },
-    cat: { type: 'enum', values: ['development','royal','community','infrastructure','culture','diaspora'], label: 'Category' },
+    cat: { type: 'enum', values: ['development','royal','community','infrastructure','culture','diaspora','commerce','health','education'], label: 'Category' },
     headline: { type: 'string', label: 'Headline', required: true },
     body: { type: 'text', label: 'Body' },
     ic: { type: 'emoji', label: 'Icon' },

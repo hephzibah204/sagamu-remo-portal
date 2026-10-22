@@ -51,8 +51,7 @@ const QUIZ_QUESTIONS = [
 const RULING_HOUSES = [
   {
     icon: '👑',
-    name: 'Kankanbina / Ejigboye Ruling House',
-    desc: 'Currently reigning royal house producing HRM Oba Babatunde Adewale Ajayi (Kankanbiina II), enthroned in April 2023.',
+    name: 'Torungbuwa Ruling House', desc: 'Ancient royal dynasty tracing lineage directly from crowned princes of Oduduwa. Currently reigning through HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II).',
   },
   {
     icon: '⚔️',

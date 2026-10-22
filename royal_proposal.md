@@ -66,13 +66,13 @@ The History page contains a meticulously researched chronicle of Sagamu Remo fro
 
 ### 3. 👑 Monarchy — The Akarigbo Throne, Digitally Honoured
 The Monarchy page is perhaps the most prestigious section of the platform. It features:
-- A dedicated, beautifully presented profile of **HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Kankanbiina II)** — the reigning Akarigbo — with his photograph, installation and coronation dates, ruling house, and landmark achievements
-- A tribute to the late **Oba Oladele Ogunbade (Agbejoye II)** — 38-year reign honoured
-- Historical profile of **Oba Alfred Babington-Ashaye (Legunsen III)** — including his famous meeting with Queen Elizabeth II
-- The **Full Confirmed Kings List** — all The Akarigbo of Remoland from recorded history
-- **Royal Oriki (praise poetry)** for the monarchs, presented in full
-- Profiles of the **Four Royal Ruling Houses**: Kankanbina/Ejigboye, Agbejoye, Legunsen, and others
-- Profiles of **notable royal descendants**, including Dr. Shola Mos-Shogbamimu
+- A dedicated, beautifully presented profile of **HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II)** — the reigning Akarigbo and Paramount Ruler of Remoland — with his photograph, ascension dates, Torungbuwa ruling house, and landmark industrial & cultural achievements
+- A tribute to the illustrious reign of **Oba Michael Adeniyi Sonariwo, CON (Erinwole II)** (reigned 1990–2016)
+- Historical profiles of **Oba Moses Sowemimo Awolesi (Erinjugbo II)** (1952–1988) and **Oba William Christopher Adedoyin II** (1916–1952)
+- The **Full Confirmed Kings List** — all The Akarigbo of Remoland from ancient times and the 1872 confederation
+- **Royal Oriki (praise poetry)** for the monarchs and the 13 confederate quarters, presented in full
+- Profiles of the **Canonical Royal Ruling Houses**: Torungbuwa Ruling House and Anoko Ruling House (Erinwole & Erinjugbo branches)
+- Profiles of **notable Sagamu descendants and leaders**, including Anthony Joshua OBE, Otunba Gbenga Daniel, and Chief Timothy Adeola Odutola
 
 ---
 

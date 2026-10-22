@@ -41,10 +41,10 @@ const LANDMARKS = [
   { name: 'KM 66-68 Expressway Axis', lat: 6.9388, lng: 3.6437 },
   { name: 'Sagamu Tollgate Corridor', lat: 6.9380, lng: 3.6410 },
   { name: 'Palace Way / Aafin Akarigbo', lat: 6.9368, lng: 3.6330 },
-  { name: 'Isale-Sagamu Hospital Road', lat: 6.9325, lng: 3.6310 },
+  { name: 'OOUTH Hospital Road (Makun)', lat: 6.9325, lng: 3.6310 },
   { name: 'RSSOSA College Junction', lat: 6.9405, lng: 3.6397 },
   { name: 'Sagamu Resort Axis', lat: 6.9388, lng: 3.6437 },
-  { name: 'Oke-Sagamu Market Complex', lat: 6.9354, lng: 3.6338 },
+  { name: 'Sabo Kolanut / Central Market Complex', lat: 6.9354, lng: 3.6338 },
   { name: 'Trailer Park Outpost', lat: 6.9366, lng: 3.6344 },
   { name: 'Agbele Ancestral Farmland', lat: 6.9290, lng: 3.6260 },
 ];

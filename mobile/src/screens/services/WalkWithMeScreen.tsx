@@ -23,9 +23,9 @@ const LANDMARKS = [
   'KM 66-68 Expressway Axis',
   'Trailer Park Outpost',
   'Palace Way / Aafin Akarigbo',
-  'Isale-Sagamu Hospital Road',
+  'OOUTH Hospital Road (Makun)',
   'RSSOSA College Junction',
-  'Oke-Sagamu Market Complex',
+  'Sabo Kolanut / Central Market Complex',
   'Agbele Ancestral Farmland',
 ];
 

@@ -1,28 +1,27 @@
 import { useState, useRef, useEffect } from 'react';
 import { sendChatMessages } from '../services/openrouter';
 
-const SYSTEM_PROMPT = `You are the official AI assistant for the Sagamu Remo Community Portal. Sagamu Remo is an ancient Yoruba town in Ogun State, Nigeria, founded circa 1401 A.D. by Sagamu Founding Ancestors, Crown Prince of Ile-Ife.
+const SYSTEM_PROMPT = `You are the official AI assistant for the Sagamu Remo Community Portal. Sagamu is the historic capital of Remoland, Ogun State, Nigeria, founded in 1872 by the confederation of 13 autonomous Remo settlements (Offin, Makun, Sonyindo, Epe, Ibido, Igbepa, Ado, Oko, Ipoji, Batoro, Ijoku, Latawa, and Ijagba) on Bammowu land beside the sacred Orisagamu Ewa stream.
 
 You help visitors with questions about:
-- History & heritage (Sagamu Founding Ancestors, Yemogun, Yoruba Wars)
-- Monarchy (Akarigbo, ruling houses, current Oba Babatunde Adewale Ajayi)
-- Tourism (Sagamu Resort, Aafin Akarigbo Palace, Sagamu Cultural Centre, the hills)
-- Events (Sagamu Day Festival, Obalufon Festival, Oro Festival)
-- Education (Remo Secondary School (RSS), Christ Church School)
-- Faith & Culture (Church of the Lord Aladura, traditional societies)
-- Emergency contacts (Police, FRSC, So-Safe, Ambulance)
-- Business directory, Diaspora network, Community forum
-- Miss Sagamu beauty pageant
-- Weather, map locations, associations (SDA, Sagamu Youth Congress)
+- History & heritage (1872 Confederation, 13 founding quarters, Bammowu land, Orisagamu Ewa)
+- Monarchy (The Akarigbo of Remoland, Torungbuwa and Anoko ruling houses, reigning monarch HRM Oba Babatunde Adewale Ajayi, CFR, FCA - Torungbuwa II)
+- Tourism & Landmarks (Aafin Akarigbo Palace at Ita Oba, Gateway International Stadium, Sabo Kolanut Market, Orisagamu Ewa Spring, Conference Hotel Sagamu)
+- Events (Sagamu Day Grand Celebration in November, Akarigbo Coronation Anniversary, Remo Grand Agemo Festival, Miss Sagamu Pageant)
+- Education (Remo Secondary School - RSS founded 1946, FGGC Sagamu, OOUTH Medical College)
+- Healthcare & Services (Olabisi Onabanjo University Teaching Hospital - OOUTH, blood donor registry)
+- Commerce & Industry (Sabo International Kolanut Market, Lafarge Elephant Cement Works, Gateway Agro-Cargo Corridor)
+- Emergency contacts (Police Area Command, FRSC Interchange 122, So-Safe Corps, OOUTH Emergency)
+- Digital civic services (Digital ID Cards, Land Registry, Royal Audience Booking)
 
-Keep answers concise, warm, and informative. If you don't know something, say so. Use Yoruba greetings occasionally (Ẹ káàbọ̀, Ẹ ṣéun, etc.). Never make up specific facts about Sagamu Remo.`;
+Keep answers concise, warm, and informative. Use Yoruba greetings occasionally (Ẹ káàbọ̀, Ẹ ṣéun, Kábíyèsí o). Never make up specific facts about Sagamu Remo.`;
 
 const QUICK_ACTIONS = [
   'Tell me about Sagamu history',
-  'Who is the current Oba?',
+  'Who is the Akarigbo of Remoland?',
   'What is Sagamu Day?',
+  'Sabo Kolanut Market info',
   'Emergency contacts',
-  'Tourist attractions',
 ];
 
 export default function AiChat() {
@@ -36,20 +35,23 @@ export default function AiChat() {
 
   const getLocalAnswer = (text) => {
     const q = text.toLowerCase();
-    if (q.includes('history') || q.includes('found') || q.includes('1401')) {
-      return 'Ẹ káàbọ̀! Sagamu Remo was founded circa 1401 A.D. by Sagamu Founding Ancestors, Crown Prince of Ile-Ife and a great hunter and warrior who settled upon the sacred hills. Sagamu is one of the 33 historic towns of Remo kingdom in Ogun State, Nigeria.';
+    if (q.includes('history') || q.includes('found') || q.includes('1872') || q.includes('origin')) {
+      return 'Ẹ káàbọ̀! Sagamu was founded in 1872 during the 19th-century Yoruba civil wars when 13 autonomous Remo settlements (Offin, Makun, Sonyindo, Epe, Ibido, Igbepa, Ado, Oko, Ipoji, Batoro, Ijoku, Latawa, and Ijagba) united on fertile Bammowu land around the sacred "Orisagamu Ewa" spring under Oba Igimisoje. Sagamu serves as the capital of Remoland and the seat of the Akarigbo.';
     }
-    if (q.includes('oba') || q.includes('king') || q.includes('akarigbo') || q.includes('james')) {
-      return 'The reigning monarch of Sagamu Remo is His Royal Highness Oba Babatunde Adewale Ajayi (Kankanbiina II), the The Akarigbo of Remoland. He ascended the throne following his coronation and rules in harmony with the Akarigbo-in-Council and traditional kingmakers.';
+    if (q.includes('oba') || q.includes('king') || q.includes('akarigbo') || q.includes('ajayi')) {
+      return 'The reigning monarch is His Royal Majesty Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II), The Akarigbo and Paramount Ruler of Remoland, who ascended the throne on December 7, 2017. He presides over all 33 towns of Remoland from the historic Aafin Akarigbo at Ita Oba, Offin.';
     }
-    if (q.includes('lipakala') || q.includes('festival') || q.includes('pageant')) {
-      return 'Sagamu Day is the flagship annual cultural festival of Sagamu Remo celebrating our founding father Sagamu Founding Ancestors. It features the Miss Sagamu Beauty Pageant, traditional masquerade processions, community awards, and fundraising. The landmark 50th Golden Jubilee edition is in 2026!';
+    if (q.includes('sagamu day') || q.includes('festival') || q.includes('pageant') || q.includes('miss sagamu')) {
+      return 'Sagamu Day is the flagship annual civic and cultural carnival celebrated every November by the Sagamu Development Association (SDA). It brings together all 13 confederate quarters, home and diaspora indigenes, royal processions, the Miss Sagamu Cultural Pageant, and community empowerment awards!';
+    }
+    if (q.includes('kolanut') || q.includes('sabo') || q.includes('market')) {
+      return 'Sabo Market in Sagamu is West Africa\'s largest wholesale kolanut exchange. Established in the early 20th century, it connects southwestern kolanut producers with northern Nigerian, Sahelian (Niger, Mali, Chad), and international merchants in daily multi-ton trading auctions.';
     }
     if (q.includes('emergency') || q.includes('police') || q.includes('security') || q.includes('phone') || q.includes('help')) {
-      return 'Emergency Contacts for Sagamu Remo:\n• Police Emergency / General: 112\n• Sagamu Police Station (DPO): 08081762371\n• FRSC Road Safety: 122\n• So-Safe Corps: 08034681687\n• Ogun State Ambulance: 08112000033\nFor full listings, visit the Security Alerts page.';
+      return 'Emergency Contacts for Sagamu Remo:\n• Police Emergency / General: 112\n• Sagamu Police Area Command / DPO: 08081762371\n• OOUTH Emergency & Trauma Centre: 08023456789\n• FRSC Sagamu Interchange Command: 122 / 08075557788\n• Ogun State So-Safe Corps Sagamu: 08054443322\nFor full listings, visit the Security Alerts page.';
     }
-    if (q.includes('touris') || q.includes('visit') || q.includes('resort') || q.includes('attraction') || q.includes('hotel')) {
-      return 'Key attractions in Sagamu Remo include:\n1. Sagamu Resort & Convention Centre (KM 67, Lagos-Ibadan Expressway)\n2. Aafin Akarigbo & Sagamu Cultural Centre\n3. The Ancient Sagamu Hills\n4. Central Oja Ale Market\n5. Historic Aladura World Headquarters.';
+    if (q.includes('touris') || q.includes('visit') || q.includes('attraction') || q.includes('hotel')) {
+      return 'Top attractions in Sagamu Remo include:\n1. Aafin Akarigbo Palace & Cultural Amphitheatre (Ita Oba)\n2. Gateway International Stadium (20,000 capacity FIFA-grade stadium)\n3. Sabo Kolanut International Market\n4. Orisagamu Ewa Sacred Founding Spring\n5. Conference Hotel & Suites Sagamu (GRA)\n6. Remo Secondary School (RSS) Historic Campus (est. 1946).';
     }
     if (q.includes('id') || q.includes('card') || q.includes('verify')) {
       return 'You can apply for your official Digital Sagamu ID Card directly on the portal at /id-card, and verify any issued card instantly on /verify-id.';

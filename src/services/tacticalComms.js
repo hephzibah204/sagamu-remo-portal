@@ -36,7 +36,7 @@ const INITIAL_MESSAGES = [
     senderAgency: 'So-Safe Corps',
     callsign: 'PANTHER-1',
     radioCode: '10-8 (In Service)',
-    text: 'So-Safe Unit 2 stationed at Isale-Sagamu market link. Grid clear.',
+    text: 'So-Safe Unit 2 stationed at Sabo / Makun market link. Grid clear.',
     timestamp: new Date(Date.now() - 1000 * 60 * 12).toISOString(),
     avatar: '🚨'
   },

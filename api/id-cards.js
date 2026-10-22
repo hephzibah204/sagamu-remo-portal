@@ -76,7 +76,7 @@ export default async function handler(req, res) {
           body.cardType || 'indigene',
           body.dob || null,
           body.compound || '',
-          body.quarter || 'Oke-Sagamu',
+          body.quarter || 'Offin',
           body.phone || '',
           body.email || '',
           body.address || '',

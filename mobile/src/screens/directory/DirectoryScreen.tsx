@@ -46,7 +46,7 @@ const EXPANDED_EMERGENCY = [
     id: 'em-hospital',
     service: 'Sagamu Comprehensive Primary Health Hospital',
     phone: '08123456781',
-    location: 'Isale-Sagamu Hospital Road',
+    location: 'OOUTH Hospital Road, Makun',
     availableHours: '24 Hours Emergency Ward & Ambulance',
     icon: '🏥',
     priority: 'MEDICAL / TRAUMA',
@@ -93,7 +93,7 @@ const SECURITY_BULLETINS = [
   {
     id: 'sb-3',
     severity: 'COMMUNITY ALERT',
-    title: 'Night Security Patrol Active in Oke-Sagamu & Isale-Sagamu',
+    title: 'Night Security Patrol Active in Offin, Makun & Sabo',
     date: 'Palace Vigilante Council',
     content: 'Joint neighborhood patrols by the Sagamu Central Council Vigilante Corps and Police Command remain active between 10:00 PM and 5:00 AM. Report suspicious movements to 08023456789.',
     color: '#059669',
