@@ -2,53 +2,56 @@ import { Link } from 'react-router-dom';
 
 const SECTIONS = [
   {
-    heading: 'About',
+    heading: 'Palace & Governance',
     links: [
-      { to: '/history', l: 'History' },
-      { to: '/monarchy', l: 'Monarchy' },
-      { to: '/families', l: 'Families' },
-      { to: '/disputes', l: '⚖️ Customary Court' },
-      { to: '/faith', l: 'Faith & Culture' },
+      { to: '/monarchy', l: 'The Akarigbo & Monarchy' },
+      { to: '/royal-audience', l: 'Book Royal Audience' },
+      { to: '/id-card', l: 'Digital Citizen ID' },
+      { to: '/land-registry', l: 'Land Registry' },
+      { to: '/disputes', l: 'Customary Court (Kootu Oba)' },
+      { to: '/governance', l: 'Civic Dashboard' },
     ],
   },
   {
-    heading: 'Community',
+    heading: 'Economy & Trade',
     links: [
-      { to: '/associations', l: 'Associations' },
-      { to: '/education', l: 'Education' },
+      { to: '/marketplace', l: 'Sagamu Marketplace' },
+      { to: '/business', l: 'Business Directory' },
+      { to: '/fix-my-street', l: 'Fix My Street' },
       { to: '/diaspora', l: 'Diaspora Network' },
-      { to: '/diaspora-escrow', l: '🌍 Diaspora Escrow' },
-      { to: '/forum', l: 'Forum' },
+      { to: '/diaspora-escrow', l: 'Diaspora Projects' },
     ],
   },
   {
-    heading: 'Media',
+    heading: 'Community & Health',
     links: [
-      { to: '/gallery', l: 'Gallery' },
-      { to: '/news', l: 'News' },
-      { to: '/blog', l: 'Blog' },
-      { to: '/events', l: 'Events' },
+      { to: '/health', l: 'OOUTH Health & Blood Bank' },
+      { to: '/education', l: 'Education & Schools' },
+      { to: '/scholarships', l: 'Scholarships' },
+      { to: '/faith', l: 'Faith & Culture' },
+      { to: '/news', l: 'Town News' },
+      { to: '/associations', l: 'Associations' },
     ],
   },
   {
-    heading: 'Explore',
+    heading: 'Heritage & Media',
     links: [
-      { to: '/marketplace', l: '🛒 Marketplace' },
-      { to: '/fix-my-street', l: '🚧 Fix My Street' },
+      { to: '/history', l: 'Founding History (1872)' },
+      { to: '/timeline', l: 'Dynastic Timeline' },
+      { to: '/gallery', l: 'Media Gallery' },
+      { to: '/map', l: 'Interactive Map' },
       { to: '/tourism', l: 'Tourism' },
-      { to: '/business', l: 'Directory' },
-      { to: '/map', l: '🗺 Map' },
-      { to: '/alerts', l: '⚠ Alerts' },
+      { to: '/miss-sagamu', l: 'Miss Sagamu' },
     ],
   },
   {
-    heading: 'More',
+    heading: 'Portal & Security',
     links: [
-      { to: '/miss-sagamu', l: '👑 Miss Sagamu' },
-      { to: '/security-dashboard', l: '🚨 Security Command' },
-      { to: '/contact', l: 'Contact' },
-      { to: '/signin', l: '🔑 Sign In' },
-      { to: '/admin', l: '⚙ Admin' },
+      { to: '/security-dashboard', l: 'Security Radar' },
+      { to: '/alerts', l: 'Emergency SOS' },
+      { to: '/contact', l: 'Contact Secretariat' },
+      { to: '/signin', l: 'Citizen Sign In' },
+      { to: '/admin', l: 'Admin Access' },
     ],
   },
 ];
@@ -57,149 +60,142 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: '#050811',
-        borderTop: '1px solid rgba(201,150,58,.18)',
-        padding: '2.5rem 2rem',
-        textAlign: 'center',
+        background: '#0f172a',
+        borderTop: '1px solid #1e293b',
+        padding: '3.5rem 1.5rem 2rem',
+        color: '#f8fafc',
       }}
     >
-      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-        <div
-          className="cinzel"
-          style={{
-            fontSize: '1.4rem',
-            fontWeight: 900,
-            color: '#C9963A',
-            letterSpacing: '.1em',
-          }}
-        >
-          SAGAMU REMO
-        </div>
-        <div
-          className="playfair"
-          style={{
-            fontStyle: 'italic',
-            fontSize: '.82rem',
-            color: 'rgba(245,237,216,.3)',
-            margin: '.3rem 0 1.5rem',
-          }}
-        >
-          &ldquo;Heartbeat & Paramount Capital of Remoland — 13 Quarters United in Peace & Progress.&rdquo;
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '2rem',
-            flexWrap: 'wrap',
-            marginBottom: '1.3rem',
-            textAlign: 'left',
-          }}
-        >
-          {SECTIONS.map((sec) => (
-            <div key={sec.heading}>
+      <div style={{ maxWidth: 1180, margin: '0 auto' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem', marginBottom: '2.5rem' }}>
+          <div style={{ maxWidth: '340px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.6rem' }}>
               <div
-                className="cinzel"
                 style={{
-                  fontSize: '.55rem',
-                  fontWeight: 700,
-                  color: '#C9963A',
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  marginBottom: '.35rem',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '6px',
+                  background: 'linear-gradient(135deg, #2563eb 0%, #10b981 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1rem',
                 }}
               >
-                {sec.heading}
+                👑
               </div>
-              {sec.links.map((lnk) => (
-                <Link
-                  key={lnk.to}
-                  to={lnk.to}
-                  style={{
-                    display: 'block',
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    fontFamily: "'Cinzel',serif",
-                    fontSize: '.5rem',
-                    letterSpacing: '.08em',
-                    textTransform: 'uppercase',
-                    color: 'rgba(245,237,216,.3)',
-                    textDecoration: 'none',
-                    transition: 'color .2s',
-                    padding: '.08rem 0',
-                    lineHeight: 1.6,
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.target.style.color = '#C9963A')
-                  }
-                  onMouseLeave={(e) =>
-                    (e.target.style.color = 'rgba(245,237,216,.3)')
-                  }
-                >
-                  {lnk.l}
-                </Link>
-              ))}
+              <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em' }}>
+                SAGAMU REMO
+              </span>
             </div>
-          ))}
+            <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: 1.6, margin: 0 }}>
+              Official civic and community portal of Sagamu, Ogun State. Capital of Remoland, Seat of The Akarigbo, and premier hub of commerce and industry.
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+              gap: '1.5rem',
+              flex: 1,
+              minWidth: 'min(300px, 100%)',
+            }}
+          >
+            {SECTIONS.map((sec) => (
+              <div key={sec.heading}>
+                <div
+                  style={{
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    color: '#60a5fa',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    marginBottom: '0.75rem',
+                  }}
+                >
+                  {sec.heading}
+                </div>
+                {sec.links.map((lnk) => (
+                  <Link
+                    key={lnk.to}
+                    to={lnk.to}
+                    style={{
+                      display: 'block',
+                      fontSize: '0.82rem',
+                      color: '#cbd5e1',
+                      textDecoration: 'none',
+                      transition: 'color 0.15s ease',
+                      padding: '0.2rem 0',
+                    }}
+                    onMouseEnter={(e) => (e.target.style.color = '#38bdf8')}
+                    onMouseLeave={(e) => (e.target.style.color = '#cbd5e1')}
+                  >
+                    {lnk.l}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Community Sponsorship & Donation Banner */}
         <div
           style={{
-            background: 'linear-gradient(135deg, rgba(201,150,58,0.12) 0%, rgba(122,46,14,0.25) 100%)',
-            border: '1px solid rgba(201,150,58,0.35)',
-            borderLeft: '4px solid var(--gold)',
+            background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+            border: '1px solid #334155',
+            borderLeft: '4px solid #10b981',
             borderRadius: '12px',
             padding: '1.5rem 1.8rem',
-            margin: '1.5rem auto 2rem',
+            margin: '2rem auto',
             textAlign: 'left',
-            maxWidth: '920px',
           }}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.2rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.2rem' }}>
             <div style={{ flex: 1, minWidth: 'min(280px, 100%)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
-                <span style={{ fontSize: '1.4rem' }}>🌟</span>
-                <span className="cinzel" style={{ fontSize: '0.68rem', fontWeight: 900, color: 'var(--gold)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  Make Sagamu Nigeria's 1st Digital City · Support This Project
+                <span style={{ fontSize: '1.2rem' }}>🌟</span>
+                <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#34d399', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+                  Support the Sagamu Digital City Initiative
                 </span>
               </div>
-              <p style={{ fontSize: '0.82rem', lineHeight: 1.65, color: 'rgba(245,237,216,0.85)', margin: '0 0 0.6rem 0' }}>
-                By supporting this initiative, you are helping Sagamu pioneer history as the <strong>first fully digitalized civic kingdom in Nigeria</strong>. Continuous funding empowers our dedicated <strong>developers, designers, project managers, cloud hosting, domain web hosting, and 24/7 maintenance</strong>.
+              <p style={{ fontSize: '0.84rem', lineHeight: 1.6, color: '#cbd5e1', margin: '0 0 0.5rem 0' }}>
+                Continuous funding powers dedicated software development, cloud infrastructure, domain management, and 24/7 maintenance for Sagamu&apos;s digital transformation.
               </p>
-              <div style={{ fontSize: '0.78rem', color: 'rgba(245,237,216,0.9)' }}>
-                🏦 <strong>Opay:</strong> <span style={{ color: 'var(--gold)', fontWeight: 700 }}>6101307590</span> · <em>Hephtech Multimedia & Innovations</em>
+              <div style={{ fontSize: '0.8rem', color: '#e2e8f0' }}>
+                🏦 <strong>Opay:</strong> <span style={{ color: '#60a5fa', fontWeight: 700 }}>6101307590</span> · <em>Hephtech Multimedia & Innovations</em>
               </div>
             </div>
 
-            <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center', flexWrap: 'wrap' }}>
               <button
                 onClick={() => window.dispatchEvent(new CustomEvent('open-donate-modal'))}
-                className="btn-p"
+                className="btn-green"
                 style={{
-                  fontSize: '0.75rem',
-                  padding: '0.6rem 1.2rem',
-                  letterSpacing: '0.08em',
-                  boxShadow: '0 4px 15px rgba(201,150,58,0.25)',
+                  fontSize: '0.78rem',
+                  padding: '0.65rem 1.2rem',
                 }}
               >
-                💛 Donate Now
+                💚 Support Project
               </button>
               <a
                 href="https://wa.me/2349077780156?text=Hello%20Hephtech%20Multimedia%2C%20I%20would%20like%20to%20support/donate%20to%20the%20Sagamu%20Community%20Portal."
                 target="_blank" rel="noopener noreferrer"
-                className="btn-o"
                 style={{
-                  fontSize: '0.75rem',
-                  padding: '0.6rem 1rem',
+                  fontSize: '0.78rem',
+                  padding: '0.65rem 1.1rem',
+                  borderRadius: '8px',
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  border: '1px solid #475569',
+                  color: '#ffffff',
                   textDecoration: 'none',
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.4rem',
+                  fontWeight: 600,
                 }}
               >
-                💬 09077780156
+                💬 WhatsApp Desk
               </a>
             </div>
           </div>
@@ -208,14 +204,15 @@ export default function Footer() {
         <div
           style={{
             height: 1,
-            background: 'rgba(201,150,58,.1)',
-            margin: '0 0 1rem',
+            background: '#1e293b',
+            margin: '1.5rem 0 1rem',
           }}
         />
         <div
           style={{
-            fontSize: '.68rem',
-            color: 'rgba(245,237,216,.25)',
+            fontSize: '0.75rem',
+            color: '#64748b',
+            textAlign: 'center',
           }}
         >
           © 2026 Sagamu Community Portal · Built & Maintained by Hephtech Multimedia & Innovations · Seat of The Akarigbo of Remoland

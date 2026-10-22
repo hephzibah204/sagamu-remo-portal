@@ -2,88 +2,104 @@ export default function Hero({ ey, ti, sub, dark }) {
   return (
     <div
       style={{
-        minHeight: '60vh',
+        minHeight: '45vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        padding: 'calc(var(--nav-height) + 4rem) 2rem 4rem',
+        padding: 'calc(var(--nav-height) + 3rem) 1.5rem 3.5rem',
         position: 'relative',
         overflow: 'hidden',
         background: dark 
-          ? 'linear-gradient(160deg, #0A0F1D, #0F172A)' 
-          : 'var(--darker)',
+          ? 'linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%)' 
+          : 'linear-gradient(180deg, #eff6ff 0%, #ffffff 100%)',
+        borderBottom: '1px solid #e2e8f0',
       }}
     >
-      {/* Dynamic Background Elements */}
+      {/* Subtle Background Accent */}
       <div
         style={{
           position: 'absolute',
-          inset: 0,
-          opacity: 0.4,
-          background: 'radial-gradient(circle at 20% 30%, var(--red) 0%, transparent 40%), radial-gradient(circle at 80% 70%, var(--gold) 0%, transparent 40%)',
-          filter: 'blur(60px)',
+          top: '-20%',
+          right: '-10%',
+          width: '500px',
+          height: '500px',
+          borderRadius: '50%',
+          background: dark ? 'rgba(37, 99, 235, 0.15)' : 'rgba(37, 99, 235, 0.05)',
+          filter: 'blur(80px)',
+          pointerEvents: 'none',
         }}
       />
-      
-      {/* Grid Pattern */}
       <div
         style={{
           position: 'absolute',
-          inset: 0,
-          backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(201, 150, 58, 0.05) 1px, transparent 0)',
-          backgroundSize: '40px 40px',
+          bottom: '-10%',
+          left: '-10%',
+          width: '400px',
+          height: '400px',
+          borderRadius: '50%',
+          background: dark ? 'rgba(5, 150, 105, 0.15)' : 'rgba(5, 150, 105, 0.05)',
+          filter: 'blur(80px)',
+          pointerEvents: 'none',
         }}
       />
 
-      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '800px' }}>
-        <p
-          className="cinzel fu"
-          style={{ 
-            color: 'var(--gold)', 
-            fontSize: '0.8rem', 
-            letterSpacing: '0.4em', 
-            textTransform: 'uppercase',
-            marginBottom: '1.5rem',
-            opacity: 0.8
-          }}
-        >
-          {ey}
-        </p>
+      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '820px' }}>
+        {ey && (
+          <div
+            style={{ 
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              padding: '0.3rem 0.8rem',
+              borderRadius: '20px',
+              background: dark ? 'rgba(255, 255, 255, 0.1)' : '#eff6ff',
+              border: dark ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid #bfdbfe',
+              color: dark ? '#93c5fd' : '#1e40af', 
+              fontSize: '0.75rem', 
+              fontWeight: 700,
+              letterSpacing: '0.08em', 
+              textTransform: 'uppercase',
+              marginBottom: '1.2rem',
+            }}
+          >
+            {ey}
+          </div>
+        )}
         <h1 
-          className="playfair fu2"
           style={{ 
-            fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', 
-            fontWeight: 900, 
-            lineHeight: 1.1,
-            color: 'var(--cream)',
-            marginBottom: '2rem'
+            fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', 
+            fontWeight: 800, 
+            lineHeight: 1.15,
+            color: dark ? '#ffffff' : '#0f172a',
+            marginBottom: '1.2rem',
+            letterSpacing: '-0.02em',
           }}
         >
           {ti}
         </h1>
         <div 
-          className="fu3"
           style={{ 
-            width: '60px', 
-            height: '2px', 
-            background: 'var(--gold)', 
-            margin: '0 auto 2rem',
-            boxShadow: '0 0 10px var(--gold)'
+            width: '48px', 
+            height: '3px', 
+            background: 'linear-gradient(90deg, #1e40af, #059669)', 
+            margin: '0 auto 1.5rem',
+            borderRadius: '2px',
           }} 
         />
-        <p 
-          className="baskerville fu3" 
-          style={{ 
-            fontSize: 'clamp(1rem, 2vw, 1.25rem)', 
-            color: 'rgba(245, 237, 216, 0.7)',
-            maxWidth: '600px',
-            margin: '0 auto',
-            lineHeight: 1.8
-          }}
-        >
-          {sub}
-        </p>
+        {sub && (
+          <p 
+            style={{ 
+              fontSize: 'clamp(1rem, 2vw, 1.15rem)', 
+              color: dark ? '#cbd5e1' : '#475569',
+              maxWidth: '640px',
+              margin: '0 auto',
+              lineHeight: 1.7
+            }}
+          >
+            {sub}
+          </p>
+        )}
       </div>
     </div>
   );

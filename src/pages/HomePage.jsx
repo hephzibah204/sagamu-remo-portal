@@ -10,43 +10,66 @@ import LiveTicker from '../components/LiveTicker';
 import TimelineFeed from '../components/TimelineFeed';
 import { photos } from '../data/gallery';
 
-const CARDS = [
-  { id: 'monarchy', ic: '👑', t: 'The Monarchy & Palace', d: 'HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II), ruling houses & royal court.' },
-  { id: 'royal-audience', ic: '📜', t: 'Book Royal Audience', d: 'Schedule an official appointment with The Akarigbo of Remoland at Aafin Akarigbo.' },
-  { id: 'id-card', ic: '🪪', t: 'Digital Citizen ID', d: 'Apply for official verifiable Sagamu citizen & resident identity cards.' },
-  { id: 'verify-id', ic: '🔍', t: 'Verify Digital ID', d: 'Public registry to verify authentic Sagamu digital ID cards online.' },
-  { id: 'marketplace', ic: '🛒', t: 'Town Marketplace & Sabo Trade', d: 'Buy and sell farm produce, Sabo kolanut wholesale, textiles, and local crafts.' },
-  { id: 'map', ic: '🗺️', t: 'Google Maps & Places', d: 'Explore palaces, OOUTH, Sabo Market, stadiums, and 13 confederate quarters on Google Maps.' },
-  { id: 'land-registry', ic: '📋', t: 'Land Registry & Plots', d: 'Verify surveys, check family boundaries & resolve customary disputes.' },
-  { id: 'scholarships', ic: '🎓', t: 'Scholarships & Grants', d: 'Educational bursaries, STEM awards & youth innovation funding.' },
-  { id: 'health', ic: '🏥', t: 'Health & Blood Bank', d: 'OOUTH tertiary hospital, primary healthcare centres and emergency donor registry.' },
-  { id: 'live', ic: '🎥', t: 'Palace Live TV', d: 'Live broadcasts of royal coronations, Sagamu Day festivals & town deliberations.' },
-  { id: 'quiz', ic: '🧠', t: 'Heritage Scholar Quiz', d: 'Test your knowledge of the 13 quarters, Akarigbo history, and earn royal certificates.' },
-  { id: 'oriki', ic: '📿', t: 'Royal Oriki Chants', d: 'Sacred praise poetry of the Akarigbos, Remo Metalelogbon, and ancestral compounds.' },
-  { id: 'diaspora', ic: '🌍', t: 'Diaspora & Giving', d: 'Global Sagamu network directory and community capital endowment.' },
-  { id: 'business', ic: '💼', t: 'Business Directory', d: 'Find verified enterprises, factories, logistics contractors, and artisans.' },
-  { id: 'associations', ic: '🤝', t: 'Societies & Groups', d: 'Sagamu Development Association (SDA), Youth Congress, RSSOSA Alumni.' },
-  { id: 'education', ic: '🏫', t: 'Schools & Education', d: 'Remo Secondary School (RSS), FGGC, and tertiary research institutes.' },
-  { id: 'faith', ic: '⛪', t: 'Faith & Spiritual Roots', d: 'Historic mosques, cathedrals, sacred groves, and traditional festivals.' },
-  { id: 'history', ic: '📖', t: 'Founding History', d: 'The 1872 confederation of thirteen settlements on the hills of Bammowu.' },
-  { id: 'timeline', ic: '⏳', t: 'Dynastic Timeline', d: 'Chronological reigns of the Akarigbos of Remoland from 1872 to present.' },
-  { id: 'forum', ic: '💬', t: 'Community Forum', d: 'Civic deliberations, quarter notices & public community discussions.' },
-  { id: 'security-dashboard', ic: '🛡️', t: 'Security Command Radar', d: 'Multi-agency dispatch console, real-time tactical radar & CCTV scanner.' },
-  { id: 'alerts', ic: '🚨', t: 'Report Incident / SOS', d: 'Instant hazard alert dispatch and 24/7 emergency rescue lines.' },
-  { id: 'gallery', ic: '📸', t: 'Media Archives', d: 'Historic photo collections, Sagamu Day festivals, and royal ceremonies.' },
-  { id: 'miss-sagamu', ic: '👸', t: 'Miss Sagamu Pageant', d: 'Annual cultural beauty pageant celebrating our daughters and heritage.' },
-  { id: 'contact', ic: '📬', t: 'Contact SDA', d: 'Reach the Sagamu Development Association central secretariat & liaison desk.' },
-];
-
-const QUICK_ACTIONS = [
-  { ti: '💬 Town Chat', path: '/messages', sub: 'Town Messaging' },
-  { ti: '🚨 Emergency SOS', path: '/alerts', sub: 'Instant Rescue' },
-  { ti: '🛡️ Security Console', path: '/security-dashboard', sub: 'Live Radar' },
-  { ti: '🪪 Digital ID Card', path: '/id-card', sub: 'Apply Online' },
-  { ti: '👑 Royal Audience', path: '/royal-audience', sub: 'Book Appointment' },
-  { ti: '🛒 Marketplace', path: '/marketplace', sub: 'Buy & Sell Local' },
-  { ti: '🗺️ Google Maps', path: '/map', sub: 'Explore Landmarks' },
-  { ti: '🧠 Heritage Quiz', path: '/quiz', sub: 'Earn Certificate' },
+const CIVIC_PILLARS = [
+  {
+    id: 'governance',
+    title: 'Monarchy & Civic Governance',
+    desc: 'Official royal palace services, citizen identification, land records, and customary dispute resolution.',
+    color: '#1e40af',
+    badge: 'Palace Administration',
+    items: [
+      { id: 'monarchy', ic: '👑', t: 'The Monarchy & Akarigbo', d: 'HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II), Paramount Ruler of Remoland.' },
+      { id: 'royal-audience', ic: '📜', t: 'Book Royal Audience', d: 'Schedule an official appointment with The Akarigbo at Aafin Akarigbo.' },
+      { id: 'id-card', ic: '🪪', t: 'Digital Citizen ID', d: 'Apply for official verifiable Sagamu citizen & resident identity cards.' },
+      { id: 'verify-id', ic: '🔍', t: 'Verify Citizen ID', d: 'Public registry to instantly verify genuine Sagamu digital identity cards online.' },
+      { id: 'land-registry', ic: '📋', t: 'Land Registry & Plots', d: 'Verify surveys, check family boundaries & prevent customary land disputes.' },
+      { id: 'disputes', ic: '⚖️', t: 'Customary Court (Kootu Oba)', d: 'Mediation & peaceful arbitration under traditional palace jurisprudence.' },
+    ],
+  },
+  {
+    id: 'commerce',
+    title: 'Commerce, Markets & Industry',
+    desc: 'Africa\'s largest kolanut wholesale market, cement manufacturing, business registration, and trade.',
+    color: '#059669',
+    badge: 'Economic Engine',
+    items: [
+      { id: 'marketplace', ic: '🛒', t: 'Town Marketplace & Sabo', d: 'Wholesale Sabo kolanut, farm harvest, textiles, crafts, and retail commerce.' },
+      { id: 'business', ic: '💼', t: 'Business & Trade Directory', d: 'Directory of verified companies, manufacturing plants, logistics, and merchants.' },
+      { id: 'fix-my-street', ic: '🚧', t: 'Fix My Street', d: 'Report road potholes, street drainage, public lighting, and civic infrastructure.' },
+      { id: 'diaspora', ic: '🌍', t: 'Diaspora Network', d: 'Global Sagamu indigenes network, investment council, and development endowment.' },
+      { id: 'diaspora-escrow', ic: '🤝', t: 'Diaspora Escrow Grants', d: 'Transparent co-funding for community infrastructure and quarter projects.' },
+    ],
+  },
+  {
+    id: 'community',
+    title: 'Health, Education & Community',
+    desc: 'Tertiary healthcare at OOUTH, premier secondary schools, youth bursaries, and civic discourse.',
+    color: '#0284c7',
+    badge: 'Civic Well-being',
+    items: [
+      { id: 'health', ic: '🏥', t: 'OOUTH Health & Blood Bank', d: 'Olabisi Onabanjo University Teaching Hospital, clinic directory & emergency blood bank.' },
+      { id: 'education', ic: '🏫', t: 'Schools & Education', d: 'Remo Secondary School (RSS), Federal Government Girls College, and institutes.' },
+      { id: 'scholarships', ic: '🎓', t: 'Scholarships & Grants', d: 'Undergraduate bursaries, vocational support & youth STEM innovation funds.' },
+      { id: 'messages', ic: '💬', t: 'Town Chat & Messages', d: 'Real-time resident communication, quarter announcements, and direct messaging.' },
+      { id: 'forum', ic: '🗣️', t: 'Community Deliberations', d: 'Town hall discourse, quarter development proposals, and civic deliberations.' },
+      { id: 'associations', ic: '🤝', t: 'Clubs & Associations', d: 'Sagamu Development Association (SDA), Youth Congress, and RSSOSA alumni.' },
+    ],
+  },
+  {
+    id: 'heritage',
+    title: 'Heritage, Culture & Geography',
+    desc: 'The 1872 confederation of thirteen quarters, sacred royal oriki, festivals, and landmarks.',
+    color: '#7c3aed',
+    badge: 'Sacred Heritage',
+    items: [
+      { id: 'history', ic: '📖', t: 'Founding History (1872)', d: 'The historic confederation of 13 Remo settlements on the fertile hills of Bammowu.' },
+      { id: 'timeline', ic: '⏳', t: 'Dynastic Timeline', d: 'Chronology of Akarigbos of Remoland from founding fathers to modern day.' },
+      { id: 'map', ic: '🗺️', t: 'Google Maps Navigator', d: 'Interactive satellite navigation across all 13 confederate quarters and monuments.' },
+      { id: 'quiz', ic: '🧠', t: 'Heritage Scholar Quiz', d: 'Test knowledge of Sagamu history, quarter totems, and earn civic certificates.' },
+      { id: 'gallery', ic: '📸', t: 'Media Archives', d: 'Historic photo collections, Sagamu Day festivals, and royal coronations.' },
+      { id: 'live', ic: '🎥', t: 'Palace Live TV', d: 'Live broadcasts of royal festivals, town meetings, and civic celebrations.' },
+    ],
+  },
 ];
 
 const WMO_CODES = {
@@ -74,7 +97,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   const [weather, setWeather] = useState(null);
   const [aiMsg, setAiMsg] = useState('');
-  const [aiBusy, setAiBusy] = useState(true);
+  const [activeCategory, setActiveCategory] = useState('all');
 
   useEffect(() => {
     // Sagamu GPS: 6.8485° N, 3.6465° E
@@ -87,345 +110,587 @@ export default function HomePage() {
   useEffect(() => {
     (async () => {
       const msg = await sendAnthropicMessage(
-        'You are the official AI greeter for the Sagamu Community & Royal Portal. Sagamu is the capital and heartbeat of Remoland, Ogun State, Nigeria, founded in 1872 by 13 confederate settlements under The Akarigbo. Respond with a warm, poetic 1-2 sentence welcome in English and Yoruba spirit celebrating peace, royal majesty, and prosperity. Use at most 25 words.',
-        'A visitor has arrived at the Sagamu Community Portal. Welcome them.'
+        'You are the official civic AI greeter for Sagamu, the paramount capital of Remoland, Ogun State, Nigeria. Founded in 1872 by 13 confederate settlements under The Akarigbo. Provide a concise, dignified, 1-sentence welcome in English celebrating progress, royal peace, and enterprise. Maximum 20 words.',
+        'Welcome a visitor to the Sagamu Civic Portal.'
       );
       if (msg) setAiMsg(msg);
-      setAiBusy(false);
     })();
   }, []);
 
+  const filteredPillars = activeCategory === 'all'
+    ? CIVIC_PILLARS
+    : CIVIC_PILLARS.filter(p => p.id === activeCategory);
+
   return (
-    <div style={{ background: 'var(--darker)' }}>
+    <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       <SEO
         title="Sagamu Community & Royal Portal"
-        description="Official community and civic portal of Sagamu, Ogun State, Nigeria. Capital of Remoland, Seat of The Akarigbo, 13 Confederate Quarters, Digital ID, Sabo Kolanut Trade, and Security Command."
+        description="Official civic portal of Sagamu, Ogun State. Capital of Remoland, Seat of The Akarigbo, 13 Confederate Quarters, Digital ID, Sabo Kolanut Trade, and Security Command."
       />
       
-      {/* Hero Section */}
-      <div
+      {/* ── CRISP EXECUTIVE CIVIC HERO ── */}
+      <section
         style={{
-          minHeight: '92vh',
           position: 'relative',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
+          padding: 'calc(var(--nav-height) + 3.5rem) 1.5rem 4rem',
+          background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%)',
+          borderBottom: '1px solid #e2e8f0',
           overflow: 'hidden',
-          padding: 'clamp(5rem, 12vh, 8rem) 1.5rem 4rem',
         }}
       >
+        {/* Subtle Geometric Background Elements */}
         <div
           style={{
             position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(rgba(13, 7, 4, 0.82), rgba(13, 7, 4, 0.5)), url(/images/Sagamu%20Town.jpg) center/cover no-repeat',
-            transform: 'scale(1.05)',
-            filter: 'grayscale(20%) brightness(0.8)',
+            top: '-15%',
+            right: '-5%',
+            width: '600px',
+            height: '600px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%)',
+            pointerEvents: 'none',
           }}
         />
-        
-        {/* Ambient Glows */}
-        <div style={{ position: 'absolute', top: '20%', left: '10%', width: '30vw', height: '30vw', background: 'var(--gold)', opacity: 0.12, filter: 'blur(100px)', borderRadius: '50%' }} />
-        <div style={{ position: 'absolute', bottom: '20%', right: '10%', width: '20vw', height: '20vw', background: 'var(--red)', opacity: 0.1, filter: 'blur(80px)', borderRadius: '50%' }} />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '0%',
+            left: '-5%',
+            width: '500px',
+            height: '500px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(5, 150, 105, 0.06) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
 
-        <div style={{ position: 'relative', zIndex: 2, maxWidth: 1000, animation: 'fadeUp 0.8s ease both' }}>
-          {!aiBusy && aiMsg && (
-            <p className="playfair" style={{ fontStyle: 'italic', fontSize: '1.05rem', color: 'var(--gold-light)', marginBottom: '1.8rem', opacity: 0.9 }}>
+        <div className="container" style={{ maxWidth: '1040px', textAlign: 'center', position: 'relative', zIndex: 2 }}>
+          
+          {/* Civic Status Pill */}
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.35rem 0.95rem',
+              borderRadius: '24px',
+              background: '#ffffff',
+              border: '1px solid #bfdbfe',
+              boxShadow: '0 1px 3px rgba(30, 64, 175, 0.08)',
+              marginBottom: '1.2rem',
+            }}
+          >
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#059669', display: 'inline-block' }} />
+            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#1e40af', letterSpacing: '0.04em' }}>
+              OFFICIAL CIVIC PORTAL · SEAT OF THE AKARIGBO OF REMOLAND
+            </span>
+          </div>
+
+          {/* AI Civic Greeter */}
+          {aiMsg && (
+            <p
+              style={{
+                fontSize: '0.92rem',
+                color: '#475569',
+                fontStyle: 'italic',
+                maxWidth: '680px',
+                margin: '0 auto 1.2rem',
+                lineHeight: 1.6,
+              }}
+            >
               &ldquo;{aiMsg}&rdquo;
             </p>
           )}
-          
-          <p className="cinzel" style={{ fontSize: '0.82rem', letterSpacing: '0.45em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1rem', fontWeight: 700 }}>
-            The Paramount Capital of Remoland
-          </p>
-          
-          <h1 className="cinzel" style={{ fontSize: 'clamp(3.5rem, 12vw, 8.5rem)', fontWeight: 900, lineHeight: 0.9, color: 'var(--cream)', marginBottom: '1.8rem' }}>
-            Sagamu<span style={{ color: 'var(--gold)', display: 'block', fontSize: '0.78em' }}>Remo</span>
+
+          {/* Main Dignified Title */}
+          <h1
+            style={{
+              fontSize: 'clamp(2.5rem, 6.5vw, 4.2rem)',
+              fontWeight: 800,
+              lineHeight: 1.1,
+              color: '#0f172a',
+              marginBottom: '1.2rem',
+              letterSpacing: '-0.025em',
+            }}
+          >
+            Welcome to <span style={{ color: '#1e40af' }}>Sagamu</span>,{' '}
+            <span style={{ color: '#059669' }}>Remo</span>
           </h1>
-          
-          <div style={{ height: '3px', width: '90px', background: 'var(--gold)', margin: '0 auto 2rem', boxShadow: '0 0 20px var(--gold)' }} />
-          
-          <p className="baskerville" style={{ fontSize: 'clamp(1rem, 2.2vw, 1.35rem)', color: 'rgba(245, 237, 216, 0.85)', maxWidth: 740, margin: '0 auto 2.5rem', lineHeight: 1.8 }}>
-            Established in 1872 by the historic confederation of 13 Remo settlements upon the fertile hills of Bammowu. Seat of The Akarigbo and Paramount Ruler of Remoland, hub of international kolanut commerce, and titan of industry.
+
+          <p
+            style={{
+              fontSize: 'clamp(1rem, 2.2vw, 1.2rem)',
+              color: '#475569',
+              maxWidth: '780px',
+              margin: '0 auto 2.2rem',
+              lineHeight: 1.7,
+            }}
+          >
+            Established in 1872 through the historic confederation of thirteen settlements upon the hills of Bammowu. The paramount seat of Remoland, global capital of kolanut commerce, and Ogun State&apos;s leading industrial corridor.
           </p>
 
-          {/* Quick Action Navigation Buttons */}
-          <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
-            {QUICK_ACTIONS.map(qa => (
-              <button
-                key={qa.path}
-                onClick={() => navigate(qa.path)}
-                className="glass"
-                style={{
-                  padding: '0.65rem 1.1rem',
-                  borderRadius: '30px',
-                  border: '1px solid rgba(201,150,58,0.3)',
-                  cursor: 'pointer',
-                  color: 'var(--cream)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.4rem',
-                  transition: 'all 0.2s ease',
-                  background: 'rgba(201,150,58,0.08)',
-                }}
-              >
-                <span style={{ fontSize: '0.85rem', fontWeight: 'bold' }}>{qa.ti}</span>
-              </button>
-            ))}
+          {/* Primary Civic Action Buttons */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '0.85rem',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              marginBottom: '3rem',
+            }}
+          >
+            <button
+              onClick={() => navigate('/id-card')}
+              className="btn-p"
+              style={{ padding: '0.85rem 1.6rem', fontSize: '0.85rem' }}
+            >
+              <span>🪪</span>
+              <span>Apply for Citizen ID</span>
+            </button>
+
+            <button
+              onClick={() => navigate('/royal-audience')}
+              className="btn-o"
+              style={{ padding: '0.85rem 1.6rem', fontSize: '0.85rem' }}
+            >
+              <span>📜</span>
+              <span>Book Royal Audience</span>
+            </button>
+
+            <button
+              onClick={() => navigate('/marketplace')}
+              className="btn-green"
+              style={{ padding: '0.85rem 1.6rem', fontSize: '0.85rem' }}
+            >
+              <span>🛒</span>
+              <span>Sabo Marketplace</span>
+            </button>
+
+            <button
+              onClick={() => navigate('/security-dashboard')}
+              style={{
+                padding: '0.85rem 1.4rem',
+                fontSize: '0.85rem',
+                borderRadius: '8px',
+                background: '#ffffff',
+                border: '1.5px solid #cbd5e1',
+                color: '#334155',
+                fontWeight: 700,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                transition: 'all 0.15s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#1e40af';
+                e.currentTarget.style.color = '#1e40af';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = '#cbd5e1';
+                e.currentTarget.style.color = '#334155';
+              }}
+            >
+              <span>🛡️</span>
+              <span>Security Console</span>
+            </button>
           </div>
 
-          {/* Interactive Stat Counters with viewport animations */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 'clamp(1rem, 3vw, 2.5rem)', maxWidth: '850px', margin: '0 auto', width: '100%' }}>
+          {/* Clean Metric Counters Bar */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+              gap: '1rem',
+              maxWidth: '880px',
+              margin: '0 auto',
+            }}
+          >
             {[
-              { val: 1872, suf: ' A.D.', lab: 'Great Confederation' },
-              { val: 33, suf: '', lab: 'Remo Towns Capital' },
-              { val: 13, suf: ' Quarters', lab: 'Offin · Makun · Sonyindo · Epe & Co.' },
-              { val: 100, suf: '+ Yrs', lab: 'Sabo Kolanut Hub' },
+              { val: '1872', lab: 'Great Confederation', sub: '13 Historic Quarters' },
+              { val: '33', lab: 'Remo Towns Seat', sub: 'Paramount Kingdom Capital' },
+              { val: '13', lab: 'Confederate Quarters', sub: 'Offin · Makun · Sonyindo' },
+              { val: '100+ Yrs', lab: 'Sabo Kolanut Hub', sub: 'West Africa Trade Center' },
             ].map((stat, i) => (
-              <div key={i} className="glass" style={{ padding: '1rem', borderRadius: '12px', border: '1px solid rgba(201,150,58,0.25)', background: 'rgba(26,13,6,0.45)' }}>
-                <div className="cinzel" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.3rem)', fontWeight: 900, color: 'var(--gold)', marginBottom: '0.2rem', lineHeight: 1 }}>
-                  {stat.val}{stat.suf}
+              <div
+                key={i}
+                style={{
+                  background: '#ffffff',
+                  padding: '1.1rem 1rem',
+                  borderRadius: '10px',
+                  border: '1px solid #e2e8f0',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.03)',
+                  textAlign: 'center',
+                }}
+              >
+                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#1e40af', lineHeight: 1.1 }}>
+                  {stat.val}
                 </div>
-                <div className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.12em', color: 'rgba(245, 237, 216, 0.65)', textTransform: 'uppercase', marginTop: '0.3rem' }}>
+                <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0f172a', marginTop: '0.35rem' }}>
                   {stat.lab}
+                </div>
+                <div style={{ fontSize: '0.68rem', color: '#64748b', marginTop: '0.15rem' }}>
+                  {stat.sub}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Live Civic News & Security Ticker Strip */}
+      {/* ── LIVE CIVIC NEWS TICKER ── */}
       <LiveTicker
-        label="⚡ SAGAMU LIVE WIRE"
+        label="⚡ SAGAMU CIVIC WIRE"
         speed={32}
-        bg="rgba(18, 8, 4, 0.95)"
+        bg="#f8fafc"
+        color="#1e40af"
         items={[
-          '🚨 Security Patrol Command: All 13 Quarters & Sagamu Interchange Active & Monitored',
-          '🗺️ Google Maps Digitization: Ground Surveys ongoing across all 13 confederate quarters',
-          '🪪 Digital Citizen Cards: Over 1,500+ Verified Sagamu IDs Issued & Active',
-          '🤝 Diaspora Capital Endowment: Sagamu Development Fund ₦50M Drive Active',
-          '👑 Palace Court: Official Akarigbo Royal Audiences now open for online booking',
+          '🚨 Security Patrol Radar: All 13 Quarters & Sagamu Interchange Active & Monitored 24/7',
+          '🪪 Digital Citizen Cards: Over 1,500+ Sagamu Resident Identity Cards Issued & Verified',
+          '🗺️ Google Maps Ground Mapping: Ground survey completed across Offin, Makun, and Sabo',
+          '🤝 Diaspora Capital Endowment: Sagamu Development Association (SDA) ₦50M Civic Fund Active',
+          '👑 Palace Court: Official Akarigbo Royal Audiences now open for direct online booking',
         ]}
       />
 
       <AdireDivider />
 
-      {/* 24/7 Security & Rapid Emergency Response Ribbon */}
-      <div style={{ maxWidth: 1100, margin: '2rem auto 1rem', padding: '0 1.5rem', position: 'relative', zIndex: 10 }}>
+      {/* ── 24/7 RAPID SECURITY & EMERGENCY CONSOLE ── */}
+      <div style={{ maxWidth: 1100, margin: '2rem auto 1.5rem', padding: '0 1.5rem' }}>
         <div
-          className="glass-lift"
           style={{
-            background: 'linear-gradient(135deg, rgba(30, 10, 8, 0.95) 0%, rgba(15, 7, 5, 0.95) 100%)',
-            border: '1.5px solid rgba(239, 68, 68, 0.6)',
-            borderRadius: '16px',
+            background: '#ffffff',
+            border: '1px solid #fee2e2',
+            borderLeft: '5px solid #dc2626',
+            borderRadius: '12px',
             padding: '1.3rem 1.6rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             gap: '1.2rem',
             flexWrap: 'wrap',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(239, 68, 68, 0.25)',
+            boxShadow: '0 4px 12px rgba(220, 38, 38, 0.06)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1, minWidth: '280px' }}>
             <div
               style={{
-                width: '52px',
-                height: '52px',
+                width: '46px',
+                height: '46px',
                 borderRadius: '50%',
-                background: 'rgba(239, 68, 68, 0.2)',
-                border: '2px solid #ef4444',
+                background: '#fef2f2',
+                border: '1.5px solid #fca5a5',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '1.7rem',
-                animation: 'pulseGlow 2s infinite',
+                fontSize: '1.4rem',
                 flexShrink: 0,
               }}
             >
               🚨
             </div>
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
-                <span className="cinzel" style={{ fontSize: '1.05rem', fontWeight: 900, color: '#fca5a5', letterSpacing: '0.05em' }}>
-                  24/7 SAGAMU JOINT SECURITY RADAR
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '0.98rem', fontWeight: 800, color: '#991b1b' }}>
+                  24/7 SAGAMU JOINT SECURITY & RESCUE RADAR
                 </span>
                 <span
                   style={{
-                    fontSize: '0.68rem',
+                    fontSize: '0.65rem',
                     fontWeight: 800,
-                    background: '#ef4444',
+                    background: '#dc2626',
                     color: '#ffffff',
                     padding: '2px 8px',
                     borderRadius: '20px',
-                    letterSpacing: '0.05em',
                   }}
                 >
                   LIVE PATROL
                 </span>
               </div>
-              <p style={{ fontSize: '0.86rem', color: '#e2e8f0', margin: '4px 0 0 0', lineHeight: 1.4 }}>
-                Direct dispatch to Sagamu Area Command Police, FRSC Interchange Rescue, So-Safe Corps, and Palace Vigilante with real-time GPS tracking.
+              <p style={{ fontSize: '0.84rem', color: '#475569', margin: '4px 0 0 0', lineHeight: 1.4 }}>
+                Instant emergency dispatch coordinating Sagamu Police Area Command, FRSC Interchange Rescue, So-Safe Corps, and Palace Vigilante.
               </p>
             </div>
           </div>
 
-          <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('open-sos-modal'))}
               style={{
-                background: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)',
-                border: '1px solid #f87171',
+                background: '#dc2626',
+                border: '1px solid #dc2626',
                 borderRadius: '8px',
-                padding: '0.65rem 1.1rem',
+                padding: '0.6rem 1.1rem',
                 color: '#ffffff',
-                fontWeight: 800,
+                fontWeight: 700,
                 fontSize: '0.82rem',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.4rem',
-                boxShadow: '0 4px 14px rgba(220, 38, 38, 0.45)',
+                boxShadow: '0 2px 8px rgba(220, 38, 38, 0.25)',
               }}
             >
               <span>📞</span>
-              <span>Fast Emergency Dial</span>
+              <span>Instant Emergency Call</span>
             </button>
 
             <button
               onClick={() => navigate('/alerts')}
               style={{
-                background: 'rgba(255, 255, 255, 0.08)',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
+                background: '#ffffff',
+                border: '1px solid #cbd5e1',
                 borderRadius: '8px',
-                padding: '0.65rem 1rem',
-                color: '#ffffff',
-                fontWeight: 700,
+                padding: '0.6rem 1rem',
+                color: '#334155',
+                fontWeight: 600,
                 fontSize: '0.82rem',
                 cursor: 'pointer',
               }}
             >
-              Report Incident ➔
+              Report Incident →
             </button>
 
             <button
               onClick={() => navigate('/security-dashboard')}
               style={{
-                background: 'rgba(201, 150, 58, 0.15)',
-                border: '1px solid #d97706',
+                background: '#eff6ff',
+                border: '1px solid #bfdbfe',
                 borderRadius: '8px',
-                padding: '0.65rem 1rem',
-                color: '#fef3c7',
-                fontWeight: 800,
+                padding: '0.6rem 1rem',
+                color: '#1e40af',
+                fontWeight: 700,
                 fontSize: '0.82rem',
                 cursor: 'pointer',
               }}
             >
-              Command Console ➔
+              Command Console →
             </button>
           </div>
         </div>
       </div>
 
-      <AdireDivider />
-
-      {/* ── CIVIC PULSE: "WHAT'S ON YOUR MIND?" & LIVE TIMELINE FEED ── */}
-      <Section bg="var(--dark)" py="4.5rem">
+      {/* ── ORGANIZED CIVIC PILLARS DIRECTORY ── */}
+      <Section bg="#f8fafc" py="4rem">
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.75rem', marginBottom: '0.8rem', fontWeight: 700 }}>
-            CIVIC PULSE & LIVE COMMUNITY RADAR
-          </p>
-          <h2 className="playfair" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', color: 'var(--cream)', fontWeight: 700, marginBottom: '0.8rem' }}>
-            What's On Your Mind, Sagamu?
+          <div
+            style={{
+              display: 'inline-block',
+              fontSize: '0.72rem',
+              fontWeight: 800,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: '#1e40af',
+              background: '#eff6ff',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '16px',
+              marginBottom: '0.6rem',
+            }}
+          >
+            CIVIC SERVICES & PORTALS
+          </div>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: '#0f172a', marginBottom: '0.6rem' }}>
+            Explore Sagamu Services by Category
           </h2>
-          <p className="baskerville" style={{ color: 'rgba(245, 237, 216, 0.75)', maxWidth: '680px', margin: '0 auto', fontSize: '1.05rem', lineHeight: 1.7 }}>
-            <em>Kí ni nǹkan tó ń ṣẹlẹ̀?</em> Share community news, celebrate quarter achievements, post local photos, and deliberate on town development across all 13 quarters in real-time.
+          <p style={{ color: '#64748b', maxWidth: '640px', margin: '0 auto', fontSize: '0.98rem' }}>
+            Structured public services, commercial trade tools, healthcare facilities, and monarchical registries organized for quick citizen access.
           </p>
+
+          {/* Clean Category Filter Tabs */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '0.5rem',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              marginTop: '1.8rem',
+            }}
+          >
+            {[
+              { id: 'all', label: 'All Services' },
+              { id: 'governance', label: '👑 Monarchy & Palace' },
+              { id: 'commerce', label: '🛒 Trade & Industry' },
+              { id: 'community', label: '🏥 Health & Education' },
+              { id: 'heritage', label: '📖 History & Culture' },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveCategory(tab.id)}
+                style={{
+                  padding: '0.5rem 1.1rem',
+                  borderRadius: '20px',
+                  fontSize: '0.8rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  border: activeCategory === tab.id ? '1.5px solid #1e40af' : '1px solid #cbd5e1',
+                  background: activeCategory === tab.id ? '#1e40af' : '#ffffff',
+                  color: activeCategory === tab.id ? '#ffffff' : '#475569',
+                  transition: 'all 0.15s ease',
+                  boxShadow: activeCategory === tab.id ? '0 2px 6px rgba(30, 64, 175, 0.2)' : 'none',
+                }}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <TimelineFeed embedded={true} maxPosts={5} showHeader={false} linkToAll="/timeline" />
-      </Section>
-
-      <AdireDivider />
-
-      {/* Weather Forecast Banner */}
-      {weather && (
-        <Section py="3.5rem">
-          <div className="glass" style={{ padding: 'clamp(1.5rem, 4vw, 2.5rem)', borderRadius: '14px', textAlign: 'center', borderTop: '3px solid var(--gold)' }}>
-            <p className="cinzel" style={{ fontSize: '0.68rem', letterSpacing: '0.25em', color: 'var(--gold)', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
-              CURRENT ATMOSPHERE & WEATHER IN SAGAMU (6.8485°N, 3.6465°E)
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(1.5rem, 3vw, 4rem)', flexWrap: 'wrap', alignItems: 'center' }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>{getWeatherEmoji(weather.current.weather_code)}</div>
-                <div className="cinzel" style={{ fontSize: '2.8rem', color: 'var(--cream)', lineHeight: 1, fontWeight: 700 }}>
-                  {Math.round(weather.current.temperature_2m)}°C
+        {/* Pillars Display */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+          {filteredPillars.map((pillar) => (
+            <div
+              key={pillar.id}
+              style={{
+                background: '#ffffff',
+                border: '1px solid #e2e8f0',
+                borderRadius: '14px',
+                padding: 'clamp(1.2rem, 3vw, 2rem)',
+                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04)',
+              }}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  marginBottom: '1.4rem',
+                  flexWrap: 'wrap',
+                  gap: '0.6rem',
+                  borderBottom: '1px solid #f1f5f9',
+                  paddingBottom: '0.8rem',
+                }}
+              >
+                <div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
+                    {pillar.title}
+                  </h3>
+                  <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '2px 0 0 0' }}>
+                    {pillar.desc}
+                  </p>
                 </div>
-                <div className="baskerville" style={{ fontSize: '0.95rem', color: 'rgba(245, 237, 216, 0.6)', marginTop: '0.4rem' }}>
-                  {WMO_CODES[weather.current.weather_code]} · Humidity {weather.current.relative_humidity_2m}%
-                </div>
+                <span
+                  style={{
+                    fontSize: '0.68rem',
+                    fontWeight: 700,
+                    padding: '0.2rem 0.65rem',
+                    borderRadius: '12px',
+                    background: pillar.id === 'governance' ? '#eff6ff' : pillar.id === 'commerce' ? '#ecfdf5' : '#f8fafc',
+                    color: pillar.id === 'governance' ? '#1e40af' : pillar.id === 'commerce' ? '#065f46' : '#334155',
+                    border: '1px solid #e2e8f0',
+                  }}
+                >
+                  {pillar.badge}
+                </span>
               </div>
-              
-              <div style={{ height: '70px', width: '1px', background: 'rgba(201, 150, 58, 0.2)' }} className="weather-sep" />
 
-              <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                {weather.daily.time.map((date, i) => {
-                  const d = new Date(date + 'T12:00:00');
-                  const day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()];
-                  return (
-                    <div key={i} style={{ textAlign: 'center', minWidth: '65px' }}>
-                      <div className="cinzel" style={{ fontSize: '0.62rem', color: 'var(--gold)', textTransform: 'uppercase', marginBottom: '0.6rem' }}>{day}</div>
-                      <div style={{ fontSize: '1.8rem', marginBottom: '0.3rem' }}>{getWeatherEmoji(weather.daily.weather_code[i])}</div>
-                      <div style={{ fontSize: '1rem', color: 'var(--cream)', fontWeight: 700 }}>{Math.round(weather.daily.temperature_2m_max[i])}°C</div>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(min(270px, 100%), 1fr))',
+                  gap: '1rem',
+                }}
+              >
+                {pillar.items.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => navigate(`/${item.id}`)}
+                    className="card"
+                    style={{
+                      padding: '1.2rem',
+                      textAlign: 'left',
+                      borderRadius: '10px',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '0.4rem',
+                      background: '#ffffff',
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                      <span style={{ fontSize: '1.5rem' }}>{item.ic}</span>
+                      <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>
+                        {item.t}
+                      </h4>
                     </div>
-                  );
-                })}
+                    <p style={{ fontSize: '0.82rem', color: '#64748b', lineHeight: 1.5, margin: 0 }}>
+                      {item.d}
+                    </p>
+                  </button>
+                ))}
               </div>
             </div>
-          </div>
-        </Section>
-      )}
-
-      {/* Daily Yoruba Phrase of the Day */}
-      <Section bg="var(--dark)" py="2.5rem">
-        <DailyPhrase />
+          ))}
+        </div>
       </Section>
 
       <AdireDivider />
 
-      {/* Interactive Google Map Section */}
-      <Section py="5rem">
-        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-          <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.75rem', marginBottom: '0.8rem' }}>
+      {/* ── INTERACTIVE GOOGLE MAPS SECTION ── */}
+      <Section py="4rem">
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <div
+            style={{
+              display: 'inline-block',
+              fontSize: '0.72rem',
+              fontWeight: 800,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: '#059669',
+              background: '#ecfdf5',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '16px',
+              marginBottom: '0.6rem',
+            }}
+          >
             GEOGRAPHY & PLACES
-          </p>
-          <h2 className="playfair" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', color: 'var(--cream)', fontWeight: 700, marginBottom: '1rem' }}>
+          </div>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: '#0f172a', marginBottom: '0.6rem' }}>
             Explore Sagamu on Google Maps
           </h2>
-          <p className="baskerville" style={{ color: 'rgba(245, 237, 216, 0.7)', maxWidth: '680px', margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.8 }}>
-            Interactive satellite navigation across Aafin Akarigbo, OOUTH Teaching Hospital, Sabo Kolanut Market, stadiums, and the 13 confederate quarters of Sagamu.{' '}
-            <Link to="/map" style={{ color: 'var(--gold)', borderBottom: '1px solid var(--gold)' }}>
-              Open Full Interactive Google Map →
+          <p style={{ color: '#64748b', maxWidth: '640px', margin: '0 auto', fontSize: '0.98rem' }}>
+            Satellite mapping of Aafin Akarigbo Palace, OOUTH Teaching Hospital, Sabo Kolanut Market, and all 13 confederate quarters.{' '}
+            <Link to="/map" style={{ color: '#1e40af', fontWeight: 600, textDecoration: 'underline' }}>
+              Launch Full Map Navigator →
             </Link>
           </p>
         </div>
 
-        <div className="glass" style={{ borderRadius: '16px', overflow: 'hidden', border: '2px solid var(--gold)', boxShadow: 'var(--shadow-gold)' }}>
-          <div style={{ padding: '1rem 1.5rem', borderBottom: '1px solid rgba(201, 150, 58, 0.2)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(201, 150, 58, 0.08)', flexWrap: 'wrap', gap: '0.5rem' }}>
-            <span className="cinzel" style={{ fontSize: '0.72rem', color: 'var(--gold)', fontWeight: 700 }}>
-              📍 LIVE GOOGLE MAPS · SAGAMU (6°50′N, 3°38′E)
+        <div
+          style={{
+            borderRadius: '12px',
+            overflow: 'hidden',
+            border: '1px solid #e2e8f0',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
+            background: '#ffffff',
+          }}
+        >
+          <div
+            style={{
+              padding: '0.85rem 1.25rem',
+              borderBottom: '1px solid #e2e8f0',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              background: '#f8fafc',
+              flexWrap: 'wrap',
+              gap: '0.6rem',
+            }}
+          >
+            <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#1e40af' }}>
+              📍 SATELLITE RADAR · SAGAMU (6°50′N, 3°38′E)
             </span>
-            <Link to="/map" className="btn-p" style={{ fontSize: '0.62rem', padding: '0.35rem 0.9rem', textDecoration: 'none' }}>
-              Launch Full Map & Navigator →
+            <Link
+              to="/map"
+              className="btn-p"
+              style={{ fontSize: '0.72rem', padding: '0.4rem 0.9rem' }}
+            >
+              Open Full Screen Map →
             </Link>
           </div>
 
-          <div style={{ width: '100%', height: '400px', background: '#1c1008' }}>
+          <div style={{ width: '100%', height: '380px', background: '#f1f5f9' }}>
             <iframe
-              title="Sagamu Google Map Live Preview"
+              title="Sagamu Google Map Preview"
               src="https://maps.google.com/maps?q=6.8485,3.6465&t=m&z=15&ie=UTF8&iwloc=&output=embed"
               style={{ width: '100%', height: '100%', border: 0 }}
               allowFullScreen=""
@@ -435,13 +700,13 @@ export default function HomePage() {
           </div>
 
           {/* Quick Landmark Jump Pills */}
-          <div style={{ padding: '1rem 1.5rem', background: 'rgba(0,0,0,0.5)', display: 'flex', gap: '0.6rem', flexWrap: 'wrap', alignItems: 'center' }}>
-            <span className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', letterSpacing: '0.1em' }}>KEY PLACES:</span>
+          <div style={{ padding: '0.85rem 1.25rem', background: '#ffffff', display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.68rem', fontWeight: 700, color: '#64748b' }}>VERIFIED PLACES:</span>
             {[
               ['👑 Aafin Akarigbo Palace', '/map'],
               ['🏥 OOUTH Teaching Hospital', '/map'],
               ['🌾 Sabo Kolanut Market', '/map'],
-              ['🏫 Remo Secondary School (RSS)', '/map'],
+              ['🏫 Remo Secondary School', '/map'],
               ['🏟️ Gateway International Stadium', '/map'],
               ['🚛 Sagamu Interchange', '/map'],
               ['🏭 Lafarge Elephant Cement', '/map'],
@@ -451,13 +716,25 @@ export default function HomePage() {
                 key={ti}
                 to={href}
                 style={{
-                  fontSize: '0.7rem',
+                  fontSize: '0.74rem',
                   padding: '0.3rem 0.75rem',
                   borderRadius: '16px',
-                  background: 'rgba(201,150,58,0.1)',
-                  border: '1px solid rgba(201,150,58,0.25)',
-                  color: 'var(--cream)',
+                  background: '#f8fafc',
+                  border: '1px solid #e2e8f0',
+                  color: '#334155',
                   textDecoration: 'none',
+                  fontWeight: 500,
+                  transition: 'all 0.15s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#1e40af';
+                  e.currentTarget.style.color = '#1e40af';
+                  e.currentTarget.style.background = '#eff6ff';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                  e.currentTarget.style.color = '#334155';
+                  e.currentTarget.style.background = '#f8fafc';
                 }}
               >
                 {ti}
@@ -467,77 +744,123 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Community Portals & Services Directory */}
-      <Section bg="var(--dark)" py="5rem">
-        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-          <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.75rem', marginBottom: '0.8rem' }}>
-            SERVICES & OPERATIONS
-          </p>
-          <h2 className="playfair" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.2rem)', color: 'var(--cream)' }}>
-            Sagamu Digital Portals
+      <AdireDivider />
+
+      {/* ── CIVIC PULSE & COMMUNITY FEED ── */}
+      <Section bg="#f8fafc" py="4rem">
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <div
+            style={{
+              display: 'inline-block',
+              fontSize: '0.72rem',
+              fontWeight: 800,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: '#1e40af',
+              background: '#eff6ff',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '16px',
+              marginBottom: '0.6rem',
+            }}
+          >
+            CIVIC PULSE & UPDATES
+          </div>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: '#0f172a', marginBottom: '0.6rem' }}>
+            What&apos;s On Your Mind, Sagamu?
           </h2>
-          <p style={{ color: 'rgba(245,237,216,0.6)', maxWidth: '600px', margin: '0.5rem auto 0', fontSize: '0.95rem' }}>
-            Explore verified civic tools, commercial marketplaces, cultural archives, and official palace registries.
+          <p style={{ color: '#64748b', maxWidth: '640px', margin: '0 auto', fontSize: '0.98rem' }}>
+            <em>Kí ni nǹkan tó ń ṣẹlẹ̀?</em> Share quarter news, deliberate on community projects, and view verified updates from across all 13 confederate settlements.
           </p>
         </div>
-        
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(270px, 100%), 1fr))', gap: '1.5rem' }}>
-          {CARDS.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => navigate(`/${t.id}`)}
-              className="glass card"
-              style={{
-                padding: 'clamp(1.2rem, 3vw, 1.8rem)',
-                textAlign: 'left',
-                borderRadius: '14px',
-                borderTop: '3px solid var(--gold)',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-              }}
-            >
-              <div style={{ fontSize: '2.4rem', marginBottom: '1rem' }}>{t.ic}</div>
-              <h3 className="cinzel" style={{ fontSize: '0.95rem', color: 'var(--cream)', marginBottom: '0.4rem', fontWeight: 700 }}>
-                {t.t}
-              </h3>
-              <p className="baskerville" style={{ fontSize: '0.85rem', color: 'rgba(245, 237, 216, 0.65)', lineHeight: 1.6 }}>
-                {t.d}
-              </p>
-            </button>
-          ))}
-        </div>
+
+        <TimelineFeed embedded={true} maxPosts={4} showHeader={false} linkToAll="/timeline" />
       </Section>
 
       <AdireDivider />
 
-      {/* Heritage Photo Highlights */}
-      <Section py="5rem">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '1.5rem' }}>
-          <div style={{ flex: 1, minWidth: 'min(280px, 100%)' }}>
-            <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.75rem', marginBottom: '0.8rem' }}>
-              HERITAGE HIGHLIGHTS
-            </p>
-            <h2 className="playfair" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--cream)', fontWeight: 700 }}>
+      {/* ── LIVE WEATHER FORECAST ── */}
+      {weather && (
+        <Section py="3.5rem">
+          <div
+            style={{
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderRadius: '12px',
+              padding: 'clamp(1.5rem, 3vw, 2.2rem)',
+              textAlign: 'center',
+              boxShadow: '0 1px 3px rgba(0, 0, 0, 0.03)',
+            }}
+          >
+            <div style={{ fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.08em', color: '#1e40af', textTransform: 'uppercase', marginBottom: '1.2rem' }}>
+              LIVE ATMOSPHERE & WEATHER IN SAGAMU (6.8485°N, 3.6465°E)
+            </div>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(1.5rem, 4vw, 4rem)', flexWrap: 'wrap', alignItems: 'center' }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '0.3rem' }}>{getWeatherEmoji(weather.current.weather_code)}</div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a', lineHeight: 1 }}>
+                  {Math.round(weather.current.temperature_2m)}°C
+                </div>
+                <div style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.3rem' }}>
+                  {WMO_CODES[weather.current.weather_code]} · Humidity {weather.current.relative_humidity_2m}%
+                </div>
+              </div>
+              
+              <div style={{ height: '60px', width: '1px', background: '#e2e8f0' }} className="weather-sep" />
+
+              <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                {weather.daily.time.map((date, i) => {
+                  const d = new Date(date + 'T12:00:00');
+                  const day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()];
+                  return (
+                    <div key={i} style={{ textAlign: 'center', minWidth: '65px' }}>
+                      <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#1e40af', textTransform: 'uppercase', marginBottom: '0.4rem' }}>{day}</div>
+                      <div style={{ fontSize: '1.6rem', marginBottom: '0.2rem' }}>{getWeatherEmoji(weather.daily.weather_code[i])}</div>
+                      <div style={{ fontSize: '0.95rem', color: '#0f172a', fontWeight: 700 }}>{Math.round(weather.daily.temperature_2m_max[i])}°C</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
+
+      {/* ── DAILY YORUBA PROVERB / PHRASE ── */}
+      <Section bg="#f8fafc" py="2.5rem">
+        <DailyPhrase />
+      </Section>
+
+      <AdireDivider />
+
+      {/* ── HERITAGE PHOTO HIGHLIGHTS ── */}
+      <Section py="4rem">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem', flexWrap: 'wrap', gap: '1.2rem' }}>
+          <div>
+            <div style={{ fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.08em', color: '#059669', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
+              HERITAGE ARCHIVES
+            </div>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 800, color: '#0f172a', margin: 0 }}>
               Snapshots of Sagamu & Remoland
             </h2>
           </div>
-          <Link to="/gallery" className="btn-o">
+          <Link to="/gallery" className="btn-o" style={{ fontSize: '0.78rem' }}>
             View Media Archives (100+ Photos) →
           </Link>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(280px, 100%), 1fr))', gap: '1.5rem' }}>
           {photos.slice(0, 3).map((p, i) => (
-            <div key={i} className="glass card" style={{ borderRadius: '14px', overflow: 'hidden' }}>
-              <div style={{ height: '230px', background: `url(${p.src}) center/cover`, borderBottom: '1px solid rgba(201, 150, 58, 0.15)' }} />
-              <div style={{ padding: '1.4rem' }}>
-                <div className="cinzel" style={{ fontSize: '0.58rem', color: 'var(--gold)', marginBottom: '0.4rem', fontWeight: 700, textTransform: 'uppercase' }}>
+            <div key={i} className="card" style={{ overflow: 'hidden' }}>
+              <div style={{ height: '210px', background: `url(${p.src}) center/cover no-repeat`, borderBottom: '1px solid #e2e8f0' }} />
+              <div style={{ padding: '1.25rem' }}>
+                <div style={{ fontSize: '0.65rem', color: '#1e40af', marginBottom: '0.3rem', fontWeight: 800, textTransform: 'uppercase' }}>
                   {p.cat}
                 </div>
-                <h4 className="playfair" style={{ fontSize: '1.25rem', color: 'var(--cream)', marginBottom: '0.6rem' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.4rem' }}>
                   {p.title}
                 </h4>
-                <p className="baskerville" style={{ fontSize: '0.85rem', color: 'rgba(245, 237, 216, 0.65)', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '0.84rem', color: '#64748b', lineHeight: 1.5, margin: 0 }}>
                   {p.desc.length > 110 ? p.desc.substring(0, 110) + '…' : p.desc}
                 </p>
               </div>
@@ -548,8 +871,8 @@ export default function HomePage() {
 
       <AdireDivider />
 
-      {/* Suggestion Box Section */}
-      <Section py="5rem" bg="var(--dark)">
+      {/* ── CITIZEN FEEDBACK & SUGGESTIONS ── */}
+      <Section py="4rem" bg="#f8fafc">
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <SuggestionBox />
         </div>
