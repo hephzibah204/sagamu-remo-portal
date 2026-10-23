@@ -47,6 +47,4 @@ export const SAGAMU_QUARTER_NAMES = [
   'Lafarge Industrial Belt',
 ];
 
-// Backward compatibility alias for legacy imports
-export const OGERE_ANCESTRAL_QUARTERS = SAGAMU_ANCESTRAL_QUARTERS;
-export const OGERE_QUARTER_NAMES = SAGAMU_QUARTER_NAMES;
+

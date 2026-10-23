@@ -184,8 +184,7 @@ export const ONBOARDED_OFFICERS = [
   }
 ];
 
-// Legacy backward-compatibility alias
-export const OGERE_STATIONS = SAGAMU_STATIONS;
+
 
 export function getStationById(stationId) {
   return SAGAMU_STATIONS.find(s => s.id === stationId) || SAGAMU_STATIONS[0];

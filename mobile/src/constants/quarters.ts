@@ -29,6 +29,4 @@ export const SAGAMU_ANCESTRAL_QUARTERS: SagamuQuarter[] = [
 
 export const SAGAMU_QUARTER_NAMES = SAGAMU_ANCESTRAL_QUARTERS.map(q => q.name);
 
-// Backward compatibility
-export const OGERE_ANCESTRAL_QUARTERS = SAGAMU_ANCESTRAL_QUARTERS;
-export const OGERE_QUARTER_NAMES = SAGAMU_QUARTER_NAMES;
+

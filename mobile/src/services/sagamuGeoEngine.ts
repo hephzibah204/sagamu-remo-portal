@@ -131,8 +131,4 @@ export function resolveSagamuLocation(lat: number, lng: number) {
   };
 }
 
-// Backward compatibility
-export const OGERE_BOUNDS = SAGAMU_BOUNDS;
-export const OGERE_LANDMARKS = SAGAMU_LANDMARKS;
-export const isInsideOgere = isInsideSagamu;
-export const resolveOgereLocation = resolveSagamuLocation;
+

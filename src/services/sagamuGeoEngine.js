@@ -292,9 +292,4 @@ export function getSagamuMapUrls(lat, lng, label = 'Sagamu Tactical Target') {
   };
 }
 
-// Backward Compatibility Aliases for seamless transitions
-export const OGERE_BOUNDS = SAGAMU_BOUNDS;
-export const OGERE_LANDMARKS = SAGAMU_LANDMARKS;
-export const isInsideOgere = isInsideSagamu;
-export const resolveOgereLocation = resolveSagamuLocation;
-export const getOgereMapUrls = getSagamuMapUrls;
+
