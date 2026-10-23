@@ -45,10 +45,10 @@ const STATIC = [
     ic: '🏫',
     desc: 'The iconic pioneer secondary school of Remoland (est. 1946), producing national leaders, scholars, and scientists for nearly eight decades.',
     phone: '+234 806 215 8840',
-    address: 'Awomosu Agbato Drive, Sagamu 121107',
+    address: 'Akarigbo Street, Sagamu 121107',
     rating: '4.8★',
     tier: 'Premium',
-    image: '/images/Ositelu%20Memorial%20School%20Gate.jpg',
+    image: '/images/palace/3.jpg',
   },
   {
     id: 'biz3',

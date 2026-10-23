@@ -45,7 +45,7 @@ const QUESTIONS = [
   },
   {
     question: "Which institution, founded in 1946 in Sagamu, was the first secondary school established in Remoland?",
-    options: ["Ositelu Memorial College", "Remo Secondary School (RSS Sagamu)", "Abeokuta Grammar School", "Ijebu Ode Grammar School"],
+    options: ["Wesley High School", "Remo Secondary School (RSS Sagamu)", "Abeokuta Grammar School", "Ijebu Ode Grammar School"],
     answer: 1,
     insight: "Remo Secondary School (RSS) was established on Akarigbo Street in 1946 under the patronage of Oba William Christopher Adedoyin II as the pioneer secondary academy of Remoland."
   },

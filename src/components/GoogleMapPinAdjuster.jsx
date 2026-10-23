@@ -106,8 +106,8 @@ function MapClickEvents({ onMapClick }) {
 }
 
 export default function GoogleMapPinAdjuster({
-  initialLat = 6.9388,
-  initialLng = 3.6437,
+  initialLat = 6.8485,
+  initialLng = 3.6465,
   onLocationChange = null,
   title = 'Adjust Exact Pin on Google Map',
   pinColor = '#0284c7',
@@ -117,8 +117,8 @@ export default function GoogleMapPinAdjuster({
   autoLocate = false,
 }) {
   const [coords, setCoords] = useState({
-    lat: Number(initialLat) || 6.9388,
-    lng: Number(initialLng) || 3.6437,
+    lat: Number(initialLat) || 6.8485,
+    lng: Number(initialLng) || 3.6465,
   });
   const [accuracyRadius, setAccuracyRadius] = useState(25);
   const [triggerFly, setTriggerFly] = useState(0);

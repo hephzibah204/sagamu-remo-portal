@@ -75,9 +75,9 @@ const spots = [
     ic: '🏫',
     color: '#1a2e5e',
     desc: 'Founded February 4, 1946 by Oba William Christopher Adedoyin II and the Remo community as the first secondary school in Remoland. Cradle of national leaders, jurists, and scholars.',
-    address: 'Awomosu Agbato Drive, Sagamu Remo',
+    address: 'Akarigbo Street, Sagamu Remo',
     features: ['Founded Feb 4, 1946', 'Pioneer secondary school in Remoland', 'RSSOSA global alumni community', 'Historic colonial-era quadrangle'],
-    img: '/images/Ositelu Memorial School Gate.jpg'
+    img: '/images/palace/3.jpg'
   },
   {
     n: 'The 13 Confederate Quarters Heritage Trail',

@@ -947,7 +947,7 @@ export default function AdminMobilePreviewPage() {
                     {/* Quick Tools */}
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '.4rem' }}>
                       <button
-                        onClick={() => showToast('📍 Geofenced Check-In: Aafin Gatehouse Outpost (6.9368°N, 3.6330°E) logged.')}
+                        onClick={() => showToast('📍 Geofenced Check-In: Aafin Gatehouse Outpost (6.8485°N, 3.6330°E) logged.')}
                         style={{ padding: '.6rem', background: '#1a0b06', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 6, color: '#fff', cursor: 'pointer', textAlign: 'left' }}
                       >
                         <div style={{ fontSize: '1.2rem' }}>📍</div>
@@ -978,7 +978,7 @@ export default function AdminMobilePreviewPage() {
                             <div style={{ fontSize: '.55rem', color: '#f87171' }}>{inc.status} · {inc.time}</div>
                           </div>
                           <button
-                            onClick={() => window.open(`https://www.google.com/maps/dir/?api=1&destination=6.9368,3.6330`, '_blank')}
+                            onClick={() => window.open(`https://www.google.com/maps/dir/?api=1&destination=6.8485,3.6330`, '_blank')}
                             style={{ background: '#ef4444', color: '#fff', border: 'none', borderRadius: 4, padding: '.3rem .6rem', fontSize: '.62rem', fontWeight: 800, cursor: 'pointer' }}
                           >
                             GPS Nav

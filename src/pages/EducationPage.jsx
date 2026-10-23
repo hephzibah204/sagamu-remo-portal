@@ -20,7 +20,7 @@ const schools = [
       'Celebrating over 80 years of academic excellence',
       'Extensive science laboratories and ICT research centers'
     ],
-    img: '/images/OSitelu Memorial College.jpeg'
+    img: '/images/palace/3.jpg'
   },
   {
     name: 'Federal Government Girls\' College (FGGC) Sagamu',
@@ -37,7 +37,7 @@ const schools = [
       'Outstanding performances in WAEC, NECO, and National Olympiads',
       'State-of-the-art boarding and robotics facilities'
     ],
-    img: '/images/ositelu-memorial-college-building.jpg'
+    img: '/images/palace/2.jpg'
   },
   {
     name: 'OOU College of Health Sciences & OOUTH Medical Academy',
@@ -54,7 +54,7 @@ const schools = [
       'Direct clinical affiliations with international teaching hospitals',
       '24/7 tertiary trauma and surgical training center'
     ],
-    img: '/images/church-of-the-lord-aladura.jpg'
+    img: '/images/news/health-centre-solar-upgrade.jpg'
   },
   {
     name: 'Methodist Comprehensive College & Muslim High School',
@@ -70,7 +70,7 @@ const schools = [
       'Over six decades of continuous civic learning',
       'Active vocational training workshops and athletic teams'
     ],
-    img: '/images/EmmanuelNarroway Academy.jpg'
+    img: '/images/news/youth-tech-bootcamp.jpg'
   },
 ];
 

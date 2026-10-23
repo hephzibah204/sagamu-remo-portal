@@ -75,7 +75,7 @@ export const SEED_DATA = {
       email: 'olumide.sob@sagamuyouths.ng',
       groupSize: '3',
       idCard: 'SGM-892102',
-      message: 'Briefing HRH on the proposed Ikenne-Sagamu ICT empowerment initiative supported by diaspora alumni.',
+      message: 'Briefing HRH on the proposed Sagamu Central ICT empowerment initiative supported by diaspora alumni.',
       status: 'confirmed',
       notes: 'Palace Secretary cleared: Room 2 Aafin.',
       createdAt: '2026-08-20T11:00:00Z',
@@ -100,7 +100,7 @@ export const SEED_DATA = {
     {
       id: 'SGM-LND-001',
       area: 'Ajura Border Axis',
-      owner: 'Ogunbade Family Trust',
+      owner: 'Awolesi Family Trust',
       size: '12 Acres',
       use: 'Agricultural',
       status: 'Verified',

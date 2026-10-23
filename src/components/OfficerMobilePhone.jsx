@@ -63,11 +63,11 @@ const CHAMBERS = [
 const SAGAMU_CCTV_CAMERAS = [
   {
     id: 'CAM-01',
-    name: 'Sagamu Tollgate North ANPR (Lagos-Ibadan Exp.)',
-    sector: 'Sector 1 — Highway Corridor',
-    location: 'KM 66.8 Lagos-Ibadan Expressway Intercept',
-    latitude: 6.9388,
-    longitude: 3.6437,
+    name: 'Sagamu Interchange ANPR (Lagos-Ibadan-Benin Exp.)',
+    sector: 'Sector 1 — Highway Interchange Corridor',
+    location: 'Sagamu Interchange Flyover Axis',
+    latitude: 6.8410,
+    longitude: 3.6280,
     agency: 'FRSC Expressway Command',
     resolution: '4K UHD · 60 FPS',
     status: 'LIVE_HD',
@@ -79,9 +79,9 @@ const SAGAMU_CCTV_CAMERAS = [
     id: 'CAM-02',
     name: 'Aafin Akarigbo Palace Square (PTZ 360° Dome)',
     sector: 'Sector 2 — Central Heritage Core',
-    location: 'Palace Way / Oba Council Chamber',
-    latitude: 6.9372,
-    longitude: 3.6335,
+    location: 'Ita Oba / Akarigbo Street',
+    latitude: 6.8485,
+    longitude: 3.6465,
     agency: 'Palace Royal Guard / Vigilante',
     resolution: '1080p · 30 FPS',
     status: 'LIVE_HD',
@@ -91,11 +91,11 @@ const SAGAMU_CCTV_CAMERAS = [
   },
   {
     id: 'CAM-03',
-    name: 'Sagamu Trailer Park Weighbridge & Haulage Hub',
-    sector: 'Sector 1 — Highway Corridor',
-    location: 'Trailer Park Bypass South Gate',
-    latitude: 6.9366,
-    longitude: 3.6344,
+    name: 'Sabo International Kolanut & Agro Logistics Hub',
+    sector: 'Sector 3 — Sabo Commercial Corridor',
+    location: 'Sabo Market Main Gate',
+    latitude: 6.8520,
+    longitude: 3.6410,
     agency: 'So-Safe Corps / Fire Precaution',
     resolution: '1080p · 30 FPS',
     status: 'MOTION_DETECTED',
@@ -105,11 +105,11 @@ const SAGAMU_CCTV_CAMERAS = [
   },
   {
     id: 'CAM-04',
-    name: 'Oja Sagamu Central Market & Commercial Ring',
-    sector: 'Sector 2 — Central Heritage Core',
-    location: 'Market Road / Civic Center',
-    latitude: 6.9354,
-    longitude: 3.6338,
+    name: 'Lafarge Elephant Cement Industrial Corridor',
+    sector: 'Sector 4 — Industrial Manufacturing Belt',
+    location: 'Lafarge Industrial Arterial Road',
+    latitude: 6.8450,
+    longitude: 3.6550,
     agency: 'Joint Vigilante Command',
     resolution: '1080p · 30 FPS',
     status: 'LIVE_HD',
@@ -119,11 +119,11 @@ const SAGAMU_CCTV_CAMERAS = [
   },
   {
     id: 'CAM-05',
-    name: 'OOUTH Hospital Junction & Emergency Axis',
-    sector: 'Sector 4 — Medical & Social',
-    location: 'OOUTH Hospital Road, Makun',
-    latitude: 6.9325,
-    longitude: 3.6310,
+    name: 'OOUTH Teaching Hospital & Emergency Axis',
+    sector: 'Sector 5 — Tertiary Medical District',
+    location: 'Hospital Road, Makun-Sagamu',
+    latitude: 6.8390,
+    longitude: 3.6430,
     agency: 'Civil Defence (NSCDC)',
     resolution: '1080p · 30 FPS',
     status: 'LIVE_HD',
@@ -133,11 +133,11 @@ const SAGAMU_CCTV_CAMERAS = [
   },
   {
     id: 'CAM-06',
-    name: 'Ositelu Memorial / Awomosu Academic Axis',
-    sector: 'Sector 5 — Academic Belt',
-    location: 'Awomosu Agbato Drive',
-    latitude: 6.9405,
-    longitude: 3.6397,
+    name: 'Remo Secondary School (RSS) / FGGC Academic Axis',
+    sector: 'Sector 6 — Central Academic Belt',
+    location: 'Akarigbo Street Academic Corridor',
+    latitude: 6.8470,
+    longitude: 3.6490,
     agency: 'Community Watch',
     resolution: '1080p · 30 FPS',
     status: 'LIVE_HD',
@@ -147,12 +147,12 @@ const SAGAMU_CCTV_CAMERAS = [
   },
   {
     id: 'CAM-07',
-    name: 'Saapade Junction / Remo North Axis Gateway',
-    sector: 'Sector 7 — Northern Gateway',
-    location: 'Ibadan-Remo Arterial Junction',
-    latitude: 6.9550,
-    longitude: 3.6480,
-    agency: 'Joint Border Command',
+    name: 'Gateway International Stadium & GRA Arterial',
+    sector: 'Sector 7 — Civic & Recreation District',
+    location: 'GRA / Stadium Boulevard Link',
+    latitude: 6.8350,
+    longitude: 3.6390,
+    agency: 'Joint Police & Traffic Command',
     resolution: '4K UHD · 60 FPS',
     status: 'LIVE_HD',
     anpr: true,
@@ -270,8 +270,8 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
       category: '🚨 Armed Robbery / Banditry',
       description: 'Suspicious armed suspects sighted along KM 67 boundary.',
       location: 'KM 67 Tollgate Expressway, Sagamu',
-      latitude: 6.9388,
-      longitude: 3.6437,
+      latitude: 6.8485,
+      longitude: 3.6465,
       accuracy: 6,
       ip_address: '197.210.54.12',
       device_model: 'Samsung Galaxy A54',
@@ -339,8 +339,8 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
       startTime: new Date().toISOString(),
       status: 'ACTIVE_MONITORING',
       assignedUnit: 'Patrol Unit 4 (Highway & Rural Intercept)',
-      latitude: 6.9388,
-      longitude: 3.6437,
+      latitude: 6.8485,
+      longitude: 3.6465,
     },
   ]);
 
@@ -424,7 +424,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
         const autoRouting = autoRouteIncident({
           id: sosItem.id || `INC-${Date.now().toString().slice(-4)}`,
           type: sosItem.category || 'SOS Emergency',
-          location: { lat: sosItem.latitude || 6.9388, lng: sosItem.longitude || 3.6437 },
+          location: { lat: sosItem.latitude || 6.8485, lng: sosItem.longitude || 3.6465 },
         });
 
         // TRIGGER HIGH-DECIBEL SIREN ALARM FOR SECURITY
@@ -435,11 +435,11 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
           threat_level: 'CODE_RED',
           category: sosItem.category || '🚨 SOS Emergency Panic',
           location: sosItem.location || 'Sagamu Remo Corridor',
-          latitude: sosItem.latitude || 6.9388,
-          longitude: sosItem.longitude || 3.6437,
+          latitude: sosItem.latitude || 6.8485,
+          longitude: sosItem.longitude || 3.6465,
           accuracy: sosItem.accuracy || 5,
           ip_address: sosItem.ipAddress || sosItem.ip_address || '197.210.54.12',
-          google_maps_url: sosItem.googleMapsUrl || `https://www.google.com/maps?q=${sosItem.latitude || 6.9388},${sosItem.longitude || 3.6437}`,
+          google_maps_url: sosItem.googleMapsUrl || `https://www.google.com/maps?q=${sosItem.latitude || 6.8485},${sosItem.longitude || 3.6465}`,
           device_model: sosItem.deviceModel || 'Mobile Device',
           device_os: sosItem.deviceOs || 'Android 14',
           battery_level: sosItem.batteryLevel ?? 75,
@@ -657,8 +657,8 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
                 remainingSeconds: remote.remaining_seconds != null ? remote.remaining_seconds : 600,
                 status: (remote.status === 'safe_arrival' || remote.status === 'completed') ? 'SAFELY_ARRIVED' : (remote.status === 'duress_triggered' ? 'DURESS_TRIGGERED' : 'ACTIVE_MONITORING'),
                 assignedUnit: remote.assignedUnit || 'Patrol Unit 4 (Highway & Rural Intercept)',
-                latitude: parseFloat(remote.last_latitude || remote.latitude || 6.9388),
-                longitude: parseFloat(remote.last_longitude || remote.longitude || 3.6437),
+                latitude: parseFloat(remote.last_latitude || remote.latitude || 6.8485),
+                longitude: parseFloat(remote.last_longitude || remote.longitude || 3.6465),
                 battery_level: remote.battery_level || 86,
                 accuracy: remote.accuracy || 6,
               };
@@ -954,8 +954,8 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
 
                 {/* Sagamu Hyper-Local Resolution & High-Precision URLs */}
                 {(() => {
-                  const sLat = selectedIncident.latitude || 6.9388;
-                  const sLng = selectedIncident.longitude || 3.6437;
+                  const sLat = selectedIncident.latitude || 6.8485;
+                  const sLng = selectedIncident.longitude || 3.6465;
                   const sagamuLoc = resolveSagamuLocation(sLat, sLng, selectedIncident.accuracy || 8);
                   const mapUrls = getSagamuMapUrls(sLat, sLng, 'Sagamu Citizen SOS');
                   const batLvl = selectedIncident.battery_level ?? selectedIncident.batteryLevel ?? null;
@@ -1380,7 +1380,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
                                 🛰️ Live Radar
                               </button>
                               <a
-                                href={`https://www.google.com/maps/dir/?api=1&destination=${esc.latitude || 6.9388},${esc.longitude || 3.6437}`}
+                                href={`https://www.google.com/maps/dir/?api=1&destination=${esc.latitude || 6.8485},${esc.longitude || 3.6465}`}
                                 target="_blank" rel="noopener noreferrer"
                                 style={{
                                   flex: 1,
@@ -1436,7 +1436,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
                       {/* Telemetry Badge Strip */}
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', margin: '4px 0 6px' }}>
                         <span style={{ background: 'rgba(56,189,248,0.15)', border: '1px solid rgba(56,189,248,0.3)', borderRadius: '3px', padding: '1px 4px', fontSize: '0.58rem', color: '#38bdf8', fontFamily: 'monospace' }}>
-                          🛰️ {Number(inc.latitude || 6.9388).toFixed(4)}, {Number(inc.longitude || 3.6437).toFixed(4)}
+                          🛰️ {Number(inc.latitude || 6.8485).toFixed(4)}, {Number(inc.longitude || 3.6465).toFixed(4)}
                         </span>
                         <span style={{ background: 'rgba(34,197,94,0.15)', border: '1px solid rgba(34,197,94,0.3)', borderRadius: '3px', padding: '1px 4px', fontSize: '0.58rem', color: '#4ade80' }}>
                           ±{inc.accuracy || 5}m
@@ -1488,7 +1488,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
                           🗺️ View Radar & Map
                         </button>
                         <a
-                          href={`https://www.google.com/maps/dir/?api=1&destination=${inc.latitude || 6.9388},${inc.longitude || 3.6437}`}
+                          href={`https://www.google.com/maps/dir/?api=1&destination=${inc.latitude || 6.8485},${inc.longitude || 3.6465}`}
                           target="_blank" rel="noopener noreferrer"
                           style={{ flex: 1, textAlign: 'center', background: '#2563eb', color: '#fff', textDecoration: 'none', borderRadius: '4px', padding: '6px', fontSize: '0.68rem', fontWeight: 800 }}
                         >
@@ -2166,7 +2166,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
                 2. SCENE GPS TELEMETRY & DIGITAL FOOTPRINT
               </div>
               <div><strong>Landmark / Sector:</strong> {selectedIncident.location}</div>
-              <div><strong>Precise Coordinates:</strong> {Number(selectedIncident.latitude || 6.9388).toFixed(5)}°N, {Number(selectedIncident.longitude || 3.6437).toFixed(5)}°E (±{selectedIncident.accuracy || 5}m)</div>
+              <div><strong>Precise Coordinates:</strong> {Number(selectedIncident.latitude || 6.8485).toFixed(5)}°N, {Number(selectedIncident.longitude || 3.6465).toFixed(5)}°E (±{selectedIncident.accuracy || 5}m)</div>
               <div><strong>Network Carrier & IP:</strong> {selectedIncident.network_type || '4G'} · {selectedIncident.ip_address || selectedIncident.ipAddress || '197.210.54.12'}</div>
               <div><strong>Device Hardware:</strong> {selectedIncident.device_model || selectedIncident.deviceModel || 'Mobile Web Client'} (🔋 {selectedIncident.battery_level ?? selectedIncident.batteryLevel ?? '82'}%)</div>
             </div>
@@ -2485,13 +2485,13 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
           <div style={{ flex: 1, borderRadius: '8px', overflow: 'hidden', border: '1px solid #38bdf8', position: 'relative' }}>
             <iframe
               title="Escort Live Google Street Map"
-              src={`https://maps.google.com/maps?q=${selectedEscortForMap.latitude || 6.9388},${selectedEscortForMap.longitude || 3.6437}&t=m&z=18&output=embed`}
+              src={`https://maps.google.com/maps?q=${selectedEscortForMap.latitude || 6.8485},${selectedEscortForMap.longitude || 3.6465}&t=m&z=18&output=embed`}
               style={{ width: '100%', height: '100%', border: 'none' }}
               loading="lazy"
             />
             {/* Live GPS Coordinates Tag */}
             <div style={{ position: 'absolute', bottom: '6px', left: '6px', background: 'rgba(15,23,42,0.85)', padding: '2px 6px', borderRadius: '3px', fontSize: '0.55rem', color: '#38bdf8', fontFamily: 'monospace' }}>
-              📍 {(selectedEscortForMap.latitude || 6.9388).toFixed(5)}°N, {(selectedEscortForMap.longitude || 3.6437).toFixed(5)}°E
+              📍 {(selectedEscortForMap.latitude || 6.8485).toFixed(5)}°N, {(selectedEscortForMap.longitude || 3.6465).toFixed(5)}°E
             </div>
           </div>
 
@@ -2516,7 +2516,7 @@ export default function OfficerMobilePhone({ deviceFrame = 'iphone' }) {
               </a>
             )}
             <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${selectedEscortForMap.latitude || 6.9388},${selectedEscortForMap.longitude || 3.6437}`}
+              href={`https://www.google.com/maps/dir/?api=1&destination=${selectedEscortForMap.latitude || 6.8485},${selectedEscortForMap.longitude || 3.6465}`}
               target="_blank" rel="noopener noreferrer"
               style={{
                 flex: 1.5,

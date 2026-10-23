@@ -41,7 +41,7 @@ const SEED_ISSUES = [
     category: 'pothole_road',
     quarter: 'Itun-Oke',
     location: 'Palace Way, directly opposite SDA Secretariat',
-    latitude: 6.9368,
+    latitude: 6.8485,
     longitude: 3.6330,
     severity: 'HIGH',
     status: 'CONTRACTOR_ASSIGNED', // REPORTED, INVESTIGATING, CONTRACTOR_ASSIGNED, IN_PROGRESS, RESOLVED
@@ -110,7 +110,7 @@ export function reportStreetIssue(issueData) {
     category: issueData.category || 'pothole_road',
     quarter: issueData.quarter || 'Itun-Iseje',
     location: issueData.location,
-    latitude: issueData.latitude || 6.9368,
+    latitude: issueData.latitude || 6.8485,
     longitude: issueData.longitude || 3.6330,
     severity: issueData.severity || 'MEDIUM',
     status: 'REPORTED',

@@ -39,7 +39,7 @@ const families = [
       { n: 'Oba Moses Awolesi', r: 'Erinwole II · Reigned 1952–1988 (36 Years) · Independence Era Titan' },
       { n: 'Oba Adebonojo', r: 'Akarigbo of Remoland (1899–1915)' }
     ],
-    img: '/images/OLSAGAMU-OF-SAGAMU-OBA OGUNBADE.jpg'
+    img: '/images/palace/1.jpg'
   },
   {
     id: 'daniel',
@@ -72,7 +72,6 @@ const families = [
       { n: 'Anthony Oluwafemi Olaseni Joshua, OBE', r: 'Two-Time Unified World Heavyweight Boxing Champion (WBA, IBF, WBO, IBO)' },
       { n: 'The Joshua Family Estate', r: 'Sagamu community youth sports and philanthropic supporters' }
     ],
-    img: '/images/David Alaba Foundation.jpg'
   },
 ];
 

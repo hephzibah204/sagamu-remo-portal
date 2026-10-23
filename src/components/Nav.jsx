@@ -11,53 +11,52 @@ const MENU_GROUPS = [
     id: 'governance',
     label: 'Governance & Palace',
     items: [
-      { id: 'monarchy', label: '👑 The Monarchy & Akarigbo' },
+      { id: 'monarchy', label: '👑 The Monarchy & The Akarigbo' },
       { id: 'royal-audience', label: '📜 Book Royal Audience' },
       { id: 'id-card', label: '🪪 Digital Citizen ID' },
       { id: 'verify-id', label: '🔍 Verify Citizen ID' },
-      { id: 'land-registry', label: '📋 Land Registry' },
+      { id: 'land-registry', label: '📋 Land Registry & Plots' },
       { id: 'disputes', label: '⚖️ Customary Court (Kootu Oba)' },
-      { id: 'governance', label: '📊 Civic Dashboard' },
+      { id: 'governance', label: '📊 Civic Performance Dashboard' },
       { id: 'contact', label: '📬 Contact SDA Secretariat' },
     ],
   },
   {
     id: 'commerce',
-    label: 'Economy & Trade',
+    label: 'Economy & Industry',
     items: [
-      { id: 'marketplace', label: '🛒 Sagamu Marketplace' },
-      { id: 'business', label: '💼 Business & Industrial Directory' },
-      { id: 'fix-my-street', label: '🚧 Fix My Street' },
-      { id: 'diaspora', label: '🌍 Diaspora Network' },
+      { id: 'marketplace', label: '🛒 Sabo Wholesale & Retail Market' },
+      { id: 'business', label: '💼 Industrial & Business Directory' },
+      { id: 'fix-my-street', label: '🚧 Fix My Street & Works' },
+      { id: 'diaspora', label: '🌍 Global Diaspora Network' },
       { id: 'diaspora-escrow', label: '🤝 Diaspora Grants & Projects' },
     ],
   },
   {
     id: 'community',
-    label: 'Community & Health',
+    label: 'Healthcare & Schools',
     items: [
-      { id: 'health', label: '🏥 OOUTH Health & Blood Bank' },
-      { id: 'education', label: '🏫 Schools & RSS' },
-      { id: 'scholarships', label: '🎓 Scholarships & Bursaries' },
-      { id: 'faith', label: '⛪ Faith & Heritage' },
-      { id: 'news', label: '📰 Sagamu News' },
-      { id: 'messages', label: '💬 Town Chat' },
-      { id: 'forum', label: '🗣️ Community Forum' },
-      { id: 'associations', label: '🤝 Societies & Clubs' },
+      { id: 'health', label: '🏥 OOUTH Teaching Hospital & Blood Bank' },
+      { id: 'education', label: '🏫 Schools & Remo Secondary School' },
+      { id: 'scholarships', label: '🎓 Scholarships & Innovation Grants' },
+      { id: 'faith', label: '⛪ Cathedral, Mosque & Heritage' },
+      { id: 'news', label: '📰 Sagamu Dispatches & Gazette' },
+      { id: 'messages', label: '💬 Town Chat & Quarter Channels' },
+      { id: 'forum', label: '🗣️ Civic Deliberations Forum' },
+      { id: 'associations', label: '🤝 Societies & Clubs (SDA, RSSOSA)' },
     ],
   },
   {
     id: 'heritage',
-    label: 'Heritage & Places',
+    label: '13 Quarters & Culture',
     items: [
-      { id: 'history', label: '📖 Founding History (1872)' },
-      { id: 'timeline', label: '⏳ Dynastic Timeline' },
-      { id: 'map', label: '🗺️ Google Maps Navigator' },
-      { id: 'tourism', label: '🌴 Tourism & Landmarks' },
-      { id: 'gallery', label: '📸 Media Archives' },
-      { id: 'live', label: '🎥 Palace Live TV' },
-      { id: 'quiz', label: '🧠 Heritage Quiz' },
-      { id: 'miss-sagamu', label: '👑 Miss Sagamu' },
+      { id: 'history', label: '📖 1872 Confederation Founding History' },
+      { id: 'timeline', label: '⏳ Dynastic Timeline of Akarigbos' },
+      { id: 'map', label: '🗺️ Satellite Landmark Radar' },
+      { id: 'tourism', label: '🌴 Tourism & Cultural Citadels' },
+      { id: 'gallery', label: '📸 Visual Archives & Media' },
+      { id: 'live', label: '🎥 Palace Live TV & Broadcaster' },
+      { id: 'quiz', label: '🧠 Heritage Scholar Quiz' },
     ],
   },
 ];
@@ -118,16 +117,51 @@ export default function Nav() {
 
   return (
     <>
+      {/* ── TOP MUNICIPAL EXECUTIVE BAR (Distinct from Ogere) ── */}
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1002,
+          height: '28px',
+          background: '#0f172a',
+          color: '#cbd5e1',
+          fontSize: '0.68rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '0 1.5rem',
+          borderBottom: '1px solid #1e293b',
+        }}
+        className="top-municipal-bar"
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <span>🇳🇬</span>
+          <span style={{ fontWeight: 600, color: '#f8fafc', letterSpacing: '0.04em' }}>
+            FEDERAL REPUBLIC OF NIGERIA · OGUN STATE · REMOLAND PARAMOUNT HEADQUARTERS
+          </span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+          <span style={{ color: '#94a3b8' }}>📍 6°50′N, 3°38′E</span>
+          <span style={{ color: '#4ade80', fontWeight: 600 }}>🟢 13 Quarters Command: Active</span>
+          <a href="tel:112" style={{ color: '#f87171', fontWeight: 700, textDecoration: 'none' }}>
+            🚨 Emergency Dispatch: 112
+          </a>
+        </div>
+      </div>
+
       {broadcast && broadcast.enabled && broadcast.message && (
         <div
           style={{
             position: 'fixed',
-            top: 0,
+            top: '28px',
             left: 0,
             right: 0,
             zIndex: 1001,
-            padding: '0.4rem 1rem',
-            fontSize: '0.75rem',
+            padding: '0.35rem 1rem',
+            fontSize: '0.74rem',
             textAlign: 'center',
             display: 'flex',
             alignItems: 'center',
@@ -164,10 +198,11 @@ export default function Nav() {
         </div>
       )}
 
+      {/* ── MAIN CIVIC NAVIGATION BAR ── */}
       <nav
         style={{
           position: 'fixed',
-          top: broadcast && broadcast.enabled && broadcast.message ? '32px' : 'var(--demo-offset, 0px)',
+          top: broadcast && broadcast.enabled && broadcast.message ? '60px' : '28px',
           left: 0,
           right: 0,
           zIndex: 1000,
@@ -175,56 +210,60 @@ export default function Nav() {
           display: 'flex',
           alignItems: 'center',
           transition: 'all 0.2s ease',
-          background: isScrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.94)',
+          background: isScrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
           borderBottom: '1px solid #e2e8f0',
-          boxShadow: isScrolled ? '0 4px 20px -2px rgba(15, 23, 42, 0.05)' : 'none',
+          boxShadow: isScrolled ? '0 4px 20px -2px rgba(15, 23, 42, 0.06)' : '0 1px 3px rgba(0, 0, 0, 0.02)',
         }}
       >
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
           
-          {/* Clean Executive Logo */}
+          {/* Official Emblem & Title */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', textDecoration: 'none' }}>
             <div
               style={{
-                width: '38px',
-                height: '38px',
+                width: '40px',
+                height: '40px',
                 borderRadius: '8px',
                 background: 'linear-gradient(135deg, #1e40af 0%, #059669 100%)',
                 color: '#ffffff',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '1.1rem',
+                fontSize: '1.2rem',
                 fontWeight: 900,
-                boxShadow: '0 2px 6px rgba(30, 64, 175, 0.2)',
+                boxShadow: '0 2px 8px rgba(30, 64, 175, 0.2)',
               }}
             >
               👑
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '1.15rem', fontWeight: 800, color: '#1e40af', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+              <span style={{ fontSize: '1.2rem', fontWeight: 900, color: '#1e40af', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
                 SAGAMU
               </span>
               <span style={{ fontSize: '0.58rem', fontWeight: 700, color: '#059669', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                Remo Civic Portal
+                Remoland Paramount Portal
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation Links */}
           <div style={{ display: 'none', gap: '1.2rem', alignItems: 'center' }} className="desktop-nav">
             <style>{`
               @media (min-width: 1024px) {
                 .desktop-nav { display: flex !important; }
                 .mobile-toggle { display: none !important; }
               }
+              @media (max-width: 900px) {
+                .top-municipal-bar { display: none !important; }
+                nav { top: 0 !important; }
+              }
             `}</style>
             
             <Link to="/" className="nav-link" style={{ 
               color: isActive('home') ? '#1e40af' : '#334155',
-              fontWeight: isActive('home') ? 700 : 500,
+              fontWeight: isActive('home') ? 800 : 600,
               borderBottom: isActive('home') ? '2px solid #1e40af' : '2px solid transparent'
             }}>
               Home
@@ -239,7 +278,7 @@ export default function Nav() {
               >
                 <button className="nav-link" style={{ 
                   color: isGroupActive(group) ? '#1e40af' : '#334155',
-                  fontWeight: isGroupActive(group) ? 700 : 500,
+                  fontWeight: isGroupActive(group) ? 800 : 600,
                   display: 'flex', alignItems: 'center', gap: '4px',
                   background: 'none', border: 'none', cursor: 'pointer'
                 }}>
@@ -248,19 +287,19 @@ export default function Nav() {
 
                 {openGroup === group.id && (
                   <div style={{
-                    position: 'absolute', top: '100%', left: 0, minWidth: '220px',
+                    position: 'absolute', top: '100%', left: 0, minWidth: '240px',
                     padding: '0.5rem 0', borderRadius: '10px', marginTop: '6px',
                     background: '#ffffff',
                     border: '1px solid #e2e8f0',
                     boxShadow: '0 12px 28px -4px rgba(15, 23, 42, 0.1), 0 4px 8px -2px rgba(15, 23, 42, 0.04)',
-                    zIndex: 1002,
+                    zIndex: 1003,
                   }}>
                     {group.items.map(item => (
                       <Link key={item.id} to={`/${item.id}`} style={{
-                        display: 'block', padding: '0.6rem 1.1rem', fontSize: '0.85rem',
+                        display: 'block', padding: '0.65rem 1.1rem', fontSize: '0.84rem',
                         color: isActive(item.id) ? '#1e40af' : '#334155',
                         background: isActive(item.id) ? '#eff6ff' : 'transparent',
-                        fontWeight: isActive(item.id) ? 600 : 400,
+                        fontWeight: isActive(item.id) ? 700 : 500,
                         textDecoration: 'none',
                         transition: 'background 0.15s ease',
                       }}
@@ -284,17 +323,17 @@ export default function Nav() {
             {standalonePages.map(page => (
               <Link key={page.id} to={`/${page.id}`} className="nav-link" style={{
                 color: isActive(page.id) ? '#1e40af' : '#334155',
-                fontWeight: isActive(page.id) ? 700 : 500,
+                fontWeight: isActive(page.id) ? 800 : 600,
               }}>
                 {page.label}
               </Link>
             ))}
             
-            {/* Quick Actions Buttons */}
+            {/* Quick Municipal Triggers */}
             <button
               onClick={() => setIsSosOpen(true)}
               className="btn-sos-nav"
-              title="Immediate Emergency Rescue & Security Dispatch"
+              title="Immediate Emergency Rescue & Security Forces"
               style={{
                 fontSize: '0.72rem',
                 padding: '0.45rem 0.85rem',
@@ -348,7 +387,7 @@ export default function Nav() {
                 background: '#f8fafc',
                 color: '#475569',
                 cursor: 'pointer',
-                fontWeight: 500,
+                fontWeight: 600,
               }}
             >
               <span>🔍</span>
@@ -358,7 +397,7 @@ export default function Nav() {
             <AiSearch />
           </div>
 
-          {/* Mobile Toggle Button */}
+          {/* Mobile Drawer Toggle */}
           <button 
             className="mobile-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -377,12 +416,12 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* Clean Mobile Menu Drawer */}
+      {/* Mobile Menu Drawer */}
       {isMobileMenuOpen && (
         <div style={{
-          position: 'fixed', inset: 0, zIndex: 999, paddingTop: 'calc(var(--nav-height) + 10px)',
+          position: 'fixed', inset: 0, zIndex: 9999, paddingTop: 'calc(var(--nav-height) + 30px)',
           overflowY: 'auto', display: 'flex', flexDirection: 'column',
-          background: 'rgba(255, 255, 255, 0.98)',
+          background: 'rgba(255, 255, 255, 0.99)',
           backdropFilter: 'blur(16px)',
         }}>
           <div className="container" style={{ padding: '1.5rem' }}>
@@ -394,7 +433,7 @@ export default function Nav() {
                 }}
                 style={{
                   flex: 1,
-                  padding: '0.7rem',
+                  padding: '0.75rem',
                   fontSize: '0.8rem',
                   background: '#dc2626',
                   border: 'none',
@@ -418,7 +457,7 @@ export default function Nav() {
                 }}
                 style={{
                   flex: 1,
-                  padding: '0.7rem',
+                  padding: '0.75rem',
                   fontSize: '0.8rem',
                   background: '#059669',
                   border: 'none',
@@ -439,7 +478,7 @@ export default function Nav() {
             <AiSearch />
 
             <div style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-              <Link to="/" style={{ fontSize: '1.05rem', fontWeight: 700, color: isActive('home') ? '#1e40af' : '#0f172a' }}>
+              <Link to="/" style={{ fontSize: '1.05rem', fontWeight: 800, color: isActive('home') ? '#1e40af' : '#0f172a' }}>
                 🏠 Home
               </Link>
               
@@ -485,7 +524,7 @@ export default function Nav() {
       <style>{`
         .nav-link {
           font-size: 0.82rem;
-          font-weight: 500;
+          font-weight: 600;
           padding: 0.4rem 0.2rem;
           transition: all 0.15s ease;
           text-decoration: none;

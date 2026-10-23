@@ -24,8 +24,8 @@ export function calculateDistanceKm(lat1, lon1, lat2, lon2) {
  * Evaluates Incident Type, GPS proximity, station readiness, and active officer proximity
  */
 export function autoRouteIncident(incident) {
-  const incLat = incident.location?.lat || 6.9412;
-  const incLng = incident.location?.lng || 6.9485;
+  const incLat = incident.location?.lat || 6.8485;
+  const incLng = incident.location?.lng || 6.8465;
   const incType = (incident.type || incident.category || 'GENERAL_EMERGENCY').toUpperCase();
 
   // Score each station based on Distance + Agency Suitability Match

@@ -215,7 +215,7 @@ export default function SosHeaderModal({ isOpen, onClose }) {
 
     const sagamuLoc = resolveSagamuLocation(lat, lng, accuracy);
     let resolvedFullAddress = '';
-    let stdMaps = getStandardMapUrls(lat || 6.9388, lng || 3.6437);
+    let stdMaps = getStandardMapUrls(lat || 6.8485, lng || 3.6465);
     if (lat && lng) {
       try {
         const rev = await reverseGeocodeLocation(lat, lng);
@@ -669,7 +669,7 @@ export default function SosHeaderModal({ isOpen, onClose }) {
 
     const finalLocation = manualLandmark.trim() || sector;
     const finalFullAddress = fullAddress.trim() || loc?.fullAddress || `${finalLocation}, Sagamu, Ogun State, Nigeria`;
-    const finalDirectionsUrl = loc?.directionsUrl || `https://www.google.com/maps/dir/?api=1&destination=${loc?.lat || 6.9388},${loc?.lng || 3.6437}&travelmode=driving`;
+    const finalDirectionsUrl = loc?.directionsUrl || `https://www.google.com/maps/dir/?api=1&destination=${loc?.lat || 6.8485},${loc?.lng || 3.6465}&travelmode=driving`;
     const finalBackup = backupPhone.trim();
 
     const newSos = {
@@ -1134,8 +1134,8 @@ export default function SosHeaderModal({ isOpen, onClose }) {
                     </button>
                     {showMapPicker && (
                       <GoogleMapPinAdjuster
-                        initialLat={pinnedLocation?.lat || deviceLocation?.lat || 6.9388}
-                        initialLng={pinnedLocation?.lng || deviceLocation?.lng || 3.6437}
+                        initialLat={pinnedLocation?.lat || deviceLocation?.lat || 6.8485}
+                        initialLng={pinnedLocation?.lng || deviceLocation?.lng || 3.6465}
                         title="Adjust Emergency Distress Pin (Google Map)"
                         pinColor="#ef4444"
                         pinIconChar="🚨"

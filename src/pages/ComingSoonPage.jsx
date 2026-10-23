@@ -219,10 +219,10 @@ export default function ComingSoonPage({ onUnlock }) {
       desc: 'Official registration portal for the annual cultural ambassador competition celebrating the beauty and heritage of Sagamu daughters.',
     },
     {
-      icon: '🕊️',
-      title: 'Mount Tabieorar & Faith Heritage',
+      icon: '⛪',
+      title: "St. Paul's Cathedral & Sacred Heritage",
       tag: 'Faith & History',
-      desc: 'Digital historical archives commemorating the birthplace of The Church of the Lord (Aladura) Worldwide and annual spiritual convocation.',
+      desc: 'Digital historical archives commemorating the episcopal seat of the Anglican Diocese of Remo, historic Central Mosque, and sacred festivals.',
     },
     {
       icon: '💛',

@@ -65,7 +65,7 @@ const SECTORS_GEO = [
 
 const STATIC_CCTV = [
   { id: 'CAM-01', name: 'Expressway Tollgate North Cam', lat: 6.9385, lng: 3.6420, agency: 'FRSC / Police' },
-  { id: 'CAM-02', name: 'Palace Way Main Gate PTZ', lat: 6.9368, lng: 3.6330, agency: 'Palace Security' },
+  { id: 'CAM-02', name: 'Palace Way Main Gate PTZ', lat: 6.8485, lng: 3.6330, agency: 'Palace Security' },
   { id: 'CAM-03', name: 'Trailer Park South Weighbridge', lat: 6.9366, lng: 3.6344, agency: 'So-Safe Corps' },
   { id: 'CAM-04', name: 'OOUTH Hospital Junction', lat: 6.9325, lng: 3.6310, agency: 'Civil Defence' },
 ];
@@ -105,7 +105,7 @@ export default function TacticalRadarMap({
   };
 
   const activeCoord = activeIncident
-    ? toSvgCoords(activeIncident.latitude || 6.9388, activeIncident.longitude || 3.6437)
+    ? toSvgCoords(activeIncident.latitude || 6.8485, activeIncident.longitude || 3.6465)
     : null;
 
   return (
@@ -137,7 +137,7 @@ export default function TacticalRadarMap({
             </span>
           </div>
           <span style={{ color: 'rgba(255,255,255,0.4)', fontFamily: 'monospace' }}>
-            GRID: 6.9388° N, 3.6437° E · AZ: 042°
+            GRID: 6.8485° N, 3.6465° E · AZ: 042°
           </span>
         </div>
 
@@ -347,7 +347,7 @@ export default function TacticalRadarMap({
 
           {/* 7. Active Incident Pulsing Beacons */}
           {incidents.map(inc => {
-            const pos = toSvgCoords(inc.latitude || 6.9388, inc.longitude || 3.6437);
+            const pos = toSvgCoords(inc.latitude || 6.8485, inc.longitude || 3.6465);
             const isSelected = activeIncident?.id === inc.id;
             const isCodeRed = inc.threat_level === 'CODE_RED' || inc.category?.toLowerCase().includes('robbery') || inc.category?.toLowerCase().includes('terror');
             const isOrange = inc.threat_level === 'CODE_ORANGE';

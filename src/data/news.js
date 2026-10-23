@@ -189,7 +189,7 @@ const NEWS_DEFAULTS = [
     ic: '🏫',
     readTime: '3 min read',
     author: 'Education & Alumni Secretariat',
-    image: '/images/Ositelu Memorial School Gate.jpg'
+    image: '/images/news/youth-tech-bootcamp.jpg'
   },
   {
     id: 'n8',

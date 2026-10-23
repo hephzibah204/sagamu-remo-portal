@@ -144,7 +144,7 @@ export default function RoyalAudiencePage() {
       <Hero
         ey="Royal Palace"
         ti="Book a Royal Audience"
-        sub="Request a formal appointment with HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Kankanbiina II, the The Akarigbo of Remoland."
+        sub="Request a formal appointment with HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II), The Akarigbo and Paramount Ruler of Remoland."
         dark
       />
 
@@ -152,14 +152,14 @@ export default function RoyalAudiencePage() {
       <div style={{ background: '#f8fafc', padding: '1rem 2rem', borderBottom: '1px solid #e2e8f0' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
           <img
-            src="/images/Akarigbo-Oba-James-Obafemi1.jpg"
+            src="/images/palace/1.jpg"
             alt="HRM Oba Babatunde Adewale Ajayi, CFR, FCA"
-            style={{ width: '50px', height: '50px', borderRadius: '50%', border: '2px solid var(--gold)', objectFit: 'cover', objectPosition: 'center top', flexShrink: 0 }}
+            style={{ width: '50px', height: '50px', borderRadius: '50%', border: '2px solid #1e40af', objectFit: 'cover', objectPosition: 'center top', flexShrink: 0 }}
             onError={e => { e.target.style.display = 'none'; }}
           />
           <div>
-            <div className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', letterSpacing: '0.18em', textTransform: 'uppercase' }}>Receiving Audiences</div>
-            <div className="playfair" style={{ fontSize: '1rem', color: 'var(--cream)' }}>HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Kankanbiina II · The Akarigbo of Remoland</div>
+            <div style={{ fontSize: '0.65rem', color: '#1e40af', letterSpacing: '0.08em', textTransform: 'uppercase', fontWeight: 700 }}>Receiving Audiences</div>
+            <div style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a' }}>HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II) · The Akarigbo of Remoland</div>
           </div>
           <div style={{ marginLeft: 'auto', textAlign: 'right' }}>
             <div style={{ fontSize: '0.7rem', color: 'rgba(245,237,216,0.5)' }}>Palace Hours</div>

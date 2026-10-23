@@ -251,9 +251,9 @@ export default function IdCardPage() {
       <SEO title="Digital ID Card" description="Apply for your official Sagamu Remo Digital Community Identity Card — for indigenes, residents, diaspora, and honorary citizens." />
       <Hero ey="Community Identity" ti="Sagamu Digital ID Card" sub="Your official proof of belonging to the ancient Kingdom of Sagamu Remoland." dark />
 
-      <div style={{ background: 'linear-gradient(135deg, #1E3A8A, #8B1E3F)', padding: '0.65rem 2rem', textAlign: 'center' }}>
-        <span className="cinzel" style={{ fontSize: '0.62rem', letterSpacing: '0.18em', color: 'white', textTransform: 'uppercase' }}>
-          👑 ISSUED UNDER THE AUTHORITY OF HRH OBA JAMES OBAFEMI SALIU — KANKANBIINA II · The Akarigbo of Remoland
+      <div style={{ background: '#eff6ff', borderBottom: '1px solid #bfdbfe', padding: '0.65rem 2rem', textAlign: 'center' }}>
+        <span style={{ fontSize: '0.74rem', letterSpacing: '0.06em', color: '#1e40af', fontWeight: 700, textTransform: 'uppercase' }}>
+          👑 ISSUED UNDER THE ROYAL AUTHORITY OF HRM OBA BABATUNDE ADEWALE AJAYI, CFR, FCA (TORUNGBUWA II) · THE AKARIGBO OF REMOLAND
         </span>
       </div>
 

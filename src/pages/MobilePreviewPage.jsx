@@ -208,7 +208,7 @@ export default function MobilePreviewPage() {
   };
 
   const [showSosMapAdjuster, setShowSosMapAdjuster] = useState(true);
-  const [sosPinCoords, setSosPinCoords] = useState({ lat: 6.9388, lng: 3.6437 });
+  const [sosPinCoords, setSosPinCoords] = useState({ lat: 6.8485, lng: 3.6465 });
 
   const handleLockSosGps = async () => {
     setIsLockingSosGps(true);
@@ -254,7 +254,7 @@ export default function MobilePreviewPage() {
   const [escortReporterPhone, setEscortReporterPhone] = useState('08081762371');
   const [escortBackupPhone, setEscortBackupPhone] = useState('08034567890');
   const [showEscortMapAdjuster, setShowEscortMapAdjuster] = useState(true);
-  const [escortPinCoords, setEscortPinCoords] = useState({ lat: 6.9388, lng: 3.6437 });
+  const [escortPinCoords, setEscortPinCoords] = useState({ lat: 6.8485, lng: 3.6465 });
 
   const handleLookupGoogleMaps = async () => {
     setIsLocatingEscortGps(true);
@@ -299,12 +299,12 @@ export default function MobilePreviewPage() {
     const citizen = getLoggedInCitizen();
     const phone = sosReporterPhone || citizen.phone;
     const kin = sosBackupPhone ? ` Kin:${sosBackupPhone}` : '';
-    const text = `EMERGENCY SOS SAGAMU: ${sosCategory} (${sosSeverity}) at ${landmark || sosCustomLandmark || sosLandmark || 'Sagamu Remo'}. GPS:${Number(lat || 6.9388).toFixed(5)},${Number(lng || 3.6437).toFixed(5)}. Caller:${citizen.name} (${phone}${kin}). Details:${details || sosDetails || 'Immediate tactical armed intervention required!'}`;
+    const text = `EMERGENCY SOS SAGAMU: ${sosCategory} (${sosSeverity}) at ${landmark || sosCustomLandmark || sosLandmark || 'Sagamu Remo'}. GPS:${Number(lat || 6.8485).toFixed(5)},${Number(lng || 3.6465).toFixed(5)}. Caller:${citizen.name} (${phone}${kin}). Details:${details || sosDetails || 'Immediate tactical armed intervention required!'}`;
     return `sms:08081762371?body=${encodeURIComponent(text)}`;
   };
 
   // Stationary & Route Deviation tracker ref
-  const lastRecordedCoordsRef = useRef({ lat: 6.9388, lng: 3.6437, stationarySeconds: 0, lastCheckTime: Date.now() });
+  const lastRecordedCoordsRef = useRef({ lat: 6.8485, lng: 3.6465, stationarySeconds: 0, lastCheckTime: Date.now() });
 
   // Guardians screen state
   const [guardiansList, setGuardiansList] = useState([
@@ -341,8 +341,8 @@ export default function MobilePreviewPage() {
     const finalBackup = sosBackupPhone.trim();
 
     // 1. Acquire real GPS coordinates with progressive precision
-    let lat = 6.9388;
-    let lng = 3.6437;
+    let lat = 6.8485;
+    let lng = 3.6465;
     let accuracy = 10;
     let resolvedFullAddress = sosFullAddress.trim();
 
@@ -541,8 +541,8 @@ export default function MobilePreviewPage() {
     const durationSeconds = escortDurationMins * 60;
 
     // 2. Acquire GPS location (prefer user-adjusted pin if set)
-    let lat = escortPinCoords?.lat || 6.9388;
-    let lng = escortPinCoords?.lng || 3.6437;
+    let lat = escortPinCoords?.lat || 6.8485;
+    let lng = escortPinCoords?.lng || 3.6465;
     if (!escortPinCoords?.lat) {
       try {
         if (navigator.geolocation) {
@@ -731,8 +731,8 @@ export default function MobilePreviewPage() {
           reporterPhone: citizen.phone,
           assignedAgency: 'Police / Joint Patrol Command',
           status: 'CRITICAL_DISPATCH',
-          latitude: 6.9388,
-          longitude: 3.6437,
+          latitude: 6.8485,
+          longitude: 3.6465,
         };
 
         sirenSound.startEmergencySiren();
@@ -808,8 +808,8 @@ export default function MobilePreviewPage() {
         reporterPhone: citizen.phone,
         assignedAgency: 'Police / SWAT Anti-Kidnapping Unit',
         status: 'CRITICAL_DISPATCH',
-        latitude: 6.9388,
-        longitude: 3.6437,
+        latitude: 6.8485,
+        longitude: 3.6465,
       };
 
       try {
