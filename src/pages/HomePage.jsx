@@ -279,7 +279,7 @@ export default function HomePage() {
               {/* Live Metric Cards Stack */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 
-                {/* 1. Royal Secretariat */}
+                {/* 1. Royal Secretariat & Paramount Sovereign Card */}
                 <div
                   onClick={() => navigate('/royal-audience')}
                   style={{
@@ -287,26 +287,32 @@ export default function HomePage() {
                     border: '1px solid #e2e8f0',
                     borderLeft: '4px solid #1e40af',
                     borderRadius: '8px',
-                    padding: '0.75rem 1rem',
+                    padding: '0.85rem 1rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     cursor: 'pointer',
+                    gap: '0.75rem',
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <span style={{ fontSize: '1.4rem' }}>👑</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+                    <div style={{ width: 48, height: 48, borderRadius: '50%', overflow: 'hidden', border: '2px solid #1e40af', flexShrink: 0, boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
+                      <img src="/images/palace/akarigbo-king.jpg" alt="HRM Oba Babatunde Adewale Ajayi" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
                     <div>
-                      <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a' }}>
+                      <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#0f172a' }}>
                         Aafin Akarigbo Royal Court
                       </div>
-                      <div style={{ fontSize: '0.72rem', color: '#64748b' }}>
+                      <div style={{ fontSize: '0.74rem', color: '#1e40af', fontWeight: 600 }}>
                         HRM Oba Babatunde Adewale Ajayi (Torungbuwa II)
+                      </div>
+                      <div style={{ fontSize: '0.68rem', color: '#64748b' }}>
+                        Paramount Ruler of Remoland · Seat at Ita Oba
                       </div>
                     </div>
                   </div>
-                  <span style={{ fontSize: '0.65rem', fontWeight: 700, background: '#eff6ff', color: '#1e40af', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
-                    ONLINE APPOINTMENTS
+                  <span style={{ fontSize: '0.65rem', fontWeight: 700, background: '#eff6ff', color: '#1e40af', padding: '0.2rem 0.5rem', borderRadius: '4px', whiteSpace: 'nowrap' }}>
+                    AUDIENCE →
                   </span>
                 </div>
 

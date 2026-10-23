@@ -2,60 +2,50 @@ import { getWithFallback } from '../services/storage';
 
 const STATIC_PHOTOS = [
   {
-    cat: 'palace',
-    title: 'Aafin Akarigbo Palace Complex at Ita Oba',
-    date: 'Paramount Seat',
-    desc: 'The monumental Aafin Akarigbo Palace complex at Ita Oba, Offin-Sagamu, the official seat of HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II), Paramount Ruler of Remoland.',
-    src: '/images/palace/1.jpg',
-    credit: 'Aafin Akarigbo Royal Media Unit',
-    icon: '🏛️',
+    cat: 'monarchy',
+    title: 'HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II)',
+    date: 'Paramount Ruler of Remoland',
+    desc: 'His Royal Majesty Oba Babatunde Adewale Ajayi, CFR, FCA — The Akarigbo & Paramount Ruler of Remoland, Chairman of the Ogun State Council of Traditional Rulers.',
+    src: '/images/palace/akarigbo-king.jpg',
+    credit: 'Wikimedia Commons / Royal Archives of Remoland',
+    icon: '👑',
     bg: 'linear-gradient(135deg,#1e40af,#0f172a)'
   },
   {
-    cat: 'coronation',
-    title: 'Royal Throne & Sceptre of The Akarigbo of Remoland',
-    date: 'Sovereign Heritage',
-    desc: 'The sacred royal throne, ceremonial staff, and beaded crown of the Torungbuwa Dynasty, sovereign spiritual symbol of all 33 towns across Remoland.',
-    src: '/images/palace/2.jpg',
-    credit: 'Remo Royal Council Archives',
-    icon: '👑',
+    cat: 'palace',
+    title: 'Aafin Akarigbo of Remo Palace, Sagamu, Ogun State',
+    date: 'Paramount Sovereign Citadel',
+    desc: 'The official palace complex of the Akarigbo of Remoland located at Ita Oba, Offin-Sagamu, administrative and cultural capital of Remoland.',
+    src: '/images/palace/akarigbo-of-remo-palace.jpg',
+    credit: 'Wikimedia Commons (File:Akarigbo_of_Remo_Palace,_Sagamu,_Ogun_state.jpg)',
+    icon: '🏛️',
     bg: 'linear-gradient(135deg,#059669,#0f172a)'
   },
   {
-    cat: 'palace',
-    title: 'Aafin Akarigbo Grand Heritage Hall & Courtyard',
-    date: 'Royal Architecture',
-    desc: 'The modern ceremonial reception hall and ancestral courtyard of the Akarigbo Palace, where royal durbars and chieftaincy investitures are hosted.',
-    src: '/images/palace/5.jpg',
-    credit: 'Sagamu Royal Media',
+    cat: 'heritage',
+    title: 'Akarigbo Palace Heritage Facade, Sagamu',
+    date: 'Historic Monument',
+    desc: 'The grand exterior architecture of the Akarigbo Palace in Sagamu, embodying over a century of sovereign confederate history uniting the 13 quarters.',
+    src: '/images/palace/akarigbo-palace-heritage.jpg',
+    credit: 'Wikimedia Commons (File:Akarigbo_palace,_Sagamu.jpg)',
     icon: '🏰',
     bg: 'linear-gradient(135deg,#1e3a8a,#0f172a)'
   },
   {
     cat: 'sagamu-day',
-    title: 'Sagamu Day Grand Durbar & 13 Quarters Procession',
-    date: 'November Annual',
-    desc: 'The 13 confederate quarters of Sagamu (Offin, Makun, Sonyindo, Epe, Ibido, Igbepa, Ado, Oko, Ipoji, Batoro, Ijoku, Latawa, Ijagba) gather in festive unity.',
+    title: 'Sagamu Day Grand Durbar & 13 Quarters Assembly',
+    date: 'November Annual Celebration',
+    desc: 'The 13 confederate quarters of Sagamu (Offin, Makun, Sonyindo, Epe, Ibido, Igbepa, Ado, Oko, Ipoji, Batoro, Ijoku, Latawa, Ijagba) pay homage to the Akarigbo.',
     src: '/images/community-empowerment.jpg',
     credit: 'Sagamu Development Association (SDA)',
     icon: '🎉',
     bg: 'linear-gradient(135deg,#2563eb,#0f172a)'
   },
   {
-    cat: 'heritage',
-    title: 'Remo Secondary School (RSS) — Pioneer Academy',
-    date: 'Est. 1946 · Akarigbo St',
-    desc: 'The historic grounds of Remo Secondary School (RSS) along Akarigbo Street, founded in 1946 as the first secondary school in Remoland.',
-    src: '/images/palace/3.jpg',
-    credit: 'RSSOSA National Archives',
-    icon: '🏫',
-    bg: 'linear-gradient(135deg,#1e40af,#0284c7)'
-  },
-  {
     cat: 'development',
     title: 'Sagamu Youth STEM & Digital Innovation Bootcamp',
-    date: 'Tech Empowerment',
-    desc: 'Equipping young indigenes across Offin, Makun, and Sonyindo with practical software engineering, robotics, and creative digital skills.',
+    date: 'Youth Tech Empowerment',
+    desc: 'Empowering young indigenes across Offin, Makun, and Sonyindo with practical coding, robotics, and digital business skills.',
     src: '/images/news/youth-tech-bootcamp.jpg',
     credit: 'Sagamu Innovation & Tech Hub',
     icon: '💻',
@@ -64,18 +54,18 @@ const STATIC_PHOTOS = [
   {
     cat: 'infrastructure',
     title: 'Sagamu Municipal Road Network & Drainage Construction',
-    date: 'Urban Renewal',
-    desc: 'Paving internal quarter streets, upgrading stormwater canals, and deploying solar street illumination along major municipal commercial arteries.',
+    date: 'Urban Renewal Projects',
+    desc: 'Active road paving, concrete stormwater canals, and solar street lighting across Sagamu quarter commercial roads.',
     src: '/images/news/yemogun-street-construction.jpg',
-    credit: 'Ogun State Ministry of Works & Sagamu LG',
+    credit: 'Ogun State Ministry of Works & Sagamu Local Government',
     icon: '🚧',
     bg: 'linear-gradient(135deg,#1e40af,#059669)'
   },
   {
     cat: 'health',
     title: 'Primary Healthcare Centers Solar Cold-Chain Upgrade',
-    date: 'Public Health',
-    desc: '24/7 solar-powered medical refrigeration and maternal healthcare clinics providing reliable public health services across Sagamu.',
+    date: 'Public Health Care',
+    desc: 'Solar-powered medical refrigeration and maternal healthcare clinics providing 24/7 care across Sagamu quarters.',
     src: '/images/news/health-centre-solar-upgrade.jpg',
     credit: 'Remo Health Initiative & Diaspora Support',
     icon: '🏥',
@@ -83,9 +73,9 @@ const STATIC_PHOTOS = [
   },
   {
     cat: 'commerce',
-    title: 'Sabo Commercial District & Hospitality Facilities',
-    date: 'Commercial Corridor',
-    desc: 'The vibrant trading corridors around Sabo, modern conference venues, and hospitality hotels supporting visitors to Remoland.',
+    title: 'Sabo Commercial Hub & Hospitality Facilities',
+    date: 'Interstate Commerce Hub',
+    desc: 'The bustling trade networks of Sabo Kolanut Wholesale Exchange, hotels, and event centers serving visitors to Remoland.',
     src: '/images/news/hospitality-events-centre.jpg',
     credit: 'Sagamu Chamber of Commerce & Industry',
     icon: '🏢',
@@ -93,33 +83,13 @@ const STATIC_PHOTOS = [
   },
   {
     cat: 'civic',
-    title: 'Sagamu Civic Infrastructure & Public Safety Command',
-    date: 'Public Safety',
-    desc: 'Federal and state security command posts and civic service centers stationed across the Sagamu interchange and commercial belts.',
+    title: 'Sagamu Public Safety & Emergency Operations Command',
+    date: 'Safety Infrastructure',
+    desc: 'Emergency tactical command and traffic patrol posts stationed across the Sagamu interchange and commercial axes.',
     src: '/images/frsc-office-commissioning.jpg',
     credit: 'Sagamu Municipal Security Bureau',
     icon: '🛡️',
     bg: 'linear-gradient(135deg,#1e40af,#059669)'
-  },
-  {
-    cat: 'palace',
-    title: 'Royal Assembly at Aafin Akarigbo',
-    date: 'Traditional Governance',
-    desc: 'HRM The Akarigbo presiding over the Remo Traditional Council assembly, deliberating on community peace, culture, and progress.',
-    src: '/images/palace/515331740_122290469708073410_6499557066502581807_n.jpg',
-    credit: 'Palace Directorate of Media & Public Relations',
-    icon: '👑',
-    bg: 'linear-gradient(135deg,#059669,#1e40af)'
-  },
-  {
-    cat: 'community',
-    title: 'Remo Community Empowerment & Vocational Assemblies',
-    date: 'Grassroots Welfare',
-    desc: 'SDA and philanthropic foundations distributing educational scholarships, farming inputs, and micro-business equipment to Sagamites.',
-    src: '/images/community-empowerment.jpg',
-    credit: 'Sagamu Development Association',
-    icon: '🤝',
-    bg: 'linear-gradient(135deg,#1e40af,#0f172a)'
   }
 ];
 
@@ -127,14 +97,13 @@ export const photos = getWithFallback('cms-gallery', STATIC_PHOTOS);
 
 export const galleryCategories = [
   'all',
+  'monarchy',
   'palace',
-  'coronation',
   'sagamu-day',
   'heritage',
   'development',
   'infrastructure',
   'health',
   'commerce',
-  'civic',
-  'community'
+  'civic'
 ];

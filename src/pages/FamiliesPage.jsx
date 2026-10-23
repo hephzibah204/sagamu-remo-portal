@@ -21,7 +21,7 @@ const families = [
       { n: 'Oba William Christopher Adedoyin II', r: 'Historic Akarigbo (1916–1952) · Patron of Remo Secondary School (1946)' },
       { n: 'Oba Oyebajo', r: 'Akarigbo of Remoland (1891–1899) · Treaty Negotiator' }
     ],
-    img: '/images/palace/1.jpg'
+    img: '/images/palace/akarigbo-of-remo-palace.jpg'
   },
   {
     id: 'anoko',
@@ -39,7 +39,7 @@ const families = [
       { n: 'Oba Moses Awolesi', r: 'Erinwole II · Reigned 1952–1988 (36 Years) · Independence Era Titan' },
       { n: 'Oba Adebonojo', r: 'Akarigbo of Remoland (1899–1915)' }
     ],
-    img: '/images/palace/1.jpg'
+    img: '/images/palace/akarigbo-of-remo-palace.jpg'
   },
   {
     id: 'daniel',

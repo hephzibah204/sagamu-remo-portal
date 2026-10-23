@@ -26,7 +26,7 @@ const NEWS_DEFAULTS = [
     ic: '🚀',
     readTime: '3 min read',
     author: 'Palace Communications Bureau',
-    image: '/images/palace/1.jpg',
+    image: '/images/palace/akarigbo-of-remo-palace.jpg',
     featured: true
   },
   {
@@ -108,7 +108,7 @@ const NEWS_DEFAULTS = [
     ic: '🔥',
     readTime: '3 min read',
     author: 'Culture & Heritage Bureau',
-    image: '/images/palace/1.jpg'
+    image: '/images/palace/akarigbo-of-remo-palace.jpg'
   },
   {
     id: 'n5',

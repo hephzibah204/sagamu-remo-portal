@@ -48,7 +48,7 @@ const STATIC = [
     address: 'Akarigbo Street, Sagamu 121107',
     rating: '4.8★',
     tier: 'Premium',
-    image: '/images/palace/3.jpg',
+    image: '/images/palace/akarigbo-palace-heritage.jpg',
   },
   {
     id: 'biz3',

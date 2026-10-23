@@ -31,7 +31,7 @@ const festivals = [
     desc: 'Commemorating the ascension of HRM Oba Babatunde Adewale Ajayi, CFR, FCA (Torungbuwa II), featuring interdenominational thanksgiving and chieftaincy awards.',
     tag: 'Royal Durbar',
     tagClass: 'badge-blue',
-    img: '/images/palace/1.jpg'
+    img: '/images/palace/akarigbo-of-remo-palace.jpg'
   },
   {
     n: 'Balufon & Oro Festivals',
@@ -63,7 +63,7 @@ const institutions = [
     desc: "The mother church of the Anglican Communion across Remoland and the episcopal seat of the Bishop of Remo Diocese. For well over a century, St. Paul's has stood as a monumental beacon of faith, moral guidance, and pioneer education in Sagamu.",
     icon: "⛪",
     type: "cathedral",
-    img: "/images/palace/3.jpg"
+    img: "/images/palace/akarigbo-palace-heritage.jpg"
   },
   {
     name: "Sagamu Central Mosque (Ita Oba)",

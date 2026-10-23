@@ -20,7 +20,7 @@ const schools = [
       'Celebrating over 80 years of academic excellence',
       'Extensive science laboratories and ICT research centers'
     ],
-    img: '/images/palace/3.jpg'
+    img: '/images/palace/akarigbo-palace-heritage.jpg'
   },
   {
     name: 'Federal Government Girls\' College (FGGC) Sagamu',
@@ -37,7 +37,7 @@ const schools = [
       'Outstanding performances in WAEC, NECO, and National Olympiads',
       'State-of-the-art boarding and robotics facilities'
     ],
-    img: '/images/palace/2.jpg'
+    img: '/images/palace/akarigbo-king.jpg'
   },
   {
     name: 'OOU College of Health Sciences & OOUTH Medical Academy',
@@ -102,7 +102,7 @@ const notable = [
     tag: 'The Akarigbo of Remoland · Torungbuwa II',
     ic: '👑',
     desc: 'Chartered Accountant, Supreme Court Barrister, and Paramount Ruler under whose leadership multimillion-naira STEM scholarships have been endowed across Sagamu.',
-    img: '/images/palace/1.jpg'
+    img: '/images/palace/akarigbo-of-remo-palace.jpg'
   },
 ];
 

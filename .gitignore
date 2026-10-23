@@ -17,3 +17,5 @@ test-results/
 agent/
 skills-lock.json
 release-apks/*.apk
+
+.vercel

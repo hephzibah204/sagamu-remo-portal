@@ -152,7 +152,7 @@ export default function RoyalAudiencePage() {
       <div style={{ background: '#f8fafc', padding: '1rem 2rem', borderBottom: '1px solid #e2e8f0' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
           <img
-            src="/images/palace/1.jpg"
+            src="/images/palace/akarigbo-of-remo-palace.jpg"
             alt="HRM Oba Babatunde Adewale Ajayi, CFR, FCA"
             style={{ width: '50px', height: '50px', borderRadius: '50%', border: '2px solid #1e40af', objectFit: 'cover', objectPosition: 'center top', flexShrink: 0 }}
             onError={e => { e.target.style.display = 'none'; }}

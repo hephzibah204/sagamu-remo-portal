@@ -9,7 +9,7 @@ const KINGS_ORIKI = [
     id: 'ajayi',
     name: 'Oba Babatunde Adewale Ajayi, CFR, FCA',
     title: 'Torungbuwa II (r. 2017–Present)',
-    img: '/images/palace/1.jpg',
+    img: '/images/palace/akarigbo-of-remo-palace.jpg',
     desc: 'The reigning Akarigbo and Paramount Ruler of Remoland. Chartered Accountant, Supreme Court Barrister, and former Chairman of Ogun State Traditional Council, under whose visionary reign Sagamu has witnessed historic modern palace development, industrial expansion, and youth digital empowerment.',
     oriki: [
       { yr: 'Kabiyeesi Oba Babatunde Adewale Ajayi, Torungbuwa Keji.', en: 'All hail His Royal Majesty Oba Babatunde Adewale Ajayi, Torungbuwa the Second.', note: 'Torungbuwa: Ancient royal ruling house of the Akarigbo of Remoland.' },
@@ -26,7 +26,7 @@ const KINGS_ORIKI = [
     id: 'sonariwo',
     name: 'Oba Dr. Michael Adeniyi Sonariwo, CON',
     title: 'Erinjugbo II (r. 1990–2016)',
-    img: '/images/palace/1.jpg',
+    img: '/images/palace/akarigbo-of-remo-palace.jpg',
     desc: 'The revered paramount monarch who reigned for 26 memorable years. A distinguished chartered accountant and former Chairman of the Ogun State Council of Obas, he cemented Sagamu’s preeminence as an industrial, educational, and commercial giant.',
     oriki: [
       { yr: 'Erinjugbo Omo Akarigbo, Oba to f’ogbon joba.', en: 'Erinjugbo child of Akarigbo, the monarch who reigned with peerless wisdom.' },
@@ -41,7 +41,7 @@ const KINGS_ORIKI = [
     id: 'awolesi',
     name: 'Oba Moses Awolesi',
     title: 'Erinwole II (r. 1952–1988)',
-    img: '/images/palace/1.jpg',
+    img: '/images/palace/akarigbo-of-remo-palace.jpg',
     desc: 'A titan who reigned for 36 historic years across Nigeria\'s independence era. He unified the 13 confederate quarters, attracted heavy manufacturing like Elephant Cement, and championed OOUTH Teaching Hospital.',
     oriki: [
       { yr: 'Oba Moses Awolesi, Erinwole Keji, Oba nla ti gbadobale oba.', en: 'King Moses Awolesi, Erinwole the Second, a great king to whom other kings pay highest homage.' },
@@ -54,7 +54,7 @@ const KINGS_ORIKI = [
     id: 'adedoyin',
     name: 'Oba William Christopher Adedoyin II',
     title: 'Adedoyin II (r. 1916–1952)',
-    img: '/images/palace/1.jpg',
+    img: '/images/palace/akarigbo-of-remo-palace.jpg',
     desc: 'The celebrated progressive monarch whose 36-year reign revolutionized education and modern governance. He spearheaded the founding of Remo Secondary School (RSS) in 1946 and was a leader in the Western Region House of Chiefs.',
     oriki: [
       { yr: 'Oba William Christopher Adedoyin Aladesanmi Keji.', en: 'King William Christopher Adedoyin Aladesanmi the Second.' },

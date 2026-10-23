@@ -17,7 +17,7 @@ const spots = [
     address: 'Ita Oba, Offin, Sagamu Remo',
     distance: 'Central Sagamu',
     features: ['Official seat of the Akarigbo', 'Council of Remo Traditional Rulers', 'Royal Cultural Amphitheatre', 'Historic Regalia & Archives'],
-    img: '/images/palace/1.jpg'
+    img: '/images/palace/akarigbo-of-remo-palace.jpg'
   },
   {
     n: 'Gateway International Stadium',
@@ -77,7 +77,7 @@ const spots = [
     desc: 'Founded February 4, 1946 by Oba William Christopher Adedoyin II and the Remo community as the first secondary school in Remoland. Cradle of national leaders, jurists, and scholars.',
     address: 'Akarigbo Street, Sagamu Remo',
     features: ['Founded Feb 4, 1946', 'Pioneer secondary school in Remoland', 'RSSOSA global alumni community', 'Historic colonial-era quadrangle'],
-    img: '/images/palace/3.jpg'
+    img: '/images/palace/akarigbo-palace-heritage.jpg'
   },
   {
     n: 'The 13 Confederate Quarters Heritage Trail',
@@ -165,7 +165,7 @@ export default function TourismPage() {
                     src={s.img}
                     alt={s.n}
                     style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
-                    onError={(e) => { e.currentTarget.src = '/images/palace/1.jpg'; }}
+                    onError={(e) => { e.currentTarget.src = '/images/palace/akarigbo-of-remo-palace.jpg'; }}
                   />
                   <span className={`tag ${s.tagClass}`} style={{ position: 'absolute', top: '0.8rem', right: '0.8rem', zIndex: 10, margin: 0 }}>{s.tag}</span>
                 </div>

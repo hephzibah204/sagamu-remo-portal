@@ -26,7 +26,7 @@ export default function MonarchyPage() {
         <h2 className="st">HRM Oba Babatunde Adewale Ajayi, CFR, FCA — Torungbuwa II</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '2.5rem', marginTop: '1.5rem', alignItems: 'start' }}>
           <div style={{ background: 'rgba(201,150,58,.08)', border: '1px solid rgba(201,150,58,.28)', padding: '2rem', textAlign: 'center', borderTop: '4px solid #C9963A' }}>
-            <img src="/images/OLsagamu Oba James Coronation.jpg" alt="Oba Babatunde Adewale Ajayi" style={{ width: '100%', maxWidth: 220, aspectRatio: '1/1', objectFit: 'cover', objectPosition: 'center top', borderRadius: '50%', border: '3px solid #C9963A', marginBottom: '.7rem', margin: '0 auto' }} />
+            <img src="/images/palace/akarigbo-king.jpg" alt="HRM Oba Babatunde Adewale Ajayi, CFR, FCA" style={{ width: '100%', maxWidth: 220, aspectRatio: '1/1', objectFit: 'cover', objectPosition: 'center top', borderRadius: '50%', border: '3px solid #C9963A', marginBottom: '.7rem', margin: '0 auto' }} />
             <div className="cinzel" style={{ fontSize: '.58rem', letterSpacing: '.12em', color: '#C9963A', textTransform: 'uppercase' }}>The Akarigbo of Remoland</div>
             <div className="playfair" style={{ fontSize: '1.05rem', color: '#F5EDD8', margin: '.5rem 0 .2rem' }}>Oba Babatunde Adewale Ajayi</div>
             <div className="cinzel" style={{ fontSize: '.52rem', color: 'rgba(245,237,216,.45)', letterSpacing: '.08em' }}>Torungbuwa II · CFR · FCA · Barrister-at-Law</div>
