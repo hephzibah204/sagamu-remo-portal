@@ -63,7 +63,7 @@ const institutions = [
     desc: "The mother church of the Anglican Communion across Remoland and the episcopal seat of the Bishop of Remo Diocese. For well over a century, St. Paul's has stood as a monumental beacon of faith, moral guidance, and pioneer education in Sagamu.",
     icon: "⛪",
     type: "cathedral",
-    img: "/images/palace/akarigbo-palace-heritage.jpg"
+    img: "/images/sagamu-cathedral.jpg"
   },
   {
     name: "Sagamu Central Mosque (Ita Oba)",
@@ -72,7 +72,17 @@ const institutions = [
     era: "Seat of Chief Imam of Remoland",
     desc: "Seat of the Chief Imam of Remoland and League of Imams. A monumental Islamic sanctuary where royal prayers and weekly Juma'at services unify the community in prayers for tranquility and civic prosperity.",
     icon: "🕌",
-    type: "islamic"
+    type: "islamic",
+    img: "/images/sagamu-central-mosque.jpg"
+  },
+  {
+    name: "Apostolic Faith Church, Sagamu",
+    category: "Apostolic Faith Mission (WECA)",
+    address: "Sagamu Zonal Headquarters, Sagamu, Ogun State",
+    era: "Zonal Headquarters · Ogun East Area",
+    desc: "A cornerstone of Christian orthodoxy, classical choral and orchestral music, and holiness evangelism in Remoland. The Sagamu Zonal Headquarters serves as a vibrant spiritual beacon for families across all confederate quarters.",
+    icon: "⛪",
+    type: "church"
   },
   {
     name: "Methodist Cathedral of Peace, Offin",
