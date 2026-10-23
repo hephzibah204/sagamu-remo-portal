@@ -7,7 +7,6 @@ import { sendAnthropicMessage } from '../services/api';
 import DailyPhrase from '../components/DailyPhrase';
 import SuggestionBox from '../components/SuggestionBox';
 import LiveTicker from '../components/LiveTicker';
-import TimelineFeed from '../components/TimelineFeed';
 import { photos } from '../data/gallery';
 
 const QUARTERS_DATA = [
@@ -801,39 +800,7 @@ export default function HomePage() {
 
       <AdireDivider />
 
-      {/* ══════════════════════════════════════════════════════════════
-          5. COMMUNITY VOICE & LIVE DELIBERATIONS
-      ══════════════════════════════════════════════════════════════ */}
-      <Section py="4rem" bg="#f8fafc">
-        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div
-            style={{
-              fontSize: '0.72rem',
-              fontWeight: 800,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: '#1e40af',
-              background: '#eff6ff',
-              padding: '0.25rem 0.75rem',
-              borderRadius: '16px',
-              display: 'inline-block',
-              marginBottom: '0.5rem',
-            }}
-          >
-            CIVIC DELIBERATIONS & DISPATCHES
-          </div>
-          <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 800, color: '#0f172a', margin: 0 }}>
-            What&apos;s On Your Mind, Sagamu?
-          </h2>
-          <p style={{ color: '#64748b', fontSize: '0.95rem', margin: '4px auto 0', maxWidth: '600px' }}>
-            <em>Kí ni nǹkan tó ń ṣẹlẹ̀?</em> Share community news, celebrate quarter achievements, and deliberate on town development in real time.
-          </p>
-        </div>
 
-        <TimelineFeed embedded={true} maxPosts={4} showHeader={false} linkToAll="/timeline" />
-      </Section>
-
-      <AdireDivider />
 
       {/* ══════════════════════════════════════════════════════════════
           6. HERITAGE ARCHIVES & PHOTO HIGHLIGHTS

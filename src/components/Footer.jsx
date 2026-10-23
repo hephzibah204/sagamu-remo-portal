@@ -29,6 +29,7 @@ const SECTIONS = [
       { to: '/education', l: 'Education & Schools' },
       { to: '/scholarships', l: 'Scholarships' },
       { to: '/faith', l: 'Faith & Culture' },
+      { to: '/social-connect', l: 'Social Connect' },
       { to: '/news', l: 'Town News' },
       { to: '/associations', l: 'Associations' },
     ],

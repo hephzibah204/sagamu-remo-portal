@@ -34,6 +34,7 @@ import SignInPage from './pages/SignInPage';
 import DashboardPage from './pages/DashboardPage';
 import MissSagamuPage from './pages/MissSagamuPage';
 import TimelinePage from './pages/TimelinePage';
+import SocialConnectPage from './pages/SocialConnectPage';
 import OrikiPage from './pages/OrikiPage';
 import QuizPage from './pages/QuizPage';
 import CustomPage from './pages/CustomPage';
@@ -202,8 +203,9 @@ export default function App() {
                 <Route path="/login" element={<SignInPage />} />
                 <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/miss-sagamu" element={<MissSagamuPage />} />
-                <Route path="/miss-sagamu" element={<MissSagamuPage />} />
-                <Route path="/timeline" element={<TimelinePage />} />
+                <Route path="/timeline" element={<SocialConnectPage />} />
+                <Route path="/social-connect" element={<SocialConnectPage />} />
+                <Route path="/social" element={<SocialConnectPage />} />
                 <Route path="/oriki" element={<OrikiPage />} />
                 <Route path="/quiz" element={<QuizPage />} />
                 <Route path="/p/:slug" element={<CustomPage />} />

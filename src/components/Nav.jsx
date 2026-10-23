@@ -40,6 +40,7 @@ const MENU_GROUPS = [
       { id: 'education', label: '🏫 Schools & Remo Secondary School' },
       { id: 'scholarships', label: '🎓 Scholarships & Innovation Grants' },
       { id: 'faith', label: '⛪ Cathedral, Mosque & Heritage' },
+      { id: 'social-connect', label: '🌐 Social Connect & Town Square' },
       { id: 'news', label: '📰 Sagamu Dispatches & Gazette' },
       { id: 'messages', label: '💬 Town Chat & Quarter Channels' },
       { id: 'forum', label: '🗣️ Civic Deliberations Forum' },
