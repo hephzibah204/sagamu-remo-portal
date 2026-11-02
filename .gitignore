@@ -5,6 +5,7 @@ dist/
 .DS_Store
 
 .vercel
+.hallmark/
 mobile/node_modules/
 mobile/.expo/
 *.log
@@ -19,3 +20,4 @@ skills-lock.json
 release-apks/*.apk
 
 .vercel
+.hallmark/

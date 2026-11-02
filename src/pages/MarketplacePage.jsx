@@ -1,39 +1,72 @@
 import { useState, useEffect, useMemo } from 'react';
-import Hero from '../components/Hero';
 import AdireDivider from '../components/AdireDivider';
-import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { dbGetAll, dbInsert, SEED_DATA } from '../services/db';
+import { SAGAMU_QUARTER_NAMES } from '../constants/quarters';
+import './MarketplacePage.css';
 
 const CATEGORIES = [
-  { id: 'All', label: 'All Items', icon: '🛍️' },
-  { id: 'Farm Produce', label: 'Farm Produce', icon: '🌾' },
-  { id: 'Crafts & Adire', label: 'Crafts & Adire', icon: '🪡' },
-  { id: 'Food & Catering', label: 'Food & Catering', icon: '🍲' },
-  { id: 'Services', label: 'Artisan Services', icon: '⚡' },
-  { id: 'Trade & Retail', label: 'Trade & Building', icon: '🏗️' },
-  { id: 'Fashion & Beads', label: 'Fashion & Beads', icon: '📿' },
-  { id: 'Property', label: 'Land & Property', icon: '🏡' },
+  { id: 'All', label: 'All items' },
+  { id: 'Farm Produce', label: 'Farm produce' },
+  { id: 'Crafts & Adire', label: 'Crafts & Adire' },
+  { id: 'Food & Catering', label: 'Food & catering' },
+  { id: 'Services', label: 'Artisan services' },
+  { id: 'Trade & Retail', label: 'Trade & building' },
+  { id: 'Fashion & Beads', label: 'Fashion & beads' },
+  { id: 'Property', label: 'Land & property' },
 ];
-
-import { SAGAMU_QUARTER_NAMES } from '../constants/quarters';
 
 const QUARTERS = [
   'All Quarters',
   ...SAGAMU_QUARTER_NAMES,
 ];
 
-const BADGE_COLORS = {
-  organic: '#16a34a',
-  handmade: '#9333ea',
-  popular: '#dc2626',
-  certified: '#2563eb',
-  fresh: '#059669',
-  bulk: '#d97706',
-  pro: '#0891b2',
-  registered: '#C9963A',
-  featured: '#eab308',
-};
+// Clean SVGs replacing emojis (Hallmark Floor 11 & Gate 30a)
+function SearchSvg() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
+
+function HeartSvg({ filled }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+    </svg>
+  );
+}
+
+function ShareSvg() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+    </svg>
+  );
+}
+
+function CheckSvg() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
+}
+
+function MapPinSvg() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
 
 export default function MarketplacePage() {
   const [listings, setListings] = useState([]);
@@ -128,7 +161,7 @@ export default function MarketplacePage() {
       try {
         await navigator.share({
           title: item.title,
-          text: `Check out "${item.title}" on the Sagamu Remo Marketplace! Price: ${item.price}`,
+          text: `Check out "${item.title}" on the Sagamu Remo Marketplace. Price: ${item.price}`,
           url,
         });
         return;
@@ -180,20 +213,6 @@ export default function MarketplacePage() {
       whatsapp: cleanWhatsApp.startsWith('0') ? '234' + cleanWhatsApp.slice(1) : cleanWhatsApp,
       email: newForm.email,
       imageUrl: newForm.imageUrl,
-      icon:
-        newForm.category === 'Farm Produce'
-          ? '🌾'
-          : newForm.category === 'Crafts & Adire'
-          ? '🪡'
-          : newForm.category === 'Food & Catering'
-          ? '🍲'
-          : newForm.category === 'Services'
-          ? '⚡'
-          : newForm.category === 'Fashion & Beads'
-          ? '📿'
-          : newForm.category === 'Property'
-          ? '🏡'
-          : '🏪',
       badge: newForm.isFeatured ? 'featured' : newForm.category === 'Farm Produce' ? 'organic' : 'fresh',
       verified: true,
       status: 'active',
@@ -229,19 +248,11 @@ export default function MarketplacePage() {
   // Filter & Search Logic
   const filteredListings = useMemo(() => {
     return listings.filter(item => {
-      // Category filter
       if (activeCategory !== 'All' && item.cat !== activeCategory) return false;
-
-      // Quarter filter
       if (selectedQuarter !== 'All Quarters' && item.quarter !== selectedQuarter) return false;
-
-      // Verified filter
       if (onlyVerified && !item.verified) return false;
-
-      // Saved favorites filter
       if (showOnlyFavs && !savedFavorites.includes(item.id)) return false;
 
-      // Search query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const matchTitle = (item.title || '').toLowerCase().includes(q);
@@ -266,35 +277,35 @@ export default function MarketplacePage() {
     });
   }, [listings, activeCategory, selectedQuarter, onlyVerified, showOnlyFavs, savedFavorites, searchQuery, sortBy]);
 
-  // Construct WhatsApp order link
+  // WhatsApp order link
   const sendWhatsAppOrder = (item, formDetails) => {
     const cleanWhatsApp = (item.whatsapp || item.phone || '').replace(/\D/g, '');
     const phoneTarget = cleanWhatsApp.startsWith('0') ? '234' + cleanWhatsApp.slice(1) : cleanWhatsApp;
-    const msg = `👑 *SAGAMU REMO MARKETPLACE ORDER* 👑\n\n` +
-      `Hello *${item.seller}*,\n` +
+    const msg = `SAGAMU REMO MARKETPLACE ORDER\n\n` +
+      `Hello ${item.seller},\n` +
       `I would like to place an order for your listing on the Sagamu Community Portal:\n\n` +
-      `📦 *Item:* ${item.title}\n` +
-      `💰 *Listed Price:* ${item.price}\n` +
-      `🔢 *Quantity / Units:* ${formDetails.quantity}\n` +
-      `👤 *Buyer Name:* ${formDetails.buyerName}\n` +
-      `📍 *Delivery / Pickup in Sagamu:* ${formDetails.address}\n` +
-      (formDetails.note ? `📝 *Note:* ${formDetails.note}\n\n` : `\n`) +
-      `Please confirm availability and bank details for payment. Ẹ ṣéun!`;
+      `Item: ${item.title}\n` +
+      `Price: ${item.price}\n` +
+      `Quantity: ${formDetails.quantity}\n` +
+      `Buyer: ${formDetails.buyerName}\n` +
+      `Delivery in Sagamu: ${formDetails.address}\n` +
+      (formDetails.note ? `Note: ${formDetails.note}\n\n` : `\n`) +
+      `Please confirm availability and bank details.`;
 
     const url = `https://wa.me/${phoneTarget}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
     setOrderModalItem(null);
   };
 
-  // Construct WhatsApp price negotiation link
+  // WhatsApp price negotiation link
   const sendWhatsAppOffer = (item, amount) => {
     const cleanWhatsApp = (item.whatsapp || item.phone || '').replace(/\D/g, '');
     const phoneTarget = cleanWhatsApp.startsWith('0') ? '234' + cleanWhatsApp.slice(1) : cleanWhatsApp;
-    const msg = `👑 *SAGAMU MARKETPLACE PRICE OFFER* 👑\n\n` +
-      `Hello *${item.seller}*,\n` +
-      `I saw your listing for *"${item.title}"* (${item.price}) on the Sagamu Portal.\n\n` +
-      `🤝 *My Proposed Price Offer:* ₦${Number(amount.replace(/,/g, '')).toLocaleString()}\n\n` +
-      `Can we agree on this price? I am ready for immediate pickup/order. Thank you!`;
+    const msg = `SAGAMU MARKETPLACE PRICE OFFER\n\n` +
+      `Hello ${item.seller},\n` +
+      `I saw your listing for "${item.title}" (${item.price}) on the Sagamu Portal.\n\n` +
+      `My Proposed Offer: ₦${Number(amount.replace(/,/g, '')).toLocaleString()}\n\n` +
+      `Can we agree on this price? I am ready for pickup. Thank you.`;
 
     const url = `https://wa.me/${phoneTarget}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
@@ -302,597 +313,417 @@ export default function MarketplacePage() {
   };
 
   return (
-    <div>
+    <div className="mkt-page">
       <SEO
         title="Sagamu Remo Community Marketplace"
-        description="Buy farm-fresh produce, traditional Adire textiles, Yoruba delicacies, artisan services, and building materials directly from verified Sagamu traders."
-      />
-      <Hero
-        ey="Local Economy & Trade"
-        ti="Sagamu Marketplace"
-        sub="Discover authentic goods, harvest produce, traditional arts, and verified services from the sons and daughters of Sagamu Remoland."
-        dark
+        description="Buy farm produce, traditional Adire textiles, Yoruba delicacies, artisan services, and building materials directly from verified Sagamu traders."
       />
 
-      {/* Community Banner */}
-      <div style={{ background: '#f8fafc', padding: '0.7rem 2rem', textAlign: 'center', borderBottom: '1px solid #e2e8f0' }}>
-        <span style={{ fontSize: '0.72rem', letterSpacing: '0.08em', color: '#1e40af', textTransform: 'uppercase', fontWeight: 700 }}>
-          🛒 {listings.length} VERIFIED COMMUNITY LISTINGS · 100% DIRECT SELLER CONTACT · ZERO INTERMEDIARY COMMISSIONS
+      {/* Community Notice Strip */}
+      <div className="mkt-notice">
+        <span className="mkt-notice-text">
+          Direct local trade with verified Sagamu merchants and zero intermediary fees
         </span>
       </div>
 
-      <Section bg="#050811" py="3.5rem">
-        {/* Marketplace Summary Metrics */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem', marginBottom: '2.5rem', textAlign: 'center' }}>
-          {[
-            { ic: '🌾', l: 'Farm Produce', n: listings.filter(l => l.cat === 'Farm Produce').length },
-            { ic: '🪡', l: 'Crafts & Adire', n: listings.filter(l => l.cat === 'Crafts & Adire').length },
-            { ic: '🍲', l: 'Food & Catering', n: listings.filter(l => l.cat === 'Food & Catering').length },
-            { ic: '⚡', l: 'Artisan Services', n: listings.filter(l => l.cat === 'Services').length },
-            { ic: '🏗️', l: 'Trade & Retail', n: listings.filter(l => l.cat === 'Trade & Retail').length },
-            { ic: '🛡️', l: 'Verified Sellers', n: listings.filter(l => l.verified).length },
-          ].map(stat => (
-            <div key={stat.l} className="glass" style={{ padding: '1rem', borderRadius: '10px', border: '1px solid rgba(201,150,58,0.15)' }}>
-              <div style={{ fontSize: '1.6rem', marginBottom: '0.2rem' }}>{stat.ic}</div>
-              <div className="cinzel" style={{ fontSize: '1.2rem', fontWeight: 900, color: 'var(--gold)' }}>{stat.n}</div>
-              <div style={{ fontSize: '0.65rem', color: 'rgba(245,237,216,0.5)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{stat.l}</div>
+      {/* Hero Stage (Hallmark Floor 12: Headline, one sentence under 12 words, action) */}
+      <section className="mkt-hero">
+        <div className="container">
+          <div className="mkt-hero-grid">
+            <div>
+              <h1 className="mkt-hero-title">Sagamu Community Marketplace</h1>
+              <p className="mkt-hero-lead">
+                Buy farm produce, Adire textiles, and artisan services directly from Sagamu traders.
+              </p>
+              <div className="mkt-hero-actions">
+                <button
+                  type="button"
+                  onClick={() => setShowForm(true)}
+                  className="mkt-btn mkt-btn-primary"
+                >
+                  Post listing
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowOnlyFavs(!showOnlyFavs)}
+                  className={`mkt-btn ${showOnlyFavs ? 'mkt-btn-primary' : 'mkt-btn-outline'}`}
+                >
+                  Saved ({savedFavorites.length})
+                </button>
+              </div>
             </div>
-          ))}
+
+            <div className="mkt-hero-banner">
+              <div className="mkt-hero-stats">
+                <div className="mkt-stat-box">
+                  <div className="mkt-stat-num">{listings.length}</div>
+                  <div className="mkt-stat-label">Total items</div>
+                </div>
+                <div className="mkt-stat-box">
+                  <div className="mkt-stat-num">{listings.filter(l => l.verified).length}</div>
+                  <div className="mkt-stat-label">Verified sellers</div>
+                </div>
+                <div className="mkt-stat-box">
+                  <div className="mkt-stat-num">{listings.filter(l => l.cat === 'Farm Produce').length}</div>
+                  <div className="mkt-stat-label">Farm batches</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Search & Comprehensive Filters Bar */}
-        <div
-          className="glass"
-          style={{
-            padding: '1.2rem 1.5rem',
-            borderRadius: '14px',
-            marginBottom: '2rem',
-            border: '1px solid rgba(201,150,58,0.25)',
-          }}
-        >
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
-            {/* Keyword search input */}
-            <div style={{ flex: 2, minWidth: 'min(240px, 100%)', position: 'relative' }}>
-              <span style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', fontSize: '0.9rem', opacity: 0.5 }}>🔍</span>
-              <input
-                className="inp"
-                style={{ paddingLeft: '2.5rem', width: '100%', borderRadius: '30px' }}
-                placeholder="Search produce, Adire, electrician, yam, caterer..."
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-              />
-            </div>
+      {/* Main Browse Section */}
+      <section style={{ padding: 'var(--space-xl) 0' }}>
+        <div className="container">
+          {/* Controls: Search, Quarter Filter, Sort */}
+          <div className="mkt-controls">
+            <div className="mkt-controls-row">
+              <div className="mkt-search-wrapper">
+                <span className="mkt-search-icon">
+                  <SearchSvg />
+                </span>
+                <input
+                  type="search"
+                  className="mkt-input mkt-search-input"
+                  placeholder="Search produce, Adire, electrician, yam, caterer..."
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                />
+              </div>
 
-            {/* Quarter filter dropdown */}
-            <div style={{ flex: 1, minWidth: '160px' }}>
               <select
-                className="inp"
-                style={{ borderRadius: '30px', background: '#ffffff', padding: '0.6rem 1rem' }}
+                className="mkt-input mkt-select"
                 value={selectedQuarter}
                 onChange={e => setSelectedQuarter(e.target.value)}
+                aria-label="Filter by quarter"
               >
                 {QUARTERS.map(q => <option key={q} value={q}>{q}</option>)}
               </select>
-            </div>
 
-            {/* Sort Dropdown */}
-            <div style={{ flex: 1, minWidth: '150px' }}>
               <select
-                className="inp"
-                style={{ borderRadius: '30px', background: '#ffffff', padding: '0.6rem 1rem' }}
+                className="mkt-input mkt-select"
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
+                aria-label="Sort listings"
               >
-                <option value="newest">📅 Newest First</option>
-                <option value="verified">🛡️ Verified Sellers First</option>
+                <option value="newest">Newest first</option>
+                <option value="verified">Verified sellers first</option>
               </select>
             </div>
 
-            {/* Action buttons (Post Listing + Saved) */}
-            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <button
-                onClick={() => setShowOnlyFavs(!showOnlyFavs)}
-                className={`abtn ${showOnlyFavs ? 'abtn-p' : 'abtn-o'}`}
-                style={{ borderRadius: '30px', padding: '0.6rem 1.2rem', fontSize: '0.65rem' }}
-              >
-                ❤️ Saved ({savedFavorites.length})
-              </button>
-
-              <button
-                onClick={() => setShowForm(true)}
-                className="btn-p"
-                style={{ borderRadius: '30px', padding: '0.6rem 1.4rem', fontSize: '0.65rem' }}
-              >
-                + Post Free Listing
-              </button>
+            {/* Category selection pills */}
+            <div className="mkt-categories">
+              {CATEGORIES.map(cat => {
+                const active = activeCategory === cat.id;
+                const count = cat.id === 'All' ? listings.length : listings.filter(l => l.cat === cat.id).length;
+                return (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={`mkt-pill ${active ? 'is-active' : ''}`}
+                  >
+                    <span>{cat.label}</span>
+                    <span className="mkt-pill-count">({count})</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          {/* Category filter pills */}
-          <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', marginTop: '1.2rem', paddingTop: '1rem', borderTop: '1px solid rgba(201,150,58,0.1)' }}>
-            {CATEGORIES.map(cat => {
-              const active = activeCategory === cat.id;
-              const count = cat.id === 'All' ? listings.length : listings.filter(l => l.cat === cat.id).length;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  style={{
-                    padding: '0.45rem 1rem',
-                    borderRadius: '20px',
-                    cursor: 'pointer',
-                    fontFamily: 'var(--font-display)',
-                    fontSize: '0.58rem',
-                    fontWeight: 700,
-                    letterSpacing: '0.05em',
-                    textTransform: 'uppercase',
-                    transition: 'all 0.2s ease',
-                    background: active ? 'var(--gold)' : 'rgba(201,150,58,0.06)',
-                    color: active ? 'var(--darker)' : 'rgba(245,237,216,0.7)',
-                    border: active ? 'none' : '1px solid rgba(201,150,58,0.2)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.35rem',
-                  }}
-                >
-                  <span>{cat.icon}</span>
-                  <span>{cat.label}</span>
-                  <span style={{ opacity: 0.6, fontSize: '0.52rem' }}>({count})</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
+          {/* Section Header with items count and filter toggle */}
+          <div className="mkt-section-header">
+            <h2 className="mkt-section-title">
+              Directory listings ({filteredListings.length})
+            </h2>
+            <div className="mkt-meta-bar">
+              <div>
+                <span>Category: <strong>{activeCategory}</strong></span>
+                {selectedQuarter !== 'All Quarters' && <span>, Quarter: <strong>{selectedQuarter}</strong></span>}
+              </div>
 
-        {/* Results Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '0.8rem' }}>
-          <div style={{ color: 'rgba(245,237,216,0.6)', fontSize: '0.82rem' }}>
-            Showing <strong style={{ color: 'var(--gold)' }}>{filteredListings.length}</strong> items in{' '}
-            <strong style={{ color: 'var(--cream)' }}>{activeCategory}</strong>
-            {selectedQuarter !== 'All Quarters' && <span> in <em>{selectedQuarter}</em></span>}
+              <label className="mkt-verified-check">
+                <input
+                  type="checkbox"
+                  checked={onlyVerified}
+                  onChange={e => setOnlyVerified(e.target.checked)}
+                />
+                Verified sellers only
+              </label>
+            </div>
           </div>
 
-          <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}>
-            <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', cursor: 'pointer', fontSize: '0.75rem', color: 'rgba(245,237,216,0.8)' }}>
-              <input
-                type="checkbox"
-                checked={onlyVerified}
-                onChange={e => setOnlyVerified(e.target.checked)}
-                style={{ accentColor: 'var(--gold)' }}
-              />
-              🛡️ Verified sellers only
-            </label>
-          </div>
-        </div>
-
-        {/* Marketplace Grid */}
-        {filteredListings.length === 0 ? (
-          <div
-            className="glass"
-            style={{
-              textAlign: 'center',
-              padding: '4rem 2rem',
-              borderRadius: '16px',
-              border: '1px dashed rgba(201,150,58,0.3)',
-              marginBottom: '3rem',
-            }}
-          >
-            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📦</div>
-            <h3 className="playfair" style={{ fontSize: '1.8rem', color: 'var(--cream)', marginBottom: '0.6rem' }}>
-              No Listings Found Matching Your Criteria
-            </h3>
-            <p style={{ color: 'rgba(245,237,216,0.6)', fontSize: '0.9rem', maxWidth: '480px', margin: '0 auto 1.5rem' }}>
-              Try searching with broader keywords, selecting all categories, or be the first to list this product or service!
-            </p>
-            <button
-              className="btn-p"
-              onClick={() => {
-                setActiveCategory('All');
-                setSelectedQuarter('All Quarters');
-                setSearchQuery('');
-                setShowOnlyFavs(false);
-              }}
-            >
-              Reset All Filters
-            </button>
-          </div>
-        ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(290px, 100%), 1fr))', gap: '1.5rem', marginBottom: '3.5rem' }}>
-            {filteredListings.map(item => {
-              const isFav = savedFavorites.includes(item.id);
-              return (
-                <div
-                  key={item.id}
-                  className="glass card"
-                  style={{
-                    borderRadius: '14px',
-                    overflow: 'hidden',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    border: '1px solid rgba(201,150,58,0.18)',
-                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                  }}
-                >
-                  {/* Top Thumbnail Image / Icon Banner */}
-                  <div
-                    style={{
-                      height: '160px',
-                      background: 'linear-gradient(135deg, #1c1008, #2a150a)',
-                      position: 'relative',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      overflow: 'hidden',
-                      borderBottom: '1px solid rgba(201,150,58,0.12)',
-                    }}
-                  >
-                    {item.imageUrl ? (
-                      <img
-                        src={item.imageUrl}
-                        alt={item.title}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                    ) : (
-                      <div style={{ fontSize: '4.5rem', opacity: 0.9 }}>{item.icon || '🛍️'}</div>
-                    )}
-
-                    {/* Floating Badges */}
-                    <div style={{ position: 'absolute', top: '10px', left: '10px', display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
-                      <span
-                        style={{
-                          fontSize: '0.52rem',
-                          background: (BADGE_COLORS[item.badge] || '#C9963A') + '30',
-                          color: BADGE_COLORS[item.badge] || 'var(--gold)',
-                          border: `1px solid ${BADGE_COLORS[item.badge] || 'var(--gold)'}70`,
-                          padding: '3px 8px',
-                          borderRadius: '12px',
-                          fontFamily: 'var(--font-display)',
-                          letterSpacing: '0.08em',
-                          textTransform: 'uppercase',
-                          fontWeight: 'bold',
-                          backdropFilter: 'blur(4px)',
-                        }}
-                      >
-                        {item.badge || 'local'}
-                      </span>
-
-                      {item.verified && (
-                        <span
-                          style={{
-                            fontSize: '0.52rem',
-                            background: 'rgba(22,163,74,0.3)',
-                            color: '#86efac',
-                            border: '1px solid rgba(22,163,74,0.6)',
-                            padding: '3px 8px',
-                            borderRadius: '12px',
-                            fontFamily: 'var(--font-display)',
-                            letterSpacing: '0.08em',
-                            backdropFilter: 'blur(4px)',
-                          }}
-                        >
-                          🛡️ Verified
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Top Action Buttons (Bookmark & Share) */}
-                    <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', gap: '0.3rem' }}>
-                      <button
-                        onClick={(e) => handleShare(item, e)}
-                        title="Share listing"
-                        style={{
-                          background: 'rgba(0,0,0,0.6)',
-                          border: '1px solid rgba(255,255,255,0.2)',
-                          color: '#fff',
-                          borderRadius: '50%',
-                          width: '32px',
-                          height: '32px',
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '0.8rem',
-                        }}
-                      >
-                        {copiedId === item.id ? '✓' : '🔗'}
-                      </button>
-
-                      <button
-                        onClick={(e) => toggleFavorite(item.id, e)}
-                        title="Save to favorites"
-                        style={{
-                          background: isFav ? '#dc2626' : 'rgba(0,0,0,0.6)',
-                          border: '1px solid rgba(255,255,255,0.2)',
-                          color: '#fff',
-                          borderRadius: '50%',
-                          width: '32px',
-                          height: '32px',
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '0.85rem',
-                        }}
-                      >
-                        {isFav ? '❤️' : '🤍'}
-                      </button>
-                    </div>
-
-                    {/* Stock Status Badge */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: '8px',
-                        right: '10px',
-                        background: 'rgba(0,0,0,0.75)',
-                        border: '1px solid rgba(201,150,58,0.2)',
-                        padding: '2px 8px',
-                        borderRadius: '4px',
-                        fontSize: '0.62rem',
-                        color: 'rgba(245,237,216,0.9)',
-                      }}
-                    >
-                      {item.stockStatus || 'Available Now'}
-                    </div>
-                  </div>
-
-                  {/* Content Area */}
-                  <div style={{ padding: '1.2rem 1.4rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem' }}>
-                      <span className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                        {item.cat}
-                      </span>
-                      <span style={{ fontSize: '0.65rem', color: 'rgba(245,237,216,0.45)' }}>
-                        📍 {item.quarter}
-                      </span>
-                    </div>
-
-                    <h4
-                      className="playfair"
-                      style={{
-                        fontSize: '1.15rem',
-                        color: 'var(--cream)',
-                        marginBottom: '0.5rem',
-                        lineHeight: 1.35,
-                        cursor: 'pointer',
-                      }}
-                      onClick={() => setSelectedItem(item)}
-                    >
-                      {item.title}
-                    </h4>
-
-                    <p style={{ fontSize: '0.8rem', color: 'rgba(245,237,216,0.65)', lineHeight: 1.6, marginBottom: '1.2rem', flex: 1 }}>
-                      {item.desc?.length > 95 ? item.desc.substring(0, 95) + '…' : item.desc}
-                    </p>
-
-                    {/* Price and Negotiable indicator */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem', borderTop: '1px solid rgba(201,150,58,0.1)', paddingTop: '0.8rem' }}>
-                      <div>
-                        <div className="cinzel" style={{ fontSize: '1.15rem', fontWeight: 900, color: 'var(--gold)' }}>
-                          {item.price}
+          {/* Listings Grid */}
+          {filteredListings.length === 0 ? (
+            <div className="mkt-controls" style={{ textAlign: 'center', padding: 'var(--space-2xl) var(--space-md)' }}>
+              <h3 className="mkt-card-title" style={{ fontSize: 'var(--text-xl)', marginBottom: 'var(--space-xs)' }}>
+                No listings found matching your criteria
+              </h3>
+              <p style={{ color: 'var(--color-muted)', marginBottom: 'var(--space-md)' }}>
+                Try searching with broader terms or reset active filters.
+              </p>
+              <button
+                type="button"
+                className="mkt-btn mkt-btn-primary"
+                onClick={() => {
+                  setActiveCategory('All');
+                  setSelectedQuarter('All Quarters');
+                  setSearchQuery('');
+                  setShowOnlyFavs(false);
+                }}
+              >
+                Reset filters
+              </button>
+            </div>
+          ) : (
+            <div className="mkt-grid">
+              {filteredListings.map(item => {
+                const isFav = savedFavorites.includes(item.id);
+                return (
+                  <article key={item.id} className="mkt-card">
+                    {/* Media thumbnail */}
+                    <div className="mkt-card-media">
+                      {item.imageUrl ? (
+                        <img
+                          src={item.imageUrl}
+                          alt={item.title}
+                          className="mkt-card-img"
+                        />
+                      ) : (
+                        <div className="mkt-card-placeholder">
+                          <span>{item.cat}</span>
                         </div>
-                        {item.isNegotiable && (
-                          <div style={{ fontSize: '0.6rem', color: '#86efac' }}>💬 Price Negotiable</div>
+                      )}
+
+                      {/* State Badges */}
+                      <div className="mkt-card-badges">
+                        <span className={`mkt-badge mkt-badge-${item.badge || 'featured'}`}>
+                          {item.badge || 'local'}
+                        </span>
+                        {item.verified && (
+                          <span className="mkt-badge mkt-badge-verified">
+                            Verified
+                          </span>
                         )}
                       </div>
-                      <div style={{ fontSize: '0.75rem', color: 'rgba(245,237,216,0.5)', textAlign: 'right' }}>
-                        👤 {item.seller}
+
+                      {/* Actions: Share & Save */}
+                      <div className="mkt-card-actions-top">
+                        <button
+                          type="button"
+                          className="mkt-icon-btn"
+                          onClick={(e) => handleShare(item, e)}
+                          title="Share listing"
+                          aria-label="Share listing"
+                        >
+                          {copiedId === item.id ? <CheckSvg /> : <ShareSvg />}
+                        </button>
+                        <button
+                          type="button"
+                          className={`mkt-icon-btn ${isFav ? 'is-fav' : ''}`}
+                          onClick={(e) => toggleFavorite(item.id, e)}
+                          title="Save to favorites"
+                          aria-label="Save to favorites"
+                        >
+                          <HeartSvg filled={isFav} />
+                        </button>
                       </div>
                     </div>
 
-                    {/* Buyer Action Buttons */}
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
-                      <button
-                        className="btn-p"
-                        style={{
-                          fontSize: '0.68rem',
-                          padding: '0.6rem',
-                          background: '#25D366',
-                          borderColor: '#22c55e',
-                          color: '#050811',
-                          fontWeight: 'bold',
-                        }}
-                        onClick={() => setOrderModalItem(item)}
-                      >
-                        ⚡ Order on WhatsApp
-                      </button>
+                    {/* Card Content */}
+                    <div className="mkt-card-body">
+                      <div className="mkt-card-header">
+                        <span className="mkt-card-category">{item.cat}</span>
+                        <span className="mkt-card-quarter">
+                          <MapPinSvg /> {item.quarter}
+                        </span>
+                      </div>
 
-                      <button
-                        className="btn-o"
-                        style={{ fontSize: '0.68rem', padding: '0.6rem' }}
+                      <h3
+                        className="mkt-card-title"
                         onClick={() => setSelectedItem(item)}
                       >
-                        🔍 View Details
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
+                        {item.title}
+                      </h3>
 
-        {/* Safety & Fair Trade Notice */}
-        <div
-          className="glass"
-          style={{
-            padding: '1.8rem 2rem',
-            borderRadius: '14px',
-            borderLeft: '4px solid var(--gold)',
-            marginBottom: '3rem',
-            background: 'rgba(201,150,58,0.04)',
-          }}
-        >
-          <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-            <div style={{ fontSize: '2rem' }}>🛡️</div>
-            <div style={{ flex: 1 }}>
-              <div className="cinzel" style={{ fontSize: '0.85rem', color: 'var(--gold)', letterSpacing: '0.1em', marginBottom: '0.3rem', fontWeight: 'bold' }}>
-                SAGAMU COMMUNITY MARKETPLACE SAFETY GUIDELINES
-              </div>
-              <p style={{ color: 'rgba(245,237,216,0.7)', fontSize: '0.82rem', lineHeight: 1.7, margin: 0 }}>
-                • For physical goods, exchange payments only upon physical inspection or pickup at designated central locations such as <strong>Sagamu Town Hall</strong>, <strong>Palace Square</strong>, or <strong>Oja Ale Centre</strong>.<br />
-                • Look for the <strong>🛡️ Verified</strong> badge confirming active registration with the Sagamu Development Association.<br />
-                • For diaspora bulk orders, communicate directly via WhatsApp to agree on shipping logistics.
-              </p>
+                      <p className="mkt-card-desc">
+                        {item.desc?.length > 95 ? item.desc.substring(0, 95) + '…' : item.desc}
+                      </p>
+
+                      <div className="mkt-card-price-row">
+                        <div>
+                          <div className="mkt-card-price">{item.price}</div>
+                          {item.isNegotiable && (
+                            <span style={{ fontSize: 'var(--text-xs)', color: 'var(--color-success)', fontWeight: 600 }}>
+                              Negotiable
+                            </span>
+                          )}
+                        </div>
+                        <div className="mkt-card-seller">{item.seller}</div>
+                      </div>
+
+                      <div className="mkt-card-buttons">
+                        <button
+                          type="button"
+                          className="mkt-btn mkt-btn-primary"
+                          onClick={() => setOrderModalItem(item)}
+                        >
+                          Order on WhatsApp
+                        </button>
+                        <button
+                          type="button"
+                          className="mkt-btn mkt-btn-outline"
+                          onClick={() => setSelectedItem(item)}
+                        >
+                          View details
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
+          )}
+
+          {/* Safety & Fair Trade Notice */}
+          <div className="mkt-guidelines">
+            <h4 className="mkt-guidelines-heading">Community marketplace safety guidelines</h4>
+            <ul className="mkt-guidelines-list">
+              <li>Exchange payments only upon physical inspection or pickup at designated central locations such as Sagamu Town Hall, Palace Square, or Oja Ale Centre.</li>
+              <li>Verify the seller badge for registered traders recognized by the Sagamu Development Association.</li>
+              <li>For diaspora orders, coordinate directly with the trader via WhatsApp to agree on shipping logistics.</li>
+            </ul>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Item Detail Modal */}
       {selectedItem && (
         <div
+          className="mkt-modal-backdrop"
           onClick={() => setSelectedItem(null)}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0,0,0,0.85)',
-            backdropFilter: 'blur(8px)',
-            zIndex: 100000,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem',
-          }}
         >
           <div
+            className="mkt-modal"
             onClick={e => e.stopPropagation()}
-            className="glass"
-            style={{
-              maxWidth: '650px',
-              width: '100%',
-              maxHeight: '90vh',
-              overflowY: 'auto',
-              borderRadius: '16px',
-              borderTop: '4px solid var(--gold)',
-              padding: 'clamp(1.5rem, 4vw, 2.5rem)',
-              animation: 'fadeUp 0.3s ease both',
-            }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedItem.title}
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.2rem' }}>
+            <div className="mkt-modal-header">
               <div>
-                <span className="cinzel" style={{ fontSize: '0.62rem', color: 'var(--gold)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  {selectedItem.cat} · {selectedItem.quarter}
-                </span>
-                <h3 className="playfair" style={{ fontSize: '1.8rem', color: 'var(--cream)', marginTop: '0.2rem' }}>
-                  {selectedItem.title}
-                </h3>
+                <h2 className="mkt-modal-title">{selectedItem.title}</h2>
+                <div className="mkt-modal-sub">{selectedItem.cat}, {selectedItem.quarter}</div>
               </div>
               <button
+                type="button"
+                className="mkt-modal-close"
                 onClick={() => setSelectedItem(null)}
-                style={{ background: 'none', border: 'none', color: 'rgba(245,237,216,0.6)', fontSize: '1.5rem', cursor: 'pointer' }}
+                aria-label="Close dialog"
               >
                 ✕
               </button>
             </div>
 
             {selectedItem.imageUrl && (
-              <div style={{ borderRadius: '10px', overflow: 'hidden', maxHeight: '280px', marginBottom: '1.5rem' }}>
+              <div style={{ borderRadius: 'var(--radius-card)', overflow: 'hidden', maxHeight: '280px', marginBottom: 'var(--space-md)' }}>
                 <img src={selectedItem.imageUrl} alt={selectedItem.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             )}
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem', background: 'rgba(201,150,58,0.06)', padding: '1rem', borderRadius: '10px', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 'var(--space-sm)', background: 'var(--color-paper-2)', padding: 'var(--space-md)', borderRadius: 'var(--radius-btn)', border: 'var(--rule-hair) solid var(--color-rule)', marginBottom: 'var(--space-md)' }}>
               <div>
-                <div className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)' }}>PRICE</div>
-                <div style={{ fontSize: '1.2rem', fontWeight: 900, color: 'var(--cream)' }}>{selectedItem.price}</div>
+                <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', fontWeight: 600 }}>Price</div>
+                <div style={{ fontSize: 'var(--text-lg)', fontWeight: 800, color: 'var(--color-accent)' }}>{selectedItem.price}</div>
               </div>
               <div>
-                <div className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)' }}>SELLER</div>
-                <div style={{ fontSize: '0.9rem', color: 'var(--cream)' }}>{selectedItem.seller}</div>
+                <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', fontWeight: 600 }}>Seller</div>
+                <div style={{ fontSize: 'var(--text-sm)', color: 'var(--color-ink)', fontWeight: 600 }}>{selectedItem.seller}</div>
               </div>
               <div>
-                <div className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)' }}>STATUS</div>
-                <div style={{ fontSize: '0.85rem', color: '#86efac' }}>{selectedItem.stockStatus || 'In Stock'}</div>
+                <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', fontWeight: 600 }}>Status</div>
+                <div style={{ fontSize: 'var(--text-sm)', color: 'var(--color-success)', fontWeight: 600 }}>{selectedItem.stockStatus || 'In Stock'}</div>
               </div>
               <div>
-                <div className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)' }}>LOCATION</div>
-                <div style={{ fontSize: '0.85rem', color: 'var(--cream)' }}>📍 {selectedItem.quarter}</div>
+                <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', fontWeight: 600 }}>Quarter</div>
+                <div style={{ fontSize: 'var(--text-sm)', color: 'var(--color-ink)' }}>{selectedItem.quarter}</div>
               </div>
             </div>
 
-            <div style={{ marginBottom: '1.5rem' }}>
-              <div className="cinzel" style={{ fontSize: '0.62rem', color: 'var(--gold)', letterSpacing: '0.1em', marginBottom: '0.4rem', textTransform: 'uppercase' }}>
-                Full Description & Details
+            <div style={{ marginBottom: 'var(--space-lg)' }}>
+              <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-accent)', fontWeight: 700, textTransform: 'uppercase', marginBottom: 'var(--space-3xs)' }}>
+                Description
               </div>
-              <p style={{ fontSize: '0.88rem', color: 'rgba(245,237,216,0.8)', lineHeight: 1.8, margin: 0, whiteSpace: 'pre-wrap' }}>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-ink-2)', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
                 {selectedItem.desc}
               </p>
             </div>
 
-            {/* Direct contact & ordering action buttons */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '0.8rem', borderTop: '1px solid rgba(201,150,58,0.2)', paddingTop: '1.2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 'var(--space-sm)', paddingTop: 'var(--space-md)', borderTop: 'var(--rule-hair) solid var(--color-rule)' }}>
               <button
-                className="btn-p"
-                style={{ background: '#25D366', borderColor: '#22c55e', color: '#050811', fontWeight: 'bold' }}
+                type="button"
+                className="mkt-btn mkt-btn-primary"
                 onClick={() => {
                   setSelectedItem(null);
                   setOrderModalItem(selectedItem);
                 }}
               >
-                ⚡ Place Order via WhatsApp
+                Order on WhatsApp
               </button>
 
               <button
-                className="btn-o"
+                type="button"
+                className="mkt-btn mkt-btn-outline"
                 onClick={() => {
                   setSelectedItem(null);
                   setOfferModalItem(selectedItem);
                 }}
               >
-                💬 Negotiate Price
+                Negotiate price
               </button>
 
               <a
                 href={`tel:${selectedItem.phone}`}
-                className="btn-o"
-                style={{ textAlign: 'center', textDecoration: 'none' }}
+                className="mkt-btn mkt-btn-outline"
+                style={{ textDecoration: 'none' }}
               >
-                📞 Call {selectedItem.phone}
+                Call seller
               </a>
             </div>
           </div>
         </div>
       )}
 
-      {/* Quick WhatsApp Order Modal */}
+      {/* WhatsApp Quick Order Modal */}
       {orderModalItem && (
         <div
+          className="mkt-modal-backdrop"
           onClick={() => setOrderModalItem(null)}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0,0,0,0.85)',
-            backdropFilter: 'blur(8px)',
-            zIndex: 100000,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem',
-          }}
         >
           <div
+            className="mkt-modal"
+            style={{ maxWidth: '480px' }}
             onClick={e => e.stopPropagation()}
-            className="glass"
-            style={{
-              maxWidth: '500px',
-              width: '100%',
-              borderRadius: '16px',
-              borderTop: '4px solid #25D366',
-              padding: '2rem',
-              animation: 'fadeUp 0.3s ease both',
-            }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Order on WhatsApp"
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
-              <h3 className="playfair" style={{ fontSize: '1.5rem', color: 'var(--cream)' }}>
-                ⚡ Quick WhatsApp Order
-              </h3>
-              <button onClick={() => setOrderModalItem(null)} style={{ background: 'none', border: 'none', color: 'rgba(245,237,216,0.6)', fontSize: '1.4rem', cursor: 'pointer' }}>✕</button>
+            <div className="mkt-modal-header">
+              <h3 className="mkt-modal-title">Place order via WhatsApp</h3>
+              <button
+                type="button"
+                className="mkt-modal-close"
+                onClick={() => setOrderModalItem(null)}
+                aria-label="Close dialog"
+              >
+                ✕
+              </button>
             </div>
 
-            <div style={{ padding: '0.8rem', background: 'rgba(37,211,102,0.08)', borderRadius: '8px', border: '1px solid rgba(37,211,102,0.3)', marginBottom: '1.2rem' }}>
-              <div style={{ fontSize: '0.85rem', color: 'var(--cream)', fontWeight: 'bold' }}>{orderModalItem.title}</div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--gold)' }}>Listed at: {orderModalItem.price} · Seller: {orderModalItem.seller}</div>
+            <div style={{ padding: 'var(--space-sm) var(--space-md)', background: 'var(--color-success-soft)', borderRadius: 'var(--radius-btn)', border: 'var(--rule-hair) solid var(--color-success)', marginBottom: 'var(--space-md)' }}>
+              <div style={{ fontSize: 'var(--text-sm)', color: 'var(--color-success-ink)', fontWeight: 700 }}>{orderModalItem.title}</div>
+              <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-success-ink)' }}>Listed at: {orderModalItem.price} · Seller: {orderModalItem.seller}</div>
             </div>
 
             <form
@@ -900,29 +731,28 @@ export default function MarketplacePage() {
                 e.preventDefault();
                 sendWhatsAppOrder(orderModalItem, orderForm);
               }}
-              style={{ display: 'grid', gap: '1rem' }}
             >
-              <div>
-                <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Your Full Name *</label>
-                <input required className="inp" value={orderForm.buyerName} onChange={e => setOrderForm({ ...orderForm, buyerName: e.target.value })} placeholder="E.g. Biodun Adeleke" />
+              <div className="mkt-form-group">
+                <label className="mkt-form-label">Full name</label>
+                <input required className="mkt-input" value={orderForm.buyerName} onChange={e => setOrderForm({ ...orderForm, buyerName: e.target.value })} placeholder="Your full name" />
               </div>
-              <div>
-                <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Quantity / Units *</label>
-                <input required className="inp" value={orderForm.quantity} onChange={e => setOrderForm({ ...orderForm, quantity: e.target.value })} placeholder="E.g. 3 tubers / 2 sets / 1 bag" />
+              <div className="mkt-form-group">
+                <label className="mkt-form-label">Quantity or units</label>
+                <input required className="mkt-input" value={orderForm.quantity} onChange={e => setOrderForm({ ...orderForm, quantity: e.target.value })} placeholder="E.g. 3 tubers or 2 sets" />
               </div>
-              <div>
-                <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Delivery / Pickup Location in Sagamu *</label>
-                <input required className="inp" value={orderForm.address} onChange={e => setOrderForm({ ...orderForm, address: e.target.value })} placeholder="E.g. Ita Oba, Offin, near Aafin Akarigbo" />
+              <div className="mkt-form-group">
+                <label className="mkt-form-label">Delivery or pickup location in Sagamu</label>
+                <input required className="mkt-input" value={orderForm.address} onChange={e => setOrderForm({ ...orderForm, address: e.target.value })} placeholder="E.g. Offin, near Akarigbo Palace" />
               </div>
-              <div>
-                <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Special Note (Optional)</label>
-                <input className="inp" value={orderForm.note} onChange={e => setOrderForm({ ...orderForm, note: e.target.value })} placeholder="E.g. Please deliver before 4 PM" />
+              <div className="mkt-form-group">
+                <label className="mkt-form-label">Special note (optional)</label>
+                <input className="mkt-input" value={orderForm.note} onChange={e => setOrderForm({ ...orderForm, note: e.target.value })} placeholder="Timing, delivery preference" />
               </div>
 
-              <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'flex-end', marginTop: '1rem' }}>
-                <button type="button" className="btn-o" onClick={() => setOrderModalItem(null)}>Cancel</button>
-                <button type="submit" className="btn-p" style={{ background: '#25D366', borderColor: '#22c55e', color: '#050811', fontWeight: 'bold' }}>
-                  💬 Open in WhatsApp →
+              <div style={{ display: 'flex', gap: 'var(--space-sm)', justifyContent: 'flex-end', marginTop: 'var(--space-md)' }}>
+                <button type="button" className="mkt-btn mkt-btn-outline" onClick={() => setOrderModalItem(null)}>Cancel</button>
+                <button type="submit" className="mkt-btn mkt-btn-primary">
+                  Open WhatsApp
                 </button>
               </div>
             </form>
@@ -933,41 +763,32 @@ export default function MarketplacePage() {
       {/* Negotiate / Price Offer Modal */}
       {offerModalItem && (
         <div
+          className="mkt-modal-backdrop"
           onClick={() => setOfferModalItem(null)}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0,0,0,0.85)',
-            backdropFilter: 'blur(8px)',
-            zIndex: 100000,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem',
-          }}
         >
           <div
+            className="mkt-modal"
+            style={{ maxWidth: '440px' }}
             onClick={e => e.stopPropagation()}
-            className="glass"
-            style={{
-              maxWidth: '440px',
-              width: '100%',
-              borderRadius: '16px',
-              borderTop: '4px solid var(--gold)',
-              padding: '2rem',
-              animation: 'fadeUp 0.3s ease both',
-            }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Make price offer"
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem' }}>
-              <h3 className="playfair" style={{ fontSize: '1.4rem', color: 'var(--cream)' }}>
-                💬 Make a Price Offer
-              </h3>
-              <button onClick={() => setOfferModalItem(null)} style={{ background: 'none', border: 'none', color: 'rgba(245,237,216,0.6)', fontSize: '1.4rem', cursor: 'pointer' }}>✕</button>
+            <div className="mkt-modal-header">
+              <h3 className="mkt-modal-title">Make a price offer</h3>
+              <button
+                type="button"
+                className="mkt-modal-close"
+                onClick={() => setOfferModalItem(null)}
+                aria-label="Close dialog"
+              >
+                ✕
+              </button>
             </div>
 
-            <div style={{ padding: '0.8rem', background: 'rgba(201,150,58,0.08)', borderRadius: '8px', marginBottom: '1.2rem' }}>
-              <div style={{ fontSize: '0.85rem', color: 'var(--cream)', fontWeight: 'bold' }}>{offerModalItem.title}</div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--gold)' }}>Asking Price: {offerModalItem.price}</div>
+            <div style={{ padding: 'var(--space-sm) var(--space-md)', background: 'var(--color-accent-soft)', borderRadius: 'var(--radius-btn)', border: 'var(--rule-hair) solid var(--color-rule)', marginBottom: 'var(--space-md)' }}>
+              <div style={{ fontSize: 'var(--text-sm)', color: 'var(--color-accent)', fontWeight: 700 }}>{offerModalItem.title}</div>
+              <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-ink-2)' }}>Asking price: {offerModalItem.price}</div>
             </div>
 
             <form
@@ -976,24 +797,22 @@ export default function MarketplacePage() {
                 sendWhatsAppOffer(offerModalItem, offerAmount);
               }}
             >
-              <div style={{ marginBottom: '1.5rem' }}>
-                <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>
-                  Your Offer Amount (₦) *
-                </label>
+              <div className="mkt-form-group">
+                <label className="mkt-form-label">Your offer amount (₦)</label>
                 <input
                   required
                   type="number"
-                  className="inp"
+                  className="mkt-input"
                   value={offerAmount}
                   onChange={e => setOfferAmount(e.target.value)}
                   placeholder="E.g. 15000"
                 />
               </div>
 
-              <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'flex-end' }}>
-                <button type="button" className="btn-o" onClick={() => setOfferModalItem(null)}>Cancel</button>
-                <button type="submit" className="btn-p" style={{ background: '#25D366', borderColor: '#22c55e', color: '#050811', fontWeight: 'bold' }}>
-                  💬 Send Offer via WhatsApp
+              <div style={{ display: 'flex', gap: 'var(--space-sm)', justifyContent: 'flex-end', marginTop: 'var(--space-md)' }}>
+                <button type="button" className="mkt-btn mkt-btn-outline" onClick={() => setOfferModalItem(null)}>Cancel</button>
+                <button type="submit" className="mkt-btn mkt-btn-primary">
+                  Send offer
                 </button>
               </div>
             </form>
@@ -1001,120 +820,108 @@ export default function MarketplacePage() {
         </div>
       )}
 
-      {/* Create New Listing Modal */}
+      {/* Post Listing Modal */}
       {showForm && (
         <div
+          className="mkt-modal-backdrop"
           onClick={() => setShowForm(false)}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0,0,0,0.85)',
-            backdropFilter: 'blur(8px)',
-            zIndex: 100000,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1rem',
-          }}
         >
           <div
+            className="mkt-modal"
+            style={{ maxWidth: '640px' }}
             onClick={e => e.stopPropagation()}
-            className="glass"
-            style={{
-              maxWidth: '720px',
-              width: '100%',
-              maxHeight: '90vh',
-              overflowY: 'auto',
-              borderRadius: '16px',
-              borderTop: '4px solid var(--gold)',
-              padding: 'clamp(1.5rem, 4vw, 2.5rem)',
-              animation: 'fadeUp 0.3s ease both',
-            }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Post listing"
           >
             {formSubmitted ? (
-              <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-                <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>🎉</div>
-                <h3 className="playfair" style={{ fontSize: '2rem', color: 'var(--cream)', marginBottom: '0.6rem' }}>
-                  Listing Published Successfully!
+              <div style={{ textAlign: 'center', padding: 'var(--space-xl) var(--space-md)' }}>
+                <h3 className="mkt-modal-title" style={{ marginBottom: 'var(--space-xs)' }}>
+                  Listing published
                 </h3>
-                <p style={{ color: 'rgba(245,237,216,0.7)', fontSize: '0.9rem' }}>
-                  Your listing is now live in the Sagamu Community Marketplace and discoverable by community members and diaspora buyers.
+                <p style={{ color: 'var(--color-ink-2)' }}>
+                  Your listing is now live in the Sagamu Community Marketplace.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+                <div className="mkt-modal-header">
                   <div>
-                    <h3 className="playfair" style={{ fontSize: '1.8rem', color: 'var(--cream)' }}>
-                      Post Free Marketplace Listing
-                    </h3>
-                    <p style={{ fontSize: '0.75rem', color: 'rgba(245,237,216,0.5)', margin: 0 }}>
-                      Reach local buyers in Sagamu and diaspora members worldwide.
+                    <h3 className="mkt-modal-title">Post marketplace listing</h3>
+                    <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', margin: 0 }}>
+                      Connect with local and diaspora buyers.
                     </p>
                   </div>
-                  <button type="button" onClick={() => setShowForm(false)} style={{ background: 'none', border: 'none', color: 'rgba(245,237,216,0.6)', fontSize: '1.5rem', cursor: 'pointer' }}>✕</button>
+                  <button
+                    type="button"
+                    className="mkt-modal-close"
+                    onClick={() => setShowForm(false)}
+                    aria-label="Close dialog"
+                  >
+                    ✕
+                  </button>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: '1.2rem', marginBottom: '1.5rem' }}>
-                  <div style={{ gridColumn: '1 / -1' }}>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Product / Service Title *</label>
-                    <input required className="inp" value={newForm.title} onChange={e => setNewForm({ ...newForm, title: e.target.value })} placeholder="E.g. Fresh Sagamu Yam Tubers, Hand-dyed Adire Aso-Oke..." />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'var(--space-md)', marginBottom: 'var(--space-md)' }}>
+                  <div style={{ gridColumn: '1 / -1' }} className="mkt-form-group">
+                    <label className="mkt-form-label">Product or service title</label>
+                    <input required className="mkt-input" value={newForm.title} onChange={e => setNewForm({ ...newForm, title: e.target.value })} placeholder="E.g. Fresh Sagamu yam tubers" />
                   </div>
 
-                  <div>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Category *</label>
-                    <select required className="inp" value={newForm.category} onChange={e => setNewForm({ ...newForm, category: e.target.value })}>
+                  <div className="mkt-form-group">
+                    <label className="mkt-form-label">Category</label>
+                    <select required className="mkt-input" value={newForm.category} onChange={e => setNewForm({ ...newForm, category: e.target.value })}>
                       {CATEGORIES.slice(1).map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
                     </select>
                   </div>
 
-                  <div>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Quarter / Sector in Sagamu *</label>
-                    <select required className="inp" value={newForm.quarter} onChange={e => setNewForm({ ...newForm, quarter: e.target.value })}>
+                  <div className="mkt-form-group">
+                    <label className="mkt-form-label">Sagamu quarter</label>
+                    <select required className="mkt-input" value={newForm.quarter} onChange={e => setNewForm({ ...newForm, quarter: e.target.value })}>
                       {QUARTERS.slice(1).map(q => <option key={q} value={q}>{q}</option>)}
                     </select>
                   </div>
 
-                  <div>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Price (₦) *</label>
-                    <input required className="inp" value={newForm.priceNumber} onChange={e => setNewForm({ ...newForm, priceNumber: e.target.value })} placeholder="E.g. 4500 or Quote" />
+                  <div className="mkt-form-group">
+                    <label className="mkt-form-label">Price (₦)</label>
+                    <input required className="mkt-input" value={newForm.priceNumber} onChange={e => setNewForm({ ...newForm, priceNumber: e.target.value })} placeholder="E.g. 4500" />
                   </div>
 
-                  <div>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Unit of Measure</label>
-                    <input className="inp" value={newForm.priceUnit} onChange={e => setNewForm({ ...newForm, priceUnit: e.target.value })} placeholder="E.g. per tuber, per set, per day" />
+                  <div className="mkt-form-group">
+                    <label className="mkt-form-label">Unit of measure</label>
+                    <input className="mkt-input" value={newForm.priceUnit} onChange={e => setNewForm({ ...newForm, priceUnit: e.target.value })} placeholder="E.g. per tuber, per set" />
                   </div>
 
-                  <div>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Seller / Business Name *</label>
-                    <input required className="inp" value={newForm.seller} onChange={e => setNewForm({ ...newForm, seller: e.target.value })} placeholder="E.g. Baba Adewale Farms" />
+                  <div className="mkt-form-group">
+                    <label className="mkt-form-label">Seller or business name</label>
+                    <input required className="mkt-input" value={newForm.seller} onChange={e => setNewForm({ ...newForm, seller: e.target.value })} placeholder="E.g. Adewale Farms" />
                   </div>
 
-                  <div>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>WhatsApp / Phone Number *</label>
-                    <input required type="tel" className="inp" value={newForm.phone} onChange={e => setNewForm({ ...newForm, phone: e.target.value, whatsapp: e.target.value })} placeholder="0803..." />
+                  <div className="mkt-form-group">
+                    <label className="mkt-form-label">Phone or WhatsApp number</label>
+                    <input required type="tel" className="mkt-input" value={newForm.phone} onChange={e => setNewForm({ ...newForm, phone: e.target.value, whatsapp: e.target.value })} placeholder="0803..." />
                   </div>
 
-                  <div style={{ gridColumn: '1 / -1' }}>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Upload Product Photo (Optional)</label>
-                    <input type="file" accept="image/*" className="inp" onChange={handleImageUpload} style={{ padding: '0.4rem' }} />
+                  <div style={{ gridColumn: '1 / -1' }} className="mkt-form-group">
+                    <label className="mkt-form-label">Product photo</label>
+                    <input type="file" accept="image/*" className="mkt-input" onChange={handleImageUpload} />
                     {newForm.imageUrl && (
-                      <div style={{ marginTop: '0.5rem', width: '80px', height: '80px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--gold)' }}>
+                      <div style={{ marginTop: 'var(--space-xs)', width: '72px', height: '72px', borderRadius: 'var(--radius-btn)', overflow: 'hidden', border: 'var(--rule-hair) solid var(--color-rule)' }}>
                         <img src={newForm.imageUrl} alt="preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       </div>
                     )}
                   </div>
 
-                  <div style={{ gridColumn: '1 / -1' }}>
-                    <label className="cinzel" style={{ fontSize: '0.55rem', color: 'var(--gold)', display: 'block', marginBottom: '0.3rem' }}>Detailed Description *</label>
-                    <textarea required className="inp" rows={4} value={newForm.desc} onChange={e => setNewForm({ ...newForm, desc: e.target.value })} placeholder="Provide quality details, packaging, sizes, delivery options, etc..." style={{ resize: 'vertical' }} />
+                  <div style={{ gridColumn: '1 / -1' }} className="mkt-form-group">
+                    <label className="mkt-form-label">Description</label>
+                    <textarea required className="mkt-input" rows={3} value={newForm.desc} onChange={e => setNewForm({ ...newForm, desc: e.target.value })} placeholder="Quality details, packaging, sizes, delivery options..." style={{ resize: 'vertical' }} />
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-end' }}>
-                  <button type="button" className="btn-o" onClick={() => setShowForm(false)}>Cancel</button>
-                  <button type="submit" className="btn-p" disabled={loading}>
-                    {loading ? 'Publishing…' : '🚀 Publish Listing Now'}
+                <div style={{ display: 'flex', gap: 'var(--space-sm)', justifyContent: 'flex-end' }}>
+                  <button type="button" className="mkt-btn mkt-btn-outline" onClick={() => setShowForm(false)}>Cancel</button>
+                  <button type="submit" className="mkt-btn mkt-btn-primary" disabled={loading}>
+                    {loading ? 'Publishing…' : 'Publish listing'}
                   </button>
                 </div>
               </form>
@@ -1122,30 +929,6 @@ export default function MarketplacePage() {
           </div>
         </div>
       )}
-
-      <AdireDivider />
-
-      {/* Why Shop Local & Diaspora Link */}
-      <Section bg="var(--dark)" py="5rem">
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <p className="cinzel" style={{ color: 'var(--gold)', letterSpacing: '0.3em', fontSize: '0.7rem', marginBottom: '1rem' }}>EMPOWERING THE HOMELAND</p>
-          <h2 className="playfair" style={{ fontSize: '3rem', color: 'var(--cream)' }}>Why Trade on the Sagamu Marketplace?</h2>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1.5rem' }}>
-          {[
-            { ic: '🌾', t: 'Farm-Fresh & Authentic', d: 'Direct farm gate and artisan pricing. No exploitative middle-men taking cuts from Sagamu farmers and weavers.' },
-            { ic: '🌍', t: 'Diaspora Direct Orders', d: 'Sons and daughters abroad in the UK, US, and Canada can arrange food, catering, and home supplies for family in Sagamu.' },
-            { ic: '🛡️', t: 'Verified Community Trust', d: 'All listings are associated with recognized Sagamu compounds and quarters, building community accountability.' },
-            { ic: '⚡', t: 'Instant WhatsApp Commerce', d: 'Direct one-tap negotiation and order creation directly into the trader’s WhatsApp without payment gateways holding funds.' },
-          ].map(card => (
-            <div key={card.t} className="glass card" style={{ padding: '2rem', borderRadius: '14px', borderTop: '3px solid var(--gold)' }}>
-              <div style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>{card.ic}</div>
-              <div className="cinzel" style={{ fontSize: '0.75rem', color: 'var(--gold)', fontWeight: 700, marginBottom: '0.5rem' }}>{card.t}</div>
-              <div style={{ fontSize: '0.82rem', color: 'rgba(245,237,216,0.65)', lineHeight: 1.7 }}>{card.d}</div>
-            </div>
-          ))}
-        </div>
-      </Section>
 
       <AdireDivider />
     </div>
